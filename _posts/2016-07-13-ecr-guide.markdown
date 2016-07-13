@@ -13,10 +13,10 @@ support ECR. Therefore you should specify the region of the registry whenever
 using `aws ecr` (if it isn't the default region in your aws cli configuration).
 
 ```bash
-$ aws ecr --region us-west-2 get-login |xclip
+$ aws ecr --region us-west-2 get-login
 ```
 
-Paste the output and press enter to login.
+Paste the output to login.
 
 # Create repository
 
