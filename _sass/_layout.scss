@@ -99,7 +99,7 @@
  */
 .site-footer {
     border-top: 0 solid $grey-color-light;
-    padding: $spacing-unit 0;
+    padding: 0; // $spacing-unit 0;
 }
 
 .footer-heading {
