@@ -1,17 +1,16 @@
 ---
 layout: post
-title: "Create an ECR container registry"
+title: "Create an ECR container repository"
 date: 2016-07-14 00:54:00 +10:00
 categories: aws
 ---
 
-# Login to registry
+# Login to the ECR registry
 
-Docker must be logged into the registry. The aws client will output the docker
-login command.
-
-n.b. **Not all regions support ECR registry.** You must specify the region of
-the registry if it isn't your default in aws cli.
+Docker must be logged into the registry. The aws client can output the required
+docker command to login with `aws ecr get-login`). Note that not all AWS
+regions support ECR. Therefore you should specify the region of the registry
+with `--region` if it isn't your default in aws cli.
 
 ```bash
 $ exec $(aws ecr --region us-west-2 get-login)
