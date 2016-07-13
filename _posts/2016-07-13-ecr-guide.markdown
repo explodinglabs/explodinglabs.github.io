@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Create an ECR container registry"
+date: 2016-07-14 00:54:00 +10:00
+categories: aws
+---
+
+# Login to registry
+
+Docker must be logged into the registry. The aws client will output the docker
+login command.
+
+n.b. **Not all regions support ECR registry.** You must specify the region of
+the registry if it isn't your default in aws cli.
+
+```bash
+$ exec $(aws ecr --region us-west-2 get-login)
+```
+
+# Create repository
+
+```bash
+$ aws ecr create-repository --repository-name myimage
+```
+
+# Push to repository
+
+Tag the image:
+
+```bash
+$ docker tag myimage aws_account_id.dkr.ecr.us-west-2.amazonaws.com/myimage
+```
+
+Push:
+
+```bash
+$ docker push aws_account_id.dkr.ecr.us-west-2.amazonaws.com/myimage
+```
