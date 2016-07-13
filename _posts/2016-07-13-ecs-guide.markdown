@@ -27,7 +27,7 @@ Make an `ecs-policy.json`:
 
 Create role with policy:
 
-```shell
+```bash
 $ aws iam create-role --role-name ecsRole --assume-role-policy-document file://ecs-policy.json
 ```
 
