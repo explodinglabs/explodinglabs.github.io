@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create an ECR container repository"
+title: "Create an ECR image repository"
 date: 2016-07-14 00:54:00 +10:00
 categories: aws
 ---
