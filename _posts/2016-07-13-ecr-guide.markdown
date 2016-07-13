@@ -9,29 +9,47 @@ categories: aws
 
 Docker must be logged into the registry. The aws client can output the required
 docker command to login with (`get-login`). Note that not all AWS regions
-support ECR.  Therefore you should specify the region of the registry with
-`--region` if it isn't your default in aws cli.
+support ECR. Therefore you should specify the region of the registry whenever
+using `aws ecr` (if it isn't the default region in your aws cli configuration).
 
 ```bash
-$ exec $(aws ecr --region us-west-2 get-login)
+$ aws ecr --region us-west-2 get-login |xclip
 ```
+
+Paste the output and press enter to login.
 
 # Create repository
 
 ```bash
-$ aws ecr create-repository --repository-name myimage
+$ aws ecr --region us-west-2 create-repository --repository-name my-team/web-app
 ```
 
-# Push to repository
+# Push an image
 
-Tag the image:
+First tag it:
 
 ```bash
-$ docker tag myimage aws_account_id.dkr.ecr.us-west-2.amazonaws.com/myimage
+$ docker tag myimage aws_account_id.dkr.ecr.us-west-2.amazonaws.com/my-team/web-app
 ```
 
-Push:
+Then push:
 
 ```bash
-$ docker push aws_account_id.dkr.ecr.us-west-2.amazonaws.com/myimage
+$ docker push aws_account_id.dkr.ecr.us-west-2.amazonaws.com/my-team/web-app
+```
+
+# Delete an image
+```bash
+aws ecr --region us-west-2 batch-delete-image --repository-name my-team/web-app --image-ids imageTag=latest
+```
+
+# Delete repository
+
+```bash
+aws ecr --region us-west-2 delete-repository --repository-name my-team/web-app
+```
+
+# List images
+```bash
+aws ecr --region us-west-2 list-images --repository-name my-team/web-app
 ```
