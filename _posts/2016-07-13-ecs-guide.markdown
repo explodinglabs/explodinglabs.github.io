@@ -1,0 +1,119 @@
+---
+layout: post
+title: "Create an ECS container instance"
+date: 2016-07-13 20:16:39 +1000
+categories: aws
+---
+
+# IAM roles & policies
+
+Make an `ecs-policy.json`:
+
+```json
+{
+  "Version": "2015-07-13",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+```
+
+Create role with policy:
+
+```shell
+$ aws iam create-role --role-name ecsRole --assume-role-policy-document file://ecs-policy.json
+```
+
+Make a `role-policy.json`:
+
+```json
+{
+  "Version": "2015-07-13",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:BatchGetImage",
+        "ecr:DescribeRepositories",
+        "ecr:GetAuthorizationToken",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:GetRepositoryPolicy",
+        "ecr:ListImages",
+        "ecs:CreateCluster",
+        "ecs:DeregisterContainerInstance",
+        "ecs:DiscoverPollEndpoint",
+        "ecs:Poll",
+        "ecs:RegisterContainerInstance",
+        "ecs:StartTask",
+        "ecs:StartTelemetrySession",
+        "ecs:SubmitContainerStateChange",
+        "ecs:SubmitTaskStateChange",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}
+```
+
+Add role policy:
+
+```bash
+$ aws iam put-role-policy --role-name ecsRole --policy-name ecsRolePolicy --policy-document file://role-policy.json
+```
+
+Create instance profile with role:
+
+```bash
+$ aws iam create-instance-profile --instance-profile-name webserver
+$ aws iam add-role-to-instance-profile --instance-profile-name webserver --role-name ecsRole
+```
+
+# Create a security group
+
+With ports 22 and 80 open:
+
+```bash
+$ aws ec2 create-security-group --group-name MySecurityGroup --description "My security group"
+$ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 22 --cidr 0.0.0.0/0
+$ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 80 --cidr 0.0.0.0/0
+```
+
+# Launch an instance inside a cluster
+
+Create a cluster:
+
+```bash
+$ aws ecs create-cluster --cluster-name MyCluster
+```
+
+Create a `userdata.txt`:
+
+```bash
+#!/bin/bash
+echo 'ECS_CLUSTER=looked' >> /etc/ecs/ecs.config
+```
+
+Launch an instance inside the cluster:
+
+```bash
+$ aws ec2 run-instances --image-id ami-0bf2da68 --count 1 --instance-type t2.micro --key-name aws-beau-sydney --iam-instance-profile Name= webserver --security-group-id sg-xxxxxx --associate-public-ip-address --user-data file://userdata.txt
+```
+
+# Register and run a task
+
+```bash
+$ aws ecs register-task-definition --cli-input-json file://ecs-task.json
+$ aws ecs run-task --cluster MyCluster --count 1 --task-definition web-app:1
+```

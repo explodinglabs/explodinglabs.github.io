@@ -16,4 +16,4 @@ twitter_username: bbmelb
 github_username: bcb
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
