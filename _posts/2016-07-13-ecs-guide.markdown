@@ -82,10 +82,15 @@ $ aws iam add-role-to-instance-profile --instance-profile-name webserver --role-
 
 # Create a security group
 
-With ports 22 and 80 open:
-
 ```bash
 $ aws ec2 create-security-group --group-name MySecurityGroup --description "My security group"
+```
+
+*Note the id, which is needed when launching an EC2 instance.*
+
+Open ports 22 and 80:
+
+```bash
 $ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 22 --cidr 0.0.0.0/0
 $ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 80 --cidr 0.0.0.0/0
 ```
