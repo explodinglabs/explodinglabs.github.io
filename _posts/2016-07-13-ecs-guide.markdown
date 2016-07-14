@@ -5,7 +5,8 @@ date: 2016-07-13 20:16:39 +1000
 categories: aws
 ---
 
-# IAM roles & policies
+IAM roles & policies
+====================
 
 Make an `ecs-policy.json`:
 
@@ -80,7 +81,8 @@ $ aws iam create-instance-profile --instance-profile-name webserver
 $ aws iam add-role-to-instance-profile --instance-profile-name webserver --role-name ecsRole
 ```
 
-# Create a security group
+Create a security group
+=======================
 
 ```bash
 $ aws ec2 create-security-group --group-name MySecurityGroup --description "My security group"
@@ -95,7 +97,8 @@ $ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protoc
 $ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 80 --cidr 0.0.0.0/0
 ```
 
-# Launch an instance inside a cluster
+Launch an instance inside a cluster
+===================================
 
 Create a cluster:
 
@@ -116,7 +119,8 @@ Launch an instance inside the cluster:
 $ aws ec2 run-instances --image-id ami-0bf2da68 --count 1 --instance-type t2.micro --key-name aws-beau-sydney --iam-instance-profile Name= webserver --security-group-id sg-xxxxxx --associate-public-ip-address --user-data file://userdata.txt
 ```
 
-# Register and run a task
+Register and run a task
+=======================
 
 ```bash
 $ aws ecs register-task-definition --cli-input-json file://ecs-task.json

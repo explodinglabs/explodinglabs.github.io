@@ -11,7 +11,8 @@ categories: aws
     commands (e.g.  aws ecr --region us-west-2).
 </div>
 
-# Login to the ECR registry
+Login to the ECR registry
+=========================
 
 Docker must be logged into the registry. The aws client can output the required
 docker command to login with (`get-login`).
@@ -22,13 +23,15 @@ $ aws ecr get-login
 
 Paste the output to login.
 
-# Create repository
+Create repository
+=================
 
 ```bash
 $ aws ecr create-repository --repository-name project/web-app
 ```
 
-# Push an image
+Push an image
+=============
 
 First tag it:
 
@@ -42,18 +45,23 @@ Then push:
 $ docker push aws_account_id.dkr.ecr.us-west-2.amazonaws.com/project/web-app
 ```
 
-# Delete an image
+Delete an image
+===============
+
 ```bash
 $ aws ecr batch-delete-image --repository-name project/web-app --image-ids imageTag=latest
 ```
 
-# Delete repository
+Delete repository
+=================
 
 ```bash
 $ aws ecr delete-repository --repository-name project/web-app
 ```
 
-# List images
+List images
+===========
+
 ```bash
 $ aws ecr list-images --repository-name project/web-app
 ```
