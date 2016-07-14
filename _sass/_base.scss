@@ -205,3 +205,11 @@ pre {
         }
     }
 }
+
+.note {
+    padding: 8px 12px;
+    background-color: #ffe;
+    margin-bottom: $spacing_unit;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+}
