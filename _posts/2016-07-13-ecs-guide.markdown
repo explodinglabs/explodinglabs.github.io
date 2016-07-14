@@ -50,8 +50,4 @@ Launch an instance inside the cluster:
 
     $ aws ec2 run-instances --image-id ami-0bf2da68 --count 1 --instance-type t2.micro --key-name aws-beau-sydney --iam-instance-profile Name= webserver --security-group-id sg-xxxxxx --associate-public-ip-address --user-data file://userdata.txt
 
-Register and run a task
-=======================
-
-    $ aws ecs register-task-definition --cli-input-json file://ecs-task.json
-    $ aws ecs run-task --cluster MyCluster --count 1 --task-definition web-app:1
+Now you can run [tasks and services](/aws/ecs/2016/07/14/ecs-service.html).
