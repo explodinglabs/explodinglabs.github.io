@@ -37,17 +37,20 @@ Then push:
 
     $ docker push aws_account_id.dkr.ecr.us-west-2.amazonaws.com/project/web-app
 
-Delete an image
+Useful commands
 ===============
+
+Delete an image
+---------------
 
     $ aws ecr batch-delete-image --repository-name project/web-app --image-ids imageTag=latest
 
 Delete repository
-=================
+-----------------
 
     $ aws ecr delete-repository --repository-name project/web-app
 
 List images
-===========
+-----------
 
     $ aws ecr list-images --repository-name project/web-app
