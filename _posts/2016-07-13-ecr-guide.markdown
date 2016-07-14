@@ -15,7 +15,7 @@ Login to the ECR registry
 =========================
 
 Docker must be logged into the registry. The aws client can output the required
-docker command to login with (`get-login`).
+docker command to login with.
 
 ```bash
 $ aws ecr get-login
