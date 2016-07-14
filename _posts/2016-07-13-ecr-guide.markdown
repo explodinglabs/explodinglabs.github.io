@@ -4,6 +4,7 @@ title: "Create an ECR image repository"
 date: 2016-07-14 00:54:00 +10:00
 categories: aws
 ---
+{::options syntax_highlighter_opts="default_lang: shell" /}
 
 <div class="note">
     Note that not all AWS regions support ECR. If like me, your default

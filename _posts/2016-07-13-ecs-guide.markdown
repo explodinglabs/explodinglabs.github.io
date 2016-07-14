@@ -4,6 +4,7 @@ title: "Create an ECS container instance"
 date: 2016-07-13 20:16:39 +1000
 categories: aws
 ---
+{::options syntax_highlighter_opts="default_lang: shell" /}
 
 IAM roles & policies
 ====================
@@ -13,60 +14,44 @@ Save these files: [ecs-policy.json](/files/ecs-policy.json) and
 
 Create role with policy:
 
-``` sh
-$ aws iam create-role --role-name ecsRole --assume-role-policy-document file://ecs-policy.json
-$ aws iam put-role-policy --role-name ecsRole --policy-name ecsRolePolicy --policy-document file://role-policy.json
-```
+    $ aws iam create-role --role-name ecsRole --assume-role-policy-document file://ecs-policy.json
+    $ aws iam put-role-policy --role-name ecsRole --policy-name ecsRolePolicy --policy-document file://role-policy.json
 
 Create instance profile with role:
 
-``` sh
-$ aws iam create-instance-profile --instance-profile-name webserver
-$ aws iam add-role-to-instance-profile --instance-profile-name webserver --role-name ecsRole
-```
+    $ aws iam create-instance-profile --instance-profile-name webserver
+    $ aws iam add-role-to-instance-profile --instance-profile-name webserver --role-name ecsRole
 
 Create a security group
 =======================
 
-``` sh
-$ aws ec2 create-security-group --group-name MySecurityGroup --description "My security group"
-```
+    $ aws ec2 create-security-group --group-name MySecurityGroup --description "My security group"
 
 *Note the security group id, which is needed when launching an EC2 instance.*
 
 Open ports 22 and 80:
 
-``` sh
-$ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 22 --cidr 0.0.0.0/0
-$ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 80 --cidr 0.0.0.0/0
-```
+    $ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 22 --cidr 0.0.0.0/0
+    $ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 80 --cidr 0.0.0.0/0
 
 Launch an EC2 instance in an ECS cluster
 ========================================
 
 Create a cluster:
 
-``` sh
-$ aws ecs create-cluster --cluster-name MyCluster
-```
+    $ aws ecs create-cluster --cluster-name MyCluster
 
 Create a `userdata.txt`:
 
-``` sh
-#!/bin/bash
-echo 'ECS_CLUSTER=looked' >> /etc/ecs/ecs.config
-```
+    #!/bin/bash
+    echo 'ECS_CLUSTER=looked' >> /etc/ecs/ecs.config
 
 Launch an instance inside the cluster:
 
-``` sh
-$ aws ec2 run-instances --image-id ami-0bf2da68 --count 1 --instance-type t2.micro --key-name aws-beau-sydney --iam-instance-profile Name= webserver --security-group-id sg-xxxxxx --associate-public-ip-address --user-data file://userdata.txt
-```
+    $ aws ec2 run-instances --image-id ami-0bf2da68 --count 1 --instance-type t2.micro --key-name aws-beau-sydney --iam-instance-profile Name= webserver --security-group-id sg-xxxxxx --associate-public-ip-address --user-data file://userdata.txt
 
 Register and run a task
 =======================
 
-``` sh
-$ aws ecs register-task-definition --cli-input-json file://ecs-task.json
-$ aws ecs run-task --cluster MyCluster --count 1 --task-definition web-app:1
-```
+    $ aws ecs register-task-definition --cli-input-json file://ecs-task.json
+    $ aws ecs run-task --cluster MyCluster --count 1 --task-definition web-app:1
