@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Create an ECS container instance"
+title: "Create an ECS Container Instance"
 date: 2016-07-13 20:16:39 +1000
-categories: aws
+categories: aws ecs
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
 
@@ -22,8 +22,8 @@ Create instance profile with role:
     $ aws iam create-instance-profile --instance-profile-name webserver
     $ aws iam add-role-to-instance-profile --instance-profile-name webserver --role-name ecsRole
 
-Create a security group
-=======================
+Security groups
+===============
 
     $ aws ec2 create-security-group --group-name MySecurityGroup --description "My security group"
 

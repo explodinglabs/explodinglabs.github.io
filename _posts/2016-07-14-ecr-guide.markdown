@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Create an ECR image repository"
+title: "Create an ECR Image Repository"
 date: 2016-07-14 00:54:00 +10:00
-categories: aws
+categories: aws ecr
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
 
 <div class="note">
-    Note that not all AWS regions support ECR. If like me, your default
-    region is not supported, remember to specify the region whenever using ecr
-    commands (e.g.  aws ecr --region us-west-2).
+    Not all AWS regions support ECR. If like me, your default region is not
+    supported, remember to specify the region whenever using ecr commands (e.g.
+    aws ecr --region us-west-2).
 </div>
 
 Login to the ECR registry
@@ -41,17 +41,14 @@ Then push:
 Useful commands
 ===============
 
-Delete an image
----------------
+Delete an image:
 
     $ aws ecr batch-delete-image --repository-name project/web-app --image-ids imageTag=latest
 
-Delete repository
------------------
+Delete repository:
 
     $ aws ecr delete-repository --repository-name project/web-app
 
-List images
------------
+List images:
 
     $ aws ecr list-images --repository-name project/web-app
