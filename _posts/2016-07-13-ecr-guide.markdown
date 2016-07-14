@@ -17,51 +17,37 @@ Login to the ECR registry
 Docker must be logged into the registry. The aws client can output the required
 docker command to login with.
 
-```bash
-$ aws ecr get-login
-```
+    $ aws ecr get-login
 
 Paste the output to login.
 
 Create repository
 =================
 
-```bash
-$ aws ecr create-repository --repository-name project/web-app
-```
+    $ aws ecr create-repository --repository-name project/web-app
 
 Push an image
 =============
 
 First tag it:
 
-```bash
-$ docker tag myimage aws_account_id.dkr.ecr.us-west-2.amazonaws.com/project/web-app
-```
+    $ docker tag myimage aws_account_id.dkr.ecr.us-west-2.amazonaws.com/project/web-app
 
 Then push:
 
-```bash
-$ docker push aws_account_id.dkr.ecr.us-west-2.amazonaws.com/project/web-app
-```
+    $ docker push aws_account_id.dkr.ecr.us-west-2.amazonaws.com/project/web-app
 
 Delete an image
 ===============
 
-```bash
-$ aws ecr batch-delete-image --repository-name project/web-app --image-ids imageTag=latest
-```
+    $ aws ecr batch-delete-image --repository-name project/web-app --image-ids imageTag=latest
 
 Delete repository
 =================
 
-```bash
-$ aws ecr delete-repository --repository-name project/web-app
-```
+    $ aws ecr delete-repository --repository-name project/web-app
 
 List images
 ===========
 
-```bash
-$ aws ecr list-images --repository-name project/web-app
-```
+    $ aws ecr list-images --repository-name project/web-app
