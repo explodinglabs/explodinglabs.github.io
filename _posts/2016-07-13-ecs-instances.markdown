@@ -1,13 +1,15 @@
 ---
 layout: post
-title: "Create an ECS Container Instance"
-date: 2016-07-13 20:16:39 +1000
+title: "ECS Container Instances"
 categories: aws ecs
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
 
+Create and launch a Container Instance
+======================================
+
 IAM roles & policies
-====================
+--------------------
 
 Save these files: [ecs-policy.json](/files/ecs-policy.json) and
 [role-policy.json](/files/role-policy.json).
@@ -23,7 +25,7 @@ Create instance profile with role:
     $ aws iam add-role-to-instance-profile --instance-profile-name webserver --role-name ecsRole
 
 Security groups
-===============
+---------------
 
     $ aws ec2 create-security-group --group-name MySecurityGroup --description "My security group"
 
@@ -34,17 +36,19 @@ Open ports 22 and 80:
     $ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 22 --cidr 0.0.0.0/0
     $ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 80 --cidr 0.0.0.0/0
 
-Launch an EC2 instance in an ECS cluster
-========================================
+Launch an instance
+------------------
 
-Create a cluster:
+Launch an EC2 instance in an ECS cluster.
 
-    $ aws ecs create-cluster --cluster-name MyCluster
+Create an ECS cluster:
 
-Create a `userdata.txt`:
+    $ aws ecs create-cluster --cluster-name my-cluster
+
+Create a `userdata.txt` (this gets run when the instance is created):
 
     #!/bin/bash
-    echo 'ECS_CLUSTER=looked' >> /etc/ecs/ecs.config
+    echo 'ECS_CLUSTER=my-cluster' >> /etc/ecs/ecs.config
 
 Launch an instance inside the cluster:
 

@@ -1,7 +1,6 @@
 ---
-layout: page
-title: "Create ECS Container Tasks"
-date: 2016-07-14 14:52:56 +10:00
+layout: post
+title: "ECS Container Tasks"
 categories: aws ecs
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
@@ -38,4 +37,4 @@ Register the task:
 
 Run it:
 
-    $ aws ecs run-task --cluster MyCluster --count 1 --task-definition web-app:1
+    $ aws ecs run-task --cluster my-cluster --count 1 --task-definition web-app:1

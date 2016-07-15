@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Send and receive JSON-RPC over ZeroMQ in Python"
-date: 2016-07-14 00:54:00 +10:00
 categories: python zeromq json-rpc
 ---
 {::options syntax_highlighter_opts="default_lang: python" /}

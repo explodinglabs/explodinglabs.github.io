@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Create an ECR Image Repository"
-date: 2016-07-14 00:54:00 +10:00
 categories: aws ecr
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
