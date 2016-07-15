@@ -2,9 +2,9 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    border-bottom: 3px solid $grey-color-dark;
     min-height: 56px;
+    background-color: #39f;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -200,24 +200,25 @@
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
-}
+    margin-top: $spacing-unit;
 
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
+    .post-title {
+        font-size: 42px;
+        color: $page-title-color;
 
-    @include media-query($on-laptop) {
-        font-size: 36px;
+        @include media-query($on-laptop) {
+            font-size: 36px;
+        }
     }
+
 }
 
 .post-content {
-    margin-bottom: $spacing-unit;
+    margin-top: $spacing-unit;
 
     h1 {
-        font-size: 26px;
+        margin-top: $spacing-unit;
+        font-size: $h1-size;
 
         @include media-query($on-laptop) {
             font-size: 28px;
@@ -225,18 +226,11 @@
     }
 
     h2 {
-        font-size: 20px;
+        margin-top: $spacing-unit;
+        font-size: $h2-size;
 
         @include media-query($on-laptop) {
             font-size: 22px;
-        }
-    }
-
-    h3 {
-        font-size: 16px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
         }
     }
 }

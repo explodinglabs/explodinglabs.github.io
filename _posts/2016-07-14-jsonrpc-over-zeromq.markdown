@@ -5,15 +5,26 @@ categories: python zeromq json-rpc
 ---
 {::options syntax_highlighter_opts="default_lang: python" /}
 
+* TOC
+{:toc}
+
 Server
 ======
 
-Handle incoming JSON-RPC requests on port 5555:
+The server will handle incoming JSON-RPC requests on port 5555.
+When it receives "ping", it should respond with "pong".
+
+Install requirements
+--------------------
 
 ``` shell
 $ pip install pyzmq jsonrpcserver
-$ vim server.py
 ```
+
+Write server script
+-------------------
+
+Create a `server.py`:
 
     import zmq
     from jsonrpcserver import dispatch
@@ -30,7 +41,8 @@ $ vim server.py
         response = dispatch([ping], request)
         socket.send_string(str(response))
 
-Save and run the script to start the server:
+Start the server
+----------------
 
 ``` shell
 $ python ./server.py
@@ -39,12 +51,17 @@ $ python ./server.py
 Client
 ======
 
-Send a JSON-RPC "ping" method to the server:
+Install requirements
+--------------------
 
 ``` shell
 $ pip install pyzmq jsonrpcclient
-$ python
 ```
+
+Ping the server
+---------------
+
+Send a JSON-RPC "ping" method to the server.
 
     >>> from jsonrpcclient.zmq_server import ZMQServer
     >>> ZMQServer('tcp://localhost:5555').request('ping')

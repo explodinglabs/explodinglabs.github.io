@@ -1,9 +1,7 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
 }
@@ -26,6 +24,14 @@ body {
 }
 
 
+::-webkit-scrollbar              { background-color: $code-background-color; }
+::-webkit-scrollbar-button       { }
+::-webkit-scrollbar-track        { background-color: #222; }
+::-webkit-scrollbar-track-piece  { }
+::-webkit-scrollbar-thumb        { background-color: #333; }
+::-webkit-scrollbar-corner       { }
+::-webkit-resizer                { }
+
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -34,7 +40,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: $spacing-unit/2;
 }
 
 /**
@@ -82,23 +88,25 @@ li {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
     font-weight: $base-font-weight;
+    line-height: 1;
 }
 
-
+h1 { color: $h1-color; }
+h2 { color: $h2-color; }
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
+    color: $link-color;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($link-color, 15%);
     }
 
     &:hover {
-        color: $text-color;
+        color: orange;
         text-decoration: underline;
     }
 }
@@ -128,10 +136,10 @@ blockquote {
  */
 pre,
 code {
-    font-family: 'Source Code Pro';
-    font-size: 14px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
+    font-family: $code-font-family;
+    font-size: $code-font-size;
+    border: 1px solid $code-border-color;
+    border-radius: $code-border-radius;
 }
 
 code {
@@ -139,7 +147,7 @@ code {
 }
 
 pre {
-    padding: 8px 12px;
+    padding: $spacing-unit/3 $spacing-unit/2;
     overflow-x: auto;
 
     > code {
@@ -205,9 +213,11 @@ pre {
 }
 
 .note {
-    padding: 8px 12px;
-    background-color: #ffe;
-    margin-bottom: $spacing_unit;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
+    padding: $spacing-unit/3 0 $spacing-unit/3 $spacing-unit/2;
+    background-color: #333;
+    border-left: 1em solid #66f;
+    h5 {
+        font-size: 1.2em;
+        color: #66f;
+    }
 }
