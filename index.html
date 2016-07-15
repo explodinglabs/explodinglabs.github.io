@@ -4,34 +4,17 @@ layout: default
 
 <div id="home">
 
-    <h1>Amazon Web Services</h1>
+    {% for collection in site.collections %}
+    {% unless collection.label == 'posts' %}
+    <h1>{{ collection.title }}</h1>
     <ul>
-    {% for page in site.amazon %}
-        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-    {% endfor %}
-    </ul>
-
-    <h1>JSON-RPC</h1>
-    <ul>
-    {% for page in site.json-rpc %}
-        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-    {% endfor %}
-    </ul>
-
-    <!--h1 class="page-heading">Posts</h1>
-
-    <ul class="post-list">
-        {% for post in site.posts %}
+        {% for page in collection.docs %}
         <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-            <h2>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
+            <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         </li>
         {% endfor %}
     </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p-->
+    {% endunless %}
+    {% endfor %}
 
 </div>
