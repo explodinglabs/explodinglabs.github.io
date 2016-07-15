@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "JSON-RPC over ZeroMQ in Python"
-permalink: /json-rpc/python/zeromq
+permalink: /python/jsonrpc/zeromq
 ---
 {::options syntax_highlighter_opts="default_lang: python" /}
 
@@ -61,7 +61,7 @@ $ pip install pyzmq jsonrpcclient
 Ping the server
 ---------------
 
-Send a JSON-RPC "ping" method to the server.
+Send a JSON-RPC "ping" method to the server:
 
     >>> from jsonrpcclient.zmq_server import ZMQServer
     >>> ZMQServer('tcp://localhost:5555').request('ping')
