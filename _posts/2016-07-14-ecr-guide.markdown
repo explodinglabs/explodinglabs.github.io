@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create an ECR Image Repository"
+title: "ECR Image Repositories"
 categories: aws ecr
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
