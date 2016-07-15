@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "JSON-RPC over ZeroMQ in Python"
-permalink: /python/jsonrpc/zeromq
+permalink: /python/zeromq/jsonrpc
 ---
 {::options syntax_highlighter_opts="default_lang: python" /}
 

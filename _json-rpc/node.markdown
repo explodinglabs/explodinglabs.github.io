@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "JSON-RPC over HTTP in Node"
-permalink: /python/jsonrpc/node
+permalink: /node/express/jsonrpc
 ---
 {::options syntax_highlighter_opts="default_lang: javascript" /}
 
