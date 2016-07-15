@@ -1,0 +1,41 @@
+---
+layout: page
+title: "Create ECS Container Tasks"
+date: 2016-07-14 14:52:56 +10:00
+categories: aws ecs
+---
+{::options syntax_highlighter_opts="default_lang: shell" /}
+
+Tasks
+=====
+
+Describe your task in a *Task Definition* file, which I named `ecs-task.json`:
+
+```json
+{
+  "family": "web-app",
+  "containerDefinitions": [
+    {
+      "image": "project/web-app:latest",
+      "name": "web-app",
+      "memory": 10,
+      "cpu": 10,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80
+        }
+      ],
+      "essential": true
+    }
+  ]
+}
+```
+
+Register the task:
+
+    $ aws ecs register-task-definition --cli-input-json file://ecs-task.json
+
+Run it:
+
+    $ aws ecs run-task --cluster MyCluster --count 1 --task-definition web-app:1
