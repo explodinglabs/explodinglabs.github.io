@@ -5,6 +5,10 @@ permalink: /python/jsonrpc/node
 ---
 {::options syntax_highlighter_opts="default_lang: javascript" /}
 
+<div style="float: right" markdown="1">
+![nodejs](/assets/nodejs.png)
+</div>
+
 * TOC
 {:toc}
 
@@ -55,7 +59,7 @@ Start the server
 ----------------
 
 ``` shell
-$ node ./server.py
+$ node server.js
 ```
 
 Client
