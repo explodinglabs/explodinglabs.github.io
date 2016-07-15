@@ -2,8 +2,8 @@
  * Site header
  */
 .site-header {
-    border-bottom: 3px solid $grey-color-dark;
     background-color: #39f;
+    border-bottom: 1px solid $grey-color-dark;
     margin-bottom: $spacing-unit * 2;
     @include media-query($on-palm) {
         margin-bottom: $spacing-unit;
@@ -11,7 +11,8 @@
 }
 
 .site-title {
-    font-size: 26px;
+    width: 100%;
+    font-size: 20px;
     font-weight: 300;
     letter-spacing: -1px;
     float: left;
@@ -24,87 +25,6 @@
 
 .site-nav {
     display: none;
-    float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
-    }
-}
-
-
-
-/**
- * Site footer
- */
-.site-footer {
-    width: 30%;
-    margin: $spacing-unit auto;
-    padding-top: 1em;
-    text-align: center;
-    font-size: 0.8em;
-    a {
-        color: darken($grey-color-light, 30%);
-    }
 }
 
 
@@ -162,7 +82,6 @@
         font-size: $h1-size;
         color: $h1-color;
 
-
         @include media-query($on-laptop) {
             font-size: 28px;
         }
@@ -177,5 +96,25 @@
         @include media-query($on-laptop) {
             font-size: 22px;
         }
+    }
+}
+
+#home {
+    ul {
+        list-style-type: none;
+        margin: 0 0 $spacing-unit;
+        padding: 0;
+    }
+}
+
+/**
+ * Site footer
+ */
+.site-footer {
+    margin-top: $spacing-unit;
+    margin-bottom: $spacing-unit;
+    font-size: 0.8em;
+    a {
+        color: darken($grey-color-light, 50%);
     }
 }
