@@ -4,7 +4,7 @@
 .site-header {
     background-color: #39f;
     border-bottom: 1px solid $grey-color-dark;
-    margin-bottom: $spacing-unit * 2;
+    margin-bottom: $spacing-unit*1.5;
     @include media-query($on-palm) {
         margin-bottom: $spacing-unit;
     }
@@ -67,6 +67,8 @@
     .post-title {
         font-size: 42px;
         color: $page-title-color;
+        margin-bottom: $spacing-unit;
+        letter-spacing: -1px;
 
         @include media-query($on-laptop) {
             font-size: 36px;
@@ -111,7 +113,7 @@
  * Site footer
  */
 .site-footer {
-    margin-top: $spacing-unit;
+    margin-top: $spacing-unit/2;
     margin-bottom: $spacing-unit;
     font-size: 0.8em;
     a {
