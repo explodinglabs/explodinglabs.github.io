@@ -21,6 +21,11 @@ highlighter: rouge
 
 collections:
     amazon:
+        title: Amazon Web Services
         output: true
-    json-rpc:
+    python:
+        title: Python
+        output: true
+    node:
+        title: Node.js
         output: true
