@@ -1,9 +1,13 @@
 ---
-layout: post
+layout: page
 title: "Amazon ECS"
-categories: aws ecs
+permalink: /amazon/ecs
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
+
+<div style="float: right" markdown="1">
+![aws](/assets/aws.png)
+</div>
 
 Amazon ECS is a highly scalable, fast, container management service that makes
 it easy to run, stop, and manage Docker containers on a cluster of EC2

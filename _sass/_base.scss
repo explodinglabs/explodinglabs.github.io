@@ -91,19 +91,12 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
 }
 
-h1 { color: $h1-color; }
-h2 { color: $h2-color; }
-
 /**
  * Links
  */
 a {
     color: $link-color;
     text-decoration: none;
-
-    &:visited {
-        color: darken($link-color, 15%);
-    }
 
     &:hover {
         color: orange;

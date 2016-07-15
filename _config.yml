@@ -18,3 +18,9 @@ github_username: bcb
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+collections:
+    amazon:
+        output: true
+    json-rpc:
+        output: true

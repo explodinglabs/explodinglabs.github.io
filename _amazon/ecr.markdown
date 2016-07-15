@@ -1,18 +1,22 @@
 ---
-layout: post
+layout: page
 title: "Amazon ECR"
-categories: aws ecr
+permalink: /amazon/ecr
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
+
+<div style="float: right" markdown="1">
+![aws](/assets/aws.png)
+</div>
 
 Amazon ECR is a Docker container registry that makes it easy for developers to
 store, manage, and deploy Docker container images.
 
 <div class="note">
     <h5>Important</h5>
-    <p>Not all AWS regions support ECR. If like me, your default region is not
+    Not all AWS regions support ECR. If like me, your default region is not
     supported, remember to specify the region whenever using ECR commands (e.g.
-    aws ecr --region us-west-2).</p>
+    aws ecr --region us-west-2).
 </div>
 
 Login to the ECR
