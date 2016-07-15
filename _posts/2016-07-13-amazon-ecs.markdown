@@ -1,17 +1,27 @@
 ---
 layout: post
-title: "ECS Container Instances"
+title: "Amazon ECS"
 categories: aws ecs
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
 
-Launch a Container Instance
-===========================
+Amazon ECS is a highly scalable, fast, container management service that makes
+it easy to run, stop, and manage Docker containers on a cluster of EC2
+instances.
+
+* TOC
+{:toc}
+
+Container Instance
+==================
+
+An ECS container instance is an EC2 instance that is running the ECS container
+agent, and has been registered into an ECS cluster.
 
 IAM roles & policies
 --------------------
 
-Create an ECS policy file, which I called `ecs-policy.json`:
+Create an ECS policy file, which I named `ecs-policy.json`:
 
 ```json
 {
@@ -33,7 +43,7 @@ Create role with policy:
 
     $ aws iam create-role --role-name ecsRole --assume-role-policy-document file://ecs-policy.json
 
-Create a role policy file, which I called `role-policy.json`:
+Create a role policy file, which I named `role-policy.json`:
 
 ```json
 {
@@ -57,9 +67,7 @@ Create a role policy file, which I called `role-policy.json`:
         "ecs:StartTask",
         "ecs:StartTelemetrySession",
         "ecs:SubmitContainerStateChange",
-        "ecs:SubmitTaskStateChange",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
+        "ecs:SubmitTaskStateChange"
       ],
       "Resource": [
         "*"
