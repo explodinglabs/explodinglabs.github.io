@@ -19,8 +19,8 @@ store, manage, and deploy Docker container images.
     aws ecr --region us-west-2).
 </div>
 
-Login to the ECR
-================
+Login
+=====
 
 Docker needs to be logged into the registry. The aws client can output the
 required docker command to login with.
