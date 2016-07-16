@@ -11,11 +11,10 @@ Server
 
 The server should handle incoming JSON-RPC requests on port 5000.
 
-Install requirements
+Install dependencies
 --------------------
 
-Install the [libzmq](https://github.com/zeromq/libzmq) and
-[czmq](https://github.com/zeromq/czmq) libraries.
+Install the [czmq](https://github.com/zeromq/czmq) library.
 
 Write server script
 -------------------
@@ -44,18 +43,12 @@ Build and start the server
 --------------------------
 
 ```shell
-$ gcc -lzmq -lczmq server.c -o server
+$ gcc -lczmq server.c -o server
 $ ./server
 ```
 
 Client
 ======
-
-Install requirements
---------------------
-
-Install the [libzmq](https://github.com/zeromq/libzmq) and
-[czmq](https://github.com/zeromq/czmq) libraries.
 
 Write client script
 -------------------
@@ -82,7 +75,7 @@ Build and run
 -------------
 
 ```shell
-$ gcc -lzmq -lczmq client.c -o client
+$ gcc -lczmq client.c -o client
 $ ./client
-'pong'
+Pong
 ```
