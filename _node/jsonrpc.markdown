@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "JSON-RPC in Node"
+title: "JSON-RPC in Node with Express"
 permalink: /node/express/jsonrpc
 ---
 {::options syntax_highlighter_opts="default_lang: javascript" /}
