@@ -29,3 +29,6 @@ collections:
     node:
         title: Node.js
         output: true
+    c:
+        title: C
+        output: true
