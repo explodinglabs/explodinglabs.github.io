@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Amazon ECR"
-permalink: /amazon/ecr
+title: "Create an ECR Container Repository and push a Docker image"
+permalink: /aws/ecr
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
 
@@ -9,8 +9,8 @@ permalink: /amazon/ecr
 ![aws](/assets/aws.png)
 </div>
 
-Amazon ECR is a Docker container registry that makes it easy for developers to
-store, manage, and deploy Docker container images.
+ECR is a Docker container registry that makes it easy for developers to store,
+manage, and deploy Docker container images.
 
 <div class="note">
     <h5>Important</h5>
@@ -18,16 +18,6 @@ store, manage, and deploy Docker container images.
     supported, remember to specify the region whenever using ECR commands (e.g.
     aws ecr --region us-west-2).
 </div>
-
-Login
-=====
-
-Docker needs to be logged into the registry. The aws client can output the
-required docker command to login with.
-
-    aws ecr get-login
-
-Paste the output to login.
 
 Repositories
 ============
@@ -45,10 +35,20 @@ Delete repository
 Images
 ======
 
+Login
+-----
+
+Docker needs to be logged into the registry. The aws client can output the
+required docker command to login with.
+
+    aws ecr get-login
+
+Paste the output to login.
+
 Push an image
 -------------
 
-First tag it:
+First tag it with your ECR repository address:
 
     docker tag myimage aws_account_id.dkr.ecr.us-west-2.amazonaws.com/project/web-app
 

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Amazon ECS"
-permalink: /amazon/ecs
+title: "Create an ECS Container Instance and run a task"
+permalink: /aws/ecs
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
 

@@ -20,7 +20,7 @@ markdown: kramdown
 highlighter: rouge
 
 collections:
-    amazon:
+    aws:
         title: Amazon Web Services
         output: true
     python:
