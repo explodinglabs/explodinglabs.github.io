@@ -82,7 +82,7 @@ Build and run
 -------------
 
 ```shell
-$ gcc -lczmq -lzmq client.c -o client
+$ gcc -lzmq -lczmq client.c -o client
 $ ./client
 'pong'
 ```
