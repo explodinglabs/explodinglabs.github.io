@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "JSON-RPC over HTTP in Python with Flask"
+title: "JSON-RPC in Python with Flask"
 permalink: /python/flask/jsonrpc
 ---
 <div style="float: right" markdown="1">

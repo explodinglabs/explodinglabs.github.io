@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "JSON-RPC over HTTP in Python with Werkzeug"
+title: "JSON-RPC in Python with Werkzeug"
 permalink: /python/werkzeug/jsonrpc
 ---
 {::options syntax_highlighter_opts="default_lang: python" /}
