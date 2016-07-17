@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Create an ECS Container Instance and run a task"
+title: "Launch an ECS Container Instance and run a Container"
 permalink: /aws/ecs
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
