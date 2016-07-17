@@ -12,8 +12,8 @@ permalink: /aws/elasticbeanstalk
 Elastic Beanstalk is a service for deploying and scaling web applications. Here
 we'll put a Docker application online.
 
-Application
-===========
+Create an Application on AWS
+============================
 
 Create an application
 ---------------------
@@ -35,7 +35,7 @@ List applications
         ]
     }
 
-Delete an application
----------------------
+Delete the Application from AWS
+===============================
 
     $ aws elasticbeanstalk delete-application --repository-name web-app
