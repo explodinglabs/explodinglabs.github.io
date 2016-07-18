@@ -126,7 +126,7 @@ Create a `userdata.txt` (this gets run when the instance is created):
 
 Launch an instance inside the cluster:
 
-    aws ec2 run-instances --image-id ami-0bf2da68 --count 1 --instance-type t2.micro --key-name aws-beau-sydney --iam-instance-profile Name= webserver --security-group-id sg-xxxxxx --associate-public-ip-address --user-data file://userdata.txt
+    aws ec2 run-instances --count 1 --image-id ami-0bf2da68 --instance-type t2.micro --key-name aws-beau-sydney --iam-instance-profile Name= webserver --security-group-id sg-xxxxxx --associate-public-ip-address --user-data file://userdata.txt
 
 Now you can run tasks and services on the instance.
 
