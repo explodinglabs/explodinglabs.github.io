@@ -93,14 +93,13 @@ Create instance profile with role:
 Security groups
 ---------------
 
+Create a security group with ports 22 and 80 open:
+
     aws ec2 create-security-group --group-name MySecurityGroup --description "My security group"
-
-*Note the security group id, which is needed when launching an EC2 instance.*
-
-Open ports 22 and 80:
-
     aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 22 --cidr 0.0.0.0/0
     aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 80 --cidr 0.0.0.0/0
+
+*Note the security group id, which is needed when launching an EC2 instance.*
 
 Launch an instance
 ------------------
@@ -170,6 +169,7 @@ Deregister a task
 
     aws ecs deregister-task-definition --task-definition web-app:1
 
+{% comment %}
 Services
 ========
 
@@ -203,3 +203,4 @@ Delete a service
 (You'll need to stop the tasks first)
 
     aws ecs delete-service --cluster my-cluster --service web-app
+{% endcomment %}
