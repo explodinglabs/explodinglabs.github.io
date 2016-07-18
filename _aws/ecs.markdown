@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: post
 title: "Launch an ECS Container Instance and run a Container"
+date: 2016-07-13
 permalink: /aws/ecs
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
@@ -13,39 +14,21 @@ Amazon ECS is a highly scalable, fast, container management service that makes
 it easy to run, stop, and manage Docker containers on a cluster of EC2
 instances.
 
+An ECS Container Instance is an EC2 instance that is running the ECS container
+agent, and has been registered into an ECS cluster.
+
 * TOC
 {:toc}
 
-Container Instances
-===================
+Create an Instance Profile
+==========================
 
-An ECS container instance is an EC2 instance that is running the ECS container
-agent, and has been registered into an ECS cluster.
+First we need to create an instance profile.
 
-IAM roles & policies
---------------------
+And before that, setup the roles for it.
 
-Create an ECS policy file, which I named `ecs-policy.json`:
-
-```json
-{
-  "Version": "2015-07-13",
-  "Statement": [
-    {
-      "Sid": "",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-```
-
-Create role with policy:
-
-    aws iam create-role --role-name ecsRole --assume-role-policy-document file://ecs-policy.json
+Create a role for the profile
+-----------------------------
 
 Create a role policy file, which I named `role-policy.json`:
 
@@ -55,7 +38,11 @@ Create a role policy file, which I named `role-policy.json`:
   "Statement": [
     {
       "Effect": "Allow",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
       "Action": [
+        "sts:AssumeRole",
         "ecr:BatchCheckLayerAvailability",
         "ecr:BatchGetImage",
         "ecr:DescribeRepositories",
@@ -81,31 +68,36 @@ Create a role policy file, which I named `role-policy.json`:
 }
 ```
 
-Create the role policy:
+Create a role with the policy:
 
-    aws iam put-role-policy --role-name ecsRole --policy-name ecsRolePolicy --policy-document file://role-policy.json
+    aws iam create-role --role-name ecsRole --assume-role-policy-document file://role-policy.json
 
-Create instance profile with role:
+Create the profile
+------------------
+
+Finally, create the instance profile with the new role:
 
     aws iam create-instance-profile --instance-profile-name webserver
     aws iam add-role-to-instance-profile --instance-profile-name webserver --role-name ecsRole
 
-Security groups
----------------
+Launch an EC2 Instance
+======================
 
-    aws ec2 create-security-group --group-name MySecurityGroup --description "My security group"
-
-*Note the security group id, which is needed when launching an EC2 instance.*
+Create a security group for the Instance
+----------------------------------------
 
 Open ports 22 and 80:
 
+    aws ec2 create-security-group --group-name MySecurityGroup
     aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 22 --cidr 0.0.0.0/0
     aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 80 --cidr 0.0.0.0/0
+
+*Note the security group id, which is needed when launching an EC2 instance.*
 
 Launch an instance
 ------------------
 
-Launch an EC2 instance in an ECS cluster.
+We'll be launching an EC2 instance in an ECS cluster.
 
 Create an ECS cluster:
 
@@ -122,8 +114,8 @@ Launch an instance inside the cluster:
 
 Now you can run tasks and services on the instance.
 
-Tasks
-=====
+Start a container
+=================
 
 Register a task
 ---------------
@@ -155,18 +147,16 @@ Register it:
 
     aws ecs register-task-definition --cli-input-json file://ecs-task.json
 
-Run a task
-----------
-
-    aws ecs run-task --cluster my-cluster --count 1 --task-definition web-app:1
-
-List tasks
-----------
+List tasks:
 
     aws ecs list-tasks --cluster my-cluster
 
-Deregister a task
------------------
+Run the task
+------------
+
+    aws ecs run-task --cluster my-cluster --count 1 --task-definition web-app:1
+
+To deregister a task:
 
     aws ecs deregister-task-definition --task-definition web-app:1
 
