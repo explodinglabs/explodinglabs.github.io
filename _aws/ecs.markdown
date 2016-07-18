@@ -160,6 +160,7 @@ To deregister a task:
 
     aws ecs deregister-task-definition --task-definition web-app:1
 
+{% comment %}
 Services
 ========
 
@@ -193,3 +194,4 @@ Delete a service
 (You'll need to stop the tasks first)
 
     aws ecs delete-service --cluster my-cluster --service web-app
+{% endcomment %}
