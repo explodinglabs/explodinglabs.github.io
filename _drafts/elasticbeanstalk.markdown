@@ -38,4 +38,4 @@ List applications
 Delete the Application from AWS
 ===============================
 
-    $ aws elasticbeanstalk delete-application --repository-name web-app
+    $ aws elasticbeanstalk delete-application --application-name web-app
