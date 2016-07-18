@@ -83,13 +83,13 @@ The second I named `role-policy.json`:
 }
 ```
 
-Create a role with the policy:
+Create a role with the two policies:
 
     aws iam create-role --role-name ecsRole --assume-role-policy-document file://ecs-policy.json
     aws iam put-role-policy --role-name ecsRole --policy-name ecsRolePolicy  --policy-document file://role-policy.json
 
-Create the profile
-------------------
+Create the instance profile
+---------------------------
 
 Finally, create the instance profile with the new role:
 
