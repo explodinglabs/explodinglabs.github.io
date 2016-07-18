@@ -23,26 +23,41 @@ agent, and has been registered into an ECS cluster.
 Create an Instance Profile
 ==========================
 
-First we need to create an instance profile.
+First we need to create an instance profile for the instance.
 
-And before that, setup the roles for it.
+And before that, setup the roles for the profile.
 
 Create a role for the profile
 -----------------------------
 
-Create a role policy file, which I named `role-policy.json`:
+Create two role policy files.
+
+The first I named `ecs-policy.json`:
 
 ```json
 {
-  "Version": "2015-07-13",
+  "Version": "2016-07-13",
   "Statement": [
     {
       "Effect": "Allow",
       "Principal": {
         "Service": "ec2.amazonaws.com"
       },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+```
+
+The second I named `role-policy.json`:
+
+```json
+{
+  "Version": "2016-07-13",
+  "Statement": [
+    {
+      "Effect": "Allow",
       "Action": [
-        "sts:AssumeRole",
         "ecr:BatchCheckLayerAvailability",
         "ecr:BatchGetImage",
         "ecr:DescribeRepositories",
@@ -70,7 +85,8 @@ Create a role policy file, which I named `role-policy.json`:
 
 Create a role with the policy:
 
-    aws iam create-role --role-name ecsRole --assume-role-policy-document file://role-policy.json
+    aws iam create-role --role-name ecsRole --assume-role-policy-document file://ecs-policy.json
+    aws iam put-role-policy --role-name ecsRole --policy-name ecsRolePolicy  --policy-document file://role-policy.json
 
 Create the profile
 ------------------
