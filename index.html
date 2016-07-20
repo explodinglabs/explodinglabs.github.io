@@ -4,9 +4,20 @@ layout: default
 
 <div id="home">
 
+    <h1>Recent posts</h1>
+
+    <ul>
+    {% for post in site.posts %}
+        <span class="post-meta">{{ post.date || date: "%b %-d, %Y" }}</span>
+        <li>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+
     {% for collection in site.collections %}
     {% unless collection.label == 'posts' %}
-    <h1>{{ collection.title }}</h1>
+    <h2>{{ collection.title }}</h2>
     <ul>
         {% for page in collection.docs %}
         <li>
