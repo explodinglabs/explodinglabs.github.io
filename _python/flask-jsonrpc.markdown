@@ -15,7 +15,7 @@ Server
 
 The server should handle incoming JSON-RPC requests on port 5000.
 
-Install requirements
+Install dependencies
 --------------------
 
 ```shell
@@ -33,19 +33,16 @@ from jsonrpcserver import dispatch
 
 app = Flask(__name__)
 
-def square(x):
-    return x * x
+def speak():
+    return 'meow'
 
-def cube(x):
-    return x * x * x
-
-@app.route('/api', methods=['POST'])
+@app.route('/cat', methods=['POST'])
 def index():
-    r = dispatch([square, cube], request.get_data().decode('utf-8'))
+    r = dispatch([speak], request.get_data().decode('utf-8'))
     return Response(str(r), r.http_status, mimetype='application/json')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 ```
 
 Start the server
@@ -58,23 +55,21 @@ $ python server.py
 Client
 ======
 
-Install requirements
+Install dependencies
 --------------------
 
 ```shell
 $ pip install requests jsonrpcclient
 ```
 
-Call the methods
--------------
+Send request
+------------
 
-Send JSON-RPC "square" and "cube" requests:
+Send a JSON-RPC "speak" request:
 
 ```python
 >>> from jsonrpcclient.http_server import HTTPServer
->>> s = HTTPServer('http://localhost:5000/api')
->>> s.request('square', 3)
-9
->>> s.request('cube', 3)
-27
+>>> s = HTTPServer('http://localhost:5000/cat')
+>>> s.request('speak')
+'meow'
 ```
