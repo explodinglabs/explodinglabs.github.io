@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ImportError: cannot import name HTTPSHandler"
+title: "ImportError cannot import name HTTPSHandler"
 date: 2016-07-22
 permalink: /importerror-httpshandler
 ---
