@@ -48,9 +48,9 @@ Test results:
     Aborting...
     The build failed.
 
-Easiest way to get it installed was to skip the tests.
+Easiest fix was to skip the tests:
 
-    # pacman -S packer33
+    # packer -S packer33
 
-When packer asked to edit the PKGBUILD I said yes, and removed the check()
+When packer asked to edit the PKGBUILD I said yes, and removed the `check()`
 function in which the tests were running.
