@@ -27,7 +27,7 @@ Create a `server.c`:
 
 int main(void) {
     // Connect
-    zsock_t *responder = zsock_new_rep("tcp://*:5555");
+    zsock_t *responder = zsock_new_rep("tcp://*:5000");
     // Recv
     char *string = zstr_recv(responder);
     puts(string);
@@ -59,7 +59,7 @@ Write client script
 
 int main(void) {
     // Connect
-    zsock_t *requester = zsock_new_req("tcp://127.0.0.1:5555");
+    zsock_t *requester = zsock_new_req("tcp://127.0.0.1:5000");
     // Send
     zstr_send(requester, "Ping");
     // Recv
