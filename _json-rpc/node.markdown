@@ -9,7 +9,7 @@ comments: true
 ![nodejs](/assets/nodejs.png)
 </div>
 
-We'll build an HTTP server in Node to handle JSON-RPC requests on port 5000.
+We'll build an HTTP server in Node, taking JSON-RPC requests on port 5000.
 
 - When it receives a "speak" request on `/api/cats`, it should respond with "meow".
 - When it receives a "speak" request on `/api/dogs`, it should respond with "woof".

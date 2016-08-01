@@ -9,8 +9,8 @@ comments: true
 ![flask](/assets/flask.png)
 </div>
 
-We'll build an HTTP server in Python. It should take JSON-RPC requests on port
-5000, responding to "speak" with "meow".
+We'll build an HTTP server in Python, taking JSON-RPC requests on port 5000.
+It should respond to "speak" with "meow".
 
 * TOC
 {:toc}

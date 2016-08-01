@@ -9,8 +9,8 @@ comments: true
 ![werkzeug](/assets/werkzeug.png)
 </div>
 
-We'll build an HTTP server in Python. It should take JSON-RPC requests on port
-5000, squaring or cubing numbers.
+We'll build an HTTP server in Python, taking JSON-RPC requests on port
+5000. It should respond to requests by squaring or cubing a given number.
 
 * TOC
 {:toc}
