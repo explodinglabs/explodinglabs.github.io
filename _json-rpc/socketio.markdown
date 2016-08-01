@@ -30,7 +30,7 @@ Create a `server.py`:
 ```python
 import logging
 from flask import Flask
-from flask_socketio import SocketIO, send
+from flask_socketio import SocketIO
 from jsonrpcserver import dispatch
 
 logging.getLogger('jsonrpcserver').setLevel(logging.INFO)
