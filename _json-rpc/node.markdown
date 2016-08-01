@@ -2,7 +2,7 @@
 layout: post
 title: "JSON-RPC in Node with Express"
 date: 2016-08-01
-permalink: /node/express/jsonrpc
+permalink: /jsonrpc/node
 comments: true
 ---
 <div style="float: right" markdown="1">

@@ -2,7 +2,7 @@
 layout: post
 title: "JSON-RPC in Python with Werkzeug"
 date: 2016-08-01
-permalink: /python/werkzeug/jsonrpc
+permalink: /jsonrpc/werkzeug
 comments: true
 ---
 <div style="float: right" markdown="1">

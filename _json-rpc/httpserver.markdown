@@ -2,7 +2,7 @@
 layout: post
 title: "JSON-RPC in Python with HTTPServer"
 date: 2016-08-01
-permalink: /python/httpserver/jsonrpc
+permalink: /jsonrpc/httpserver
 ---
 <div style="float: right" markdown="1">
 ![python](/assets/python.png)
