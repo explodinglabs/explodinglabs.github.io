@@ -8,8 +8,8 @@ layout: default
         <p class="post-meta">
             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
             • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.author }}</span></span>
-            {% include icon-github.html username=site.github_username %}
             {% include icon-twitter.html username=site.twitter_username %}
+            {% include icon-github.html username=site.github_username %}
         </p>
     </header>
 

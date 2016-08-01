@@ -3,7 +3,7 @@
  */
 .site-header {
     background-color: #39f;
-    border-bottom: 1px solid $grey-color-dark;
+    border-bottom: 1px solid $grey-dark;
     margin-bottom: $spacing-unit*1.5;
     @include media-query($on-palm) {
         margin-bottom: $spacing-unit;
@@ -49,10 +49,12 @@
 
 .post-meta {
     font-size: $small-font-size;
-    color: $grey-color;
+    padding: 2px 1em;
+    background-color: $grey-dark;
+    margin-bottom: $spacing-unit;
+    color: $yellow-light;
     a {
-        color: $grey-color;
-        text-decoration: underline;
+        color: $yellow-light;
     }
 }
 
