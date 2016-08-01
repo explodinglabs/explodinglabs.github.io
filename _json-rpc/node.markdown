@@ -5,11 +5,14 @@ date: 2016-08-01
 permalink: /node/express/jsonrpc
 comments: true
 ---
-{::options syntax_highlighter_opts="default_lang: javascript" /}
-
 <div style="float: right" markdown="1">
 ![nodejs](/assets/nodejs.png)
 </div>
+
+We'll build an HTTP server in Node to handle JSON-RPC requests on port 5000.
+
+- When it receives a "speak" request on `/api/cats`, it should respond with "meow".
+- When it receives a "speak" request on `/api/dogs`, it should respond with "woof".
 
 * TOC
 {:toc}
@@ -17,12 +20,7 @@ comments: true
 Server
 ======
 
-The server should handle incoming JSON-RPC requests on port 5000.
-
-- When it receives a "speak" request on `/api/cats`, it should respond with "meow".
-- When it receives a "speak" request on `/api/dogs`, it should respond with "woof".
-
-Install requirements
+Install dependencies
 --------------------
 
 ``` shell
@@ -34,28 +32,30 @@ Write server script
 
 Create a `server.js`:
 
-    var express = require('express');
-    var bodyParser = require('body-parser');
-    var jayson = require('jayson');
+```javascript
+var express = require('express');
+var bodyParser = require('body-parser');
+var jayson = require('jayson');
 
-    var cats = {
-        speak: function(callback) {
-            callback(null, 'meow');
-        }
+var cats = {
+    speak: function(callback) {
+        callback(null, 'meow');
     }
+}
 
-    var dogs = {
-        speak: function(callback) {
-            callback(null, 'woof');
-        }
+var dogs = {
+    speak: function(callback) {
+        callback(null, 'woof');
     }
+}
 
-    var app = express();
-    app.use(bodyParser.urlencoded({extended: true}));
-    app.use(bodyParser.json());
-    app.post('/api/cats', jayson.server(cats).middleware());
-    app.post('/api/dogs', jayson.server(dogs).middleware());
-    app.listen(5000);
+var app = express();
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.post('/api/cats', jayson.server(cats).middleware());
+app.post('/api/dogs', jayson.server(dogs).middleware());
+app.listen(5000);
+```
 
 Start the server
 ----------------

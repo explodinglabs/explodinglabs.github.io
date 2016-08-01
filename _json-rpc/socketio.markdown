@@ -5,9 +5,8 @@ date: 2016-08-01
 permalink: /python/flask-socketio/jsonrpc
 comments: true
 ---
-
-How to create a socket.io server to handle JSON-RPC requests on port
-5000. The server should respond with "pong" when it receives "ping".
+We'll build a socket.io server in Python to handle JSON-RPC requests on port
+5000. It should respond to "ping" with "pong".
 
 * TOC
 {:toc}

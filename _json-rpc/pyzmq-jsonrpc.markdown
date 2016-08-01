@@ -7,16 +7,16 @@ comments: true
 ---
 {::options syntax_highlighter_opts="default_lang: python" /}
 
+We'll build a [ZeroMQ](http://zeromq.org) server in Python to process JSON-RPC
+requests on port 5000. It should respond to "ping" with "pong".
+
 * TOC
 {:toc}
 
 Server
 ======
 
-The server will handle incoming JSON-RPC requests on port 5000.
-When it receives "ping", it should respond with "pong".
-
-Install requirements
+Install dependencies
 --------------------
 
 ``` shell
@@ -53,7 +53,7 @@ $ python ./server.py
 Client
 ======
 
-Install requirements
+Install dependencies
 --------------------
 
 ``` shell

@@ -8,8 +8,9 @@ permalink: /python/httpserver/jsonrpc
 ![python](/assets/python.png)
 </div>
 
-How to start a HTTP server to handle JSON-RPC requests. We'll use Python's
-built-in http.server module, so we won't need any other web framework.
+We'll build an HTTP server in Python to handle JSON-RPC requests on port 5000.
+We'll use Python's built-in http.server module, so we won't need any other web
+framework. It should respond to "ping" with "pong".
 
 * TOC
 {:toc}
@@ -37,8 +38,6 @@ import logging
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from jsonrpcserver import dispatch
 
-ADDRESS=('localhost', 5000)
-
 def speak():
     return 'meow'
 
@@ -57,7 +56,7 @@ class TestHttpServer(BaseHTTPRequestHandler):
 if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
     logging.debug('Listening on port %s', ADDRESS[1])
-    HTTPServer(ADDRESS, TestHttpServer).serve_forever()
+    HTTPServer(('localhost', 5000), TestHttpServer).serve_forever()
 ```
 
 Start the server
