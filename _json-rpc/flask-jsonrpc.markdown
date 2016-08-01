@@ -2,7 +2,7 @@
 layout: post
 title: "JSON-RPC in Python with Flask"
 date: 2016-08-01
-permalink: /json-rpc/flask
+permalink: /jsonrpc/flask
 comments: true
 ---
 <div style="float: right" markdown="1">
