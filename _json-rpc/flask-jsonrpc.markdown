@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: post
 title: "JSON-RPC in Python with Flask"
+date: 2016-08-01
 permalink: /python/flask/jsonrpc
+comments: true
 ---
 <div style="float: right" markdown="1">
 ![flask](/assets/flask.png)

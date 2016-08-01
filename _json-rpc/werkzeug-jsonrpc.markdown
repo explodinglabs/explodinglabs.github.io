@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: post
 title: "JSON-RPC in Python with Werkzeug"
+date: 2016-08-01
 permalink: /python/werkzeug/jsonrpc
+comments: true
 ---
 {::options syntax_highlighter_opts="default_lang: python" /}
 

@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: post
 title: "JSON-RPC in Node with Express"
+date: 2016-08-01
 permalink: /node/express/jsonrpc
+comments: true
 ---
 {::options syntax_highlighter_opts="default_lang: javascript" /}
 

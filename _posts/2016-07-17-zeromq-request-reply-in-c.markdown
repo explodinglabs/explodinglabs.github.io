@@ -3,6 +3,7 @@ layout: post
 title: "ZeroMQ Request/Reply in C"
 date: 2016-07-17
 permalink: /c/zeromq/request-reply
+comments: true
 ---
 * TOC
 {:toc}

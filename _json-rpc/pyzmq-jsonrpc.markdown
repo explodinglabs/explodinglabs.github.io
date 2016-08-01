@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: post
 title: "JSON-RPC over ZeroMQ in Python with PyZMQ"
+date: 2016-08-01
 permalink: /python/pyzmq/jsonrpc
+comments: true
 ---
 {::options syntax_highlighter_opts="default_lang: python" /}
 

@@ -3,6 +3,7 @@ layout: post
 title: "JSON-RPC over Socket.io in Python with Flask-SocketIO"
 date: 2016-08-01
 permalink: /python/flask-socketio/jsonrpc
+comments: true
 ---
 
 How to create a socket.io server to handle JSON-RPC requests on port
