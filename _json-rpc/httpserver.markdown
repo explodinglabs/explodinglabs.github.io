@@ -8,9 +8,9 @@ permalink: /python/httpserver/jsonrpc
 ![python](/assets/python.png)
 </div>
 
-We'll build an HTTP server in Python to handle JSON-RPC requests on port 5000.
-We'll use Python's built-in http.server module, so we won't need any other web
-framework. It should respond to "ping" with "pong".
+We'll build an HTTP server in Python. It should take JSON-RPC requests on port
+5000, responding to "ping" with "pong". We'll use Python's built-in http.server
+module, so no web framework is required. 
 
 * TOC
 {:toc}
