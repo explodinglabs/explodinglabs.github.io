@@ -62,6 +62,9 @@ $ python server.py
 Client
 ======
 
+HTML
+----
+
 Create `index.html` which is just a simple button:
 
 ```html
@@ -78,6 +81,9 @@ Create `index.html` which is just a simple button:
     </body>
 </html>
 ```
+
+Javascript
+----------
 
 Create ``client.js``:
 
