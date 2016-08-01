@@ -11,4 +11,4 @@ Running tox tests tonight, had some failures on some Python 3.x versions:
 
 Solution was to re-install those Python versions. In Arch:
 
-    # pacman -S python33 python34 python35
+    # packer -S python33 python34 python35
