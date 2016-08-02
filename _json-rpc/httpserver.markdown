@@ -19,9 +19,6 @@ http.server module, so no web framework is required.
 Server
 ======
 
-The server should handle requests on port 5000, process them, and return a
-JSON-RPC response.
-
 Install dependencies
 --------------------
 
