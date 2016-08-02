@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Python Decorators"
-date: 2016-07-23
 permalink: /python-decorators
+date: 2016-08-02
+comments: true
 ---
-
 Decorators were introduced in Python 2.5
-

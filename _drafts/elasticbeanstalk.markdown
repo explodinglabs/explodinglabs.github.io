@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: post
 title: "Create an Elastic Beanstalk application with a Docker image"
 permalink: /aws/elasticbeanstalk
+date: 2016-08-02
+comments: true
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
 
