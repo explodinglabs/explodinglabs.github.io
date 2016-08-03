@@ -22,7 +22,7 @@ Install dependencies
 --------------------
 
 ``` shell
-$ pip install flask jsonrpcserver
+$ pip install werkzeug jsonrpcserver
 ```
 
 Write server script
