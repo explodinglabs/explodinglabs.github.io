@@ -17,7 +17,7 @@ twitter_username: bbmelb
 github_username: bcb
 future: true # Include posts with a date in the future
 google_analytics: UA-81795603-1
-    
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
@@ -26,6 +26,6 @@ collections:
     aws:
         title: Amazon Web Services
         output: true
-    json-rpc:
+    jsonrpc:
         title: JSON-RPC
         output: true
