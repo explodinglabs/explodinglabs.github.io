@@ -51,6 +51,9 @@ Start the server
 
 ```shell
 $ python server.py
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 216-262-392
 ```
 
 Client
