@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JSON-RPC in Python with HTTPServer"
+title: "JSON-RPC in Python with http.server"
 date: 2016-08-01
 permalink: /jsonrpc/httpserver
 comments: true
