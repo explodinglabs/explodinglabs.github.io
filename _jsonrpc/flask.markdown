@@ -9,11 +9,9 @@ comments: true
 ![flask](/assets/flask.png)
 </div>
 
-We'll build an HTTP server in Python, taking JSON-RPC requests on port 5000.
-It should respond to "speak" with "meow".
-
-* TOC
-{:toc}
+We'll build an HTTP server in Python, taking
+[JSON-RPC](http://www.jsonrpc.org/) requests on port 5000.  It should respond
+to "speak" with "meow".
 
 Server
 ======
@@ -72,7 +70,6 @@ Send a JSON-RPC "speak" request:
 
 ```python
 >>> from jsonrpcclient.http_server import HTTPServer
->>> s = HTTPServer('http://localhost:5000/cat')
->>> s.request('speak')
+>>> HTTPServer('http://localhost:5000/cat').request('speak')
 'meow'
 ```

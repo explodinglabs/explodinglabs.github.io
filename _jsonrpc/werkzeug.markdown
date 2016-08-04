@@ -9,11 +9,9 @@ comments: true
 ![werkzeug](/assets/werkzeug.png)
 </div>
 
-We'll build an HTTP server in Python, taking JSON-RPC requests on port
-5000. It should respond to requests by squaring or cubing a given number.
-
-* TOC
-{:toc}
+We'll build an HTTP server in Python, taking
+[JSON-RPC](http://www.jsonrpc.org/) requests on port
+5000. It should respond to 'ping' with 'pong'.
 
 Server
 ======
@@ -35,15 +33,12 @@ from werkzeug.wrappers import Request, Response
 from werkzeug.serving import run_simple
 from jsonrpcserver import dispatch
 
-def square(x):
-    return x * x
-
-def cube(x):
-    return x * x * x
+def ping():
+    return 'pong'
 
 @Request.application
 def application(request):
-    r = dispatch([square, cube], request.data.decode('utf-8'))
+    r = dispatch([ping], request.data.decode('utf-8'))
     return Response(str(r), r.http_status, mimetype='application/json')
 
 if __name__ == '__main__':
@@ -55,6 +50,7 @@ Start the server
 
 ``` shell
 $ python server.py
+ * Running on http://localhost:5000/ (Press CTRL+C to quit)
 ```
 
 Client
@@ -74,9 +70,6 @@ Send JSON-RPC "square" and "cube" requests:
 
 ```python
 >>> from jsonrpcclient.http_server import HTTPServer
->>> s = HTTPServer('http://localhost:5000')
->>> s.request('square', 3)
-9
->>> s.request('cube', 3)
-27
+>>> HTTPServer('http://localhost:5000').request('ping')
+'pong'
 ```
