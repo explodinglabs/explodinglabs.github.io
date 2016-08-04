@@ -8,7 +8,7 @@ comments: true
 When to use Decorators
 ======================
 
-- Additional functionalty (before or after the method is executed)
+- Add functionalty before or after a method is executed
 - Data sanitization or addition
 - Function registration
 
