@@ -10,8 +10,8 @@ comments: true
 </div>
 
 We'll build an HTTP server in Python, taking
-[JSON-RPC](http://www.jsonrpc.org/) requests on port 5000.  It should respond
-to "speak" with "meow".
+[JSON-RPC](http://www.jsonrpc.org/) requests on port 5000. It should respond to
+"ping" with "pong".
 
 Server
 ======
@@ -34,12 +34,12 @@ from jsonrpcserver import dispatch
 
 app = Flask(__name__)
 
-def speak():
-    return 'meow'
+def ping():
+    return 'pong'
 
-@app.route('/cat', methods=['POST'])
+@app.route('/', methods=['POST'])
 def index():
-    r = dispatch([speak], request.get_data().decode('utf-8'))
+    r = dispatch([ping], request.get_data().decode('utf-8'))
     return Response(str(r), r.http_status, mimetype='application/json')
 
 if __name__ == '__main__':
@@ -69,10 +69,10 @@ $ pip install requests jsonrpcclient
 Send request
 ------------
 
-Send a JSON-RPC "speak" request:
+Send a JSON-RPC "ping" request:
 
 ```python
 >>> from jsonrpcclient.http_server import HTTPServer
->>> HTTPServer('http://localhost:5000/cat').request('speak')
-'meow'
+>>> HTTPServer('http://localhost:5000/').request('ping')
+'pong'
 ```
