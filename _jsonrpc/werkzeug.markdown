@@ -66,7 +66,7 @@ $ pip install requests jsonrpcclient
 Call the methods
 ----------------
 
-Send JSON-RPC "square" and "cube" requests:
+Send JSON-RPC requests:
 
 ```python
 >>> from jsonrpcclient.http_server import HTTPServer
