@@ -10,9 +10,6 @@ comments: true
 We'll build a [ZeroMQ](http://zeromq.org) server in Python, taking JSON-RPC
 requests on port 5000. It should respond to "ping" with "pong".
 
-* TOC
-{:toc}
-
 Server
 ======
 

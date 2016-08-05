@@ -14,9 +14,6 @@ We'll build an HTTP server in Node, taking JSON-RPC requests on port 5000.
 - When it receives a "speak" request on `/api/cats`, it should respond with "meow".
 - When it receives a "speak" request on `/api/dogs`, it should respond with "woof".
 
-* TOC
-{:toc}
-
 Server
 ======
 

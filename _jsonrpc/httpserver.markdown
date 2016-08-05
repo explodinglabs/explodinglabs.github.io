@@ -13,9 +13,6 @@ We'll build an HTTP server in Python, taking JSON-RPC requests on port
 5000. It should respond to "speak" with "meow". We'll use Python's built-in
 http.server module, so no web framework is required. 
 
-* TOC
-{:toc}
-
 Server
 ======
 
