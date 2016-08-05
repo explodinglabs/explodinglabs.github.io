@@ -10,7 +10,7 @@ comments: true
 </div>
 
 We'll build an HTTP server in Python, taking JSON-RPC requests on port
-5000. It should respond to "speak" with "meow". We'll use Python's built-in
+5000. It should respond to "ping" with "pong". We'll use Python's built-in
 http.server module, so no web framework is required. 
 
 Server
@@ -33,15 +33,15 @@ import logging
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from jsonrpcserver import dispatch
 
-def speak():
-    return 'meow'
+def ping():
+    return 'pong'
 
 class TestHttpServer(BaseHTTPRequestHandler):
 
     def do_POST(self):
         # Process request
         request = self.rfile.read(int(self.headers['Content-Length'])).decode('utf-8')
-        r = dispatch([speak], request)
+        r = dispatch([ping], request)
         # Return response
         self.send_response(r.http_status)
         self.send_header('Content-type', 'application/json')
@@ -49,8 +49,8 @@ class TestHttpServer(BaseHTTPRequestHandler):
         self.wfile.write(str(r).encode('utf-8'))
 
 if __name__ == '__main__':
-    logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
-    logging.debug('Listening on port %s', ADDRESS[1])
+    logging.basicConfig(level=logging.DEBUG)
+    logging.debug('Listening on port %s', 5000)
     HTTPServer(('localhost', 5000), TestHttpServer).serve_forever()
 ```
 
@@ -68,8 +68,7 @@ Client
 Test with curl:
 
 ```shell
-$ TYPE='Content-type: application/json'
-$ MSG='{"jsonrpc": "2.0", "method": "speak", "id": 1}'
-$ curl -H $TYPE -d $MSG http://localhost:5000
-{"jsonrpc":"2.0","result":"meow","id":1}
+$ REQ='{"jsonrpc": "2.0", "method": "ping", "id": 1}'
+$ curl -H 'Content-type: application/json' -d $REQ http://localhost:5000
+{"jsonrpc":"2.0","result":"pong","id":1}
 ```
