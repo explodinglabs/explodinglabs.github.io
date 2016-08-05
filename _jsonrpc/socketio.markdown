@@ -11,18 +11,10 @@ We'll build a socket.io server in Python, taking JSON-RPC requests on port
 Server
 ======
 
-Install dependencies
---------------------
-
 ```shell
 $ pip install flask-socketio eventlet jsonrpcserver
+$ cat server.py
 ```
-
-Write server script
--------------------
-
-Create a `server.py`:
-
 ```python
 import logging
 from flask import Flask
@@ -46,10 +38,6 @@ def handle_message(request):
 if __name__ == '__main__':
     socketio.run(app, port=5000)
 ```
-
-Start the server
-----------------
-
 ```shell
 $ python server.py
 (27985) wsgi starting up on http://127.0.0.1:5000
@@ -58,11 +46,9 @@ $ python server.py
 Client
 ======
 
-HTML
-----
-
-Create `index.html` which is just a simple button:
-
+```shell
+$ cat index.html
+```
 ```html
 <!DOCTYPE html>
 <html>
@@ -70,30 +56,14 @@ Create `index.html` which is just a simple button:
         <meta charset="utf-8">
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
-        <script type="text/javascript" src="client.js"></script>
-    </head>
-    <body>
-        <button>Ping</button>
-    </body>
-</html>
-```
-
-Javascript
-----------
-
-Create ``client.js``:
-
-```javascript
+        <script type="text/javascript">
 $(function() {
-
     // Connect
     var socket = io.connect('http://localhost:5000/');
-
     // Connected
     socket.on('connect', function() {
         console.log('Connected');
     });
-
     // Send
     $('button').click(function(e) {
         message = {jsonrpc: "2.0", method: "ping", id: 1};
@@ -102,8 +72,13 @@ $(function() {
             console.log('<-- '+JSON.stringify(response));
         });
     });
-
 });
+        </script>
+    </head>
+    <body>
+        <button>Ping</button>
+    </body>
+</html>
 ```
 
 Running

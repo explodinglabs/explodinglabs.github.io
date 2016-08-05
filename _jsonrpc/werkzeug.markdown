@@ -16,18 +16,10 @@ We'll build an HTTP server in Python, taking
 Server
 ======
 
-Install dependencies
---------------------
-
 ``` shell
 $ pip install werkzeug jsonrpcserver
+$ cat server.py
 ```
-
-Write server script
--------------------
-
-Create a `server.py`:
-
 ```python
 from werkzeug.wrappers import Request, Response
 from werkzeug.serving import run_simple
@@ -44,10 +36,6 @@ def application(request):
 if __name__ == '__main__':
     run_simple('localhost', 5000, application)
 ```
-
-Start the server
-----------------
-
 ``` shell
 $ python server.py
  * Running on http://localhost:5000/ (Press CTRL+C to quit)
@@ -56,18 +44,10 @@ $ python server.py
 Client
 ======
 
-Install dependencies
---------------------
-
 ``` shell
-$ pip install requests jsonrpcclient
+$ pip install jsonrpcclient requests
+$ python
 ```
-
-Call the methods
-----------------
-
-Send JSON-RPC requests:
-
 ```python
 >>> from jsonrpcclient.http_server import HTTPServer
 >>> HTTPServer('http://localhost:5000').request('ping')

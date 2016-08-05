@@ -13,36 +13,26 @@ requests on port 5000. It should respond to "ping" with "pong".
 Server
 ======
 
-Install dependencies
---------------------
-
 ``` shell
 $ pip install pyzmq jsonrpcserver
+$ cat server.py
 ```
+```python
+import zmq
+from jsonrpcserver import dispatch
 
-Write server script
--------------------
+def ping():
+    return 'pong'
 
-Create a `server.py`:
+context = zmq.Context()
+socket = context.socket(zmq.REP)
+socket.bind('tcp://*:5000')
 
-    import zmq
-    from jsonrpcserver import dispatch
-
-    def ping():
-        return 'pong'
-
-    context = zmq.Context()
-    socket = context.socket(zmq.REP)
-    socket.bind('tcp://*:5000')
-
-    while True:
-        request = socket.recv().decode('UTF-8')
-        response = dispatch([ping], request)
-        socket.send_string(str(response))
-
-Start the server
-----------------
-
+while True:
+    request = socket.recv().decode('UTF-8')
+    response = dispatch([ping], request)
+    socket.send_string(str(response))
+```
 ``` shell
 $ python ./server.py
 ```
@@ -50,18 +40,12 @@ $ python ./server.py
 Client
 ======
 
-Install dependencies
---------------------
-
 ``` shell
-$ pip install pyzmq jsonrpcclient
+$ pip install jsonrpcclient pyzmq
+$ python
 ```
-
-Ping the server
----------------
-
-Send a JSON-RPC "ping" method to the server:
-
-    >>> from jsonrpcclient.zmq_server import ZMQServer
-    >>> ZMQServer('tcp://localhost:5000').request('ping')
-    'pong'
+```python
+>>> from jsonrpcclient.zmq_server import ZMQServer
+>>> ZMQServer('tcp://localhost:5000').request('ping')
+'pong'
+```

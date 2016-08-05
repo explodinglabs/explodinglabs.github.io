@@ -16,18 +16,10 @@ http.server module, so no web framework is required.
 Server
 ======
 
-Install dependencies
---------------------
-
 ```shell
 $ pip install jsonrpcserver
+$ cat server.py
 ```
-
-Write server script
--------------------
-
-Create a `server.py`:
-
 ```python
 import logging
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -49,26 +41,21 @@ class TestHttpServer(BaseHTTPRequestHandler):
         self.wfile.write(str(r).encode('utf-8'))
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.DEBUG)
-    logging.debug('Listening on port %s', 5000)
     HTTPServer(('localhost', 5000), TestHttpServer).serve_forever()
 ```
-
-Start the server
-----------------
-
 ```shell
 $ python server.py
-2016-08-01 14:57:07,061 Listening on port 5000
 ```
 
 Client
 ======
 
-Test with curl:
-
-```shell
-$ HDR='Content-type: application/json'
-$ curl -H $HDR -d '{"jsonrpc": "2.0", "method": "ping", "id": 1}' http://localhost:5000
-{"jsonrpc":"2.0","result":"pong","id":1}
+``` shell
+$ pip install jsonrpcclient requests
+$ python
+```
+```python
+>>> from jsonrpcclient.http_server import HTTPServer
+>>> HTTPServer('http://localhost:5000').request('ping')
+'pong'
 ```

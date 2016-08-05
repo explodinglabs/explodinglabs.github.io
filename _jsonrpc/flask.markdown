@@ -16,18 +16,10 @@ We'll build an HTTP server in Python, taking
 Server
 ======
 
-Install dependencies
---------------------
-
 ```shell
 $ pip install flask jsonrpcserver
+$ cat server.py
 ```
-
-Write server script
--------------------
-
-Create a `server.py`:
-
 ```python
 from flask import Flask, request, Response
 from jsonrpcserver import dispatch
@@ -45,10 +37,6 @@ def index():
 if __name__ == '__main__':
     app.run()
 ```
-
-Start the server
-----------------
-
 ```shell
 $ python server.py
  * Restarting with stat
@@ -59,18 +47,10 @@ $ python server.py
 Client
 ======
 
-Install dependencies
---------------------
-
 ```shell
-$ pip install requests jsonrpcclient
+$ pip install jsonrpcclient requests
+$ python
 ```
-
-Send request
-------------
-
-Send a JSON-RPC "ping" request:
-
 ```python
 >>> from jsonrpcclient.http_server import HTTPServer
 >>> HTTPServer('http://localhost:5000/').request('ping')

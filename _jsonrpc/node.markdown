@@ -17,18 +17,10 @@ We'll build an HTTP server in Node, taking JSON-RPC requests on port 5000.
 Server
 ======
 
-Install dependencies
---------------------
-
 ``` shell
 $ npm install express jayson
+$ cat server.js
 ```
-
-Write server script
--------------------
-
-Create a `server.js`:
-
 ```javascript
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -53,10 +45,6 @@ app.post('/api/cats', jayson.server(cats).middleware());
 app.post('/api/dogs', jayson.server(dogs).middleware());
 app.listen(5000);
 ```
-
-Start the server
-----------------
-
 ``` shell
 $ node server.js
 ```
@@ -64,12 +52,14 @@ $ node server.js
 Client
 ======
 
-Use curl to send requests:
-
-```shell
-$ HDR='Content-type: application/json'
-$ curl -H $HDR -d '{"jsonrpc": "2.0", "method": "speak", "id": 1}' http://localhost:5000/api/cats
-{"jsonrpc":"2.0","result":"meow","id":1}
-$ curl -H $HDR -d '{"jsonrpc": "2.0", "method": "speak", "id": 1}' http://localhost:5000/api/dogs
-{"jsonrpc":"2.0","result":"woof","id":1}
+``` shell
+$ pip install jsonrpcclient requests
+$ python
+```
+```python
+>>> from jsonrpcclient.http_server import HTTPServer
+>>> HTTPServer('http://localhost:5000/cats').request('speak')
+'meow'
+>>> HTTPServer('http://localhost:5000/dogs').request('speak')
+'woof'
 ```
