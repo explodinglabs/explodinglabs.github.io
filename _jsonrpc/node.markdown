@@ -67,9 +67,9 @@ Client
 Use curl to send requests:
 
 ```shell
-$ REQ='{"jsonrpc": "2.0", "method": "speak", "id": 1}'
-$ curl -H 'Content-type: application/json' -d $REQ http://localhost:5000/api/cats
+$ HDR='Content-type: application/json'
+$ curl -H $HDR -d '{"jsonrpc": "2.0", "method": "speak", "id": 1}' http://localhost:5000/api/cats
 {"jsonrpc":"2.0","result":"meow","id":1}
-$ curl -H 'Content-type: application/json' -d $REQ http://localhost:5000/api/dogs
+$ curl -H $HDR -d '{"jsonrpc": "2.0", "method": "speak", "id": 1}' http://localhost:5000/api/dogs
 {"jsonrpc":"2.0","result":"woof","id":1}
 ```

@@ -68,7 +68,7 @@ Client
 Test with curl:
 
 ```shell
-$ REQ='{"jsonrpc": "2.0", "method": "ping", "id": 1}'
-$ curl -H 'Content-type: application/json' -d $REQ http://localhost:5000
+$ HDR='Content-type: application/json'
+$ curl -H $HDR -d '{"jsonrpc": "2.0", "method": "ping", "id": 1}' http://localhost:5000
 {"jsonrpc":"2.0","result":"pong","id":1}
 ```
