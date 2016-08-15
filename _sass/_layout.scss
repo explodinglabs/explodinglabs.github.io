@@ -88,7 +88,10 @@
     h1 {
         margin-top: $spacing-unit;
         margin-bottom: $spacing-unit/2;
-        font-size: $h1-size;
+        font-weight: bold;
+        font-size: 32px;
+        font-size: 2rem;
+        line-height: 1.25;
         color: $h1-color;
 
         @include media-query($on-laptop) {
