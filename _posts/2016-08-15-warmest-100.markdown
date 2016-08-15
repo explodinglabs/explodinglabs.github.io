@@ -8,9 +8,9 @@ comments: true
 At Pycon there was a talk from Justin Warren on the Warmest 100, which is an
 attempt at predicting the Hottest 100 based on social media posts.
 
-I've often wondered if "people only vote for what they play on the radio". So I
-set about finding out if that was true. It'll give me a chance to try Python's
-pandas library.
+I've often wondered if "people only vote for what gets played on the radio". So
+I set about finding out if that was true. (It'll give me a chance to try
+Python's pandas library.)
 
 Gathering the data
 ==================
@@ -159,8 +159,8 @@ Let's look at the bottom 10:
 Here we see Golden Features *No One* and Halsey's *Ghost* were second and third
 most played songs, but rated lowly in the vote.
 
-*"People only vote for what they hear on the radio"* - this is somewhat true.
+*"People only vote for what gets played on the radio"* - this is somewhat true.
 There are no songs in the Hottest 100 that were not played on Triple J. But
 Courtney Barnett's *Depreston* made the list after being played only 23 times.
 *Big Jet Plane* made it after being played only 12 times. So it's not fair to
-say that people only vote for what they hear.
+say that people only vote for what gets played.
