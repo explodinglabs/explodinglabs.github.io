@@ -67,7 +67,7 @@ a feed of songs being played, but it turns out Triple J has an api which lets
 me enter a date range, and gives json back with plenty more data if needed.
 
 Because the api is used for lazy-loading, it only returns 10 songs at a time.
-To get the full year's playlist took 9833 requests.
+So to get the full year's playlist took 9833 requests.
 
 ```sh
 start='2015-01-22T01:00:00'
