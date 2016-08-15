@@ -129,9 +129,9 @@ Now we can look at the top 10 voted songs:
   9         10                     Magnets    139        70.0
 ```
 
-From this it looks like there isn't a strong relationship between plays and
-votes. A song like *Let It Happen* came 5th even though it was the 227th most
-played song. Maybe it was played during peak times?
+From this it looks like there is **not** a strong relationship between plays
+and votes. A song like *Let It Happen* was voted 5th even though it was the
+227th most played song. Maybe it was played during peak times?
 
 On the other hand, *Lean On* and *Do You Remember* are near the top in both
 plays and votes.
