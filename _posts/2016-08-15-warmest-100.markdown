@@ -1,0 +1,165 @@
+---
+layout: post
+title: "Warmest 100"
+permalink: /warmest-100
+date: 2016-08-15
+comments: true
+---
+At Pycon there was a talk from Justin Warren on the Warmest 100, which is an
+attempt at predicting the Hottest 100 based on social media posts.
+
+I've often thought "people only vote for what they hear on the radio". So I set
+about finding out if that was true.
+
+Gathering the data
+==================
+
+I needed two lists:
+
+1. The Hottest 100 for 2015.
+2. The Triple J playlist for 2015.
+
+Getting the Hottest 100 results
+-------------------------------
+
+The list was scraped from the [Hottest 100
+2015](http://www.abc.net.au/triplej/hottest100/15/countdown/) web page, using
+BeautifulSoup.
+
+```sh
+curl 'http://www.abc.net.au/triplej/hottest100/15/countdown/' > results.html
+```
+
+```python
+from bs4 import BeautifulSoup
+import re
+import pandas
+
+def get():
+    results = []
+    with open('results.html') as f:
+        for t in BeautifulSoup(f, 'html.parser').find_all('div', class_='hottest-countdown-track'):
+            # Extract position, artist, title
+            pos = t.find(class_='hottest-countdown-position').string
+            title = t.find(class_='title').string
+            artists = [t.find(class_='artist').string]
+            # Sanitize (pull featured artists from title)
+            matches = re.search(r' {Ft. ([^}]+)}', title)
+            if (matches):
+                artists += matches.group(1).split('/')
+            title = re.sub(r' {Ft. ([^}]+)}', '', title)
+            # Append to list of dicts
+            results.append(
+                {'rank': pos, 'name': title, 'artists': tuple(sorted(artists))})
+    # Return as a DataFrame
+    return pandas.DataFrame(results)
+```
+
+I cleaned it up a bit, such as removing *{Radio edit}* from one song title.
+
+Getting the playlist for all of 2015
+------------------------------------
+
+Justin pointed me to [@triplejplays](https://twitter.com/triplejplays) which is
+a feed of songs being played, but it turns out Triple J has an api which lets
+me enter a date range, and gives json back with plenty more data if needed.
+
+Because the api is used for lazy-loading, it only returns 10 songs at a time.
+To get the full year's playlist took 9833 requests.
+
+```sh
+start='2015-01-22T01:00:00'
+end='2016-01-22T01:00:00'
+
+# Loop from start to end date
+while [[ $(date -d $start +"%s") -lt $(date -d $end +"%s") ]]; do
+    echo $start >&2
+    # The URL and output filename
+    url="http://music.abcradio.net.au/api/v1/plays/search.json?station=triplej&from=$start&order=asc"
+    output_fn="raw/$start"
+    # Download the list
+    curl $url > $output_fn
+    # Get the time of the last song played
+    start=$(jq -r '.items[].played_time' $output_fn |tail -n1)
+    # Add one second so it doesn't include the last song next time
+    start=$(date -u -d "$start + 1 second" +"%Y-%m-%dT%H:%M:%S")
+done
+```
+
+It pulled in 1.3G of json data. I used jq to extract just the parts we needed,
+(title and artist):
+
+```sh
+for i in raw/*; do echo $i; jq -r '[.items[].recording | {name: .title, artists: [.artists[].name]}]' $i > clean/$(basename $i); done
+```
+
+Did a bit of manual data sanitizing here, like replacing the song "DOWNTOWN"
+with "Downtown". The data wasn't great, and I didn't spend much time cleaning
+it up.
+
+Eventually we have the playlist for 2015 - 16261 songs played 98330 times.
+
+Analysis
+========
+I'll load the hottest and warmest lists and merge them.
+
+```python
+>>> import hottest, warmest
+>>> h = hottest.get()
+>>> w = warmest.get()
+>>> m = h.merge(w, on='name', how='left', suffixes=('', '_plays'))[['rank_votes', 'name', 'plays', 'rank_plays']]
+```
+
+Now we can look at the top 10 voted songs:
+
+```python
+>>> m.head(10)
+```
+```
+    rank_votes                        name  plays  rank_plays
+  0          1                       Hoops    145        50.5
+  1          2                  King Kunta    138        76.0
+  2          3                     Lean On    171        13.5
+  3          4  The Less I Know The Better    153        32.0
+  4          5               Let It Happen    109       227.5
+  5          6         The Trouble With Us    115       190.5
+  6          7             Do You Remember    181         6.0
+  7          8                    The Buzz    122       148.0
+  8          9          Can't Feel My Face    119       166.5
+  9         10                     Magnets    139        70.0
+```
+
+From this it looks like there isn't a strong relationship between plays and
+votes. A song like *Let It Happen* came 5th even though it was the 227th most
+played song. Maybe it was played during peak times?
+
+On the other hand, *Lean On* and *Do You Remember* are near the top in both
+plays and votes.
+
+Let's look at the bottom 10:
+
+```python
+>>> m.tail(10)
+```
+```
+      rank_votes                    name  plays  rank_plays
+   90         91          Be Your Shadow    120       159.0
+   91         92                  No One    232         3.0
+   92         93           Indian Summer    110       220.0
+   93         94                   Ghost    236         2.0
+   94         95  Nobody Really Cares...    124       137.5
+   95         96             Rumour Mill    124       137.5
+   96         97        Twilight Driving    121       153.0
+   97         98             Be Together    120       159.0
+   98         99            True Friends     90       335.5
+   99        100                Hell Boy    115       190.5
+```
+
+Here we see Golden Features *No One* and Halsey's *Ghost* were second and third
+most played songs, but rated lowly in the vote.
+
+*"People only vote for what they hear on the radio"* - this is somewhat true.
+There are no songs in the Hottest 100 that were not played on Triple J. But Big
+Jet Plane made the list after being played only 12 times. Courtney Barnett's
+*Depreston* made the list after being played only 23 times. So it's not fair to
+say that people only vote for what they're forced to hear.
