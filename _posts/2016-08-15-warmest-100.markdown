@@ -8,8 +8,9 @@ comments: true
 At Pycon there was a talk from Justin Warren on the Warmest 100, which is an
 attempt at predicting the Hottest 100 based on social media posts.
 
-I've often thought "people only vote for what they hear on the radio". So I set
-about finding out if that was true.
+I've often wondered if "people only vote for what they play on the radio". So I
+set about finding out if that was true. It'll give me a chance to try Python's
+pandas library.
 
 Gathering the data
 ==================
