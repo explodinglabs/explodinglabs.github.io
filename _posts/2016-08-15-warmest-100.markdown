@@ -94,7 +94,7 @@ It pulled in 1.3G of json data. I used jq to extract just the parts we needed,
 for i in raw/*; do echo $i; jq -r '[.items[].recording | {name: .title, artists: [.artists[].name]}]' $i > clean/$(basename $i); done
 ```
 
-Did a bit of manual data sanitizing here, like replacing the song "DOWNTOWN"
+Did a bit of manual data sanitizing at this point, like replacing "DOWNTOWN"
 with "Downtown". The data wasn't great, and I didn't spend much time cleaning
 it up.
 
