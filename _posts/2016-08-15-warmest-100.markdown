@@ -98,7 +98,7 @@ Did a bit of manual data sanitizing at this point, like replacing "DOWNTOWN"
 with "Downtown". The data wasn't great, and I didn't spend much time cleaning
 it up.
 
-Eventually we have the playlist for 2015 - 16261 songs played 98330 times.
+Eventually we have the playlist - 16261 songs played 98330 times.
 
 Analysis
 ========
