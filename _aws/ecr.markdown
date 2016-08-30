@@ -14,13 +14,6 @@ comments: true
 ECR is a Docker container registry that makes it easy for developers to store,
 manage, and deploy Docker container images.
 
-<div class="note">
-    <h5>Important</h5>
-    Not all AWS regions support ECR. If like me, your default region is not
-    supported, remember to specify the region whenever using ECR commands (e.g.
-    aws ecr --region us-west-2).
-</div>
-
 Repositories
 ============
 
