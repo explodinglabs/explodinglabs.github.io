@@ -3,46 +3,42 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
-$base-font-family: "Open Sans", sans-serif;
-$base-font-size:   16px;
+$base-font-family: 'Open sans', sans-serif;
+$base-font-size: 16px;
 $base-font-weight: 100;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $page-title-color: #9f6;
 $h1-color: #f96;
 $h1-size: 2.2em;
-$h2-color: #d9d9d9;
+$h2-color: #f9f9d9;
 $h2-size: 1.4em;
 
-$spacing-unit:     30px;
+$spacing-unit: 30px;
 
-$text-color:       #c9c9c9;
-$background-color: #292929;
-$link-color:       #6a9aff;
+$text-color: #c9c9c9;
+$background-color: #090909;
+$link-color: #6a9aff;
 
-$code-background-color: #191919;
+$code-background-color: black;
 $code-border-color: #444;
 $code-border-radius: 3px;
 $code-font-family: 'Source Code Pro';
 $code-font-size: 1em;
 $code-font-color: #c9c9c9;
 
-$grey:       #828282;
+// Colours
+$grey: #828282;
 $grey-light: lighten($grey, 40%);
-$grey-dark:  darken($grey, 25%);
+$grey-dark: darken($grey, 25%);
 $yellow-light: lighten(yellow, 40%);
 
 // Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
+$content-width: 800px;
+$on-palm: 600px;
+$on-laptop: 800px;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
