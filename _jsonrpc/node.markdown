@@ -11,14 +11,14 @@ comments: true
 
 We'll build an HTTP server in Node, taking [JSON-RPC](http://www.jsonrpc.org/) requests on port 5000.
 
-- When it receives a "speak" request on `/api/cats`, it should respond with "meow".
-- When it receives a "speak" request on `/api/dogs`, it should respond with "woof".
+- When it receives a "speak" request on `/cats`, it should respond with "meow".
+- When it receives a "speak" request on `/dogs`, it should respond with "woof".
 
 Server
 ======
 
 ``` shell
-$ npm install express jayson
+$ npm install express body-parser jayson
 $ cat server.js
 ```
 ```javascript
@@ -31,7 +31,6 @@ var cats = {
         callback(null, 'meow');
     }
 }
-
 var dogs = {
     speak: function(callback) {
         callback(null, 'woof');
@@ -41,8 +40,8 @@ var dogs = {
 var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.post('/api/cats', jayson.server(cats).middleware());
-app.post('/api/dogs', jayson.server(dogs).middleware());
+app.post('/cats', jayson.server(cats).middleware());
+app.post('/dogs', jayson.server(dogs).middleware());
 app.listen(5000);
 ```
 ``` shell
