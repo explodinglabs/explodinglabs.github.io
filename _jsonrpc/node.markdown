@@ -51,7 +51,6 @@ $ node server.js
 
 Client
 ======
-
 ``` shell
 $ pip install jsonrpcclient requests
 $ python

@@ -58,5 +58,7 @@ $ python
 ```python
 >>> from jsonrpcclient.http_server import HTTPServer
 >>> HTTPServer('http://localhost:5000').request('ping')
+--> {"jsonrpc": "2.0", "method": "ping", "id": 1}
+<-- {"jsonrpc": "2.0", "result": "pong", "id": 1}
 'pong'
 ```
