@@ -19,7 +19,7 @@ $h2-size: 1.4em;
 $spacing-unit: 30px;
 
 $text-color: #c9c9c9;
-$background-color: #090909;
+$background-color: #111111;
 $link-color: #6a9aff;
 
 $code-background-color: black;
@@ -47,13 +47,12 @@ $on-laptop: 800px;
 //         padding-left: $spacing-unit / 2;
 //     }
 // }
+
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
     }
 }
-
-
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
