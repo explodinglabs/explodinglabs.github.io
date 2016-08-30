@@ -50,14 +50,14 @@ $ node server.js
 
 Client
 ======
-``` shell
-$ pip install jsonrpcclient requests
-$ python
-```
-```python
->>> from jsonrpcclient.http_server import HTTPServer
->>> HTTPServer('http://localhost:5000/cats').request('speak')
-'meow'
->>> HTTPServer('http://localhost:5000/dogs').request('speak')
-'woof'
+
+Use curl to send requests:
+
+```shell
+$ HDR='Content-type: application/json'
+$ MSG='{"jsonrpc": "2.0", "method": "speak", "id": 1}'
+$ curl -H $HDR -d $MSG http://localhost:5000/cats
+{"jsonrpc":"2.0","result":"meow","id":1}
+$ curl -H $HDR -d $MSG http://localhost:5000/dogs
+{"jsonrpc":"2.0","result":"woof","id":1}
 ```
