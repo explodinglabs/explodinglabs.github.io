@@ -4,8 +4,8 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: sans-serif;
-$base-font-size: 16px;
+$base-font-family: 'Source sans pro', sans-serif;
+$base-font-size: 18px;
 $base-font-weight: 100;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -13,12 +13,12 @@ $base-line-height: 1.5;
 $page-title-color: #9f6;
 $h1-color: #f96;
 $h1-size: 1.8em;
-$h2-color: #f9f9d9;
+$h2-color: #ffffc9;
 $h2-size: 1.4em;
 
 $spacing-unit: 30px;
 
-$text-color: #c9c9c9;
+$text-color: #e0e0e0;
 $background-color: #111111;
 $link-color: #6a9aff;
 
@@ -26,7 +26,7 @@ $code-background-color: black;
 $code-border-color: #444;
 $code-border-radius: 3px;
 $code-font-family: 'Source Code Pro';
-$code-font-size: 1em;
+$code-font-size: 15px;
 $code-font-color: #c9c9c9;
 
 // Colours

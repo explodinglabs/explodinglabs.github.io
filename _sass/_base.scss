@@ -6,8 +6,6 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -23,7 +21,6 @@ body {
     font-kerning: normal;
 }
 
-
 ::-webkit-scrollbar              { background-color: $code-background-color; }
 ::-webkit-scrollbar-button       { }
 ::-webkit-scrollbar-track        { background-color: #222; }
@@ -31,7 +28,6 @@ body {
 ::-webkit-scrollbar-thumb        { background-color: #333; }
 ::-webkit-scrollbar-corner       { }
 ::-webkit-resizer                { }
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -43,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit/2;
+    margin-bottom: 1em;
 }
 
 /**
@@ -53,8 +49,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -67,8 +61,6 @@ figcaption {
     font-size: $small-font-size;
 }
 
-
-
 /**
  * Lists
  */
@@ -79,8 +71,6 @@ ul, ol {
         margin-bottom: 5px;
     }
 }
-
-
 
 /**
  * Headings
@@ -104,8 +94,6 @@ a {
     }
 }
 
-
-
 /**
  * Blockquotes
  */
@@ -114,15 +102,12 @@ blockquote {
     border-left: 4px solid $grey-light;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
-    letter-spacing: -1px;
     font-style: italic;
 
     > :last-child {
         margin-bottom: 0;
     }
 }
-
-
 
 /**
  * Code formatting
@@ -150,8 +135,6 @@ pre {
     }
 }
 
-
-
 /**
  * Wrapper
  */
@@ -172,8 +155,6 @@ pre {
     }
 }
 
-
-
 /**
  * Clearfix
  */
@@ -185,8 +166,6 @@ pre {
         clear: both;
     }
 }
-
-
 
 /**
  * Icons
