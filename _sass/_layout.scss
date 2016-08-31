@@ -49,7 +49,7 @@
 
 .post-meta {
     font-size: $small-font-size;
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit/2;
     color: $yellow-light;
     a {
         color: $yellow-light;
@@ -75,10 +75,6 @@
         color: $page-title-color;
         margin-bottom: $spacing-unit;
         letter-spacing: -1px;
-
-        @include media-query($on-laptop) {
-            font-size: 36px;
-        }
     }
 
 }
@@ -89,15 +85,8 @@
     h1 {
         margin-top: $spacing-unit;
         margin-bottom: $spacing-unit/2;
-        font-weight: bold;
-        font-size: 32px;
-        font-size: 2rem;
-        line-height: 1.25;
+        font-size: $h1-size;
         color: $h1-color;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
     }
 
     h2 {
@@ -105,18 +94,13 @@
         margin-bottom: $spacing-unit/2;
         font-size: $h2-size;
         color: $h2-color;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
     }
 }
 
 #home {
     ul {
         list-style-type: none;
-        margin: 0 0 $spacing-unit;
-        padding: 0;
+        margin-bottom: $spacing-unit;
     }
 }
 
