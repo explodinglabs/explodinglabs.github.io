@@ -47,5 +47,7 @@ $ python
 ```python
 >>> from jsonrpcclient.zmq_server import ZMQServer
 >>> ZMQServer('tcp://localhost:5000').request('ping')
+--> {"jsonrpc": "2.0", "method": "ping", "id": 1}
+<-- {"jsonrpc": "2.0", "result": "pong", "id": 1}
 'pong'
 ```
