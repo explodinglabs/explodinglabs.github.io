@@ -55,6 +55,7 @@
 .post-header {
 
     .post-meta {
+        float: right;
         font-size: $small-font-size;
         margin-bottom: $spacing-unit/2;
         color: $yellow-light;
@@ -66,7 +67,7 @@
     .post-title {
         font-size: 42px;
         color: $page-title-color;
-        margin-bottom: $spacing-unit/2;
+        margin-bottom: $spacing-unit;
     }
 
 }
