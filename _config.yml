@@ -23,9 +23,9 @@ markdown: kramdown
 highlighter: rouge
 
 collections:
-    aws:
-        title: Amazon Web Services
-        output: true
     jsonrpc:
         title: JSON-RPC
+        output: true
+    aws:
+        title: Amazon Web Services
         output: true
