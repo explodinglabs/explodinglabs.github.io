@@ -11,6 +11,8 @@ comments: true
 
 My NodeMCU arrived so I went right ahead and installed Micropython on it.
 
+![nodemcu](/assets/nodemcu.png)
+
 Install the Micropython firmware
 ================================
 
