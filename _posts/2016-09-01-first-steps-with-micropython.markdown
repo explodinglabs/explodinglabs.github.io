@@ -5,10 +5,6 @@ permalink: /micropython
 date: 2016-09-01
 comments: true
 ---
-<div style="float: right" markdown="1">
-![micropython](/assets/micropython.jpg)
-</div>
-
 My NodeMCU arrived so I went right ahead and installed Micropython on it.
 
 ![nodemcu](/assets/nodemcu.png)
