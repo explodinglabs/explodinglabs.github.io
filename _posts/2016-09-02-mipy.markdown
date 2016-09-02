@@ -1,0 +1,28 @@
+---
+layout: post
+title: "mipy: Copy files into Micropython"
+permalink: /mipy
+date: 2016-09-02
+comments: true
+---
+{::options syntax_highlighter_opts="default_lang: shell" /}
+
+I've put a little script on pypi that copies files onto a NodeMCU.
+
+To install it:
+
+    $ pip install --user mipy
+
+Now you can copy files to the device (make sure you have `$HOME/.local/bin` in your
+PATH):
+
+    $ mipy cp main.py
+
+My typical workflow is to make a change, then copy it to the board with `-ir`:
+
+    $ mipy -ir cp main.py
+
+This interrupts the running script, copies the file, then resets the device.
+
+Thanks to [mpy-utils](https://github.com/nickzoic/mpy-utils) which I forked to
+make mipy.
