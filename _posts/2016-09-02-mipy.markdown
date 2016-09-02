@@ -7,9 +7,12 @@ comments: true
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
 
-I've put a little script on pypi that copies files onto a NodeMCU.
+<div style="float: right" markdown="1">
+![micropython](/assets/micropython.jpg)
+</div>
 
-To install it:
+I've put a little script on pypi that copies files onto a NodeMCU or other
+serial device. To install it:
 
     $ pip install --user mipy
 
@@ -18,11 +21,14 @@ PATH):
 
     $ mipy cp main.py
 
-My typical workflow is to make a change, then copy it to the board with `-ir`:
+My typical workflow is to make a change, then copy it to the board with `mipy
+-ir`:
 
     $ mipy -ir cp main.py
 
 This interrupts the running script, copies the file, then resets the device.
 
-Thanks to [mpy-utils](https://github.com/nickzoic/mpy-utils) which I forked to
-make mipy.
+You can also set the port, baudrate and other options. See `mipy --help`.
+
+Contribute at [mipy on github](https://github.com/bcb/mipy). Thanks to
+[mpy-utils](https://github.com/nickzoic/mpy-utils) which I forked to make mipy.
