@@ -43,7 +43,7 @@ Write the micropython firmware:
 $ esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=8m -fm dio 0 esp8266-20160809-v1.8.3.bin
 ```
 
-**Now replug the device.**
+Now **replug the device** (or hit the **RST** button).
 
 Enter the REPL
 ==============
@@ -86,8 +86,6 @@ Press enter to see the prompt:
 
 Notes
 =====
-
-- **Replug the device** after copying the firmware over.
 
 - **Specify the baudrate** of 115200. Without this it said *Terminal Ready*,
 but there was no prompt and I couldn't communicate at all. Once I specified the
