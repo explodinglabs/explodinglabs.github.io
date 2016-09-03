@@ -14,10 +14,9 @@ comments: true
 I've put a little script on pypi that copies files onto a NodeMCU or other
 serial device. To install it:
 
-    $ pip install --user mipy
+    $ pip install mipy
 
-Now you can copy files to the device (make sure you have `$HOME/.local/bin` in your
-PATH):
+Now you can copy files to the device:
 
     $ mipy cp main.py
 
@@ -26,7 +25,7 @@ My typical workflow is to make a change, then copy it to the board with `mipy
 
     $ mipy -ir cp main.py
 
-This interrupts the running script, copies the file, then resets the device.
+This interrupts the running script, copies the file, then does a soft-reset.
 
 You can also set the port, baudrate and other options. See `mipy --help`.
 
