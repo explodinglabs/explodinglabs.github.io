@@ -6,8 +6,8 @@ date: 2016-08-15
 comments: true
 ---
 At Pycon there was a [talk](https://www.youtube.com/watch?v=qjTc5q7MsMg) from
-Justin Warren on the Warmest 100, which is an attempt at predicting the Hottest
-100 based on social media posts.
+Justin Warren on the *Warmest 100*, which is an attempt at predicting the
+Triple J Hottest 100 by analysing on social media posts.
 
 I've often wondered if "people only vote for what gets played on the radio". So
 I set about finding out if that was true. (It'll give me a chance to try
