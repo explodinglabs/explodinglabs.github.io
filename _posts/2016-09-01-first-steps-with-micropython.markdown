@@ -34,8 +34,9 @@ Erase any existing firmware:
 $ esptool.py --port /dev/ttyUSB0 erase_flash
 ```
 
-Downloaded the [pre-built micropython firmware](http://micropython.org/download/)
-to put onto the board. Write the firmware to the device:
+Downloaded the [pre-built micropython
+firmware](http://micropython.org/download/), then write the firmware to the
+device:
 
 ```
 $ esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=8m -fm dio 0 esp8266-20160809-v1.8.3.bin
