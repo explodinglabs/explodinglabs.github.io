@@ -59,7 +59,6 @@ figcaption {
 ul, ol {
     margin-left: $spacing-unit;
     li {
-        margin-bottom: 5px;
     }
 }
 
@@ -100,7 +99,6 @@ a {
     border-bottom: 1px dashed;
     &:hover {
         color: orange;
-        text-decoration: underline;
     }
 }
 

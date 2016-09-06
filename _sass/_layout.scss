@@ -24,17 +24,13 @@
  * Posts
  */
 .post-link {
-    display: block;
-    font-size: 1.2em;
-    line-height: 110%;
-    margin-bottom: 0.8em;
+    margin-bottom: 1em;
 }
 
 .post-meta {
-    display: none;
     font-size: $postmeta-font-size;
     color: $postmeta-font-color;
-    margin-bottom: $spacing-unit/2;
+    margin-bottom: 0.2em;
 }
 
 .post-content {
