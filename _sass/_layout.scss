@@ -1,38 +1,16 @@
 /**
  * Site header
  */
-.site-header {
-    background-color: #39f;
-    margin-bottom: $spacing-unit;
-}
-
-.site-title {
-    width: 100%;
-    font-size: 20px;
-    font-weight: 300;
-    float: left;
-
-    &,
-    &:visited {
-        color: white;
-    }
-}
-
 .site-nav {
     display: none;
+    font-size: $postmeta-font-size;
+    font-style: italic;
+    text-align: right;
 }
-
-
 
 /**
  * Page content
  */
-.page-content {
-}
-
-.page-heading {
-}
-
 .post-list {
     margin-left: 0;
     list-style: none;
@@ -52,42 +30,16 @@
     margin-bottom: 0.8em;
 }
 
-.post-header {
-
-    .post-meta {
-        float: right;
-        font-size: $small-font-size;
-        margin-bottom: $spacing-unit/2;
-        color: $yellow-light;
-        a {
-            color: $yellow-light;
-        }
-    }
-
-    .post-title {
-        font-size: 42px;
-        color: $page-title-color;
-        margin-bottom: $spacing-unit;
-    }
-
+.post-meta {
+    display: none;
+    font-size: $postmeta-font-size;
+    color: $postmeta-font-color;
+    margin-bottom: $spacing-unit/2;
 }
 
 .post-content {
     margin-bottom: $spacing-unit;
 
-    h1 {
-        margin-top: $spacing-unit;
-        margin-bottom: $spacing-unit/2;
-        font-size: $h1-size;
-        color: $h1-color;
-    }
-
-    h2 {
-        margin-top: $spacing-unit;
-        margin-bottom: $spacing-unit/2;
-        font-size: $h2-size;
-        color: $h2-color;
-    }
 }
 
 #home {

@@ -10,9 +10,9 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
     background-color: $background-color;
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $base-font-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -29,17 +29,9 @@ body {
 ::-webkit-scrollbar-corner       { }
 ::-webkit-resizer                { }
 
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: $spacing-unit;
-}
-
-p, blockquote, pre,
-ul, ol, dl, figure,
+p, blockquote, pre, ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: 0.7em;
+    margin-bottom: $spacing-unit /2;
 }
 
 /**
@@ -58,7 +50,7 @@ figure > img {
 }
 
 figcaption {
-    font-size: $small-font-size;
+    font-size: $postmeta-font-size;
 }
 
 /**
@@ -67,7 +59,6 @@ figcaption {
 ul, ol {
     margin-left: $spacing-unit;
     li {
-        line-height: 100%;
         margin-bottom: 5px;
     }
 }
@@ -76,9 +67,28 @@ ul, ol {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', georgia, serif;
+    font-family: $heading-font-family;
     font-weight: $base-font-weight;
-    line-height: 100%;
+    line-height: $heading-line-height;
+    margin: $spacing-unit*1.5 0 $spacing-unit 0;
+}
+
+h1.page-title {
+    margin: $h0-margin;
+    font-size: $h0-size;
+    color: $h0-color;
+}
+
+h1 {
+    margin: $h1-margin;
+    font-size: $h1-size;
+    color: $h1-color;
+}
+
+h2 {
+    margin: $h2-margin;
+    font-size: $h2-size;
+    color: $h2-color;
 }
 
 /**
@@ -87,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $link-color;
     text-decoration: none;
-
+    border-bottom: 1px dashed;
     &:hover {
         color: orange;
         text-decoration: underline;
@@ -116,7 +126,7 @@ pre,
 code {
     font-family: $code-font-family;
     font-size: $code-font-size;
-    border: 1px solid $code-border-color;
+    border: $code-border-width solid $code-border-color;
     border-radius: $code-border-radius;
     line-height: $code-line-height;
 }
@@ -142,6 +152,7 @@ pre {
     padding-top:30px;
     height:0;
     overflow:hidden;
+    margin-bottom: $spacing-unit;
 }
 
 .video-container iframe, .video-container object, .video-container embed {
@@ -176,7 +187,6 @@ pre {
  * Clearfix
  */
 %clearfix {
-
     &:after {
         content: "";
         display: table;
@@ -188,13 +198,11 @@ pre {
  * Icons
  */
 .icon {
-
     > svg {
         display: inline-block;
         width: 16px;
         height: 16px;
         vertical-align: middle;
-
         path {
             fill: $grey;
         }
