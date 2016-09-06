@@ -5,7 +5,7 @@ permalink: /fading-an-led-with-micropython
 date: 2016-09-06
 comments: true
 ---
-<iframe width="740" height="416" src="https://www.youtube.com/embed/GFwwPe4uO34" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GFwwPe4uO34" frameborder="0" allowfullscreen></iframe>
 
 ```python
 import math
