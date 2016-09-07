@@ -15,7 +15,7 @@ body {
     font-family: 'Open sans', sans-serif;
     font-family: 'goudy old style', 'minion pro', 'bell mt', Georgia, 'Hiragino Mincho Pro', serif;
     font-size: 17px;
-    line-height: 1.4em;
+    line-height: 1.5em;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -69,19 +69,16 @@ ul, ol {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    line-height: 1.2;
     margin: $spacing-unit*1.5 0 $spacing-unit 0;
-    width: 100%;
     font-family: 'Garamond', 'Merriweather', 'Georgia', serif;
-    font-weight: 100;
+    font-weight: normal;
+    line-height: 1.2;
+    width: 100%;
 }
 
 h1.page-title {
-    margin: $spacing-unit/2 0 $spacing-unit/2 0;
+    margin: $spacing-unit 0 $spacing-unit/2 0;
     font-size: 2.4em;
-    color: black;
-    border-bottom: 0px solid $grey-light;
-    font-weight: 100;
 }
 
 h1 {
