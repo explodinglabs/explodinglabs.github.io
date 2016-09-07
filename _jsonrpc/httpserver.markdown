@@ -11,11 +11,14 @@ comments: true
 
 We'll build an HTTP server in Python, taking
 [JSON-RPC](http://www.jsonrpc.org/) requests on port
-5000. It should respond to "ping" with "pong". We'll use Python's built-in
-http.server module, so no web framework is required. 
+5000. It should respond to "ping" with "pong".
 
 Server
 ======
+
+We'll use Python's built-in http.server module, so no web framework is
+required, only [jsonrpcserver](https://jsonrpcserver.readthedocs.io/en/latest/)
+to process the messages.
 
 ```shell
 $ pip install jsonrpcserver
