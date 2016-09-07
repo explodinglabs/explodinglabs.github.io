@@ -10,8 +10,8 @@ Justin Warren on the *Warmest 100*, which is an attempt at predicting the
 Triple J Hottest 100 by analysing social media posts.
 
 I've often wondered if the listeners only vote for what's played on the radio
-the most. So I set about finding out if that was true. (It'll give me a chance
-to try Python's pandas library.)
+the most. So I set out to see if that was true. (It'll give me a chance to try
+Python's pandas library.)
 
 Gathering the data
 ==================
