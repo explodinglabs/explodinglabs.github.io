@@ -5,50 +5,19 @@
 
 $spacing-unit: 40px;
 
-$background-color: #f9f9f9;
-$link-color: #4a0aff;
-
-$base-font-family: 'Lora', sans-serif;
-$base-font-color: #191919;
-$base-font-size: 16px;
-$base-font-weight: 100;
-$base-line-height: 1.6;
-
-$heading-font-family: 'Merriweather', georgia, serif;
-$heading-line-height: 1.2;
-$h0-color: black;
-$h0-size: 2em;
-$h0-style: italic;
-$h0-margin: $spacing-unit*1.5 0 $spacing-unit 0;
-$h1-color: black;
-$h1-size: 1.2em;
-$h1-margin: $spacing-unit 0 $spacing-unit/2 0;
-$h2-color: black;
-$h2-size: 1.0em;
-$h2-margin: $spacing-unit 0 $spacing-unit/2 0;
-
 $postmeta-font-size: 0.8em;
 $postmeta-font-color: #666;
 
-$code-font-family: 'Source Code Pro';
-$code-font-size: 15px;
-$code-font-color: #c9c9c9;
-$code-background-color: #111;
-$code-border-color: #444;
-$code-border-radius: 3px;
-$code-border-width: 0;
-$code-line-height: 150%;
-
 // Colours
 $grey: #828282;
-$grey-light: lighten($grey, 40%);
+$grey-light: lighten($grey, 30%);
 $grey-dark: darken($grey, 25%);
 $yellow-light: lighten(yellow, 40%);
 
 // Width of the content area
 $content-width: 750px;
-$on-palm: 600px;
 $on-laptop: 750px;
+$on-palm: 600px;
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {

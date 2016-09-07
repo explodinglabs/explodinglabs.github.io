@@ -28,9 +28,11 @@
 }
 
 .post-meta {
-    font-size: $postmeta-font-size;
-    color: $postmeta-font-color;
-    margin-bottom: 0.2em;
+    display: none;
+    margin-left: 2em;
+    margin-bottom: 1em;
+    float: right;
+    font-style: italic;
 }
 
 .post-content {

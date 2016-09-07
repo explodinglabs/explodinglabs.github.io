@@ -10,22 +10,24 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    background-color: $background-color;
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $base-font-color;
+    background-color: white;
+    color: #191919;
+    font: 100 15px/1.8 'Open sans', sans-serif;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar              { background-color: $code-background-color; }
+::-webkit-scrollbar              { display: none; padding-top: $spacing-unit/2; background-color: #fff; height: 5px;}
 ::-webkit-scrollbar-button       { }
-::-webkit-scrollbar-track        { background-color: #222; }
+::-webkit-scrollbar-track        { background-color: #ccc; }
 ::-webkit-scrollbar-track-piece  { }
-::-webkit-scrollbar-thumb        { background-color: #333; }
+::-webkit-scrollbar-thumb        { background-color: #ddd; }
 ::-webkit-scrollbar-corner       { }
 ::-webkit-resizer                { }
 
@@ -66,35 +68,40 @@ ul, ol {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-family: $heading-font-family;
-    font-weight: $base-font-weight;
-    line-height: $heading-line-height;
+    line-height: 1.2;
     margin: $spacing-unit*1.5 0 $spacing-unit 0;
+    width: 100%;
+    font-family: 'Merriweather', georgia, serif;
+    font-weight: 100;
+    letter-spacing: 1px;
 }
 
 h1.page-title {
-    margin: $h0-margin;
-    font-size: $h0-size;
-    color: $h0-color;
+    margin: 0;
+    padding: $spacing-unit*1.5 0 $spacing-unit 0;
+    font-size: 2em;
+    color: black;
+    border-bottom: 0px solid $grey-light;
+    font-weight: 500;
 }
 
 h1 {
-    margin: $h1-margin;
-    font-size: $h1-size;
-    color: $h1-color;
+    margin: $spacing-unit 0 $spacing-unit/2 0;
+    font-size: 1.4em;
+    color: black;
 }
 
 h2 {
-    margin: $h2-margin;
-    font-size: $h2-size;
-    color: $h2-color;
+    margin: $spacing-unit 0 $spacing-unit/2 0;
+    font-size: 1.2em;
+    color: black;
 }
 
 /**
  * Links
  */
 a {
-    color: $link-color;
+    color: #4a0aff;
     text-decoration: none;
     border-bottom: 1px dashed;
     &:hover {
@@ -120,22 +127,18 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
-code {
-    font-family: $code-font-family;
-    font-size: $code-font-size;
-    border: $code-border-width solid $code-border-color;
-    border-radius: $code-border-radius;
-    line-height: $code-line-height;
-}
-
-code {
-    padding: 1px 5px;
+pre, code {
+    background-color: #f0f0f0;
+    font-family: 'Source Code Pro';
+    font-size: 14px;
+    border: 0px solid #999;
+    line-height: 150%;
+    border-radius: 3px;
 }
 
 pre {
-    padding: $spacing-unit/3 $spacing-unit/2;
     overflow-x: auto;
+    padding: 0.4em 0.7em;
 
     > code {
         border: 0;
@@ -176,8 +179,8 @@ pre {
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
+        padding-right: 5px;
+        padding-left: 5px;
     }
 }
 
