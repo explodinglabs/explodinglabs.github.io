@@ -43,8 +43,13 @@
 }
 
 .post-meta {
-    margin-bottom: 1em;
+    font-size: 0.8em;
+    margin-bottom: $spacing-unit/2;
     font-style: italic;
+    color: $grey;
+    a {
+        color: $grey;
+    }
 }
 
 .post-content {
