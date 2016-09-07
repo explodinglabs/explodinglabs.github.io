@@ -9,9 +9,7 @@ layout: default
     <ul>
     {% for post in site.posts %}
         <li class="post-link">
-            <div class="post-meta">
-                <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
-            </div>
+            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
             <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </li>
     {% endfor %}

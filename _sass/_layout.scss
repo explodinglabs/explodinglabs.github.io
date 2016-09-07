@@ -8,6 +8,13 @@
     text-align: right;
 }
 
+.page-content {
+    margin-top: $spacing-unit*1.5;
+    @include media-query($on-laptop) {
+        margin-top: $spacing-unit;
+    }
+}
+
 /**
  * Page content
  */
@@ -24,14 +31,19 @@
  * Posts
  */
 .post-link {
-    margin-bottom: 1em;
+    time {
+        display: block;
+        font-size: 12px;
+    }
+    a {
+        display: block;
+        margin-left: $spacing-unit/2;
+    }
+    margin-bottom: $spacing-unit/2;
 }
 
 .post-meta {
-    display: none;
-    margin-left: 2em;
     margin-bottom: 1em;
-    float: right;
     font-style: italic;
 }
 

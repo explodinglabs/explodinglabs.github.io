@@ -77,15 +77,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1.page-title {
-    margin: 0;
-    padding: $spacing-unit*1.5 0 $spacing-unit 0;
+    margin: 0 0 $spacing-unit 0;
     font-size: 2em;
     color: black;
     border-bottom: 0px solid $grey-light;
     font-weight: 100;
-    @include media-query($on-laptop) {
-        padding-top: $spacing-unit;
-    }
 }
 
 h1 {
