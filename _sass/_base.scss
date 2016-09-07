@@ -176,6 +176,8 @@ pre {
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
     }
     @extend %clearfix;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
     @include media-query($on-palm) {
         padding-right: 15px;
         padding-left: 15px;
