@@ -5,9 +5,9 @@ permalink: /warmest-100
 date: 2016-08-15
 comments: true
 ---
-There was a [talk](https://www.youtube.com/watch?v=qjTc5q7MsMg) at Pycon by
-Justin Warren on the *Warmest 100*, which is an attempt at predicting the
-Triple J Hottest 100 by analysing social media posts.
+Justin Warren gave a [talk](https://www.youtube.com/watch?v=qjTc5q7MsMg) at
+Pycon on the *Warmest 100*, which is an attempt at predicting the Triple J
+Hottest 100 by analysing social media posts.
 
 I've often wondered if the listeners only vote for what's played on the radio
 the most. So I set out to see if that was true. (It'll give me a chance to try
