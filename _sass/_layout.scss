@@ -28,10 +28,6 @@
         display: block;
         font-size: 12px;
     }
-    a {
-        display: block;
-        margin-left: $spacing-unit/2;
-    }
     margin-bottom: $spacing-unit/2;
 }
 
@@ -48,13 +44,6 @@
 .post-content {
     margin-bottom: $spacing-unit;
 
-}
-
-#home {
-    ul {
-        list-style-type: none;
-        margin: 0 0 $spacing-unit 0;
-    }
 }
 
 /**
