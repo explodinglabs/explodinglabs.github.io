@@ -8,13 +8,6 @@
     text-align: right;
 }
 
-.page-content {
-    margin-top: $spacing-unit;
-    @include media-query($on-laptop) {
-        margin-top: $spacing-unit;
-    }
-}
-
 /**
  * Page content
  */
