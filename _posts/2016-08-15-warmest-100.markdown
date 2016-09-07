@@ -5,7 +5,7 @@ permalink: /warmest-100
 date: 2016-08-15
 comments: true
 ---
-At Pycon there was a [talk](https://www.youtube.com/watch?v=qjTc5q7MsMg) from
+There was a [talk](https://www.youtube.com/watch?v=qjTc5q7MsMg) at Pycon by
 Justin Warren on the *Warmest 100*, which is an attempt at predicting the
 Triple J Hottest 100 by analysing social media posts.
 
