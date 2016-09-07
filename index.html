@@ -4,9 +4,7 @@ layout: default
 
 <div id="home">
 
-    <h1 class="page-title">
-        Beau Barker
-    </h1>
+    <h1 class="page-title">Beau Barker</h1>
 
     {% for collection in site.collections %}
     {% unless collection.label == 'posts' %}
@@ -22,7 +20,6 @@ layout: default
     {% endfor %}
 
     <h1>Uncollated Posts</h1>
-
     <ul>
     {% for post in site.posts %}
         <li class="post-link">
