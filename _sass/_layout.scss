@@ -9,7 +9,7 @@
 }
 
 .page-content {
-    margin-top: $spacing-unit*1.5;
+    margin-top: $spacing-unit;
     @include media-query($on-laptop) {
         margin-top: $spacing-unit;
     }
