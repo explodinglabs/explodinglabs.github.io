@@ -23,6 +23,9 @@ markdown: kramdown
 highlighter: rouge
 
 collections:
+    micropython:
+        title: Micropython
+        output: true
     jsonrpc:
         title: JSON-RPC
         output: true

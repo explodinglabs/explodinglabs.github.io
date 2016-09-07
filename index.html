@@ -8,17 +8,6 @@ layout: default
         Beau Barker
     </h1>
 
-    <h1>Recent Posts</h1>
-
-    <ul>
-    {% for post in site.posts %}
-        <li class="post-link">
-            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </li>
-    {% endfor %}
-    </ul>
-
     {% for collection in site.collections %}
     {% unless collection.label == 'posts' %}
     <h1>{{ collection.title }}</h2>
@@ -31,5 +20,16 @@ layout: default
     </ul>
     {% endunless %}
     {% endfor %}
+
+    <h1>Recent Uncollated Posts</h1>
+
+    <ul>
+    {% for post in site.posts %}
+        <li class="post-link">
+            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+    </ul>
 
 </div>
