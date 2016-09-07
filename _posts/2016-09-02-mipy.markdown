@@ -12,7 +12,7 @@ comments: true
 </div>
 
 I've put a little script on pypi that copies files onto a NodeMCU or other
-serial device running Micropython. To install it:
+serial device running Micropython. To use it, install mipy with pip:
 
     $ pip install mipy
 
