@@ -11,11 +11,15 @@ We'll build a socket.io server in Python, taking
 
 Server
 ======
+Install dependencies, [Flask-SocketIO](https://flask-socketio.readthedocs.org/)
+to take requests and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to
+process them:
 
 ```shell
 $ pip install flask-socketio eventlet jsonrpcserver
-$ cat server.py
 ```
+Create a `server.py`:
+
 ```python
 import logging
 from flask import Flask
@@ -39,6 +43,8 @@ def handle_message(request):
 if __name__ == '__main__':
     socketio.run(app, port=5000)
 ```
+Start the server:
+
 ```shell
 $ python server.py
 (27985) wsgi starting up on http://127.0.0.1:5000
@@ -46,10 +52,8 @@ $ python server.py
 
 Client
 ======
+Create an `index.html`:
 
-```shell
-$ cat index.html
-```
 ```html
 <!DOCTYPE html>
 <html>

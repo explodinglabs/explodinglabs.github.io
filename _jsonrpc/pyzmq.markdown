@@ -12,11 +12,14 @@ requests on port 5000. It should respond to "ping" with "pong".
 
 Server
 ======
+Install dependencies, [pyzmq](https://pyzmq.readthedocs.io/) to take requests
+and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ``` shell
 $ pip install pyzmq jsonrpcserver
-$ cat server.py
 ```
+Create a `server.py`:
+
 ```python
 import zmq
 from jsonrpcserver import dispatch
@@ -33,12 +36,15 @@ while True:
     response = dispatch([ping], request)
     socket.send_string(str(response))
 ```
+Start the server:
+
 ``` shell
 $ python ./server.py
 ```
 
 Client
 ======
+Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ``` shell
 $ pip install jsonrpcclient pyzmq

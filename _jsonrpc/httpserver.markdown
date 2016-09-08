@@ -15,15 +15,17 @@ We'll build an HTTP server in Python, taking
 
 Server
 ======
-
-We'll use Python's built-in http.server module, so no web framework is
-required, only [jsonrpcserver](https://jsonrpcserver.readthedocs.io/en/latest/)
-to process the messages.
+We'll use Python's built-in
+[http.server](https://docs.python.org/3/library/http.server.html) module, so no
+web framework is required - only
+[jayson](https://jsonrpcserver.readthedocs.io/en/latest/) to process the
+messages.
 
 ```shell
 $ pip install jsonrpcserver
-$ cat server.py
 ```
+Create a `server.py`:
+
 ```python
 import logging
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -33,7 +35,6 @@ def ping():
     return 'pong'
 
 class TestHttpServer(BaseHTTPRequestHandler):
-
     def do_POST(self):
         # Process request
         request = self.rfile.read(int(self.headers['Content-Length'])).decode('utf-8')
@@ -47,12 +48,16 @@ class TestHttpServer(BaseHTTPRequestHandler):
 if __name__ == '__main__':
     HTTPServer(('localhost', 5000), TestHttpServer).serve_forever()
 ```
+Start the server:
+
 ```shell
 $ python server.py
 ```
 
 Client
 ======
+
+Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ``` shell
 $ pip install jsonrpcclient requests

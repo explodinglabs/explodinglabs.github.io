@@ -15,11 +15,14 @@ We'll build an HTTP server in Python, taking
 
 Server
 ======
+Install dependencies, [Flask](http://flask.pocoo.org) to take requests and
+[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ```shell
 $ pip install flask jsonrpcserver
-$ cat server.py
 ```
+Create a `server.py`:
+
 ```python
 from flask import Flask, request, Response
 from jsonrpcserver import dispatch
@@ -37,6 +40,8 @@ def index():
 if __name__ == '__main__':
     app.run()
 ```
+Start the server:
+
 ```shell
 $ python server.py
  * Restarting with stat
@@ -46,6 +51,7 @@ $ python server.py
 
 Client
 ======
+Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ```shell
 $ pip install jsonrpcclient requests

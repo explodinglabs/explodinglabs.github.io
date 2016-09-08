@@ -16,11 +16,15 @@ We'll build an HTTP server in Node, taking [JSON-RPC](http://www.jsonrpc.org/) r
 
 Server
 ======
+Install dependencies,
+[Express](https://docs.python.org/3/library/http.server.html) to take requests
+and [jayson](https://github.com/tedeh/jayson) to process them.
 
 ``` shell
 $ npm install express body-parser jayson
-$ cat server.js
 ```
+Create a `server.js`:
+
 ```javascript
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -44,13 +48,14 @@ app.post('/cats', jayson.server(cats).middleware());
 app.post('/dogs', jayson.server(dogs).middleware());
 app.listen(5000);
 ```
+Start the server:
+
 ``` shell
 $ node server.js
 ```
 
 Client
 ======
-
 Use curl to send requests:
 
 ```shell

@@ -15,11 +15,14 @@ We'll build an HTTP server in Python, taking
 
 Server
 ======
+Install dependencies, [Werkzeug](http://werkzeug.pocoo.org) to take requests
+and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ``` shell
 $ pip install werkzeug jsonrpcserver
-$ cat server.py
 ```
+Create a `server.py`:
+
 ```python
 from werkzeug.wrappers import Request, Response
 from werkzeug.serving import run_simple
@@ -36,6 +39,8 @@ def application(request):
 if __name__ == '__main__':
     run_simple('localhost', 5000, application)
 ```
+Start the server:
+
 ``` shell
 $ python server.py
  * Running on http://localhost:5000/ (Press CTRL+C to quit)
@@ -43,6 +48,7 @@ $ python server.py
 
 Client
 ======
+Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ``` shell
 $ pip install jsonrpcclient requests
