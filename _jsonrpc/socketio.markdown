@@ -11,7 +11,7 @@ We'll build a socket.io server in Python, taking
 
 Server
 ======
-Install dependencies, [Flask-SocketIO](https://flask-socketio.readthedocs.org/)
+Install dependencies — [Flask-SocketIO](https://flask-socketio.readthedocs.org/)
 to take requests and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to
 process them:
 

@@ -15,7 +15,7 @@ We'll build an HTTP server in Python, taking
 
 Server
 ======
-Install dependencies, [Flask](http://flask.pocoo.org) to take requests and
+Install dependencies — [Flask](http://flask.pocoo.org) to take requests and
 [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ```shell

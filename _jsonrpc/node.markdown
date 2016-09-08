@@ -16,7 +16,7 @@ We'll build an HTTP server in Node, taking [JSON-RPC](http://www.jsonrpc.org/) r
 
 Server
 ======
-Install dependencies,
+Install dependencies —
 [Express](https://docs.python.org/3/library/http.server.html) to take requests
 and [jayson](https://github.com/tedeh/jayson) to process them.
 

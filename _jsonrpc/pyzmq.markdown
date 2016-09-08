@@ -12,7 +12,7 @@ requests on port 5000. It should respond to "ping" with "pong".
 
 Server
 ======
-Install dependencies, [pyzmq](https://pyzmq.readthedocs.io/) to take requests
+Install dependencies — [pyzmq](https://pyzmq.readthedocs.io/) to take requests
 and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ``` shell

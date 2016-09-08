@@ -15,7 +15,7 @@ We'll build an HTTP server in Python, taking
 
 Server
 ======
-Install dependencies, [Werkzeug](http://werkzeug.pocoo.org) to take requests
+Install dependencies — [Werkzeug](http://werkzeug.pocoo.org) to take requests
 and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ``` shell
