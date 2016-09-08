@@ -18,7 +18,7 @@ Server
 We'll use Python's built-in
 [http.server](https://docs.python.org/3/library/http.server.html) module, so no
 web framework is required - only
-[jayson](https://jsonrpcserver.readthedocs.io/en/latest/) to process the
+[jsonrpcserver](https://jsonrpcserver.readthedocs.io/en/latest/) to process the
 messages.
 
 ```shell
