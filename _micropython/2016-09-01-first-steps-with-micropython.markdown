@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "First steps with Micropython on a NodeMCU"
-permalink: /micropython
+permalink: /micropython/first-steps
 date: 2016-09-01
 comments: true
 ---

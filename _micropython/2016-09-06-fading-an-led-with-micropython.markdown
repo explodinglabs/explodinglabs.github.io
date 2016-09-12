@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fading an LED with Micropython"
-permalink: /fading-an-led-with-micropython
+permalink: /micropython/fading-an-led
 date: 2016-09-06
 comments: true
 ---

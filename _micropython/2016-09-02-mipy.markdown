@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Copy files to a Micropython device"
-permalink: /mipy
+permalink: /micropython/mipy
 date: 2016-09-02
 comments: true
 ---
