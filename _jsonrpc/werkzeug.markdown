@@ -26,14 +26,17 @@ Create a `server.py`:
 ```python
 from werkzeug.wrappers import Request, Response
 from werkzeug.serving import run_simple
-from jsonrpcserver import dispatch
+from jsonrpcserver import Methods, dispatch
 
+methods = Methods()
+
+@methods.add
 def ping():
     return 'pong'
 
 @Request.application
 def application(request):
-    r = dispatch([ping], request.data.decode('utf-8'))
+    r = dispatch(methods, request.data.decode('utf-8'))
     return Response(str(r), r.http_status, mimetype='application/json')
 
 if __name__ == '__main__':

@@ -27,10 +27,12 @@ $ pip install jsonrpcserver
 Create a `server.py`:
 
 ```python
-import logging
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from jsonrpcserver import dispatch
+from jsonrpcserver import Methods, dispatch
 
+methods = Methods()
+
+@methods.add
 def ping():
     return 'pong'
 
@@ -38,7 +40,7 @@ class TestHttpServer(BaseHTTPRequestHandler):
     def do_POST(self):
         # Process request
         request = self.rfile.read(int(self.headers['Content-Length'])).decode('utf-8')
-        r = dispatch([ping], request)
+        r = dispatch(methods, request)
         # Return response
         self.send_response(r.http_status)
         self.send_header('Content-type', 'application/json')

@@ -25,16 +25,18 @@ Create a `server.py`:
 
 ```python
 from flask import Flask, request, Response
-from jsonrpcserver import dispatch
+from jsonrpcserver import Methods, dispatch
 
 app = Flask(__name__)
+methods = Methods()
 
+@methods.add
 def ping():
     return 'pong'
 
 @app.route('/', methods=['POST'])
 def index():
-    r = dispatch([ping], request.get_data().decode('utf-8'))
+    r = dispatch(methods, request.get_data().decode('utf-8'))
     return Response(str(r), r.http_status, mimetype='application/json')
 
 if __name__ == '__main__':

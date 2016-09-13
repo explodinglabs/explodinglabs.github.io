@@ -22,8 +22,11 @@ Create a `server.py`:
 
 ```python
 import zmq
-from jsonrpcserver import dispatch
+from jsonrpcserver import Methods, dispatch
 
+methods = Methods()
+
+@methods.add
 def ping():
     return 'pong'
 
@@ -33,7 +36,7 @@ socket.bind('tcp://*:5000')
 
 while True:
     request = socket.recv().decode('UTF-8')
-    response = dispatch([ping], request)
+    response = dispatch(methods, request)
     socket.send_string(str(response))
 ```
 Start the server:
