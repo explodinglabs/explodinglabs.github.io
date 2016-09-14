@@ -80,7 +80,6 @@ Create a `client.py`:
 
 ```python
 from tornado.ioloop import IOLoop
-from tornado import gen
 from jsonrpcclient.tornado_client import TornadoClient
 
 client = TornadoClient('http://localhost:5000/')
@@ -88,14 +87,14 @@ client = TornadoClient('http://localhost:5000/')
 def done_callback(future):
     print(future.result())
 
-@gen.coroutine
-def main():
+async def main():
     future = client.request('ping')
     future.add_done_callback(done_callback)
-    yield(future)
+    await future
 
 io_loop = IOLoop.current().run_sync(main)
 ```
+Note the async/await syntax requires Python 3.5+.
 
 ```shell
 $ python client.py
