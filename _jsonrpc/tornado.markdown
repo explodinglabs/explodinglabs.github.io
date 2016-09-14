@@ -70,13 +70,14 @@ $ python
 
 Asynchronous with Tornado
 -------------------------
-Thanks to [saaj](https://github.com/saaj/) we can send asynchronous requests in
-Tornado with jsonrpcclient:
+We can send asynchronous requests in Tornado with jsonrpcclient (Thanks to
+[saaj](https://github.com/saaj/)):
 
 ```shell
 $ pip install jsonrpcclient tornado
-$ python
 ```
+Create a `client.py`:
+
 ```python
 from tornado.ioloop import IOLoop
 from tornado import gen
@@ -94,4 +95,11 @@ def main():
     yield(future)
 
 io_loop = IOLoop.current().run_sync(main)
+```
+
+```shell
+$ python client.py
+INFO:jsonrpcclient.client.request:{"jsonrpc": "2.0", "method": "ping", "id": 1}
+INFO:jsonrpcclient.client.response:{"jsonrpc": "2.0", "result": "pong", "id": 1}
+pong
 ```
