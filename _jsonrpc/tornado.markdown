@@ -94,7 +94,10 @@ async def main():
 
 io_loop = IOLoop.current().run_sync(main)
 ```
-Note the async/await syntax requires Python 3.5+.
+Note the `async`/`await` syntax requires Python 3.5+. Prior to that use
+[@gen.coroutine and
+yield](http://tornado.readthedocs.io/en/stable/guide/coroutines.html#python-3-5-async-and-await).
+
 
 ```shell
 $ python client.py
