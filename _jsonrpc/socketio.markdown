@@ -5,12 +5,12 @@ date: 2016-08-01
 permalink: /jsonrpc/flask-socketio
 comments: true
 ---
+Server
+======
 We'll build a socket.io server in Python, taking
 [JSON-RPC](http://www.jsonrpc.org/) requests on port
 5000. It should respond to "ping" with "pong".
 
-Server
-======
 Install dependencies — [Flask-SocketIO](https://flask-socketio.readthedocs.org/)
 to take requests and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to
 process them:

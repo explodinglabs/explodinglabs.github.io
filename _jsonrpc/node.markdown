@@ -9,13 +9,13 @@ comments: true
 ![nodejs](/assets/nodejs.png)
 </div>
 
+Server
+======
 We'll build an HTTP server in Node, taking [JSON-RPC](http://www.jsonrpc.org/) requests on port 5000.
 
 - When it receives a "speak" request on `/cats`, it should respond with "meow".
 - When it receives a "speak" request on `/dogs`, it should respond with "woof".
 
-Server
-======
 Install dependencies —
 [Express](https://docs.python.org/3/library/http.server.html) to take requests
 and [jayson](https://github.com/tedeh/jayson) to process them.
