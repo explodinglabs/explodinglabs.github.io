@@ -15,7 +15,7 @@ We'll build an HTTP server with Tornado, taking
 [JSON-RPC](http://www.jsonrpc.org/) requests on port 5000. It should respond to
 "ping" with "pong".
 
-Install dependencies — [Tornado](http://www.tornadoweb.org/) to take
+Install the dependencies — [Tornado](http://www.tornadoweb.org/) to take
 requests and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process
 them:
 
