@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JSON-RPC in Python over Socket.io with Flask-SocketIO"
+title: "JSON-RPC in Python over Socket.io"
 date: 2016-08-01
 permalink: /jsonrpc/flask-socketio
 comments: true

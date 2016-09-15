@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JSON-RPC in Python over ZeroMQ with PyZMQ"
+title: "JSON-RPC in Python over ZeroMQ"
 date: 2016-08-01
 permalink: /jsonrpc/zeromq
 comments: true
