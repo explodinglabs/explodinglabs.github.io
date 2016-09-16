@@ -29,6 +29,7 @@ from tornado import ioloop, web
 from jsonrpcserver import Methods, dispatch
 
 methods = Methods()
+
 @methods.add
 def ping():
     return 'pong'
