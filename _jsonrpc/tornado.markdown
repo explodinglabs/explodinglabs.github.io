@@ -15,7 +15,7 @@ We'll build an HTTP server with Tornado, taking
 [JSON-RPC](http://www.jsonrpc.org/) requests on port 5000. It should respond to
 "ping" with "pong".
 
-Install dependencies — [Tornado](http://www.tornadoweb.org/) to take
+Install the dependencies — [Tornado](http://www.tornadoweb.org/) to take
 requests and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process
 them:
 
@@ -81,7 +81,6 @@ Create a `client.py`:
 
 ```python
 from tornado.ioloop import IOLoop
-from tornado import gen
 from jsonrpcclient.tornado_client import TornadoClient
 
 client = TornadoClient('http://localhost:5000/')
@@ -89,14 +88,17 @@ client = TornadoClient('http://localhost:5000/')
 def done_callback(future):
     print(future.result())
 
-@gen.coroutine
-def main():
+async def main():
     future = client.request('ping')
     future.add_done_callback(done_callback)
-    yield(future)
+    await future
 
 io_loop = IOLoop.current().run_sync(main)
 ```
+Note the `async`/`await` syntax requires Python 3.5+. Prior to that use
+[@gen.coroutine and
+yield](http://tornado.readthedocs.io/en/stable/guide/coroutines.html#python-3-5-async-and-await).
+
 
 ```shell
 $ python client.py

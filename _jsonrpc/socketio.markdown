@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "JSON-RPC over Socket.io in Python with Flask-SocketIO"
+title: "JSON-RPC in Python over Socket.io"
 date: 2016-08-01
 permalink: /jsonrpc/flask-socketio
 comments: true
 ---
+Server
+======
 We'll build a socket.io server in Python, taking
 [JSON-RPC](http://www.jsonrpc.org/) requests on port
 5000. It should respond to "ping" with "pong".
 
-Server
-======
-Install dependencies — [Flask-SocketIO](https://flask-socketio.readthedocs.org/)
-to take requests and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to
-process them:
+Install the dependencies —
+[Flask-SocketIO](https://flask-socketio.readthedocs.org/) to take requests and
+[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ```shell
 $ pip install flask-socketio eventlet jsonrpcserver

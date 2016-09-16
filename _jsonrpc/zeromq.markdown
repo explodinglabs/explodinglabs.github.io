@@ -1,19 +1,24 @@
 ---
 layout: post
-title: "JSON-RPC over ZeroMQ in Python with PyZMQ"
+title: "JSON-RPC in Python over ZeroMQ"
 date: 2016-08-01
-permalink: /jsonrpc/pyzmq
+permalink: /jsonrpc/zeromq
 comments: true
 ---
 {::options syntax_highlighter_opts="default_lang: python" /}
 
-We'll build a [ZeroMQ](http://zeromq.org) server in Python, taking JSON-RPC
-requests on port 5000. It should respond to "ping" with "pong".
+<div style="float: right; margin-left: 1em;" markdown="1">
+![zeromq](/assets/zeromq.jpg)
+</div>
 
 Server
 ======
-Install dependencies — [pyzmq](https://pyzmq.readthedocs.io/) to take requests
-and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
+We'll build a [ZeroMQ](http://zeromq.org) server in Python, taking JSON-RPC
+requests on port 5000. It should respond to "ping" with "pong".
+
+Install the dependencies — [pyzmq](https://pyzmq.readthedocs.io/) to take
+requests and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process
+them:
 
 ``` shell
 $ pip install pyzmq jsonrpcserver

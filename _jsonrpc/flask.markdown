@@ -9,13 +9,13 @@ comments: true
 ![flask](/assets/flask.png)
 </div>
 
+Server
+======
 We'll build an HTTP server in Python, taking
 [JSON-RPC](http://www.jsonrpc.org/) requests on port 5000. It should respond to
 "ping" with "pong".
 
-Server
-======
-Install dependencies — [Flask](http://flask.pocoo.org) to take requests and
+Install the dependencies — [Flask](http://flask.pocoo.org) to take requests and
 [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ```shell
