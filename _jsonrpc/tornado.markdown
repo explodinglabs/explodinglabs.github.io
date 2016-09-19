@@ -80,20 +80,16 @@ $ pip install 'jsonrpcclient[tornado]'
 Create a `client.py`:
 
 ```python
-from tornado.ioloop import IOLoop
+from tornado import ioloop
 from jsonrpcclient.tornado_client import TornadoClient
 
 client = TornadoClient('http://localhost:5000/')
 
-def done_callback(future):
-    print(future.result())
-
 async def main():
-    future = client.request('ping')
-    future.add_done_callback(done_callback)
-    await future
+    result = await client.request('ping')
+    print(result)
 
-io_loop = IOLoop.current().run_sync(main)
+ioloop.IOLoop.current().run_sync(main)
 ```
 Note the `async`/`await` syntax requires Python 3.5+. Prior to that use
 [@gen.coroutine and
