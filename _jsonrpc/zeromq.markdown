@@ -55,7 +55,7 @@ Client
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ``` shell
-$ pip install jsonrpcclient pyzmq
+$ pip install 'jsonrpcclient[pyzmq]'
 $ python
 ```
 ```python

@@ -62,7 +62,7 @@ Client
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ``` shell
-$ pip install jsonrpcclient requests
+$ pip install 'jsonrpcclient[requests]'
 $ python
 ```
 ```python
