@@ -36,7 +36,7 @@ def ping():
 
 @app.route('/', methods=['POST'])
 def index():
-    r = dispatch(methods, request.get_data().decode('utf-8'))
+    r = dispatch(methods, request.get_data().decode())
     return Response(str(r), r.http_status, mimetype='application/json')
 
 if __name__ == '__main__':

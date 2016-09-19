@@ -40,7 +40,7 @@ socket = context.socket(zmq.REP)
 socket.bind('tcp://*:5000')
 
 while True:
-    request = socket.recv().decode('UTF-8')
+    request = socket.recv().decode()
     response = dispatch(methods, request)
     socket.send_string(str(response))
 ```

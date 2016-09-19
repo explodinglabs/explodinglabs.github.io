@@ -36,7 +36,7 @@ def ping():
 
 class MainHandler(web.RequestHandler):
     def post(self):
-        response = dispatch(methods, self.request.body.decode('utf-8'))
+        response = dispatch(methods, self.request.body.decode())
         self.write(response)
 
 if __name__ == "__main__":
