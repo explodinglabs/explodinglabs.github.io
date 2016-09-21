@@ -17,11 +17,11 @@ on port 5000. It should respond to "ping" with "pong".
 Install the dependencies —
 
 - [Flask](http://flask.pocoo.org) will take queries,
-- [graphene](http://graphene-python.org/) (1.0-dev version) to process them, and
+- [graphene](http://graphene-python.org/) to process them, and
 - [flask-graphql](https://github.com/graphql-python/flask-graphql) will simplify creating the route:
 
 ```shell
-$ pip install flask git+https://github.com/graphql-python/graphene flask-graphql
+$ pip install flask graphene flask-graphql
 ```
 Create a `server.py`:
 
@@ -32,7 +32,8 @@ from flask_graphql import GraphQLView
 
 class Query(graphene.ObjectType):
     ping = graphene.String(description='Ping')
-    def resolve_ping(self, args, context, info):
+
+    def resolve_ping(self, args, info):
         return 'pong'
 
 schema = graphene.Schema(query=Query)
