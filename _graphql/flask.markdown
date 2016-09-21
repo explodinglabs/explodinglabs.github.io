@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Graphql in Python with Flask"
+title: "GraphQL in Python with Flask"
 date: 2016-09-21
 permalink: /graphql/flask
 comments: true
