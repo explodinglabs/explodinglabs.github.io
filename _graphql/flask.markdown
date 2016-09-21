@@ -26,8 +26,8 @@ $ pip install flask graphene flask-graphql
 Create a `server.py`:
 
 ```python
-import graphene
 from flask import Flask
+import graphene
 from flask_graphql import GraphQLView
 
 class Query(graphene.ObjectType):
@@ -41,7 +41,6 @@ app = Flask(__name__)
 app.add_url_rule('/', view_func=GraphQLView.as_view('graphql', schema=schema))
 app.run()
 ```
-
 Start the server:
 
 ```shell
