@@ -37,8 +37,7 @@ def ping():
 def handle_message(request):
     return dispatch(methods, request)
 
-if __name__ == '__main__':
-    socketio.run(app, port=5000)
+socketio.run(app, port=5000)
 ```
 Start the server:
 

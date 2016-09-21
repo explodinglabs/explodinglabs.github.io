@@ -47,8 +47,7 @@ class TestHttpServer(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(str(r).encode())
 
-if __name__ == '__main__':
-    HTTPServer(('localhost', 5000), TestHttpServer).serve_forever()
+HTTPServer(('localhost', 5000), TestHttpServer).serve_forever()
 ```
 Start the server:
 

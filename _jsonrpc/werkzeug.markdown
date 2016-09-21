@@ -40,8 +40,7 @@ def application(request):
     r = dispatch(methods, request.data.decode())
     return Response(str(r), r.http_status, mimetype='application/json')
 
-if __name__ == '__main__':
-    run_simple('localhost', 5000, application)
+run_simple('localhost', 5000, application)
 ```
 Start the server:
 

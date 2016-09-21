@@ -39,10 +39,9 @@ class MainHandler(web.RequestHandler):
         response = dispatch(methods, self.request.body.decode())
         self.write(response)
 
-if __name__ == "__main__":
-    app = web.Application([(r"/", MainHandler)])
-    app.listen(5000)
-    ioloop.IOLoop.current().start()
+app = web.Application([(r"/", MainHandler)])
+app.listen(5000)
+ioloop.IOLoop.current().start()
 ```
 Start the server:
 
