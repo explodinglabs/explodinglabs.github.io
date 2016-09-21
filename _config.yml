@@ -23,12 +23,15 @@ markdown: kramdown
 highlighter: rouge
 
 collections:
-    micropython:
-        title: Micropython
+    aws:
+        title: Amazon Web Services
+        output: true
+    graphql:
+        title: GraphQL
         output: true
     jsonrpc:
         title: JSON-RPC
         output: true
-    aws:
-        title: Amazon Web Services
+    micropython:
+        title: Micropython
         output: true

@@ -125,7 +125,6 @@ blockquote {
  * Code formatting
  */
 pre, code {
-    background-color: #eee;
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     font-size: 0.9em;
     line-height: 1.3em;
@@ -133,6 +132,7 @@ pre, code {
 }
 
 pre {
+    background-color: #eee;
     overflow-x: auto;
     padding: 0.4em 0.4em 0.4em $spacing-unit/2;
     @include media-query($on-palm) {
@@ -217,5 +217,14 @@ pre {
     h5 {
         font-size: 1.2em;
         color: #66f;
+    }
+}
+
+.wide-logos {
+    float: right;
+    @include media-query($on-palm) {
+        float: none;
+        display: block;
+        text-align: center;
     }
 }
