@@ -7,7 +7,7 @@ comments: true
 ---
 <div class="wide-logos" markdown="1">
 ![flask](/assets/aiohttp.png)
-![plus](/assets/plus.jpg)
+![plus](/assets/plus.png)
 ![json](/assets/json.png)
 </div>
 

@@ -6,8 +6,8 @@ permalink: /jsonrpc/zeromq
 comments: true
 ---
 <div class="wide-logos" markdown="1">
-![zeromq](/assets/zeromq.jpg)
-![plus](/assets/plus.jpg)
+![zeromq](/assets/zeromq.png)
+![plus](/assets/plus.png)
 ![json](/assets/json.png)
 </div>
 

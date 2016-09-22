@@ -7,7 +7,7 @@ comments: true
 ---
 <div class="wide-logos" markdown="1">
 ![tornado](/assets/tornado.png)
-![plus](/assets/plus.jpg)
+![plus](/assets/plus.png)
 ![json](/assets/json.png)
 </div>
 

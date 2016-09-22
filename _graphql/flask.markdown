@@ -6,19 +6,19 @@ permalink: /graphql/flask
 comments: true
 ---
 <div class="wide-logos" markdown="1">
-![graphql](/assets/graphql.png)
-![plus](/assets/plus.jpg)
-![flask](/assets/flask.png)
+![Flask](/assets/flask.png)
+![plus](/assets/plus.png)
+![GraphQL](/assets/graphql.png)
 </div>
 
-We'll build a [Graphql](http://graphql.org/) server in Python, taking queries
-on port 5000. It should respond to "ping" with "pong".
+We'll build a [Flask](http://flask.pocoo.org/) server to take
+[GraphQL](http://graphql.org/) queries.
 
 Install the dependencies —
 
-- [Flask](http://flask.pocoo.org) will take queries,
-- [graphene](http://graphene-python.org/) to process them, and
-- [flask-graphql](https://github.com/graphql-python/flask-graphql) will simplify creating the route:
+- [Flask](http://flask.pocoo.org/) to take queries,
+- [Graphene](http://graphene-python.org/) to process them, and
+- [Flask-GraphQL](https://github.com/graphql-python/flask-graphql) to simplify the route.
 
 ```shell
 $ pip install flask graphene flask-graphql
@@ -54,6 +54,6 @@ Client
 Test with curl:
 
 ```shell
-$ curl -H 'Content-type: application/graphql' -d '{ping}' http://localhost:5000
-{"data":{"ping":"pong"}}
+curl -H 'Content-type: application/graphql' -d '{hello}' http://localhost:5000
+{"data": {"hello": "World"}}%
 ```
