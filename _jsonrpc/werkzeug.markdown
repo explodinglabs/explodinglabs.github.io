@@ -11,13 +11,12 @@ comments: true
 ![json](/assets/json.png)
 </div>
 
-We'll build an HTTP server in Python, taking
-[JSON-RPC](http://www.jsonrpc.org/) requests on port
-5000. It should respond to 'ping' with 'pong'.
+We'll build a [Werkzeug](http://werkzeug.pocoo.org) server to take
+[JSON-RPC](http://www.jsonrpc.org/) requests. It should respond to 'ping' with
+'pong'.
 
-Install the dependencies — [Werkzeug](http://werkzeug.pocoo.org) to take
-requests and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process
-them:
+Install the dependencies — Werkzeug to take requests and
+[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ``` shell
 $ pip install werkzeug jsonrpcserver
@@ -61,6 +60,6 @@ $ python
 >>> from jsonrpcclient.http_client import HTTPClient
 >>> HTTPClient('http://localhost:5000').request('ping')
 --> {"jsonrpc": "2.0", "method": "ping", "id": 1}
-<-- {"jsonrpc": "2.0", "result": "pong", "id": 1}
+<-- {"jsonrpc": "2.0", "result": "pong", "id": 1} (200 OK)
 'pong'
 ```

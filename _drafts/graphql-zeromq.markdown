@@ -14,10 +14,8 @@ comments: true
 We'll build a [ZeroMQ](http://zeromq.org/) server to take
 [GraphQL](http://graphql.org/) queries.
 
-Install the dependencies —
-
-- [PyZMQ](https://pyzmq.readthedocs.io/) to take queries,
-- [Graphene](http://graphene-python.org/) to process them.
+Install the dependencies — [PyZMQ](https://pyzmq.readthedocs.io/) to take
+queries and [Graphene](http://graphene-python.org/) to process them:
 
 ```shell
 $ pip install pyzmq graphene

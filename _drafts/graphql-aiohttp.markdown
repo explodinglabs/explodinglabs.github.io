@@ -11,13 +11,11 @@ comments: true
 ![GraphQL](/assets/graphql.png)
 </div>
 
-We'll build an [aiohttp](http://aiohttp.readthedocs.io/) server, taking
-[GraphQL](http://graphql.org/) queries and processing them asynchronously.
+We'll build an [aiohttp](http://aiohttp.readthedocs.io/) server to take
+[GraphQL](http://graphql.org/) queries and process them asynchronously.
 
-Install the dependencies —
-
-- [aiohttp](http://aiohttp.readthedocs.io/) to take queries, and
-- [Graphene](http://graphene-python.org/) to process them.
+Install the dependencies — aiohttp to take queries and
+[Graphene](http://graphene-python.org/) to process them:
 
 ```shell
 $ pip install aiohttp graphene
@@ -63,5 +61,5 @@ Test with curl:
 
 ```shell
 curl -H 'Content-type: application/graphql' -d '{hello}' http://localhost:5000
-{"data": {"hello": "World"}}% 
+{"data": {"hello": "World"}}%
 ```

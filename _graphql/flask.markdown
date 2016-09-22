@@ -14,11 +14,10 @@ comments: true
 We'll build a [Flask](http://flask.pocoo.org/) server to take
 [GraphQL](http://graphql.org/) queries.
 
-Install the dependencies —
-
-- [Flask](http://flask.pocoo.org/) to take queries,
-- [Graphene](http://graphene-python.org/) to process them, and
-- [Flask-GraphQL](https://github.com/graphql-python/flask-graphql) to simplify the route.
+Install the dependencies — Flask to take queries,
+[Graphene](http://graphene-python.org/) to process them and
+[Flask-GraphQL](https://github.com/graphql-python/flask-graphql) to simplify
+the route:
 
 ```shell
 $ pip install flask graphene flask-graphql

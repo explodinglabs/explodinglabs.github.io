@@ -11,13 +11,12 @@ comments: true
 ![json](/assets/json.png)
 </div>
 
-We'll build an HTTP server with Tornado, taking
-[JSON-RPC](http://www.jsonrpc.org/) requests on port 5000. It should respond to
-"ping" with "pong".
+We'll build an [Tornado](http://www.tornadoweb.org/) server to take
+[JSON-RPC](http://www.jsonrpc.org/) requests. It should respond to "ping" with
+"pong".
 
-Install the dependencies — [Tornado](http://www.tornadoweb.org/) to take
-requests and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process
-them:
+Install the dependencies — Tornado to take requests and
+[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ```shell
 $ pip install tornado jsonrpcserver
@@ -65,13 +64,13 @@ $ python
 >>> from jsonrpcclient.http_client import HTTPClient
 >>> HTTPClient('http://localhost:5000/').request('ping')
 --> {"jsonrpc": "2.0", "method": "ping", "id": 1}
-<-- {"jsonrpc": "2.0", "result": "pong", "id": 1}
+<-- {"jsonrpc": "2.0", "result": "pong", "id": 1} (200 OK)
 'pong'
 ```
 
 Asynchronous with Tornado
 -------------------------
-We can send asynchronous requests in Tornado with jsonrpcclient (Thanks to
+We can send asynchronous requests in Tornado with jsonrpcclient (thanks to
 [saaj](https://github.com/saaj/)):
 
 ```shell
@@ -91,10 +90,9 @@ async def main():
 
 ioloop.IOLoop.current().run_sync(main)
 ```
-Note the `async`/`await` syntax requires Python 3.5+. Prior to that use
+The `async`/`await` syntax requires Python 3.5+. Prior to that use
 [@gen.coroutine and
 yield](http://tornado.readthedocs.io/en/stable/guide/coroutines.html#python-3-5-async-and-await).
-
 
 ```shell
 $ python client.py
