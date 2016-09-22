@@ -5,8 +5,6 @@ date: 2016-08-01
 permalink: /jsonrpc/zeromq
 comments: true
 ---
-{::options syntax_highlighter_opts="default_lang: python" /}
-
 <div style="float: right; margin-left: 1em;" markdown="1">
 ![zeromq](/assets/zeromq.jpg)
 </div>
