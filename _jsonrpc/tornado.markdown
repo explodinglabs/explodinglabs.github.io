@@ -9,8 +9,6 @@ comments: true
 ![tornado](/assets/tornado.png)
 </div>
 
-Server
-======
 We'll build an HTTP server with Tornado, taking
 [JSON-RPC](http://www.jsonrpc.org/) requests on port 5000. It should respond to
 "ping" with "pong".
