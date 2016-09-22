@@ -2,7 +2,7 @@
 layout: post
 title: "GraphQL in Python with ZeroMQ"
 date: 2016-09-23
-permalink: /graphql/aiohttp
+permalink: /graphql/zeromq
 comments: true
 ---
 <div class="wide-logos" markdown="1">
