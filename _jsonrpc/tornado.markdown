@@ -29,7 +29,6 @@ from tornado import ioloop, web
 from jsonrpcserver import Methods, dispatch
 
 methods = Methods()
-
 @methods.add
 def ping():
     return 'pong'
@@ -40,8 +39,10 @@ class MainHandler(web.RequestHandler):
         self.write(response)
 
 app = web.Application([(r"/", MainHandler)])
-app.listen(5000)
-ioloop.IOLoop.current().start()
+
+if __name__ == '__main__':
+    app.listen(5000)
+    ioloop.IOLoop.current().start()
 ```
 Start the server:
 

@@ -26,18 +26,19 @@ from flask_socketio import SocketIO
 from jsonrpcserver import Methods, dispatch
 
 app = Flask(__name__)
-socketio = SocketIO(app)
-methods = Methods()
 
+methods = Methods()
 @methods.add
 def ping():
     return 'pong'
 
+socketio = SocketIO(app)
 @socketio.on('message')
 def handle_message(request):
     return dispatch(methods, request)
 
-socketio.run(app, port=5000)
+if __name__ == '__main__':
+    socketio.run(app, port=5000)
 ```
 Start the server:
 

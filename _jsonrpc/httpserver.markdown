@@ -31,7 +31,6 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from jsonrpcserver import Methods, dispatch
 
 methods = Methods()
-
 @methods.add
 def ping():
     return 'pong'
@@ -47,7 +46,8 @@ class TestHttpServer(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(str(r).encode())
 
-HTTPServer(('localhost', 5000), TestHttpServer).serve_forever()
+if __name__ == '__main__':
+    HTTPServer(('localhost', 5000), TestHttpServer).serve_forever()
 ```
 Start the server:
 
