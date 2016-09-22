@@ -6,9 +6,9 @@ permalink: /jsonrpc/zeromq
 comments: true
 ---
 <div class="wide-logos" markdown="1">
-![json](/assets/json.png)
-![plus](/assets/plus.jpg)
 ![zeromq](/assets/zeromq.jpg)
+![plus](/assets/plus.jpg)
+![json](/assets/json.png)
 </div>
 
 We'll build a [ZeroMQ](http://zeromq.org) server in Python, taking JSON-RPC

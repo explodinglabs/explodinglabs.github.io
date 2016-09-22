@@ -6,9 +6,9 @@ permalink: /jsonrpc/flask
 comments: true
 ---
 <div class="wide-logos" markdown="1">
-![json](/assets/json.png)
-![plus](/assets/plus.jpg)
 ![flask](/assets/flask.png)
+![plus](/assets/plus.jpg)
+![json](/assets/json.png)
 </div>
 
 We'll build an HTTP server in Python, taking

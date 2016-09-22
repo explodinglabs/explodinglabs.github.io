@@ -6,9 +6,9 @@ permalink: /jsonrpc/socketio
 comments: true
 ---
 <div class="wide-logos" markdown="1">
-![json](/assets/json.png)
-![plus](/assets/plus.jpg)
 ![socketio](/assets/socketio.png)
+![plus](/assets/plus.jpg)
+![json](/assets/json.png)
 </div>
 
 We'll build a socket.io server in Python, taking
