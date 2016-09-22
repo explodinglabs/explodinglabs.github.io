@@ -27,7 +27,9 @@ Create a `server.py`:
 from aiohttp import web
 from jsonrpcserver import Methods, dispatch
 
+app = web.Application()
 methods = Methods()
+
 @methods.add
 def ping():
     return 'pong'
@@ -37,7 +39,6 @@ async def handle(request):
     response = dispatch(methods, request)
     return web.json_response(response)
 
-app = web.Application()
 app.router.add_post('/', handle)
 
 if __name__ == '__main__':
