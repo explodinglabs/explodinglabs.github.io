@@ -53,6 +53,6 @@ Client
 Test with curl:
 
 ```shell
-curl -H 'Content-type: application/graphql' -d '{hello}' http://localhost:5000
+$ curl -H 'Content-type: application/graphql' -d '{hello}' http://localhost:5000
 {"data": {"hello": "World"}}%
 ```
