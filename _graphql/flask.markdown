@@ -27,19 +27,20 @@ Create a `server.py`:
 
 ```python
 from flask import Flask
-import graphene
+from graphene import ObjectType, String, Schema
 from flask_graphql import GraphQLView
 
-class Query(graphene.ObjectType):
-    ping = graphene.String(description='Ping')
+class Query(ObjectType):
+    hello = String(description='Hello')
+    def resolve_hello(self, args, info):
+        return 'World'
 
-    def resolve_ping(self, args, info):
-        return 'pong'
-
-schema = graphene.Schema(query=Query)
 app = Flask(__name__)
-app.add_url_rule('/', view_func=GraphQLView.as_view('graphql', schema=schema))
-app.run()
+app.add_url_rule('/', view_func=GraphQLView.as_view('graphql',
+                 schema=Schema(query=Query)))
+
+if __name__ == '__main__':
+    app.run()
 ```
 Start the server:
 
