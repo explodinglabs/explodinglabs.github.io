@@ -5,7 +5,9 @@ date: 2016-09-13
 permalink: /jsonrpc/tornado
 comments: true
 ---
-<div style="float: right" markdown="1">
+<div class="wide-logos" markdown="1">
+![json](/assets/json.png)
+![plus](/assets/plus.jpg)
 ![tornado](/assets/tornado.png)
 </div>
 

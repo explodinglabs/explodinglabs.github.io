@@ -5,7 +5,7 @@ date: 2016-08-01
 permalink: /jsonrpc/aiohttp
 comments: true
 ---
-<div style="float: right" markdown="1">
+<div class="wide-logos" markdown="1">
 ![json](/assets/json.png)
 ![plus](/assets/plus.jpg)
 ![flask](/assets/aiohttp.png)
