@@ -20,7 +20,7 @@ server in Node, to take [JSON-RPC](http://www.jsonrpc.org/) requests.
 Install the dependencies — Express to take requests and
 [jayson](https://github.com/tedeh/jayson) to process them:
 
-``` shell
+```sh
 $ npm install express body-parser jayson
 ```
 Create a `server.js`:
@@ -58,7 +58,7 @@ Client
 ======
 Use curl to send requests:
 
-```shell
+```sh
 $ HDR='Content-type: application/json'
 $ MSG='{"jsonrpc": "2.0", "method": "speak", "id": 1}'
 $ curl -H $HDR -d $MSG http://localhost:5000/cats

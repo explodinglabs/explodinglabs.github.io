@@ -16,7 +16,7 @@ We'll build an HTTP server in Python, taking
 Server
 ======
 
-```shell
+```sh
 $ pip install jsonrpcserver
 $ cat server.py
 ```
@@ -31,7 +31,7 @@ def ping():
 if __name__ == '__main__':
     methods.serve_forever()
 ```
-```shell
+```sh
 $ python server.py
  * Listening on port 5000
 ```
@@ -39,7 +39,7 @@ $ python server.py
 Client
 ======
 
-```shell
+```sh
 $ pip install jsonrpcclient requests
 $ python
 ```

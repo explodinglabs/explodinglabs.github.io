@@ -18,7 +18,7 @@ We'll build an [Tornado](http://www.tornadoweb.org/) server to take
 Install the dependencies — Tornado to take requests and
 [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
-```shell
+```sh
 $ pip install tornado jsonrpcserver
 ```
 Create a `server.py`:
@@ -46,7 +46,7 @@ if __name__ == '__main__':
 ```
 Start the server:
 
-```shell
+```sh
 $ python server.py
 ```
 
@@ -57,7 +57,7 @@ Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests.
 
 Synchronous
 -----------
-```shell
+```sh
 $ pip install 'jsonrpcclient[requests]'
 $ python
 ```
@@ -74,7 +74,7 @@ Asynchronous with Tornado
 We can send asynchronous requests in Tornado with jsonrpcclient (thanks to
 [saaj](https://github.com/saaj/)):
 
-```shell
+```sh
 $ pip install 'jsonrpcclient[tornado]'
 ```
 Create a `client.py`:
@@ -95,7 +95,7 @@ The `async`/`await` syntax requires Python 3.5+. Prior to that use
 [@gen.coroutine and
 yield](http://tornado.readthedocs.io/en/stable/guide/coroutines.html#python-3-5-async-and-await).
 
-```shell
+```sh
 $ python client.py
 INFO:jsonrpcclient.client.request:{"jsonrpc": "2.0", "method": "ping", "id": 1}
 INFO:jsonrpcclient.client.response:{"jsonrpc": "2.0", "result": "pong", "id": 1}

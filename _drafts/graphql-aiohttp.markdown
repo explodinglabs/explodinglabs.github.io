@@ -17,7 +17,7 @@ We'll build an [aiohttp](http://aiohttp.readthedocs.io/) server to take
 Install the dependencies — aiohttp to take queries and
 [Graphene](http://graphene-python.org/) to process them:
 
-```shell
+```sh
 $ pip install aiohttp graphene
 ```
 Create a `server.py`:
@@ -49,7 +49,7 @@ if __name__ == '__main__':
 ```
 Start the server:
 
-```shell
+```sh
 $ python server.py
 ======== Running on http://0.0.0.0:5000/ ========
 (Press CTRL+C to quit)
@@ -59,7 +59,7 @@ Client
 ======
 Test with curl:
 
-```shell
+```sh
 $ curl -H 'Content-type: application/graphql' -d '{hello}' http://localhost:5000
 {"data": {"hello": "World"}}%
 ```

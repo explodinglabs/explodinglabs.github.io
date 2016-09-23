@@ -21,7 +21,7 @@ Install the dependencies —
 [eventlet](http://eventlet.net/) to take requests and
 [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
-```shell
+```sh
 $ pip install flask flask-socketio eventlet jsonrpcserver
 ```
 Create a `server.py`:
@@ -48,7 +48,7 @@ if __name__ == '__main__':
 ```
 Start the server:
 
-```shell
+```sh
 $ python server.py
 (27985) wsgi starting up on http://127.0.0.1:5000
 ```

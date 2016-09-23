@@ -44,7 +44,7 @@ int main(void) {
 Build and start the server
 --------------------------
 
-```shell
+```sh
 $ gcc -lczmq server.c -o server
 $ ./server
 ```
@@ -76,7 +76,7 @@ int main(void) {
 Build and run
 -------------
 
-```shell
+```sh
 $ gcc -lczmq client.c -o client
 $ ./client
 Pong

@@ -20,7 +20,7 @@ web framework is required - only
 [jsonrpcserver](https://jsonrpcserver.readthedocs.io/en/latest/) to process the
 messages:
 
-```shell
+```sh
 $ pip install jsonrpcserver
 ```
 Create a `server.py`:
@@ -51,7 +51,7 @@ if __name__ == '__main__':
 ```
 Start the server:
 
-```shell
+```sh
 $ python server.py
 ```
 

@@ -18,7 +18,7 @@ We'll build an [aiohttp](http://aiohttp.readthedocs.io/) server to take
 Install the dependencies — aiohttp to take requests and
 [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
-```shell
+```sh
 $ pip install aiohttp jsonrpcserver
 ```
 Create a `server.py`:
@@ -46,7 +46,7 @@ if __name__ == '__main__':
 ```
 Start the server:
 
-```shell
+```sh
 $ python server.py
 ======== Running on http://0.0.0.0:5000/ ========
 (Press CTRL+C to quit)
@@ -56,7 +56,7 @@ Client
 ======
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
-```shell
+```sh
 $ pip install 'jsonrpcclient[requests]'
 $ python
 ```

@@ -16,13 +16,13 @@ To copy the firmware onto the board, you can use *esptool*. It can be installed
 with pip, so I created a virtualenv for installing it. Esptool requires Python
 2, so the virtualenv was configured to use that.
 
-```shell
+```sh
 $ mkvirtualenv -p /usr/bin/python2.7 esptool && setvirtualenvproject
 ```
 
 Install esptool in the virtualenv:
 
-```
+```sh
 $ pip install esptool
 ```
 
@@ -30,7 +30,7 @@ Plugging in the nodemcu gives me `/dev/ttyUSB0`.
 
 Erase any existing firmware:
 
-```
+```sh
 $ esptool.py --port /dev/ttyUSB0 erase_flash
 ```
 
@@ -38,7 +38,7 @@ Downloaded the [pre-built micropython
 firmware](http://micropython.org/download/), then write the firmware to the
 device:
 
-```
+```sh
 $ esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=8m -fm dio 0 esp8266-20160809-v1.8.3.bin
 ```
 
@@ -49,10 +49,10 @@ Enter the REPL
 
 I used picocom.
 
-```shell
+```sh
 $ picocom -b115200 -ep /dev/ttyUSB0
 ```
-```
+```sh
 picocom v2.1
 
 port is        : /dev/ttyUSB0
@@ -79,7 +79,7 @@ Terminal ready
 
 Press enter to see the prompt:
 
-```
+```sh
 >>>
 ```
 

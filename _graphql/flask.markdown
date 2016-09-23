@@ -19,7 +19,7 @@ Install the dependencies — Flask to take queries,
 [Flask-GraphQL](https://github.com/graphql-python/flask-graphql) to simplify
 the route:
 
-```shell
+```sh
 $ pip install flask graphene flask-graphql
 ```
 Create a `server.py`:
@@ -43,7 +43,7 @@ if __name__ == '__main__':
 ```
 Start the server:
 
-```shell
+```sh
 $ python server.py
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
@@ -52,7 +52,7 @@ Client
 ======
 Test with curl:
 
-```shell
+```sh
 $ curl -H 'Content-type: application/graphql' -d '{hello}' http://localhost:5000
 {"data": {"hello": "World"}}%
 ```

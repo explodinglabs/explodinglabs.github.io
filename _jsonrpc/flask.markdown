@@ -18,7 +18,7 @@ We'll build a [Flask](http://flask.pocoo.org) server to take
 Install the dependencies — Flask to take requests and
 [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
-```shell
+```sh
 $ pip install flask jsonrpcserver
 ```
 Create a `server.py`:
@@ -44,7 +44,7 @@ if __name__ == '__main__':
 ```
 Start the server:
 
-```shell
+```sh
 $ python server.py
  * Restarting with stat
  * Debugger is active!
@@ -55,7 +55,7 @@ Client
 ======
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
-```shell
+```sh
 $ pip install 'jsonrpcclient[requests]'
 $ python
 ```

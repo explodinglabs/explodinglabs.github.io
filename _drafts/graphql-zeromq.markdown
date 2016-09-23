@@ -17,7 +17,7 @@ We'll build a [ZeroMQ](http://zeromq.org/) server to take
 Install the dependencies — [PyZMQ](https://pyzmq.readthedocs.io/) to take
 queries and [Graphene](http://graphene-python.org/) to process them:
 
-```shell
+```sh
 $ pip install pyzmq graphene
 ```
 Create a `server.py`:
@@ -44,7 +44,7 @@ if __name__ == '__main__':
 ```
 Start the server:
 
-```shell
+```sh
 $ python server.py
 ```
 
