@@ -57,8 +57,8 @@ $ pip install 'jsonrpcclient[pyzmq]'
 $ python
 ```
 ```python
->>> from jsonrpcclient.zmq_client import ZMQClient
->>> ZMQClient('tcp://localhost:5000').request('ping')
+>>> from jsonrpcclient.zeromq_client import ZeroMQClient
+>>> ZeroMQClient('tcp://localhost:5000').request('ping')
 --> {"jsonrpc": "2.0", "method": "ping", "id": 1}
 <-- {"jsonrpc": "2.0", "result": "pong", "id": 1}
 'pong'
