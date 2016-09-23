@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JSON-RPC in Python with aiohttp"
-date: 2016-08-01
+date: 2016-09-23
 permalink: /jsonrpc/aiohttp
 comments: true
 ---
