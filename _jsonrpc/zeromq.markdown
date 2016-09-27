@@ -63,3 +63,5 @@ $ python
 <-- {"jsonrpc": "2.0", "result": "pong", "id": 1}
 'pong'
 ```
+
+You can also do this [asynchronously](./zeromq-async) with python 3.5+.
