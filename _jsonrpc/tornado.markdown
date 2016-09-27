@@ -25,17 +25,16 @@ Create a `server.py`:
 
 ```python
 from tornado import ioloop, web
-from jsonrpcserver import Methods, dispatch
-
-methods = Methods()
+from jsonrpcserver.aio import methods
 
 @methods.add
-def ping():
+async def ping():
     return 'pong'
 
 class MainHandler(web.RequestHandler):
-    def post(self):
-        response = dispatch(methods, self.request.body.decode())
+    async def post(self):
+        request = self.request.body.decode()
+        response = await methods.dispatch(request)
         self.write(response)
 
 app = web.Application([(r"/", MainHandler)])

@@ -26,9 +26,8 @@ Create a `server.py`:
 
 ```python
 import zmq
-from jsonrpcserver import Methods, dispatch
+from jsonrpcserver import methods
 
-methods = Methods()
 socket = zmq.Context().socket(zmq.REP)
 
 @methods.add
@@ -39,7 +38,7 @@ if __name__ == '__main__':
     socket.bind('tcp://*:5000')
     while True:
         request = socket.recv().decode()
-        response = dispatch(methods, request)
+        response = methods.dispatch(request)
         socket.send_string(str(response))
 ```
 Start the server:

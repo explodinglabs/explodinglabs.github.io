@@ -25,18 +25,17 @@ Create a `server.py`:
 
 ```python
 from aiohttp import web
-from jsonrpcserver import Methods, dispatch
+from jsonrpcserver.aio import methods
 
 app = web.Application()
-methods = Methods()
 
 @methods.add
-def ping():
+async def ping():
     return 'pong'
 
 async def handle(request):
     request = await request.text()
-    response = dispatch(methods, request)
+    response = await methods.dispatch(request)
     return web.json_response(response)
 
 app.router.add_post('/', handle)

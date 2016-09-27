@@ -25,10 +25,9 @@ Create a `server.py`:
 
 ```python
 from flask import Flask, request, Response
-from jsonrpcserver import Methods, dispatch
+from jsonrpcserver import methods
 
 app = Flask(__name__)
-methods = Methods()
 
 @methods.add
 def ping():
@@ -36,8 +35,10 @@ def ping():
 
 @app.route('/', methods=['POST'])
 def index():
-    r = dispatch(methods, request.get_data().decode())
-    return Response(str(r), r.http_status, mimetype='application/json')
+    req = request.get_data().decode()
+    response = methods.dispatch(req)
+    return Response(str(response), response.http_status,
+                    mimetype='application/json')
 
 if __name__ == '__main__':
     app.run()
