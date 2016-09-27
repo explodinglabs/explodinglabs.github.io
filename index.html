@@ -15,7 +15,8 @@ layout: default
     {% unless collection.label == 'posts' %}
     <h1>{{ collection.title }}</h2>
     <ul>
-        {% for page in collection.docs %}
+        {% assign items = collection.docs | sort: 'title' %}
+        {% for page in items %}
         <li>
             <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         </li>
