@@ -94,6 +94,6 @@ loop.run_until_complete(main(loop))
 ```sh
 $ python client.py
 --> {"jsonrpc": "2.0", "method": "ping", "id": 1}
-<-- {"jsonrpc": "2.0", "result": "pong", "id": 1} (200 OK)
+<-- {"jsonrpc": "2.0", "result": "pong", "id": 1}
 'pong'
 ```
