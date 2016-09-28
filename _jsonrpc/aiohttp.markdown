@@ -73,7 +73,6 @@ Asynchronous client with aiohttp
 ================================
 ```sh
 $ pip install 'jsonrpcclient[aiohttp]'
-$ python
 ```
 Create a `client.py`:
 
