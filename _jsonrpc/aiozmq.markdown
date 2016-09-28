@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JSON-RPC in Python over ZeroMQ asynchronously"
+title: "JSON-RPC in Python over ZeroMQ, asynchronously"
 date: 2016-09-28
 permalink: /jsonrpc/zeromq-async
 comments: true
