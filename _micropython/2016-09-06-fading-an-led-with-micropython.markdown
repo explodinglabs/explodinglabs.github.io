@@ -2,6 +2,7 @@
 layout: post
 title: "Fading an LED with Micropython"
 permalink: /micropython/fading-an-led
+redirect_from: /fading-an-led-with-micropython
 date: 2016-09-06
 comments: true
 ---
