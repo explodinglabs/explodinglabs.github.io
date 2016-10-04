@@ -15,7 +15,7 @@ $yellow-light: lighten(yellow, 40%);
 
 // Width of the content area
 $content-width: 800px;
-$on-laptop: 800px;
+$on-laptop: 750px;
 $on-palm: 600px;
 
 @mixin media-query($device) {
