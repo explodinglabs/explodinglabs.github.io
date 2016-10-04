@@ -172,7 +172,7 @@ blockquote {
 /* Code formatting */
 pre, code {
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
-    font-size: 0.9em;
+    font-size: 0.85em;
     line-height: 140%;
     border-radius: 3px;
 }
@@ -180,7 +180,7 @@ pre, code {
 pre {
     background-color: #eee;
     overflow-x: auto;
-    padding: 0.4em 0.4em 0.4em $spacing-unit;
+    padding: $spacing-unit/2 $spacing-unit;
     @include media-query($on-palm) {
         padding-left: 0.7em;
     }
