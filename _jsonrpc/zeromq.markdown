@@ -64,4 +64,4 @@ $ python
 'pong'
 ```
 
-You can also do this [asynchronously](./zeromq-async) with python 3.5+.
+You can also do this [asynchronously](./zeromq-async) with Python 3.5+.
