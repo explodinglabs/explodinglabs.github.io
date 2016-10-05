@@ -49,13 +49,11 @@ Start the server:
 $ python server.py
 ```
 
-Client
-======
+Synchronous client
+==================
 
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests.
 
-Synchronous
------------
 ```sh
 $ pip install 'jsonrpcclient[requests]'
 $ python
@@ -68,8 +66,9 @@ $ python
 'pong'
 ```
 
-Asynchronous with Tornado
--------------------------
+Asynchronous client with Tornado
+================================
+
 We can send asynchronous requests in Tornado with jsonrpcclient (thanks to
 [saaj](https://github.com/saaj/)):
 

@@ -69,6 +69,8 @@ async def main():
 
 asyncio.get_event_loop().run_until_complete(main())
 ```
+Run the client:
+
 ```sh
 $ python client.py
 --> {"jsonrpc": "2.0", "method": "ping", "id": 1}
