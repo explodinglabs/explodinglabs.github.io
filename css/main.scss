@@ -2,7 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "syntax-highlighting";
+@import "pygments";
 @charset "utf-8";
 
 $spacing-unit: 20px;
@@ -128,7 +128,7 @@ h2 {
 }
 
 a {
-    color: #004B6B;
+    color: black;
     text-decoration: none;
     border-bottom: 1px dotted;
     &:hover {
@@ -156,39 +156,22 @@ img {
     vertical-align: middle;
 }
 
-/* Blockquotes */
-blockquote {
-    color: $grey;
-    border-left: 4px solid $grey-light;
-    padding-left: $spacing-unit;
-    font-size: 18px;
-    font-style: italic;
-
-    > :last-child {
-        margin-bottom: 0;
-    }
-}
-
 /* Code formatting */
 pre, code {
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
-    font-size: 0.85em;
-    line-height: 140%;
-    border-radius: 3px;
+}
+
+code {
+    font-size: 0.75em;
 }
 
 pre {
-    background-color: #eee;
+    border-radius: 3px;
     overflow-x: auto;
+    background-color: #eee;
     padding: $spacing-unit/2 $spacing-unit;
     @include media-query($on-palm) {
         padding-left: 0.7em;
-    }
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
     }
 }
 
