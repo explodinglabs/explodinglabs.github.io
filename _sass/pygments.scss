@@ -3,6 +3,11 @@
 .highlight {
   color: #111; }
 
+/* ??? */
+.highlight .il {
+    color: #009999;
+}
+
 .highlight .hll {
   background-color: #ffffcc; }
 
@@ -25,6 +30,22 @@
 .highlight .w {
   color: #bbbbbb; }
 
+
+
+/* Comment */
+/* Comment.Multiline */
+/* Comment.Preproc */
+/* Comment.Single */
+/* Comment.Special */
+.highlight .c,
+.highlight .cm,
+.highlight .cp,
+.highlight .c1,
+.highlight .cs {
+    color: #999999;
+    font-weight: bold;
+    font-style: italic;
+}
 
 
 /* Generic.Deleted */
@@ -51,7 +72,6 @@
     font-style: italic;
 }
 
-
 /* Keyword */
 /* Keyword.Constant */
 /* Keyword.Declaration */
@@ -70,7 +90,18 @@
     font-weight: bold;
 }
 
-
+/* Number.Float */
+/* Number.Hex */
+/* Number.Integer */
+/* Number.Oct */
+/* Number */
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mo,
+.highlight .mi {
+    color: #6622ff;
+}
 
 /* Name.Attribute */
 /* Name.Builtin */
@@ -103,7 +134,7 @@
 .highlight .nn,
 .highlight .nt,
 .highlight .nv {
-    color: #9c225d;
+    color: #cc0044;
     font-weight: bold;
 }
 
@@ -112,47 +143,18 @@
     font-weight: bold;
 }
 
-/* Comment */
-/* Comment.Multiline */
-/* Comment.Preproc */
-/* Comment.Single */
-/* Comment.Special */
-.highlight .c,
-.highlight .cm,
-.highlight .cp,
-.highlight .c1,
-.highlight .cs {
-    color: #999999;
-    font-weight: bold;
-    font-style: italic;
-}
-
-
-/* Literal.Number.Float */
-/* Literal.Number.Hex */
-/* Literal.Number.Integer */
-/* Literal.Number.Oct */
-/* Literal.Number */
-.highlight .m,
-.highlight .mf,
-.highlight .mh,
-.highlight .mo,
-.highlight .mi {
-    color: #0099ff;
-}
-
-/* Literal.String.Backtick */
-/* Literal.String.Char */
-/* Literal.String.Doc */
-/* Literal.String.Double */
-/* Literal.String.Escape */
-/* Literal.String.Heredoc */
-/* Literal.String.Interpol */
-/* Literal.String.Other */
-/* Literal.String.Regex */
-/* Literal.String.Single */
-/* Literal.String.Symbol */
-/* Literal.String */
+/* String.Backtick */
+/* String.Char */
+/* String.Doc */
+/* String.Double */
+/* String.Escape */
+/* String.Heredoc */
+/* String.Interpol */
+/* String.Other */
+/* String.Regex */
+/* String.Single */
+/* String.Symbol */
+/* String */
 .highlight .s,
 .highlight .sb,
 .highlight .sc,
@@ -166,8 +168,4 @@
 .highlight .s1,
 .highlight .ss {
     color: #ff007f;
-}
-
-.highlight .il {
-    color: #009999;
 }
