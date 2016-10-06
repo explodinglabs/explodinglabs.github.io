@@ -11,7 +11,7 @@ comments: true
 ![json](/assets/json.png)
 </div>
 
-We'll build an [Tornado](http://www.tornadoweb.org/) server to take
+We'll build a [Tornado](http://www.tornadoweb.org/) server to take
 [JSON-RPC](http://www.jsonrpc.org/) requests. It should respond to "ping" with
 "pong".
 
