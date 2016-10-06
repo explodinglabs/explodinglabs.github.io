@@ -42,7 +42,7 @@
 .highlight .cp,
 .highlight .c1,
 .highlight .cs {
-    color: #999999;
+    color: #777777;
     font-weight: bold;
     font-style: italic;
 }
@@ -64,12 +64,14 @@
 .highlight .gh,
 .highlight .gi,
 .highlight .go,
-.highlight .gp,
 .highlight .gs,
 .highlight .gu,
 .highlight .gt {
-    color: #666666;
-    font-style: italic;
+    color: #777777;
+}
+
+.highlight .gp {
+    color: #999999;
 }
 
 /* Keyword */
