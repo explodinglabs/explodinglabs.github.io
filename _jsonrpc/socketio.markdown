@@ -3,6 +3,7 @@ layout: post
 title: "JSON-RPC in Python over Socket.io"
 date: 2016-08-01
 permalink: /jsonrpc/socketio
+redirect_from: /jsonrpc/pyzmq
 comments: true
 ---
 <div class="wide-logos" markdown="1">
