@@ -11,13 +11,11 @@ comments: true
 ![json](/assets/json.png)
 </div>
 
-We'll build a Websockets server to take
-[JSON-RPC](http://www.jsonrpc.org/) requests. It should respond to "ping" with
-"pong".
+We'll use Websockets to take [JSON-RPC](http://www.jsonrpc.org/) requests. It
+should respond to "ping" with "pong".
 
-Install the dependencies —  [websockets](http://websockets.readthedocs.io/) to
-take requests and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to
-process them:
+Install [websockets](http://websockets.readthedocs.io/) to take requests and
+[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ```sh
 $ pip install websockets jsonrpcserver

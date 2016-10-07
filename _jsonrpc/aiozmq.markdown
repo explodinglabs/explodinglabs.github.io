@@ -11,14 +11,13 @@ comments: true
 ![json](/assets/json.png)
 </div>
 
-We'll build a [ZeroMQ](http://zeromq.org) server to take
+We'll use [ZeroMQ](http://zeromq.org) to take
 [JSON-RPC](http://www.jsonrpc.org/) requests, and process them asynchronously
 (the synchronous version is [here](./zeromq)). The server should respond to
 "ping" with "pong".
 
-Install the dependencies — [aiozmq](https://aiozmq.readthedocs.io/) to take
-requests and [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process
-them:
+Install [aiozmq](https://aiozmq.readthedocs.io/) to take requests and
+[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ```sh
 $ pip install aiozmq jsonrpcserver

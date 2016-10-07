@@ -11,13 +11,11 @@ comments: true
 ![json](/assets/json.png)
 </div>
 
-We'll build an [aiohttp](http://aiohttp.readthedocs.io/) server to take
+We'll use [aiohttp](http://aiohttp.readthedocs.io/) to take
 [JSON-RPC](http://www.jsonrpc.org/) requests. It should respond to "ping" with
 "pong".
 
-Server
-======
-Install the dependencies — aiohttp to take requests and
+Install aiohttp to take requests and
 [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ```sh

@@ -11,11 +11,11 @@ comments: true
 ![json](/assets/json.png)
 </div>
 
-We'll build a [Werkzeug](http://werkzeug.pocoo.org) server to take
+We'll use [Werkzeug](http://werkzeug.pocoo.org) to take
 [JSON-RPC](http://www.jsonrpc.org/) requests. It should respond to 'ping' with
 'pong'.
 
-Install the dependencies — Werkzeug to take requests and
+Install Werkzeug to take requests and
 [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ``` shell

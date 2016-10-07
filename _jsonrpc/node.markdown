@@ -11,14 +11,14 @@ comments: true
 ![json](/assets/json.png)
 </div>
 
-We'll build an [Express](https://docs.python.org/3/library/http.server.html)
-server in Node, to take [JSON-RPC](http://www.jsonrpc.org/) requests.
+We'll use [Express](https://docs.python.org/3/library/http.server.html) to take
+[JSON-RPC](http://www.jsonrpc.org/) requests.
 
 - When it receives a "speak" request on `/cats`, it should respond with "meow".
 - When it receives a "speak" request on `/dogs`, it should respond with "woof".
 
-Install the dependencies — Express to take requests and
-[jayson](https://github.com/tedeh/jayson) to process them:
+Install Express to take requests and [jayson](https://github.com/tedeh/jayson)
+to process them:
 
 ```sh
 $ npm install express body-parser jayson

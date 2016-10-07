@@ -11,11 +11,11 @@ comments: true
 ![json](/assets/json.png)
 </div>
 
-We'll build a [Flask](http://flask.pocoo.org) server to take
+We'll use [Flask](http://flask.pocoo.org) to take
 [JSON-RPC](http://www.jsonrpc.org/) requests. It should respond to "ping" with
 "pong".
 
-Install the dependencies — Flask to take requests and
+Install Flask to take requests and
 [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
 
 ```sh
