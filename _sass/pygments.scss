@@ -1,7 +1,10 @@
-/* -- syntax ----------------------------------------------------------- */
-
 .highlight {
-  color: #111; }
+    color: #111;
+}
+
+.highlight .p {
+    color: #666666;
+}
 
 /* ??? */
 .highlight .il {
@@ -9,18 +12,19 @@
 }
 
 .highlight .hll {
-  background-color: #ffffcc; }
+    background-color: #ffffcc;
+}
 
 /* Error */
 .highlight .err {
-  color: #a61717;
-  background-color: #e3d2d2; }
+    color: #a61717;
+    background-color: #e3d2d2;
+}
 
 /* Text.Whitespace */
 .highlight .w {
-  color: #bbbbbb; }
-
-
+    color: #bbbbbb;
+}
 
 /* Comment */
 /* Comment.Multiline */
@@ -32,8 +36,7 @@
 .highlight .cp,
 .highlight .c1,
 .highlight .cs {
-    color: #777777;
-    font-weight: bold;
+    color: #999999;
     font-style: italic;
 }
 
@@ -44,10 +47,10 @@
 /* Generic.Heading */
 /* Generic.Inserted */
 /* Generic.Output */
-/* Generic.Prompt */
 /* Generic.Strong */
 /* Generic.Subheading */
 /* Generic.Traceback */
+/* Rare */
 .highlight .gd,
 .highlight .ge,
 .highlight .gr,
@@ -60,8 +63,9 @@
     color: #777777;
 }
 
+/* Generic.Prompt */
 .highlight .gp {
-    color: #999999;
+    color: #777777;
 }
 
 /* Keyword */
@@ -71,6 +75,7 @@
 /* Keyword.Reserved */
 /* Keyword.Pseudo */
 /* Keyword.Type */
+/* e.g. from, with, import */
 .highlight .k,
 .highlight .kc,
 .highlight .kd,
@@ -78,28 +83,12 @@
 .highlight .kp,
 .highlight .kr,
 .highlight .kt {
-    color: #111111;
-    font-weight: bold;
-}
-
-/* Number.Float */
-/* Number.Hex */
-/* Number.Integer */
-/* Number.Oct */
-/* Number */
-.highlight .m,
-.highlight .mf,
-.highlight .mh,
-.highlight .mo,
-.highlight .mi {
-    color: #6622ff;
 }
 
 /* Name.Attribute */
 /* Name.Builtin */
 /* Name.Class */
 /* Name.Constant */
-/* Name.Decorator */
 /* Name.Entity */
 /* Name.Exception */
 /* Name.Function */
@@ -111,6 +100,7 @@
 /* Name.Variable.Class */
 /* Name.Variable.Global */
 /* Name.Variable.Instance */
+/* e.g. main(), module names */
 .highlight .bp,
 .highlight .vc,
 .highlight .vg,
@@ -126,20 +116,33 @@
 .highlight .nn,
 .highlight .nt,
 .highlight .nv {
-    color: #cc0044;
-    font-weight: bold;
+    color: #6622cc;
 }
 
+/* Name.Decorator */
 .highlight .nd {
-    color: #777777;
-    font-weight: bold;
+    color: #cc0044;
+}
+
+/* Number.Float */
+/* Number.Hex */
+/* Number.Integer */
+/* Number.Oct */
+/* Number */
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mo,
+.highlight .mi {
+    color: #2266cc;
 }
 
 /* Operator */
 /* Operator.Word */
+/* =, + */
 .highlight .o,
 .highlight .ow {
-    color: #999999;
+    color: #777777;
 }
 
 /* String.Backtick */
