@@ -16,16 +16,6 @@
   color: #a61717;
   background-color: #e3d2d2; }
 
-/* Operator */
-.highlight .o {
-  color: #000000;
-  font-weight: bold; }
-
-/* Operator.Word */
-.highlight .ow {
-  color: #000000;
-  font-weight: bold; }
-
 /* Text.Whitespace */
 .highlight .w {
   color: #bbbbbb; }
@@ -143,6 +133,13 @@
 .highlight .nd {
     color: #777777;
     font-weight: bold;
+}
+
+/* Operator */
+/* Operator.Word */
+.highlight .o,
+.highlight .ow {
+    color: #999999;
 }
 
 /* String.Backtick */

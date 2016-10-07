@@ -58,18 +58,13 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
 .post-link {
     time {
         display: block;
-        font-size: 12px;
+        font-size: small;
     }
 }
 
 .post-meta {
     margin-bottom: $spacing-unit;
-    font-size: 0.8em;
-    line-height: 100%;
     color: $grey-light;
-    a {
-        color: orange;
-    }
 }
 
 .post-content {
@@ -83,15 +78,13 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
 /* Basic styling */
 body {
     background-color: white;
-    color: #3E4349;
-    font-family: 'goudy old style', 'minion pro', 'bell mt', Georgia, 'Hiragino Mincho Pro', serif;
-    font-size: 19px;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    font-size: 16px;
 }
 
 ::-webkit-scrollbar              { padding-top: $spacing-unit; background-color: #fff; height: 5px;}
@@ -104,27 +97,25 @@ body {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', 'Garamond', 'Georgia', serif;
+    font-family: 'Merriweather', 'Garamond', 'Georgia', 'serif';
     font-weight: normal;
     color: #444;
 }
 
-h1 {
+h1.page-title {
+    margin-bottom: $spacing-unit*1.5;
+    font-size: 180%;
+}
+
+h1:not(.page-title) {
     margin-top: $spacing-unit*1.5;
     margin-bottom: $spacing-unit;
-    font-size: 1.3em;
-    &.page-title {
-        font-size: 1.5em;
-        margin-top: $spacing-unit;
-        margin-bottom: $spacing-unit*1.5;
-        @include media-query($on-palm) {
-        }
-    }
+    font-size: 150%;
 }
 
 h2 {
-    margin: $spacing-unit 0 $spacing-unit 0;
-    font-size: 1.2em;
+    margin: $spacing-unit*1.5 0 $spacing-unit 0;
+    font-size: 130%;
 }
 
 a {
@@ -136,13 +127,19 @@ a {
     }
 }
 
-p, blockquote, pre, ul, ol, dl, figure,
+p, blockquote, ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit;
 }
 
+p, ul, ol, .post-meta {
+    font-family: 'noto serif', 'goudy old style', 'Georgia', 'serif';
+}
+
 p, ul, ol {
+    color: #3E4349;
     line-height: 160%;
+    font-size: 120%;
 }
 
 /* Lists */
@@ -158,11 +155,10 @@ img {
 
 /* Code formatting */
 pre, code {
-    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-family: 'Deja vu Sans Mono', 'Consolas', 'Bitstream Vera Sans Mono', monospace;
 }
 
 code {
-    font-size: 0.75em;
 }
 
 pre {
@@ -173,6 +169,8 @@ pre {
     @include media-query($on-palm) {
         padding-left: 0.7em;
     }
+    line-height: 140%;
+    margin-bottom: $spacing-unit;
 }
 
 .video-container {
@@ -232,16 +230,6 @@ pre {
         path {
             fill: $grey;
         }
-    }
-}
-
-.note {
-    padding: $spacing-unit/2 0 $spacing-unit/2 $spacing-unit;
-    background-color: #333;
-    border-left: 1em solid #66f;
-    h5 {
-        font-size: 1.2em;
-        color: #66f;
     }
 }
 
