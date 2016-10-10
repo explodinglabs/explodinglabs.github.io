@@ -12,8 +12,8 @@ comments: true
 </div>
 
 We'll use [ZeroMQ](http://zeromq.org) to take
-[JSON-RPC](http://www.jsonrpc.org/) requests, and process them asynchronously
-(the synchronous version is [here](./zeromq)). The server should respond to
+[JSON-RPC](http://www.jsonrpc.org/) requests, and process them asynchronously.
+(The synchronous version is [here](./zeromq).) The server should respond to
 "ping" with "pong".
 
 Install [aiozmq](https://aiozmq.readthedocs.io/) to take requests and
