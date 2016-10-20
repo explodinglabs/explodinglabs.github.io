@@ -25,15 +25,23 @@ markdown: kramdown
 highlighter: rouge
 
 collections:
-    aws:
-        title: Amazon Web Services
-        output: true
-    graphql:
-        title: GraphQL
-        output: true
     jsonrpc:
         title: JSON-RPC
         output: true
+        priority: 1
+        intro: >
+            My python libraries:
+            <a href="https://jsonrpcclient.readthedocs.io">jsonrpcclient</a> and
+            <a href="https://jsonrpcserver.readthedocs.io">jsonrpcserver</a>.
+    aws:
+        title: Amazon Web Services
+        output: true
+        priority: 99
+    graphql:
+        title: GraphQL
+        output: true
+        priority: 3
     micropython:
         title: Micropython
         output: true
+        priority: 2
