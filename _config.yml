@@ -30,13 +30,9 @@ collections:
         output: true
         priority: 1
         intro: >
-            My python libraries:
+            My libraries:
             <a href="https://jsonrpcclient.readthedocs.io">jsonrpcclient</a> and
             <a href="https://jsonrpcserver.readthedocs.io">jsonrpcserver</a>.
-    aws:
-        title: Amazon Web Services
-        output: true
-        priority: 99
     graphql:
         title: GraphQL
         output: true
@@ -45,3 +41,7 @@ collections:
         title: Micropython
         output: true
         priority: 3
+    aws:
+        title: Amazon Web Services
+        output: true
+        priority: 4
