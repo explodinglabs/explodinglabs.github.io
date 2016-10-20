@@ -40,8 +40,8 @@ collections:
     graphql:
         title: GraphQL
         output: true
-        priority: 3
+        priority: 2
     micropython:
         title: Micropython
         output: true
-        priority: 2
+        priority: 3
