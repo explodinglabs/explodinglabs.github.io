@@ -25,18 +25,18 @@ markdown: kramdown
 highlighter: rouge
 
 collections:
+    graphql:
+        title: GraphQL
+        output: true
+        priority: 1
     jsonrpc:
         title: JSON-RPC
         output: true
-        priority: 1
+        priority: 2
         intro: >
             My libraries:
             <a href="https://jsonrpcclient.readthedocs.io">jsonrpcclient</a> and
             <a href="https://jsonrpcserver.readthedocs.io">jsonrpcserver</a>.
-    graphql:
-        title: GraphQL
-        output: true
-        priority: 2
     micropython:
         title: Micropython
         output: true
