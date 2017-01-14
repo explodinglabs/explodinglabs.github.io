@@ -53,6 +53,27 @@ Client
 Test with curl:
 
 ```sh
-$ curl -H 'Content-type: application/graphql' -d '{hello}' http://localhost:5000
+$ curl -H 'Content-type: application/graphql' -d '{hello}' http://localhost:5000/
 {"data": {"hello": "World"}}%
+```
+
+Python Client
+-------------
+```sh
+$ pip install gql
+```
+```python
+import json
+from gql import gql, Client
+from gql.transport.requests import RequestsHTTPTransport
+
+transport = RequestsHTTPTransport('http://localhost:5000/')
+client = Client(transport=transport)
+response = client.execute(gql('{hello}'))
+
+print(json.dumps(response))
+```
+```sh
+$ python client.py
+{"hello": "world"}
 ```

@@ -7,14 +7,18 @@ title: Beau Barker
     <h1 class="page-title">Beau Barker</h1>
 
     <p>
-        Writing about things that interest me. You can also find me on <a
-            href="https://twitter.com/bbmelb">Twitter</a> and <a
-            href="https://github.com/bcb">Github</a>.
+        Writing about things that interest me. You can also find me on
+            <a href="https://twitter.com/bbmelb">Twitter</a> and
+            <a href="https://github.com/bcb">Github</a>.
     </p>
 
-    {% for collection in site.collections %}
+    {% assign sorted = site.collections |sort: 'priority' %}
+    {% for collection in sorted %}
     {% unless collection.label == 'posts' %}
-    <h1>{{ collection.title }}</h2>
+    <h1>{{ collection.title }}</h1>
+    {% if collection.intro %}
+    <p>{{ collection.intro }}</p>
+    {% endif %}
     <ul>
         {% assign items = collection.docs | sort: 'title' %}
         {% for page in items %}
