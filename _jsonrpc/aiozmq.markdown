@@ -29,6 +29,7 @@ import asyncio
 import aiozmq
 import zmq
 from jsonrpcserver.aio import methods
+from jsonrpcserver.response import NotificationResponse
 
 @methods.add
 async def ping():
@@ -39,7 +40,8 @@ async def main():
     while True:
         request = await rep.read()
         response = await methods.dispatch(request[0].decode())
-        rep.write((str(response).encode(),))
+        if not isinstance(response, NotificationResponse):
+            rep.write((str(response).encode(),))
 
 if __name__ == '__main__':
     asyncio.set_event_loop_policy(aiozmq.ZmqEventLoopPolicy())
