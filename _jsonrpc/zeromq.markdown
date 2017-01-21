@@ -27,6 +27,7 @@ Create a `server.py`:
 ```python
 import zmq
 from jsonrpcserver import methods
+from jsonrpcserver.response import NotificationResponse
 
 socket = zmq.Context().socket(zmq.REP)
 
@@ -39,7 +40,8 @@ if __name__ == '__main__':
     while True:
         request = socket.recv().decode()
         response = methods.dispatch(request)
-        socket.send_string(str(response))
+        if not isinstance(response, NotificationResponse):
+            socket.send_string(str(response))
 ```
 Start the server:
 

@@ -26,6 +26,7 @@ Create a `server.py`:
 ```python
 from tornado import ioloop, web
 from jsonrpcserver.aio import methods
+from jsonrpcserver.response import NotificationResponse
 
 @methods.add
 async def ping():
@@ -35,7 +36,8 @@ class MainHandler(web.RequestHandler):
     async def post(self):
         request = self.request.body.decode()
         response = await methods.dispatch(request)
-        self.write(response)
+        if not isinstance(response, NotificationResponse):
+            self.write(response)
 
 app = web.Application([(r"/", MainHandler)])
 
