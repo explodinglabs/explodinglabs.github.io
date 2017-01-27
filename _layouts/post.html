@@ -1,14 +1,12 @@
 ---
 layout: default
 ---
-<p class="rubric"><a href="/">Beau Barker</a></p>
-
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
     <h1 class="page-title" itemprop="name headline">{{ page.title }}</h1>
 
     <div class="post-meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+        <a href="/">Beau Barker</a>, <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
     </div>
 
     <div class="post-content" itemprop="articleBody">
