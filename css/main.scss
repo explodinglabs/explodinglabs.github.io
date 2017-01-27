@@ -263,3 +263,19 @@ pre {
     font-style: italic;
     margin-bottom: $spacing-unit;
 }
+
+.mbtablestyle {
+
+    border-collapse: collapse;
+
+    th, td {
+        text-align: left;
+        padding: $spacing-unit/1.5 $spacing-unit;
+        border: 1px solid orange;
+    }
+
+    th {
+        background-color: $yellow-light;
+    }
+
+}
