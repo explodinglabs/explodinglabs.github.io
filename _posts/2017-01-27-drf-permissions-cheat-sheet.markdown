@@ -8,7 +8,7 @@ comments: true
 
 Permission Class                        | Unauthenticated           | Authenticated
 -|-
-`AllowAny`                              | Full access               | Full read/write access
+`AllowAny`                              | Full read/write access    | Full read/write access
 `IsAuthenticated`                       | No access                 | Full read/write access
 `IsAdminUser`                           | No access                 | Only Admin user has access. They have full read/write access.
 `IsAuthenticatedOrReadOnly`             | Read access               | Full read/write access
