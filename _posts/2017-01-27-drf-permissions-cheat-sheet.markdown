@@ -10,7 +10,7 @@ Permission Class                        | Unauthenticated           | Authentica
 -|-
 `AllowAny`                              | Full access               | Full read/write access
 `IsAuthenticated`                       | No access                 | Full read/write access
-`IsAdminUser`                           | No access                 | Only Admin user has acces. They have full read/write access.
+`IsAdminUser`                           | No access                 | Only Admin user has access. They have full read/write access.
 `IsAuthenticatedOrReadOnly`             | Read access               | Full read/write access
 `DjangoModelPermissions`                | No access                 | Read access; write requires model permissions
 `DjangoModelPermissionsOrAnonReadOnly`  | Read access               | Read access; write requires model permissions
