@@ -6,6 +6,9 @@ permalink: /django/drf-permissions-cheatsheet
 comments: true
 ---
 
+In the following table, *read* means `GET`, `OPTIONS` and `HEAD` access.
+*Write* means `POST`, `PUT`, `PATCH` and `DELETE`.
+
 Permission Class                        | Unauthenticated           | Authenticated
 -|-
 `AllowAny`                              | Full read/write access    | Full read/write access
