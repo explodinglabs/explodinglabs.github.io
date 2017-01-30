@@ -10,13 +10,13 @@ A guide to DRF's built-in permission classes.
 
 Permission Class                        | Unauthenticated Read | Unauthenticated Write | Authenticated
 -|-
-`AllowAny`                              |   |   |   |
-`IsAuthenticated`                       | X | X |   |
-`IsAdminUser`                           | X | X | X |
-`IsAuthenticatedOrReadOnly`             |   | X |   |
-`DjangoModelPermissions`                | X | X | Requires Model Permissions |
-`DjangoModelPermissionsOrAnonReadOnly`  |   | X | Requires Model Permissions |
-`DjangoObjectPermissions`               | X | X | Requires Object Permissions |
+`AllowAny`                              |           |           |   |
+`IsAuthenticated`                       | Forbidden | Forbidden |   |
+`IsAdminUser`                           | Forbidden | Forbidden | Staff only |
+`IsAuthenticatedOrReadOnly`             |           | Forbidden |   |
+`DjangoModelPermissions`                | Forbidden | Forbidden | Requires Model Permissions |
+`DjangoModelPermissionsOrAnonReadOnly`  |           | Forbidden | Requires Model Permissions |
+`DjangoObjectPermissions`               | Forbidden | Forbidden | Requires Object Permissions |
 {:.mbtablestyle}
 
 - *Read access* means `GET`, `OPTIONS` and `HEAD`.
