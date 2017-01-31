@@ -16,7 +16,7 @@ Permission Class                        | Unauthenticated Write | Unauthenticate
 `DjangoModelPermissionsOrAnonReadOnly`  | Forbidden |           | Requires Model Permissions
 `DjangoModelPermissions`                | Forbidden | Forbidden | Requires Model Permissions
 `DjangoObjectPermissions`               | Forbidden | Forbidden | Requires Object Permissions
-`IsAdminUser`                           | Forbidden | Forbidden | Requires is_staff=True
+`IsAdminUser`                           | Forbidden | Forbidden | Admin only (is_staff=True)
 {:.mbtablestyle}
 
 - *Read access* means `GET`, `OPTIONS` and `HEAD`.
