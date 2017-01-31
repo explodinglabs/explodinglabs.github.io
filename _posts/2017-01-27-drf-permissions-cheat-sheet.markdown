@@ -13,11 +13,10 @@ Permission Class                        | Unauthenticated Write | Unauthenticate
 `AllowAny`                              |           |           |
 `IsAuthenticatedOrReadOnly`             | Forbidden |           |
 `IsAuthenticated`                       | Forbidden | Forbidden |
-`DjangoModelPermissionsOrAnonReadOnly`  | Forbidden |           | Requires Model Permissions
-`DjangoModelPermissions`                | Forbidden | Forbidden | Requires Model Permissions
-`DjangoObjectPermissions`               | Forbidden | Forbidden | Requires Object Permissions
+`DjangoModelPermissionsOrAnonReadOnly`  | Forbidden |           | Write requires Model Permissions
+`DjangoModelPermissions`                | Forbidden | Forbidden | Write requires Model Permissions
+`DjangoObjectPermissions`               | Forbidden | Forbidden | Write requires Object Permissions
 `IsAdminUser`                           | Forbidden | Forbidden | Admin only
 {:.mbtablestyle}
 
-- *Read access* means `GET`, `OPTIONS` and `HEAD`.
 - *Write access* means `POST`, `PUT`, `PATCH` and `DELETE`.
