@@ -10,9 +10,9 @@ A guide to DRF's built-in permission classes.
 
 Permission Class                        | Unauthenticated Write | Unauthenticated Read | Authenticated
 -|-
-`AllowAny`                              |           |           | 
-`IsAuthenticatedOrReadOnly`             | Forbidden |           | 
-`IsAuthenticated`                       | Forbidden | Forbidden | 
+`AllowAny`                              |           |           |
+`IsAuthenticatedOrReadOnly`             | Forbidden |           |
+`IsAuthenticated`                       | Forbidden | Forbidden |
 `DjangoModelPermissionsOrAnonReadOnly`  | Forbidden |           | Requires Model Permissions
 `DjangoModelPermissions`                | Forbidden | Forbidden | Requires Model Permissions
 `DjangoObjectPermissions`               | Forbidden | Forbidden | Requires Object Permissions
