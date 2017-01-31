@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "Django Rest Framework: Permissions Cheatsheet"
+title: "Django REST Framework: Permissions Matrix"
 date: 2017-01-27
-permalink: /django/drf-permissions-cheatsheet
+permalink: /django/drf-permissions-matrix
+redirect_from: /django/drf-permissions-cheatsheet
 comments: true
 ---
-
 A guide to DRF's built-in permission classes.
 
-Permission Class                        | Unauthenticated Read | Unauthenticated Write | Authenticated
+Permission Class                        | Unauthenticated Write | Unauthenticated Read | Authenticated
 -|-
 `AllowAny`                              |           |           | 
-`IsAuthenticatedOrReadOnly`             |           | Forbidden | 
+`IsAuthenticatedOrReadOnly`             | Forbidden |           | 
 `IsAuthenticated`                       | Forbidden | Forbidden | 
-`DjangoModelPermissionsOrAnonReadOnly`  |           | Forbidden | Requires Model Permissions
+`DjangoModelPermissionsOrAnonReadOnly`  | Forbidden |           | Requires Model Permissions
 `DjangoModelPermissions`                | Forbidden | Forbidden | Requires Model Permissions
 `DjangoObjectPermissions`               | Forbidden | Forbidden | Requires Object Permissions
 `IsAdminUser`                           | Forbidden | Forbidden | Requires is_staff=True
