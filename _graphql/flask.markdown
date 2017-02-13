@@ -31,7 +31,7 @@ from flask_graphql import GraphQLView
 
 class Query(ObjectType):
     hello = String(description='Hello')
-    def resolve_hello(self, args, info):
+    def resolve_hello(self, args, context, info):
         return 'World'
 
 app = Flask(__name__)
