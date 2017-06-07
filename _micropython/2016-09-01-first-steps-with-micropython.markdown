@@ -14,10 +14,10 @@ Install the Micropython firmware
 
 To copy the firmware onto the board, you can use *esptool*. It can be installed
 with pip, so I created a virtualenv for installing it. Esptool requires Python
-2, so the virtualenv was configured to use that.
+2.
 
 ```sh
-$ mkvirtualenv -p /usr/bin/python2.7 esptool && setvirtualenvproject
+$ mkvirtualenv -p $(which python2.7) esptool
 ```
 
 Install esptool in the virtualenv:
@@ -94,3 +94,8 @@ baudrate with the `-b` option, the prompt appears (after pressing enter).
 `C-a` clashed with my tmux setup.
 
 - To exit use `[C-p]`, ``C-\``, `[C-p]`, `C-x`.
+
+Now see
+=======
+
+[How to copy files to a Micropython device](https://bcb.github.io/micropython/mipy)
