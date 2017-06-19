@@ -34,9 +34,10 @@ class Query(ObjectType):
     def resolve_hello(self, args, context, info):
         return 'World'
 
+view_func = GraphQLView.as_view('graphql', schema=Schema(query=Query))
+
 app = Flask(__name__)
-app.add_url_rule('/', view_func=GraphQLView.as_view('graphql',
-                 schema=Schema(query=Query)))
+app.add_url_rule('/', view_func=view_func)
 
 if __name__ == '__main__':
     app.run()
@@ -54,13 +55,13 @@ Test with curl:
 
 ```sh
 $ curl -H 'Content-type: application/graphql' -d '{hello}' http://localhost:5000/
-{"data": {"hello": "World"}}%
+{"data": {"hello": "World"}}
 ```
 
 Python Client
 -------------
 ```sh
-$ pip install gql
+$ pip install gql requests
 ```
 ```python
 import json
@@ -75,5 +76,5 @@ print(json.dumps(response))
 ```
 ```sh
 $ python client.py
-{"hello": "world"}
+{"hello": "World"}
 ```
