@@ -27,6 +27,6 @@ When to use Metaclasses
 - Class verification (ensure class conforms to a particular interface)
 - Non-inheriting attributes. e.g. make an abstract class not inherit attributes
 
-These notes are from [Professional
+Notes from [Professional
 Python](http://www.wrox.com/WileyCDA/WroxTitle/Professional-Python.productCd-1119070856.html)
 by Luke Sneeringer.
