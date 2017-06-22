@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "When to use Decorators, Context-Managers, Generators and Metaclasses"
+title: "When to use Python's Decorators, Context-Managers, Generators and Metaclasses"
 date: 2016-08-04
 permalink: /python/when-to-use
 comments: true
