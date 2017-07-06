@@ -49,8 +49,8 @@ $ python server.py
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
-Client
-======
+## Client
+
 Test with curl:
 
 ```sh
@@ -58,8 +58,8 @@ $ curl -H 'Content-type: application/graphql' -d '{hello}' http://localhost:5000
 {"data": {"hello": "World"}}
 ```
 
-Python Client
--------------
+## Python Client
+
 ```sh
 $ pip install gql requests
 ```
