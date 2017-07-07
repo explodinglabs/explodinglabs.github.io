@@ -21,11 +21,28 @@ Now you can copy files to the device:
 
     $ mipy cp main.py
 
+You can also set the port, baudrate and other options. See `mipy --help`.
+
+```sh
+Usage: mipy [OPTIONS] COMMAND [ARGS]...
+
+  Manage files with Micropython
+
+Options:
+  -b, --baud <rate>      Port speed in baud (default is 115200).
+  -i, --interrupt        Send soft interrupt (ctrl-c) before command.
+  -p, --port <port>      Serial port device (default is /dev/ttyUSB0).
+  -r, --reset            Send soft reset (ctrl-d) after copy.
+  -t, --timeout INTEGER  Timeout.
+  --help                 Show this message and exit.
+
+Commands:
+  cp  Copy files to Micropython
+```
+
 My typical workflow is to make a change, then copy it to the board with `mipy
 -ir`:
 
     $ mipy -ir cp main.py
 
 This interrupts the running script, copies the file, then does a soft-reset.
-
-You can also set the port, baudrate and other options. See `mipy --help`.
