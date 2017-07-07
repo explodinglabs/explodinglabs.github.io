@@ -54,8 +54,8 @@ $ python server.py
 Test with curl:
 
 ```sh
-$ curl -H 'Content-type: application/graphql' -d '{hello}' http://localhost:5000/
-{"data": {"hello": "World"}}
+$ curl -g 'http://localhost:5000/?query={hello}'
+{"data":{"hello":"World"}}
 ```
 
 ## Python Client
@@ -72,9 +72,9 @@ transport = RequestsHTTPTransport('http://localhost:5000/')
 client = Client(transport=transport)
 response = client.execute(gql('{hello}'))
 
-print(json.dumps(response))
+json.dumps(response)
 ```
-```sh
-$ python client.py
+```python
+>>>
 {"hello": "World"}
 ```
