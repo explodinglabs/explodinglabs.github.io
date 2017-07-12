@@ -42,7 +42,7 @@ def ping():
 @socketio.on('message')
 def handle_message(request):
     response = methods.dispatch(request)
-    if not isinstance(response, NotificationResponse):
+    if not response.is_notification:
         send(response, json=True)
 
 if __name__ == '__main__':
