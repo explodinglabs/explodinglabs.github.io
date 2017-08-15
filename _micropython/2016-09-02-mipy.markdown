@@ -12,8 +12,11 @@ comments: true
 </div>
 
 I've put a little script on PyPi that copies files onto a NodeMCU or other
-serial device running Micropython. To use it, install
-[mipy](https://github.com/bcb/mipy) with pip:
+serial device running Micropython. It's basically a fork of Nick Moore's
+[mpy-utils](https://github.com/nickzoic/mpy-utils), with nice command-line
+options thanks to [click](https://github.com/pallets/click).
+
+To use it, install [mipy](https://github.com/bcb/mipy) with pip:
 
     $ pip install mipy
 
