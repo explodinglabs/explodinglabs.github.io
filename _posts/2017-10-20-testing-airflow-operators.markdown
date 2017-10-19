@@ -26,7 +26,7 @@ class TestMyOperator(TestCase):
         with DAG(dag_id='foo'):
             task = MyOperator(task_id='foo', start_date=datetime.now())
             ti = TaskInstance(task=task, execution_date=datetime.now())
-            result = task.execute(context={'ti': ti, 'task': task})
+            result = task.execute(context={'task': task, 'ti': ti})
             self.assertEqual(result, 'foo')
 ```
 
