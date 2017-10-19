@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Testing Airflow Operators"
-date: 2017-10-16
+date: 2017-10-20
 permalink: /airflow/testing-airflow-operators
 comments: true
 ---
