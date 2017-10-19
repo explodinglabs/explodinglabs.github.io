@@ -14,7 +14,7 @@ class MyOperator(BaseOperator):
         return 'foo'
 ```
 
-Now test it:
+Now test it in a `test_my_operator.py`:
 ```python
 from unittest import TestCase
 from datetime import datetime
@@ -26,6 +26,6 @@ class TestMyOperator(TestCase):
         with DAG(dag_id='foo'):
             task = MyOperator(task_id='foo', start_date=datetime.now())
             ti = TaskInstance(task=task, execution_date=datetime.now())
-            result = task.execute({'ti': ti, 'task': task})
+            result = task.execute(context={'ti': ti, 'task': task})
             self.assertEqual(result, 'foo')
 ```
