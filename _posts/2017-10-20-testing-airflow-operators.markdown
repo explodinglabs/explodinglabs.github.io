@@ -5,16 +5,8 @@ date: 2017-10-20
 permalink: /airflow/testing-airflow-operators
 comments: true
 ---
-Create a simple operator to test in `my_operator.py`:
-```python
-from airflow.models import BaseOperator
-
-class MyOperator(BaseOperator):
-    def execute(self, context):
-        return 'foo'
-```
-
-Now test it in a `test_my_operator.py`:
+Here's how you can test any method of an Airflow operator. In this case,
+`MyOperator.execute()`:
 ```python
 from unittest import TestCase
 from datetime import datetime
