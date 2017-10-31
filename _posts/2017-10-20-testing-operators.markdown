@@ -6,8 +6,7 @@ permalink: /airflow/testing-operators
 redirect_from: /airflow/testing-airflow-operators
 comments: true
 ---
-Here's how you can test any method of an Airflow operator. In this case,
-`MyOperator.execute()`:
+Testing operators is easy in Airflow 1.8. Here we test `MyOperator.execute()`:
 ```python
 from unittest import TestCase
 from datetime import datetime
