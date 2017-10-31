@@ -2,7 +2,8 @@
 layout: post
 title: "Testing Airflow Operators"
 date: 2017-10-20
-permalink: /airflow/testing-airflow-operators
+permalink: /airflow/testing-operators
+redirect_from: /airflow/testing-airflow-operators
 comments: true
 ---
 Here's how you can test any method of an Airflow operator. In this case,
