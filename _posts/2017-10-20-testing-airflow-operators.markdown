@@ -6,7 +6,16 @@ permalink: /airflow/testing-operators
 redirect_from: /airflow/testing-airflow-operators
 comments: true
 ---
-Testing operators is easy in Airflow 1.8. Here we test `MyOperator.execute()`:
+Testing operators is easy in Airflow 1.8.
+
+It takes three lines of setup before you can test an operator's method.
+
+1. Create a DAG using the `with DAG` usage.
+2. Create the operator.
+3. Create a TaskInstance.
+
+Now you can test the method. Here we test `MyOperator.execute`:
+
 ```python
 from unittest import TestCase
 from datetime import datetime
