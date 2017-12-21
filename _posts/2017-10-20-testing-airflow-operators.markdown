@@ -6,15 +6,15 @@ permalink: /airflow/testing-operators
 redirect_from: /airflow/testing-airflow-operators
 comments: true
 ---
-Testing operators is easy in Airflow 1.8.
+It takes a few lines of setup before you can test an Airflow operator's method.
 
-It takes three lines of setup before you can test an operator's method.
-
-1. Create a DAG using the `with DAG` usage.
+1. Create a DAG.
 2. Create the operator.
 3. Create a TaskInstance.
 
-Now you can test the method. Here we test `MyOperator.execute`:
+Then you can test the method.
+
+Here we test `MyOperator.execute` in Airflow 1.8:
 
 ```python
 from unittest import TestCase
@@ -27,18 +27,18 @@ class TestMyOperator(TestCase):
         with DAG(dag_id='foo'):
             task = MyOperator(task_id='foo', start_date=datetime.now())
             ti = TaskInstance(task=task, execution_date=datetime.now())
-            result = task.execute(context={'task': task, 'ti': ti})
+            result = task.execute(ti.get_template_context())
             self.assertEqual(result, 'foo')
 ```
 
-Run the test:
-```
-$ python -m unittest test_my_operator -v
-[2017-10-20 10:50:34,722] {__init__.py:57} INFO - Using executor SequentialExecutor
-test_execute (test_my_operator.TestMyOperator) ... ok
+Here's the same in Airflow 1.7:
 
-----------------------------------------------------------------------
-Ran 1 test in 0.088s
-
-OK
+```python
+class TestMyOperator(TestCase):
+    def test_execute(self):
+        dag = DAG(dag_id='foo')
+        task = MyOperator(dag=dag, owner='foo', task_id='foo', start_date=datetime.now())
+        ti = TaskInstance(task=task, execution_date=datetime.now())
+        result = task.execute(ti.get_template_context())
+        self.assertEqual(result, 1)
 ```
