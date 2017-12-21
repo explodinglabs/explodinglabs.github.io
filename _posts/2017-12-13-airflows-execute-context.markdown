@@ -5,8 +5,10 @@ date: 2017-12-13
 permalink: /airflow/execute-context
 comments: false
 ---
-The contents of this dict can be found in the `get_template_context` method of
-`models.py`.
+I often forget the contents of this dict and it's not well documented.
+
+It can be found in `airflow/models.py`, in the
+`TaskInstance.get_template_context` method.
 
 ```python
 return {
@@ -35,4 +37,10 @@ return {
     'conf': configuration,
     'test_mode': self.test_mode,
 }
+
+As a side note, you can generate the context from a TaskInstance object.
+
+```python
+ti = TaskInstance(task=task, execution_date=datetime.now())
+task.execute(context=ti.get_template_context())
 ```
