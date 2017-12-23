@@ -3,7 +3,6 @@ layout: post
 title: "Launch an ECS Container Instance and run a Container"
 date: 2016-07-13
 permalink: /aws/ecs
-comments: true
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
 

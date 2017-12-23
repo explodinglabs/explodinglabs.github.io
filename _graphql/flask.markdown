@@ -3,7 +3,6 @@ layout: post
 title: "GraphQL in Python with Flask"
 date: 2016-09-21
 permalink: /graphql/flask
-comments: true
 ---
 <div class="wide-logos" markdown="1">
 ![Flask](/assets/flask.png)

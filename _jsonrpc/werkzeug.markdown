@@ -3,7 +3,6 @@ layout: post
 title: "JSON-RPC in Python with Werkzeug"
 date: 2016-08-01
 permalink: /jsonrpc/werkzeug
-comments: true
 ---
 <div class="wide-logos" markdown="1">
 ![werkzeug](/assets/werkzeug.png)

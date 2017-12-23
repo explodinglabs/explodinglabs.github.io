@@ -4,7 +4,6 @@ title: "Django REST Framework: Permissions Matrix"
 date: 2017-01-27
 permalink: /django/drf-permissions-matrix
 redirect_from: /django/drf-permissions-cheatsheet
-comments: true
 ---
 A guide to DRF's built-in permission classes.
 

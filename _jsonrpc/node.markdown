@@ -3,7 +3,6 @@ layout: post
 title: "JSON-RPC in Node with Express"
 date: 2016-08-01
 permalink: /jsonrpc/node
-comments: true
 ---
 <div class="wide-logos" markdown="1">
 ![nodejs](/assets/nodejs.png)

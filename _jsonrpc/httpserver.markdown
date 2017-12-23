@@ -3,7 +3,6 @@ layout: post
 title: "JSON-RPC in Python with http.server"
 date: 2016-08-01
 permalink: /jsonrpc/httpserver
-comments: true
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)

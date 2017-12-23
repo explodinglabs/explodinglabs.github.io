@@ -3,7 +3,6 @@ layout: post
 title: "Sphinx Autodoc ImportError"
 date: 2016-08-06
 permalink: /sphinx-autodoc-importerror
-comments: true
 ---
 This drove me crazy today until I found the solution.
 

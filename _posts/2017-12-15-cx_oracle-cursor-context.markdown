@@ -3,7 +3,6 @@ layout: post
 title: "cx_Oracle cursor context"
 date: 2017-12-15
 permalink: /cx_oracle/cursor-context
-comments: true
 ---
 Use `contextlib`'s `closing` context manager:
 

@@ -3,7 +3,6 @@ layout: post
 title: "JSON-RPC in Python with aiohttp"
 date: 2016-09-23
 permalink: /jsonrpc/aiohttp
-comments: true
 ---
 <div class="wide-logos" markdown="1">
 ![flask](/assets/aiohttp.png)

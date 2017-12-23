@@ -3,7 +3,6 @@ layout: post
 title: "Python 3.3 failing to install on Arch Linux"
 date: 2016-07-22
 permalink: /archlinux-python33-install-fails
-comments: true
 ---
 
 Installing Python 3.3 on Arch tonight, two tests failed:

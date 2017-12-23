@@ -3,7 +3,6 @@ layout: post
 title: "First steps with Micropython on a NodeMCU"
 permalink: /micropython/first-steps
 date: 2016-09-01
-comments: true
 ---
 My NodeMCU arrived so I went right ahead and installed Micropython on it.
 

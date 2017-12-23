@@ -3,7 +3,6 @@ layout: post
 title: "JSON-RPC in Python with Tornado"
 date: 2016-09-13
 permalink: /jsonrpc/tornado
-comments: true
 ---
 <div class="wide-logos" markdown="1">
 ![tornado](/assets/tornado.png)

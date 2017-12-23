@@ -3,7 +3,6 @@ layout: post
 title: "JSON-RPC in Python with Django"
 date: 2016-10-29
 permalink: /jsonrpc/django
-comments: true
 ---
 <div class="wide-logos" markdown="1">
 ![flask](/assets/django.png)

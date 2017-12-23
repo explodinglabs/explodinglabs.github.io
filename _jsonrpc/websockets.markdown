@@ -3,7 +3,6 @@ layout: post
 title: "JSON-RPC in Python with Websockets"
 date: 2016-09-23
 permalink: /jsonrpc/websockets
-comments: true
 ---
 <div class="wide-logos" markdown="1">
 ![websockets](/assets/websockets.png)

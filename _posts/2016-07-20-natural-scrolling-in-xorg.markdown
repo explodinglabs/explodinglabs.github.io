@@ -3,7 +3,6 @@ layout: post
 title: "Natural scrolling in Xorg"
 date: 2016-07-20
 permalink: /natural-scrolling-in-xorg
-comments: true
 ---
 
 Edit `/etc/X11/xorg.conf.d/50-synaptics.conf`:

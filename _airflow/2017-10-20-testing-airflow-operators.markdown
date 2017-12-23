@@ -4,7 +4,6 @@ title: "Testing Airflow operators"
 date: 2017-10-20
 permalink: /airflow/testing-operators
 redirect_from: /airflow/testing-airflow-operators
-comments: true
 ---
 It takes a few lines of setup before you can test an Airflow operator.
 

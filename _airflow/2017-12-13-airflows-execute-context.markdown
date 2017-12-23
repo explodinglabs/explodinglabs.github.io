@@ -3,7 +3,6 @@ layout: post
 title: "Airflow's execute context"
 date: 2017-12-13
 permalink: /airflow/execute-context
-comments: false
 ---
 I often forget the contents of the `context` dict, and it's not well
 documented.

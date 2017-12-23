@@ -3,7 +3,6 @@ layout: post
 title: "Create an ECR Container Repository and push a Docker image"
 date: 2016-08-01
 permalink: /aws/ecr
-comments: true
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
 

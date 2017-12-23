@@ -3,7 +3,6 @@ layout: post
 title: "Launch an EC2 Instance"
 permalink: /aws/ec2
 date: 2016-08-02
-comments: true
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
 

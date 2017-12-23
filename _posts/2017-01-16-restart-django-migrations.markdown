@@ -3,7 +3,6 @@ layout: post
 title: "Restart Django Migrations"
 date: 2017-01-16
 permalink: /django/restart-migrations
-comments: true
 ---
 
 To reset an app back to the initial "zero" migration:
