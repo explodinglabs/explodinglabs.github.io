@@ -39,5 +39,5 @@ class TestMyOperator(TestCase):
         task = MyOperator(dag=dag, owner='foo', task_id='foo', start_date=datetime.now())
         ti = TaskInstance(task=task, execution_date=datetime.now())
         result = task.execute(ti.get_template_context())
-        self.assertEqual(result, 1)
+        self.assertEqual(result, 'foo')
 ```
