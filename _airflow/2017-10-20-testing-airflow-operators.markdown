@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Testing Airflow Operators"
+title: "Testing Airflow operators"
 date: 2017-10-20
 permalink: /airflow/testing-operators
 redirect_from: /airflow/testing-airflow-operators

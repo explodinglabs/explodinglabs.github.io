@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Airflow's Execute Context"
+title: "Airflow's execute context"
 date: 2017-12-13
 permalink: /airflow/execute-context
 comments: false
