@@ -6,11 +6,11 @@ permalink: /airflow/testing-operators
 redirect_from: /airflow/testing-airflow-operators
 comments: true
 ---
-It takes a few lines of setup before you can test an Airflow operator's method.
+It takes a few lines of setup before you can test an Airflow operator.
 
-1. Create a DAG.
-2. Create the operator.
-3. Create a TaskInstance.
+1. Instantiate a (fake) DAG.
+2. Instantiate the operator we're testing.
+3. Instantiate a TaskInstance.
 
 Then you can test the method.
 
@@ -31,7 +31,7 @@ class TestMyOperator(TestCase):
             self.assertEqual(result, 'foo')
 ```
 
-Here's the same in Airflow 1.7:
+And in Airflow 1.7:
 
 ```python
 class TestMyOperator(TestCase):

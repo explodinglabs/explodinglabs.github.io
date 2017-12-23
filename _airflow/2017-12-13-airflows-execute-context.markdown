@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Airflow's execute context"
+title: "Airflow's Execute Context"
 date: 2017-12-13
 permalink: /airflow/execute-context
 comments: false
 ---
-I often forget the contents of this dict and it's not well documented.
+I often forget the contents of the `context` dict, and it's not well
+documented.
 
 It can be found in `airflow/models.py`, in the
 `TaskInstance.get_template_context` method.
