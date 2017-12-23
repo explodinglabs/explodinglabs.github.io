@@ -38,6 +38,7 @@ return {
     'conf': configuration,
     'test_mode': self.test_mode,
 }
+```
 
 As a side note, you can generate the context from a TaskInstance object.
 
