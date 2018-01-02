@@ -6,7 +6,10 @@ layout: default
     <h1 class="page-title" itemprop="name headline">{{ page.title }}</h1>
 
     <div class="post-meta">
-        <a href="//twitter.com/bbmelb">@beau</a>, <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+        Posted by
+        <a href="mailto:beauinmelbourne@gmail.com">beauinmelbourne@gmail.com</a>
+        on
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
     </div>
 
     <div class="post-content" itemprop="articleBody">
