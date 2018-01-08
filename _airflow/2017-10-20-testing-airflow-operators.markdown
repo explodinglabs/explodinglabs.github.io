@@ -23,11 +23,11 @@ from my_operator import MyOperator
 
 class TestMyOperator(TestCase):
     def test_execute(self):
-        with DAG(dag_id='foo'):
-            task = MyOperator(task_id='foo', start_date=datetime.now())
-            ti = TaskInstance(task=task, execution_date=datetime.now())
-            result = task.execute(ti.get_template_context())
-            self.assertEqual(result, 'foo')
+        dag = DAG(dag_id='foo')
+        task = MyOperator(dag=dag, task_id='foo', start_date=datetime.now())
+        ti = TaskInstance(task=task, execution_date=datetime.now())
+        result = task.execute(ti.get_template_context())
+        self.assertEqual(result, 'foo')
 ```
 
 And in Airflow 1.7:
