@@ -7,11 +7,11 @@ redirect_from: /airflow/testing-airflow-operators
 ---
 It takes a few lines of setup before you can test an Airflow operator.
 
-1. Instantiate a (fake) DAG.
-2. Instantiate the operator we're testing.
+1. Instantiate a DAG.
+2. Instantiate a Task (the operator we're testing).
 3. Instantiate a TaskInstance.
 
-Then you can test the method.
+Then you can test your task's method.
 
 Here we test `MyOperator.execute` in Airflow 1.8:
 
