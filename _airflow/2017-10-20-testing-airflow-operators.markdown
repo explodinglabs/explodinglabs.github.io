@@ -16,12 +16,8 @@ Then you can test the method.
 Here we test `MyOperator.execute` in Airflow 1.8:
 
 ```python
-from unittest import TestCase
-from datetime import datetime
-from airflow.models import DAG, TaskInstance
-from my_operator import MyOperator
-
 class TestMyOperator(TestCase):
+
     def test_execute(self):
         dag = DAG(dag_id='foo')
         task = MyOperator(dag=dag, task_id='foo', start_date=datetime.now())
@@ -30,14 +26,4 @@ class TestMyOperator(TestCase):
         self.assertEqual(result, 'foo')
 ```
 
-And in Airflow 1.7:
-
-```python
-class TestMyOperator(TestCase):
-    def test_execute(self):
-        dag = DAG(dag_id='foo')
-        task = MyOperator(dag=dag, owner='foo', task_id='foo', start_date=datetime.now())
-        ti = TaskInstance(task=task, execution_date=datetime.now())
-        result = task.execute(ti.get_template_context())
-        self.assertEqual(result, 'foo')
-```
+(Airflow 1.7 also requires the `owner` passed to the task.)
