@@ -24,7 +24,7 @@ Side note: Keep your operators light. Only put some controlling code in there.
 The real work should be kept away from Airflow, in plain functions or classes.
 Airflow is just a scheduler, don't do too much work in there.
 
-Anyway, after testing those "work" functions, you should still test the
+Anyway, after testing those implementation functions, you should still test the
 operator as well.
 
 To test an operator's method in a unit test, you need to create three objects,
