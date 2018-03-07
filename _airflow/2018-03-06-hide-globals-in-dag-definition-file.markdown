@@ -3,7 +3,7 @@ layout: post
 title: "Hide globals in a DAG definition file"
 date: 2018-03-06
 permalink: /airflow/hide-globals-in-dag-definition-file
-redirect-from: /airflow/hide-globals-when-importing
+redirect_from: /airflow/hide-globals-when-importing
 ---
 Airflow has a fairly strange way of registering DAGs and tasks. They're put
 into the global namespace of the DAG definition file.

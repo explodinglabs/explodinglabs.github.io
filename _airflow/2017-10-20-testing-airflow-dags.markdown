@@ -41,4 +41,4 @@ class TestMyOperator(TestCase):
 ```
 
 If your operator is inside a _DAG definition file_, you should [hide the
-globals section of that module](/airflow/hide-globals-when-importing).
+globals section of that module](/airflow/hide-globals-in-dag-definition-file).
