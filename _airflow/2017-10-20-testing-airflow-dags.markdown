@@ -40,4 +40,5 @@ class TestMyOperator(TestCase):
         self.assertEqual(result, 'foo')
 ```
 
-See also: [Hide globals when importing a DAG definition file](/airflow/hide-globals-when-importing)
+If your operator is inside a _DAG definition file_, you should [hide the
+globals section of that module](/airflow/hide-globals-when-importing).
