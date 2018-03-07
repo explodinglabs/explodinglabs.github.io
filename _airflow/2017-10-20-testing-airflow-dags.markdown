@@ -8,7 +8,7 @@ redirect_from:
     - /airflow/testing-airflow-operators
 ---
 Developing Airflow dags involves writing unit tests for the individual tasks,
-and then manually running the whole dag from start to finish.
+and then manually [running the whole dag from start to finish](/airflow/run-dag-and-watch-logs).
 
 Here's a simple operator for testing:
 
@@ -46,3 +46,5 @@ class TestMyOperator(TestCase):
         result = task.execute(ti.get_template_context())
         self.assertEqual(result, 'foo')
 ```
+
+See also: [Hide globals when importing a DAG definition file](/airflow/hide-globals-when-importing)
