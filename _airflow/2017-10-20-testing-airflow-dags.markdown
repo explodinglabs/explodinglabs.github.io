@@ -13,8 +13,6 @@ and then manually [running the whole dag from start to finish](/airflow/run-dag-
 Here's a simple operator for testing:
 
 ```python
-from airflow.models import BaseOperator
-
 class MyOperator(BaseOperator):
     def execute(self, context):
         return 'foo'
@@ -32,11 +30,6 @@ a dag, a task (the operator we're testing), and a TaskInstance. Here we test
 `MyOperator.execute`.
 
 ```python
-from datetime import datetime
-from unittest import TestCase
-from airflow.models import DAG, TaskInstance
-from my_package.my_operator import MyOperator
-
 class TestMyOperator(TestCase):
 
     def test_execute(self):

@@ -15,9 +15,9 @@ MyOperator(dag=dag, task_id='foo')
 Airflow then comes along and finds them.
 
 When importing that file however, as you do when unit testing, it's not ideal
-to have those global objects to be created.
+to have those global objects created.
 
-The solution is to protect that code by placing a predicate before it:
+The solution is to protect that code by preceding it with a predicate:
 
 ```python
 if __name__ == 'unusual_prefix_my_module':
@@ -27,5 +27,5 @@ if __name__ == 'unusual_prefix_my_module':
 
 (Replace `my_module` with the name of the module.)
 
-Airflow will still find your DAG as normal, however the code won't be executed
+Airflow will still find your DAG as normal, however that code won't be executed
 when the module is imported.
