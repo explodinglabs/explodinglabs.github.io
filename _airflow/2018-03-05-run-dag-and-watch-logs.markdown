@@ -10,14 +10,16 @@ Here's how I run entire dags from start to finish, and watch the log output in
 real-time in the terminal.
 
 First start the Airflow scheduler.
+
 ```sh
 $ airflow scheduler
 ```
 
-So now we need to trigger a dag, but unfortunately neither the scheduler or
-`airflow trigger_dag` command shows log output from the tasks. The output from
-tasks is sent to log files. Each time any task is run, a new timestamped log
-file is created. Something like
+So now we need to trigger a dag, but unfortunately neither the `airflow
+trigger_dag` command nor the scheduler shows log output from the tasks. The
+output from tasks is sent to log files. Each time any task is run, a new
+timestamped log file is created. Something like
+
 ```
 ~/airflow/logs/my-dag/my-task/2018-03-06T09:59:10.427477
 ```
