@@ -25,12 +25,11 @@ like
 ~/airflow/logs/my-dag/my-task/2018-03-06T09:59:10.427477
 ```
 
-So we need to tail all log files, including those in subdirectories, and
-including any new ones that appear. For this I use
-[fswatch](https://emcrisostomo.github.io/fswatch/) combined with `tail`.
+So we need to tail follow these files, new ones that appear. For this I use
+[xtail](https://www.unicom.com/sw/xtail).
 
 ```sh
-$ fswatch -r ~/airflow/logs/my-dag |xargs -n1 tail
+$ xtail ~/airflow/logs/my-dag/*
 ```
 
 Now trigger the dag and watch the output.
