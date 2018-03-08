@@ -14,23 +14,23 @@ First start the Airflow scheduler.
 $ airflow scheduler
 ```
 
-Using `airflow run` or `airflow test` will run a single task and show you the
-output, but to run a whole dag from start to finish, the command is `airflow
-trigger_dag`. Unfortuntately, it doesn't show you any log output. The output
-from tasks is sent to log files.
-
-Each time any task is run, a new timestamped log file is created. Something
-like
+So now we need to trigger a dag, but unfortunately neither the scheduler or
+`airflow trigger_dag` command shows log output from the tasks. The output from
+tasks is sent to log files. Each time any task is run, a new timestamped log
+file is created. Something like
 ```
 ~/airflow/logs/my-dag/my-task/2018-03-06T09:59:10.427477
 ```
 
-So we need to tail follow these files, new ones that appear. For this I use
+To watch these files as they appear, I use
 [xtail](https://www.unicom.com/sw/xtail).
 
 ```sh
 $ xtail ~/airflow/logs/my-dag/*
 ```
+
+(The directory and subdirectories may need to be created, if the dag hasn't
+been run yet.)
 
 Now trigger the dag and watch the output.
 ```sh
