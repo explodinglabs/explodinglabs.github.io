@@ -8,7 +8,8 @@ When to use Decorators
 ======================
 - Add functionality before or after a method is executed.
 - Data sanitization or addition.
-- Function registration.
+- Function or class registration.
+- Logging.
 
 When to use Context Managers
 ============================
@@ -27,6 +28,6 @@ When to use Metaclasses
 - Non-inheriting attributes. e.g. make an abstract class not inherit attributes.
 - Class registration.
 
-Mostly taken from [Professional
+Some of this was taken from [Professional
 Python](http://www.wrox.com/WileyCDA/WroxTitle/Professional-Python.productCd-1119070856.html)
 by Luke Sneeringer.
