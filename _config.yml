@@ -20,6 +20,7 @@ google_analytics: UA-81795603-1
 repository: bcb/bcb.github.io
 plugins:
     - jekyll-redirect-from
+    - jekyll-sitemap
 
 # Build settings
 markdown: kramdown
