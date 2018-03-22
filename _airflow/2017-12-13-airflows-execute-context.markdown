@@ -1,9 +1,17 @@
 ---
 layout: post
-title: "Airflow's execute context"
 date: 2017-12-13
+title: Airflow's execute context
+description:
+    Showing the contents of the context dictionary, which is available in an
+    Operator's execute method, or a PythonOperator's function definition.
+image: /assets/airflow-wide.png
 permalink: /airflow/execute-context
 ---
+<div class="wide-logos" markdown="1">
+![airflow](/assets/airflow.png)
+</div>
+
 I often forget the contents of the `context` dict, and it's not well
 documented.
 

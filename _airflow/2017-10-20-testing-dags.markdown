@@ -1,15 +1,18 @@
 ---
 layout: post
-title: Testing Airflow DAGs
-description:
-    How to test an Airflow DAG by writing unit tests for individual operators.
 date: 2017-10-20
+title: Testing Airflow DAGs
+description: How to test an Airflow DAG by writing unit tests for individual operators.
+image: /assets/airflow-wide.png
 permalink: /airflow/testing-dags
-image: /assets/airflow.png
 redirect_from:
     - /airflow/testing-operators
     - /airflow/testing-airflow-operators
 ---
+<div class="wide-logos" markdown="1">
+![airflow](/assets/airflow.png)
+</div>
+
 Developing Airflow dags involves writing unit tests for the individual tasks,
 and then manually running the whole dag from start to finish.
 

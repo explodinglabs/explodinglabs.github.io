@@ -1,9 +1,17 @@
 ---
 layout: post
-title: "Run an Airflow DAG from the command-line and watch the log output"
-date: 2018-03-06
+date: 2018-03-05
+title: Run an Airflow DAG from the command-line and watch the log output
+description:
+    Explains how to run a DAG, completely from the command-line, and watch the
+    log output in real-time.
+image: /assets/airflow-wide.png
 permalink: /airflow/run-dag-and-watch-logs
 ---
+<div class="wide-logos" markdown="1">
+![airflow](/assets/airflow.png)
+</div>
+
 I prefer the command-line over web interfaces.
 
 Here's how I run entire dags from start to finish, and watch the log output in
