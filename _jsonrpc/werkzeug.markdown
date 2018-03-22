@@ -52,12 +52,8 @@ Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ``` shell
 $ pip install 'jsonrpcclient[requests]'
-$ python
-```
-```python
->>> import jsonrpcclient
->>> jsonrpcclient.request('http://localhost:5000/', 'ping')
+$ jsonrpc --send http://localhost:5000 ping
 --> {"jsonrpc": "2.0", "method": "ping", "id": 1}
 <-- {"jsonrpc": "2.0", "result": "pong", "id": 1} (200 OK)
-'pong'
+pong
 ```
