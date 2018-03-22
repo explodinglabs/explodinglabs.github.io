@@ -1,14 +1,17 @@
 ---
 layout: post
-title: "Testing Airflow DAGs"
+title: Testing Airflow DAGs
+description:
+    How to test an Airflow DAG by writing unit tests for individual operators.
 date: 2017-10-20
 permalink: /airflow/testing-dags
+image: assets/airflow.png
 redirect_from:
     - /airflow/testing-operators
     - /airflow/testing-airflow-operators
 ---
 Developing Airflow dags involves writing unit tests for the individual tasks,
-and then manually [running the whole dag from start to finish](/airflow/run-dag-and-watch-logs).
+and then manually running the whole dag from start to finish.
 
 Here's a simple operator for testing:
 
@@ -40,5 +43,12 @@ class TestMyOperator(TestCase):
         self.assertEqual(result, 'foo')
 ```
 
-If your operator is inside a _DAG definition file_, you should [hide the
-globals section of that module](/airflow/hide-globals-in-dag-definition-file).
+In _DAG definition files_, you should [hide the globals
+section](/airflow/hide-globals-in-dag-definition-file) when instantiating your
+DAG and operators.
+
+
+## Running the whole dag
+
+See how I [run an entire dag from the
+commandline](/airflow/run-dag-and-watch-logs) and watch the logs in real-time.
