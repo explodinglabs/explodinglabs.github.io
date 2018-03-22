@@ -5,7 +5,7 @@ description:
     How to test an Airflow DAG by writing unit tests for individual operators.
 date: 2017-10-20
 permalink: /airflow/testing-dags
-image: assets/airflow.png
+image: /assets/airflow.png
 redirect_from:
     - /airflow/testing-operators
     - /airflow/testing-airflow-operators
