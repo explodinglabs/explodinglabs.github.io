@@ -13,8 +13,15 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bcb.github.io" # the base hostname & protocol for your site
 author: Beau Barker
-twitter_username: bbmelb
+twitter:
+  username: bbmelb
 github_username: bcb
+social:
+  name: Beau Barker
+  links:
+    - https://twitter.com/bbmelb
+    - https://www.linkedin.com/in/beaub
+    - https://github.com/bcb
 future: true # Include posts with a date in the future
 google_analytics: UA-81795603-1
 repository: bcb/bcb.github.io
