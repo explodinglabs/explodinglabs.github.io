@@ -5,34 +5,32 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
-title:
-email: beauinmelbourne@gmail.com
+author: Beau Barker
+baseurl: "" # the subpath of your site, e.g. /blog
 description: > # this means to ignore newlines until "baseurl:"
   ...
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://bcb.github.io" # the base hostname & protocol for your site
-author: Beau Barker
-twitter:
-  username: bbmelb
+email: beauinmelbourne@gmail.com
+future: true # Include posts with a date in the future
 github_username: bcb
+google_analytics: UA-81795603-1
+highlighter: rouge
+markdown: kramdown
+permalink: /:categories/:title
+plugins:
+    - jekyll-redirect-from
+    - jekyll-sitemap
+    - jekyll-seo-tag
+repository: bcb/bcb.github.io
 social:
   name: Beau Barker
   links:
     - https://twitter.com/bbmelb
     - https://www.linkedin.com/in/beaub
     - https://github.com/bcb
-future: true # Include posts with a date in the future
-google_analytics: UA-81795603-1
-repository: bcb/bcb.github.io
-plugins:
-    - jekyll-redirect-from
-    - jekyll-sitemap
-    - jekyll-seo-tag
-
-# Build settings
-markdown: kramdown
-highlighter: rouge
+title: Beau Barker
+twitter:
+  username: bbmelb
+url: "https://bcb.github.io" # the base hostname & protocol for your site
 
 collections:
     jsonrpc:
