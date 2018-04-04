@@ -13,7 +13,7 @@
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
     {% if jekyll.environment == 'production' %}
-    {% include analytics.html %}
+        {% include analytics.html %}
     {% endif %}
 
     {% seo %}

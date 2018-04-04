@@ -1,0 +1,69 @@
+---
+layout: post
+category: jsonrpc
+date: 2016-08-01
+title: JSON-RPC in Python with Flask
+permalink: /jsonrpc/flask
+---
+<div class="wide-logos" markdown="1">
+![flask](/assets/flask.png)
+![plus](/assets/plus.png)
+![json](/assets/json.png)
+</div>
+
+We'll use [Flask](http://flask.pocoo.org) to take
+[JSON-RPC](http://www.jsonrpc.org/) requests. It should respond to "ping" with
+"pong".
+
+Install Flask to take requests and
+[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
+
+```sh
+$ pip install flask jsonrpcserver
+```
+Create a `server.py`:
+
+```python
+from flask import Flask, request, Response
+from jsonrpcserver import methods
+
+app = Flask(__name__)
+
+@methods.add
+def ping():
+    return 'pong'
+
+@app.route('/', methods=['POST'])
+def index():
+    req = request.get_data().decode()
+    response = methods.dispatch(req)
+    return Response(str(response), response.http_status,
+                    mimetype='application/json')
+
+if __name__ == '__main__':
+    app.run()
+```
+Start the server:
+
+```sh
+$ python server.py
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 216-262-392
+```
+
+Client
+======
+Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
+
+```sh
+$ pip install 'jsonrpcclient[requests]'
+$ python
+```
+```python
+>>> import jsonrpcclient
+>>> jsonrpcclient.request('http://localhost:5000/', 'ping')
+--> {"jsonrpc": "2.0", "method": "ping", "id": 1}
+<-- {"jsonrpc": "2.0", "result": "pong", "id": 1} (200 OK)
+'pong'
+```

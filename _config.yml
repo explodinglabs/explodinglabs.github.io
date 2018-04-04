@@ -31,29 +31,4 @@ title: Beau Barker
 twitter:
   username: bbmelb
 url: "https://bcb.github.io" # the base hostname & protocol for your site
-
-collections:
-    jsonrpc:
-        title: JSON-RPC
-        output: true
-        priority: 1
-        intro: >
-            My libraries:
-            <a href="https://jsonrpcclient.readthedocs.io">jsonrpcclient</a> and
-            <a href="https://jsonrpcserver.readthedocs.io">jsonrpcserver</a>.
-    airflow:
-        title: Airflow
-        output: true
-        priority: 2
-    graphql:
-        title: GraphQL
-        output: true
-        priority: 3
-    micropython:
-        title: Micropython
-        output: true
-        priority: 4
-    aws:
-        title: Amazon Web Services
-        output: true
-        priority: 5
+include: ['_pages']
