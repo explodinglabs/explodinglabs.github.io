@@ -17,8 +17,8 @@ redirect_from:
 Use `types.SimpleNamespace`.
 
 ```python
->>> my_dict = {'name': 'foo', 'value': 1}
 >>> from types import SimpleNamespace
+>>> my_dict = {'name': 'foo', 'value': 1}
 >>> obj = SimpleNamespace(**my_dict)
 >>> obj.name
 'foo'
@@ -30,6 +30,7 @@ Use `collections.namedtuple`.
 
 ```python
 >>> from collections import namedtuple
+>>> my_dict = {'name': 'foo', 'value': 1}
 >>> obj = namedtuple('Obj', my_dict.keys())(**my_dict)
 >>> obj.name
 'foo'
