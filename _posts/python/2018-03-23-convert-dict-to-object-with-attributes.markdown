@@ -2,7 +2,7 @@
 layout: post
 category: python
 date: 2018-03-23
-title: Convert Python dict to an object with attributes
+title: Convert Python dictionary to an object with attributes
 image: /assets/python-wide.png
 redirect_from:
     - /airflow/testing-operators
@@ -12,7 +12,7 @@ redirect_from:
 ![airflow](/assets/python.png)
 </div>
 
-## Convert a dict to a mutable object
+## Convert to a mutable object
 
 Use `types.SimpleNamespace`.
 
@@ -24,7 +24,7 @@ Use `types.SimpleNamespace`.
 'foo'
 ```
 
-## Convert a dict to an immutable object
+## Convert to an immutable object
 
 Use `collections.namedtuple`.
 
