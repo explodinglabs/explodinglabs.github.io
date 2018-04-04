@@ -14,10 +14,10 @@ layout: all
 
     <p style="font-size: smaller">
         Filter by
-        <a href="/">All</a>,
-        <a href="/python/">Python</a>,
-        <a href="/jsonrpc/">JSON-RPC</a>,
-        <a href="/airflow/">Airflow</a>
+        <a href="/">All</a> ({{ site.posts |size }}),
+        <a href="/python/">Python</a> ({{ site.categories.python |size }}),
+        <a href="/jsonrpc/">JSON-RPC</a> ({{ site.categories.jsonrpc |size }}),
+        <a href="/airflow/">Airflow</a> ({{ site.categories.airflow |size }})
     </p>
 
 </header>
