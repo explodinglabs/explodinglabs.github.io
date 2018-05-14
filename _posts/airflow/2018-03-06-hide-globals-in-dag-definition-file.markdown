@@ -30,12 +30,10 @@ to have those global objects created.
 The solution is to protect that code by preceding it with a predicate:
 
 ```python
-if __name__ == 'unusual_prefix_my_module':
+if __name__.startswith('unusual_prefix'):
     dag = DAG(dag_id='foo', start_date=start_date)
     MyOperator(dag=dag, task_id='foo')
 ```
-
-(Replace `my_module` with the name of the module.)
 
 Airflow will still find your DAG as normal, however that code won't be executed
 when the module is imported.
