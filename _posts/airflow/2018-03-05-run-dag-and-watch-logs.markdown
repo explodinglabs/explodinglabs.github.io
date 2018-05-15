@@ -36,17 +36,17 @@ created with each task run.
 Thankfully, from Airflow 1.9 the logging can be configured to use a simpler log
 file naming scheme which can be tail-followed more easily.
 
-1. Copy Airflow's log config template file to somewhere in your PYTHONPATH.
+Copy Airflow's log config template file to somewhere in your PYTHONPATH.
 ```
 $ curl -O ~/airflow/plugins/log_config.py https://raw.githubusercontent.com/apache/incubator-airflow/master/airflow/config_templates/airflow_local_settings.py
 ```
 
-2. Change the `FILENAME_TEMPLATE` to this:
+Change the `FILENAME_TEMPLATE` to this:
 ```
 FILENAME_TEMPLATE = '{{ ti.dag_id }}/{{ ti.task_id }}.log'
 ```
 
-3. Set the logging_config_class in `airflow.cfg`:
+Set the logging_config_class in `airflow.cfg`:
 ```
 logging_config_class = log_config.LOGGING_CONFIG
 ```
