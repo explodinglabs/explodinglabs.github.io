@@ -13,15 +13,29 @@ permalink: /airflow/fernet-key
 ![airflow](/assets/airflow.png)
 </div>
 
-Generate a fernet key:
+Install cryptography:
+```shell
+pip install cryptography
+```
 
+Generate a fernet key:
 ```shell
 $ python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
 81HqDtbqAywKSOumSha3BhWNOdQ26slT6K0YaZeZyPs=
 ```
 
 Paste it into your `airflow.cfg`.
-
 ```
 fernet_key = 81HqDtbqAywKSOumSha3BhWNOdQ26slT6K0YaZeZyPs=
 ```
+
+Alternatively, set the environment variable.
+```shell
+export AIRFLOW__CORE__FERNET_KEY='81HqDtbqAywKSOumSha3BhWNOdQ26slT6K0YaZeZyPs='
+```
+
+Restart Airflow's webserver.
+
+*For existing connections (the ones that you had defined before installing
+airflow[crypto] and creating a Fernet key), you need to open each connection in
+the connection admin UI, re-type the password, and save it.*
