@@ -2,27 +2,17 @@
 layout: post
 category: python
 date: 2018-03-23
-title: Convert Python dictionary to an object with attributes
+title: Convert a dictionary to postfix notation
 image: /assets/python-wide.png
-redirect_from:
-    - /airflow/testing-operators
-    - /airflow/testing-airflow-operators
+permalink: /convert-dict-to-postfix-notation
+redirect_from: /convert-dict-to-object-with-attributes
 ---
 <div class="wide-logos" markdown="1">
 ![airflow](/assets/python.png)
 </div>
 
-## Convert to a mutable object
-
-Use `types.SimpleNamespace`.
-
-```python
->>> from types import SimpleNamespace
->>> my_dict = {'name': 'foo', 'value': 1}
->>> obj = SimpleNamespace(**my_dict)
->>> obj.name
-'foo'
-```
+We have a dictionary, and want to convert it to a an object with postfix
+notation ('obj.name').
 
 ## Convert to an immutable object
 
@@ -30,8 +20,23 @@ Use `collections.namedtuple`.
 
 ```python
 >>> from collections import namedtuple
->>> my_dict = {'name': 'foo', 'value': 1}
->>> obj = namedtuple('Obj', my_dict.keys())(**my_dict)
+>>> data = {'id': 1, 'name': 'foo'}
+>>> Obj = namedtuple('Obj', data.keys())
+>>> obj = Obj(**data)
 >>> obj.name
 'foo'
 ```
+
+## Convert to a mutable object
+
+Use `types.SimpleNamespace`.
+
+```python
+>>> from types import SimpleNamespace
+>>> data = {'id': 1, 'name': 'foo'}
+>>> obj = SimpleNamespace(**data)
+>>> obj.name
+'foo'
+```
+
+See also: [Convert a sequence to postfix notation](/convert-sequence-to-postfix-notation)
