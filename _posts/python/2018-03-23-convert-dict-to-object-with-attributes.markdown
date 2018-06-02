@@ -4,8 +4,10 @@ category: python
 date: 2018-03-23
 title: Convert a dictionary to postfix notation
 image: /assets/python-wide.png
-permalink: /convert-dict-to-postfix-notation
-redirect_from: /convert-dict-to-object-with-attributes
+permalink: /python/convert-dict-to-postfix-notation
+redirect_from:
+    - /convert-dict-to-postfix-notation
+    - /python/convert-dict-to-object-with-attributes
 ---
 <div class="wide-logos" markdown="1">
 ![airflow](/assets/python.png)
