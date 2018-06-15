@@ -9,7 +9,7 @@ Was getting this error in sqlldr:
 SQL*Loader-510: Physical record in data file (incoming/TODS/FFL/data.csv) is longer than the maximum(1048576)
 ```
 
-Solution is to set the READSIZE option, in the command:
+Solution is to set the `readsize` option, in the command:
 ```
 sqlldr readsize=10000000000 ...
 ```
