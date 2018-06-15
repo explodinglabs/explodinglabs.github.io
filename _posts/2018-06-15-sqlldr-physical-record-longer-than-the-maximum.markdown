@@ -6,7 +6,7 @@ permalink: /sqlldr/physical-record-longer-than-maximum
 ---
 Was getting this error in sqlldr:
 ```
-SQL*Loader-510: Physical record in data file (incoming/TODS/FFL/data.csv) is longer than the maximum(1048576)
+SQL*Loader-510: Physical record in data file (data.csv) is longer than the maximum(1048576)
 ```
 
 Solution is to set the `readsize` option, in the command:
