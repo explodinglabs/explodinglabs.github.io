@@ -39,4 +39,4 @@ Use `types.SimpleNamespace`.
 'foo'
 ```
 
-See also: [Convert a dictionary to postfix notation](/convert-dict-to-postfix-notation)
+See also: [Convert a dictionary to postfix notation](/python/convert-dict-to-postfix-notation)
