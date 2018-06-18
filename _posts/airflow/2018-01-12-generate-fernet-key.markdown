@@ -31,11 +31,11 @@ fernet_key = 81HqDtbqAywKSOumSha3BhWNOdQ26slT6K0YaZeZyPs=
 
 Alternatively, set the environment variable.
 ```shell
-export AIRFLOW__CORE__FERNET_KEY='81HqDtbqAywKSOumSha3BhWNOdQ26slT6K0YaZeZyPs='
+AIRFLOW__CORE__FERNET_KEY='81HqDtbqAywKSOumSha3BhWNOdQ26slT6K0YaZeZyPs='
 ```
 
 Restart Airflow's webserver.
 
-*For existing connections (the ones that you had defined before installing
-airflow[crypto] and creating a Fernet key), you need to open each connection in
-the connection admin UI, re-type the password, and save it.*
+*For existing connections (the ones that you had defined before setting the
+Fernet key), you need to open each connection in the connection admin UI,
+re-type the password, and save it.*
