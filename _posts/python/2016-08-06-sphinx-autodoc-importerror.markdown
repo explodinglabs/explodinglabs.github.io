@@ -6,7 +6,7 @@ title: "Sphinx Autodoc ImportError"
 permalink: /sphinx-autodoc-importerror
 ---
 <div class="wide-logos" markdown="1">
-![airflow](/assets/python.png)
+![python](/assets/python.png)
 </div>
 
 This drove me crazy today until I found the solution.

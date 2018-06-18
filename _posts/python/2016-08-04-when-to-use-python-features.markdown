@@ -6,7 +6,7 @@ title: "When to use Python's Decorators, Context Managers, Generators and Metacl
 permalink: /python/when-to-use
 ---
 <div class="wide-logos" markdown="1">
-![airflow](/assets/python.png)
+![python](/assets/python.png)
 </div>
 
 When to use Decorators

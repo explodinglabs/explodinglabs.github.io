@@ -6,7 +6,7 @@ title: "Restart Django Migrations"
 permalink: /django/restart-migrations
 ---
 <div class="wide-logos" markdown="1">
-![airflow](/assets/python.png)
+![python](/assets/python.png)
 </div>
 
 To reset an app back to the initial "zero" migration:

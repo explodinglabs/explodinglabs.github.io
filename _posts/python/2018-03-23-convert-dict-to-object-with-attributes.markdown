@@ -10,7 +10,7 @@ redirect_from:
     - /python/convert-dict-to-object-with-attributes
 ---
 <div class="wide-logos" markdown="1">
-![airflow](/assets/python.png)
+![python](/assets/python.png)
 </div>
 
 We have a dictionary, and want to convert it to a an object with postfix

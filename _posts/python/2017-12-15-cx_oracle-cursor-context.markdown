@@ -6,7 +6,7 @@ title: "cx_Oracle cursor context"
 permalink: /cx_oracle/cursor-context
 ---
 <div class="wide-logos" markdown="1">
-![airflow](/assets/python.png)
+![python](/assets/python.png)
 </div>
 
 Use `contextlib`'s `closing` context manager:

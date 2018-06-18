@@ -6,7 +6,7 @@ title: "Python 3.3 failing to install on Arch Linux"
 permalink: /archlinux-python33-install-fails
 ---
 <div class="wide-logos" markdown="1">
-![airflow](/assets/python.png)
+![python](/assets/python.png)
 </div>
 
 Installing Python 3.3 on Arch tonight, two tests failed:

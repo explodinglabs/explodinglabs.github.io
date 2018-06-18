@@ -6,7 +6,7 @@ title: "ImportError: cannot import name HTTPSHandler"
 permalink: /importerror-httpshandler
 ---
 <div class="wide-logos" markdown="1">
-![airflow](/assets/python.png)
+![python](/assets/python.png)
 </div>
 
 Running tox tests tonight, had some failures on some Python 3.x versions:

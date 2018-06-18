@@ -7,7 +7,7 @@ image: /assets/python-wide.png
 permalink: /convert-sequence-to-postfix-notation
 ---
 <div class="wide-logos" markdown="1">
-![airflow](/assets/python.png)
+![python](/assets/python.png)
 </div>
 
 We have a sequence such as a tuple or list, and want to convert it to a an
