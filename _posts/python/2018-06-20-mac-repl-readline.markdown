@@ -4,7 +4,7 @@ category: python
 date: 2018-06-20
 title: Readline in the Python REPL on MacOS
 image: /assets/python-wide.png
-permalink: /python/convert-dict-to-postfix-notation
+permalink: /python/mac-repl-readline
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)
