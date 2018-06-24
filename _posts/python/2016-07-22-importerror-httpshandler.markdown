@@ -3,7 +3,8 @@ layout: post
 category: python
 date: 2016-07-22
 title: "ImportError: cannot import name HTTPSHandler"
-permalink: /importerror-httpshandler
+permalink: /python/importerror-httpshandler
+redirect_from: /importerror-httpshandler
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)

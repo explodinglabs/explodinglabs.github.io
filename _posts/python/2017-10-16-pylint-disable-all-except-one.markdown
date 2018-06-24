@@ -3,8 +3,10 @@ layout: post
 category: python
 date: 2017-10-16
 title: "Pylint: Show only one error type"
-permalink: /pylint/show-only-one-type
-redirect_from: /pylint/disable-all-except-one
+permalink: /python/show-only-one-pylint-error
+redirect_from:
+    - /pylint/show-only-one-type
+    - /pylint/disable-all-except-one
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)

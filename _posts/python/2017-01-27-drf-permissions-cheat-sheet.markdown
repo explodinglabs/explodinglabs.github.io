@@ -3,8 +3,10 @@ layout: post
 category: python
 date: 2017-01-27
 title: "Django REST Framework: Permissions Matrix"
-permalink: /django/drf-permissions-matrix
-redirect_from: /django/drf-permissions-cheatsheet
+permalink: /python/drf-permissions-cheatsheet
+redirect_from:
+    - /django/drf-permissions-cheatsheet
+    - /django/drf-permissions-matrix
 ---
 A guide to DRF's built-in permission classes.
 

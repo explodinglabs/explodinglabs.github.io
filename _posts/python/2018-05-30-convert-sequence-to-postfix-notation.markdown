@@ -4,7 +4,8 @@ category: python
 date: 2018-05-30
 title: Convert a sequence to postfix notation
 image: /assets/python-wide.png
-permalink: /convert-sequence-to-postfix-notation
+permalink: /python/convert-sequence-to-postfix-notation
+redirect_from: /convert-sequence-to-postfix-notation
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)

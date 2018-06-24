@@ -3,7 +3,8 @@ layout: post
 category: python
 date: 2016-08-06
 title: "Sphinx Autodoc ImportError"
-permalink: /sphinx-autodoc-importerror
+permalink: /python/sphinx-autodoc-importerror
+redirect_from: /sphinx-autodoc-importerror
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)

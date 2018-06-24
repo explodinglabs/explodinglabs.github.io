@@ -1,9 +1,10 @@
 ---
 layout: post
-date: 2016-09-21
 category: python
+date: 2016-09-21
 title: "GraphQL in Python with Flask"
-permalink: /graphql/flask
+permalink: /python/graphql-flask
+redirect_from: /graphql/flask
 ---
 <div class="wide-logos" markdown="1">
 ![Flask](/assets/flask.png)

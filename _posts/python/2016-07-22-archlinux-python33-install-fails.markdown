@@ -3,7 +3,8 @@ layout: post
 category: python
 date: 2016-07-22
 title: "Python 3.3 failing to install on Arch Linux"
-permalink: /archlinux-python33-install-fails
+permalink: /python/archlinux-python33-install-fails
+redirect_from: /archlinux-python33-install-fails
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)

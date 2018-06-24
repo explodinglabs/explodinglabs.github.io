@@ -3,7 +3,8 @@ layout: post
 category: python
 date: 2017-12-15
 title: "cx_Oracle cursor context"
-permalink: /cx_oracle/cursor-context
+permalink: /python/cx-oracle-cursor-context
+redirect_from: /cx_oracle/cursor-context
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)

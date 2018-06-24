@@ -3,7 +3,8 @@ layout: post
 category: python
 date: 2017-01-16
 title: "Restart Django Migrations"
-permalink: /django/restart-migrations
+permalink: /python/restart-django-migrations
+redirect_from: /django/restart-migrations
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)
