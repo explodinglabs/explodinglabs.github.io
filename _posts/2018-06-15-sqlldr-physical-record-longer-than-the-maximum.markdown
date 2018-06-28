@@ -3,7 +3,7 @@ layout: post
 title: "SQL*Loader: Physical record longer than the maximum"
 date: 2018-06-15
 permalink: /oracle/sqlldr-physical-record-longer-than-maximum
-redirects_from: /sqlldr/physical-record-longer-than-maximum
+redirect_from: /sqlldr/physical-record-longer-than-maximum
 ---
 Was getting this error in sqlldr:
 ```
