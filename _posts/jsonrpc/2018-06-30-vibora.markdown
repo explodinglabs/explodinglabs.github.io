@@ -43,6 +43,13 @@ if __name__ == '__main__':
     app.run()
 ```
 
+Start the server:
+
+```sh
+$ python server.py
+# Vibora (0.0.7) # http://127.0.0.1:5000
+```
+
 Client
 ======
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
