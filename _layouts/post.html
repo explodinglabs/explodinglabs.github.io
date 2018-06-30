@@ -18,3 +18,16 @@ layout: all
 <div class="site-footer">
     <a href="mailto:beauinmelbourne@gmail.com">beauinmelbourne@gmail.com</a>
 </div>
+
+{% if page.category != empty %}
+    Also in {{ page.category |capitalize }}:
+
+    <ul class="post-list">
+        {% assign posts = site.posts |where: "category", page.category |where_exp: "item", "item.url != page.url" |sort: "date" |reverse %}
+        {% for post in posts limit: 5 %}
+            <li class="post-link">
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

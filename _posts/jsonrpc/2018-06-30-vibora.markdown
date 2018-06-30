@@ -1,0 +1,59 @@
+---
+layout: post
+category: jsonrpc
+date: 2018-06-30
+title: JSON-RPC in Python with Vibora
+permalink: /jsonrpc/vibora
+---
+<div class="wide-logos" markdown="1">
+![vibora](/assets/vibora.png)
+![plus](/assets/plus.png)
+![json](/assets/json.png)
+</div>
+
+We'll use [Vibora](https://vibora.io/) to take
+[JSON-RPC](http://www.jsonrpc.org/) requests. It should respond to "ping" with
+"pong".
+
+Install Vibora to take requests and
+[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
+
+```sh
+$ pip install vibora jsonrpcserver
+```
+Create a `server.py`:
+
+```python
+from vibora import Vibora, Request
+from vibora.responses import JsonResponse
+from jsonrpcserver.aio import methods
+
+app = Vibora()
+
+@methods.add
+async def ping():
+    return 'pong'
+
+@app.route('/', methods=['POST'])
+async def home(request: Request):
+    response = await methods.dispatch(await request.json())
+    return JsonResponse(response)
+
+if __name__ == '__main__':
+    app.run()
+```
+
+Client
+======
+Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
+
+```sh
+$ pip install 'jsonrpcclient[requests]'
+$ python
+```
+```python
+>>> jsonrpcclient.request('http://localhost:5000', 'ping')
+--> {"jsonrpc": "2.0", "method": "ping", "id": 1}
+<-- {"jsonrpc":"2.0","result":"pong","id":1} (200 OK)
+'pong'
+```
