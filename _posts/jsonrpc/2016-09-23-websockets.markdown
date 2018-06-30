@@ -53,7 +53,7 @@ Client
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ```sh
-$ pip install 'jsonrpcclient[websockets]'
+$ pip install "jsonrpcclient[websockets]"
 ```
 Create a `client.py`:
 
