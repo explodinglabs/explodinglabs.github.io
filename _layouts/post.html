@@ -19,6 +19,7 @@ layout: all
     <a href="mailto:beauinmelbourne@gmail.com">beauinmelbourne@gmail.com</a>
 </div>
 
+{% comment %}
 {% if page.category != empty %}
     Also in {{ page.category |capitalize }}:
 
@@ -31,3 +32,4 @@ layout: all
         {% endfor %}
     </ul>
 {% endif %}
+{% endcomment %}
