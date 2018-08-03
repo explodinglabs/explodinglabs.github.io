@@ -36,7 +36,7 @@ Copy Airflow's log config template file to somewhere in your `PYTHONPATH`.
 curl -O ~/airflow/plugins/log_config.py https://raw.githubusercontent.com/apache/incubator-airflow/master/airflow/config_templates/airflow_local_settings.py
 ```
 
-Change `FILENAME_TEMPLATE` to this:
+Edit the file, changing `FILENAME_TEMPLATE` to this:
 ```sh
 {% raw %}FILENAME_TEMPLATE = '{{ ti.dag_id }}/{{ ti.task_id }}.log'{% endraw %}
 ```
@@ -46,9 +46,8 @@ Set the logging_config_class in `airflow.cfg`:
 logging_config_class = log_config.DEFAULT_LOGGING_CONFIG
 ```
 
-(Alternatively set the environment variable
-`AIRFLOW__CORE__LOGGING_CONFIG_CLASS`.)
-
+Alternatively set the environment variable
+`AIRFLOW__CORE__LOGGING_CONFIG_CLASS`.
 
 ## Tailing
 
