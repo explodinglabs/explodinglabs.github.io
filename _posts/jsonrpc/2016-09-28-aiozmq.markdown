@@ -52,8 +52,8 @@ Start the server:
 $ python server.py
 ```
 
-Synchronous Client
-==================
+## Client
+
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ``` shell
@@ -61,36 +61,7 @@ $ pip install "jsonrpcclient[pyzmq]"
 $ python
 ```
 ```python
->>> from jsonrpcclient.zeromq_client import ZeroMQClient
->>> ZeroMQClient('tcp://localhost:5000').request('ping')
---> {"jsonrpc": "2.0", "method": "ping", "id": 1}
-<-- {"jsonrpc": "2.0", "result": "pong", "id": 1}
-'pong'
-```
-
-Asynchronous Client
-===================
-```sh
-$ pip install "jsonrpcclient[pyzmq]"
-```
-Create a `client.py`:
-
-```python
-import asyncio
-import zmq
-from jsonrpcclient.zeromq_async_client import ZeroMQAsyncClient
-
-async def main():
-    client = ZeroMQAsyncClient('tcp://localhost:5000')
-    response = await client.request('ping')
-    print(response)
-
-asyncio.set_event_loop(zmq.asyncio.ZMQEventLoop())
-asyncio.get_event_loop().run_until_complete(main())
-```
-```sh
-$ python client.py
---> {"jsonrpc": "2.0", "method": "ping", "id": 1}
-<-- {"jsonrpc": "2.0", "result": "pong", "id": 1}
+>>> from jsonrpcclient.clients.zeromq_client import ZeroMQClient
+>>> ZeroMQClient('tcp://localhost:5000').request('ping').data.result
 'pong'
 ```

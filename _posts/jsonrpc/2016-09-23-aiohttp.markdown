@@ -79,20 +79,18 @@ Create a `client.py`:
 ```python
 import aiohttp
 import asyncio
-from jsonrpcclient.aiohttp_client import aiohttpClient
+from jsonrpcclient.clients.aiohttp_client import aiohttpClient
 
 async def main(loop):
     async with aiohttp.ClientSession(loop=loop) as session:
         client = aiohttpClient(session, 'http://localhost:5000/')
         response = await client.request('ping')
-        print(response)
+        print(response.data.result)
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main(loop))
 ```
 ```sh
 $ python client.py
---> {"jsonrpc": "2.0", "method": "ping", "id": 1}
-<-- {"jsonrpc": "2.0", "result": "pong", "id": 1}
-'pong'
+pong
 ```

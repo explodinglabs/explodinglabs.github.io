@@ -60,7 +60,7 @@ Create a `client.py`:
 ```python
 import asyncio
 import websockets
-from jsonrpcclient.websockets_client import WebSocketsClient
+from jsonrpcclient.clients.websockets_client import WebSocketsClient
 
 async def main():
     async with websockets.connect('ws://localhost:5000') as ws:
@@ -73,7 +73,5 @@ Run the client:
 
 ```sh
 $ python client.py
---> {"jsonrpc": "2.0", "method": "ping", "id": 1}
-<-- {"jsonrpc": "2.0", "result": "pong", "id": 1}
 pong
 ```
