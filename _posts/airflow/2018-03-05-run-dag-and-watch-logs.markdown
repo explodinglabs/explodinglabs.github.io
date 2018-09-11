@@ -41,6 +41,10 @@ Edit the file, changing `FILENAME_TEMPLATE` to this:
 {% raw %}FILENAME_TEMPLATE = '{{ ti.dag_id }}/{{ ti.task_id }}.log'{% endraw %}
 ```
 
+_Note:_ In the new Airflow 1.10, the "filename template" configuration setting
+[has moved to the airflow.cfg
+file](https://github.com/apache/incubator-airflow/blob/master/UPDATING.md#logging-configuration).
+
 Set the logging_config_class in `airflow.cfg`:
 ```
 logging_config_class = log_config.DEFAULT_LOGGING_CONFIG

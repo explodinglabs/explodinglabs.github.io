@@ -35,14 +35,21 @@ class TestMyOperator(TestCase):
         dag = DAG(dag_id='foo', start_date=datetime.now())
         task = MyOperator(dag=dag, task_id='foo')
         ti = TaskInstance(task=task, execution_date=datetime.now())
-        result = task.execute(ti.get_template_context())
-        self.assertEqual(result, 'foo')
+        task.execute(ti.get_template_context())
 ```
 
-In _DAG definition files_, you should [hide the globals
-section](/airflow/hide-globals-in-dag-definition-file) when instantiating your
-DAG and operators.
+Or in Pytest:
 
+```python
+def test_my_operator():
+    dag = DAG(dag_id='foo', start_date=datetime.now())
+    task = MyOperator(dag=dag, task_id='foo')
+    ti = TaskInstance(task=task, execution_date=datetime.now())
+    task.execute(ti.get_template_context())
+```
+
+Be sure to [hide the globals
+section](/airflow/hide-globals-in-dag-definition-file) in definition files.
 
 ## Running the whole dag
 
