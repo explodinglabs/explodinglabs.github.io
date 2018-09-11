@@ -33,29 +33,41 @@ Thankfully, starting from Airflow 1.9, logging can be configured easily.
 
 Copy Airflow's log config template file to somewhere in your `PYTHONPATH`.
 ```sh
-curl -O ~/airflow/plugins/log_config.py https://raw.githubusercontent.com/apache/incubator-airflow/master/airflow/config_templates/airflow_local_settings.py
+curl -O https://raw.githubusercontent.com/apache/incubator-airflow/master/airflow/config_templates/airflow_local_settings.py
 ```
 
-Edit the file, changing `FILENAME_TEMPLATE` to this:
+Set the environment variable `AIRFLOW__CORE__LOGGING_CONFIG_CLASS`. (Make sure
+this is set in your scheduler and worker's environments).
+```sh
+export AIRFLOW__CORE__LOGGING_CONFIG_CLASS=airflow_local_settings.DEFAULT_LOGGING_CONFIG
+```
+
+Now you can configure the logging to your liking in the airflow_local_settings
+module.
+
+I like to put all of a task's logs into one file. For this, set the
+`FILENAME_TEMPLATE` setting.
+
+In Airflow 1.10, set the following environment variable.
+```sh
+export AIRFLOW__CORE__LOG_FILENAME_TEMPLATE="{{ ti.dag_id }}/{{ ti.task_id }}.log"
+```
+
+In Airflow 1.9, edit airflow_local_settings.py, changing `FILENAME_TEMPLATE` to:
 ```sh
 {% raw %}FILENAME_TEMPLATE = '{{ ti.dag_id }}/{{ ti.task_id }}.log'{% endraw %}
 ```
 
-_Note:_ In the new Airflow 1.10, the "filename template" configuration setting
-[has moved to the airflow.cfg
-file](https://github.com/apache/incubator-airflow/blob/master/UPDATING.md#logging-configuration).
+Now you should get all of a task's log output in a single file, and can tail
+the file.
 
-Set the logging_config_class in `airflow.cfg`:
 ```
-logging_config_class = log_config.DEFAULT_LOGGING_CONFIG
+tail -f ~/airflow/logs/my-dag/my-task.log
 ```
 
-Alternatively set the environment variable
-`AIRFLOW__CORE__LOGGING_CONFIG_CLASS`.
+## Better Tailing
 
-## Tailing
-
-Use [xtail](https://www.unicom.com/sw/xtail) to tail and follow files,
+I use [xtail](https://www.unicom.com/sw/xtail) to tail and follow files,
 including newly created ones.
 
 ```sh
@@ -63,7 +75,6 @@ xtail ~/airflow/logs/my-dag
 ```
 
 Now start the scheduler and trigger a dag.
-
 ```sh
 $ airflow scheduler
 $ airflow trigger_dag my-dag
