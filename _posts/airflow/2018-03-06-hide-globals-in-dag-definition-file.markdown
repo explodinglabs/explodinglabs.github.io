@@ -35,8 +35,8 @@ if __name__.startswith('unusual_prefix'):
     MyOperator(dag=dag, task_id='foo')
 ```
 
-This is Airflow's equivalent of [if __name__ ==
-"__main__"](http://effbot.org/pyfaq/tutor-what-is-if-name-main-for.htm).
+This is Airflow's equivalent of [`if __name__ ==
+"__main__"`](http://effbot.org/pyfaq/tutor-what-is-if-name-main-for.htm).
 
 Airflow will still find your DAG as normal, however that code inside the block
 won't be executed when the module is imported.
