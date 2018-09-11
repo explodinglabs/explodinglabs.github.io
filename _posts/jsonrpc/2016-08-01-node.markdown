@@ -66,3 +66,5 @@ $ curl -H $HDR -d $MSG http://localhost:5000/cats
 $ curl -H $HDR -d $MSG http://localhost:5000/dogs
 {"jsonrpc":"2.0","result":"woof","id":1}
 ```
+
+_Updated 11 Sep 2018 thanks to Roman Frolov._
