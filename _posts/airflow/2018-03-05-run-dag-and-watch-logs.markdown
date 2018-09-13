@@ -48,9 +48,12 @@ module.
 I like to put all of a task's logs into one file. For this, set the
 `FILENAME_TEMPLATE` setting.
 
+_Note: If you make this change, you won't be able to view task logs in the web
+UI, only in the terminal._
+
 In Airflow 1.10, set the following environment variable.
 ```sh
-export AIRFLOW__CORE__LOG_FILENAME_TEMPLATE="{{ ti.dag_id }}/{{ ti.task_id }}.log"
+{% raw %}export AIRFLOW__CORE__LOG_FILENAME_TEMPLATE="{{ ti.dag_id }}/{{ ti.task_id }}.log"{% endraw %}
 ```
 
 In Airflow 1.9, edit airflow_local_settings.py, changing `FILENAME_TEMPLATE` to:
