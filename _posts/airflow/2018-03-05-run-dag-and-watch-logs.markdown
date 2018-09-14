@@ -27,6 +27,11 @@ timestamped directory and log file is created. Something like:
 This makes it hard to tail and follow the logs, because a new directory and
 file is created with each run.
 
+For development I prefer to send all the logs for a dag into one file.
+```sh
+~/airflow/logs/my-dag.log
+```
+
 ## Solution
 
 Thankfully, starting from Airflow 1.9, logging can be configured easily.
@@ -45,36 +50,25 @@ export AIRFLOW__CORE__LOGGING_CONFIG_CLASS=airflow_local_settings.DEFAULT_LOGGIN
 Now you can configure the logging to your liking in the airflow_local_settings
 module.
 
-I like to put all of a task's logs into one file. For this, set the
-`FILENAME_TEMPLATE` setting.
+To put all of a dag's logs into one file, set the `FILENAME_TEMPLATE` setting.
 
 _Note: If you make this change, you won't be able to view task logs in the web
 UI, only in the terminal._
 
 In Airflow 1.10, set the following environment variable.
 ```sh
-{% raw %}export AIRFLOW__CORE__LOG_FILENAME_TEMPLATE="{{ ti.dag_id }}/{{ ti.task_id }}.log"{% endraw %}
+{% raw %}export AIRFLOW__CORE__LOG_FILENAME_TEMPLATE="{{ ti.dag_id }}.log"{% endraw %}
 ```
 
 In Airflow 1.9, edit airflow_local_settings.py, changing `FILENAME_TEMPLATE` to:
 ```sh
-{% raw %}FILENAME_TEMPLATE = '{{ ti.dag_id }}/{{ ti.task_id }}.log'{% endraw %}
+{% raw %}FILENAME_TEMPLATE = '{{ ti.dag_id }}.log'{% endraw %}
 ```
 
 Now you should get all of a task's log output in a single file, and can tail
 the file.
-
 ```
 tail -f ~/airflow/logs/my-dag/my-task.log
-```
-
-## Better Tailing
-
-I use [xtail](https://www.unicom.com/sw/xtail) to tail and follow files,
-including newly created ones.
-
-```sh
-xtail ~/airflow/logs/my-dag
 ```
 
 Now start the scheduler and trigger a dag.
@@ -83,4 +77,8 @@ $ airflow scheduler
 $ airflow trigger_dag my-dag
 ```
 
-Watch the output in xtail.
+Watch the output with `tail -f`.
+
+```sh
+$ tail -f ~/airflow/logs/my-dag.log
+```
