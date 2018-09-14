@@ -25,16 +25,22 @@ timestamped directory and log file is created. Something like:
 ```
 
 This makes it hard to tail and follow the logs, because a new directory and
-file is created with each run.
+file is created with each run. Thankfully, starting from Airflow 1.9, logging
+can be configured easily, allowing you to put all of a dag's logs into one
+file.
 
-For development I prefer to send all the logs for a dag into one file.
+_Note: If you make this change, you won't be able to view task logs in the web
+UI, only in the terminal._
+
+## Airflow 1.10 Solution
+
+Set the `FILENAME_TEMPLATE` setting.
+
 ```sh
-~/airflow/logs/my-dag.log
+{% raw %}export AIRFLOW__CORE__LOG_FILENAME_TEMPLATE="{{ ti.dag_id }}.log"{% endraw %}
 ```
 
-## Solution
-
-Thankfully, starting from Airflow 1.9, logging can be configured easily.
+## Airflow 1.9 Solution
 
 Copy Airflow's log config template file to somewhere in your `PYTHONPATH`.
 ```sh
@@ -50,20 +56,12 @@ export AIRFLOW__CORE__LOGGING_CONFIG_CLASS=airflow_local_settings.DEFAULT_LOGGIN
 Now you can configure the logging to your liking in the airflow_local_settings
 module.
 
-To put all of a dag's logs into one file, set the `FILENAME_TEMPLATE` setting.
-
-_Note: If you make this change, you won't be able to view task logs in the web
-UI, only in the terminal._
-
-In Airflow 1.10, set the following environment variable.
-```sh
-{% raw %}export AIRFLOW__CORE__LOG_FILENAME_TEMPLATE="{{ ti.dag_id }}.log"{% endraw %}
-```
-
-In Airflow 1.9, edit airflow_local_settings.py, changing `FILENAME_TEMPLATE` to:
+Edit airflow_local_settings.py, changing `FILENAME_TEMPLATE` to:
 ```sh
 {% raw %}FILENAME_TEMPLATE = '{{ ti.dag_id }}.log'{% endraw %}
 ```
+
+## Tailing the logs
 
 Now you should get all of a task's log output in a single file.
 
