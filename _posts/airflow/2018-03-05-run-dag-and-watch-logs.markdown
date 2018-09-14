@@ -65,13 +65,9 @@ In Airflow 1.9, edit airflow_local_settings.py, changing `FILENAME_TEMPLATE` to:
 {% raw %}FILENAME_TEMPLATE = '{{ ti.dag_id }}.log'{% endraw %}
 ```
 
-Now you should get all of a task's log output in a single file, and can tail
-the file.
-```
-tail -f ~/airflow/logs/my-dag/my-task.log
-```
+Now you should get all of a task's log output in a single file.
 
-Now start the scheduler and trigger a dag.
+Start the scheduler and trigger a dag.
 ```sh
 $ airflow scheduler
 $ airflow trigger_dag my-dag
