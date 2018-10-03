@@ -6,21 +6,6 @@ description: How to get the elapsed time since the dag run began, or another tas
 category: airflow
 permalink: /airflow/log-elapsed-time
 ---
-Log the elapsed time since the dag run began:
-
-```python
-class CompletedOperator(BaseOperator):
-    def execute(self, context):
-        self.log.info(
-            "Process completed successfully in %s",
-            str(datetime.now(timezone.utc) - context["dag_run"].execution_date),
-        )
-```
-
-```
-Process completed successfully in 0:26:13.031687
-```
-
 Log the elapsed time since another task began:
 
 ```python
@@ -33,7 +18,7 @@ class CompletedOperator(BaseOperator):
             "Process completed succesfully in %s",
             str(
                 datetime.now(timezone.utc)
-                - context["dag_run"].get_task_instance(self.other_task_id).start_date
+                - context["dag_run"].get_task_instance(self.other_task_id).execution_date
             ),
         )
 ```
