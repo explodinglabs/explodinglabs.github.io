@@ -15,15 +15,15 @@ permalink: /airflow/run-dag-and-watch-logs
 
 I prefer the command-line over web interfaces. I want to run dags and watch the
 log output in the terminal. Each time an Airflow task is run, a new timestamped
-directory and log file is created.  Something like:
+directory and file is created. Something like:
 
 ```sh
 ~/airflow/logs/my-dag/my-task/2018-03-06T09:59:10.427477/1.log
 ```
 
-This makes it hard to tail-follow the logs, because a new directory and file is
-created with each run. Thankfully, starting from Airflow 1.9, logging can be
-configured easily, allowing you to put all of a dag's logs into one file.
+This makes it hard to tail-follow the logs. Thankfully, starting from Airflow
+1.9, logging can be configured easily, allowing you to put all of a dag's logs
+into one file.
 
 _Note: If you make this change, you won't be able to view task logs in the web
 UI, only in the terminal._
@@ -54,16 +54,16 @@ airflow.cfg.)
 export AIRFLOW__CORE__LOGGING_CONFIG_CLASS=airflow_local_settings.DEFAULT_LOGGING_CONFIG
 ```
 
-Now you can configure Airflow's logging to your liking.
+Now you can configure logging to your liking.
 
 Edit airflow_local_settings.py, changing `FILENAME_TEMPLATE` to:
 ```sh
 {% raw %}FILENAME_TEMPLATE = '{{ ti.dag_id }}.log'{% endraw %}
 ```
 
-## Tailing the logs
+You should now get all of a dag log output in a single file.
 
-Now you should get all of a task's log output in a single file.
+## Tailing the logs
 
 Start the scheduler and trigger a dag.
 ```sh
