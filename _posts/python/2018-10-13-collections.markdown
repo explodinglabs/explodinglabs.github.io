@@ -13,17 +13,11 @@ These are the most commonly used collections:
 
 |          | Immutable         | Mutable         |
 |----------|-------------------|-----------------|
-| Set      | frozenset         | set             |
 | Sequence | tuple, str, bytes | list, bytearray |
+| Set      | frozenset         | set             |
 | Mapping  |                   | dict            |
 
 Or shown in a heirarchy:
-
-## Set
-
-- frozenset
-- MutableSet
-    - set
 
 ## Sequence
 - tuple
@@ -34,6 +28,12 @@ Or shown in a heirarchy:
 - MutableSequence
     - list
     - bytearray
+
+## Set
+
+- frozenset
+- MutableSet
+    - set
 
 ## Mapping
 - MutableMapping
