@@ -17,7 +17,7 @@ These are the most commonly used collections:
 | Sequence | tuple, str, bytes | list, bytearray |
 | Mapping  |                   | dict            |
 
-Put another way:
+Or shown in a heirarchy:
 
 ## Set
 
