@@ -31,16 +31,16 @@ app = Flask(__name__)
 
 @methods.add
 def ping():
-    return 'pong'
+    return "pong"
 
-@app.route('/', methods=['POST'])
+@app.route("/", methods=["POST"])
 def index():
     req = request.get_data().decode()
     response = methods.dispatch(req)
     return Response(str(response), response.http_status,
-                    mimetype='application/json')
+                    mimetype="application/json")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()
 ```
 Start the server:
@@ -61,7 +61,7 @@ $ pip install "jsonrpcclient[requests]"
 $ python
 ```
 ```python
->>> from jsonrpcclient.clients.http_client import HTTPClient
->>> HTTPClient('http://localhost:5000/').request('ping').data.result
+>>> from jsonrpcclient import request
+>>> request("http://localhost:5000/", "ping").data.result
 'pong'
 ```

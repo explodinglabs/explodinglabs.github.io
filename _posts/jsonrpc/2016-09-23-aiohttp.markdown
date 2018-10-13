@@ -62,10 +62,8 @@ $ pip install "jsonrpcclient[requests]"
 $ python
 ```
 ```python
->>> import jsonrpcclient
->>> jsonrpcclient.request('http://localhost:5000/', 'ping')
---> {"jsonrpc": "2.0", "method": "ping", "id": 1}
-<-- {"jsonrpc": "2.0", "result": "pong", "id": 1} (200 OK)
+>>> from jsonrpcclient import request
+>>> request("http://localhost:5000/", "ping").data.result
 'pong'
 ```
 
@@ -83,8 +81,8 @@ from jsonrpcclient.clients.aiohttp_client import aiohttpClient
 
 async def main(loop):
     async with aiohttp.ClientSession(loop=loop) as session:
-        client = aiohttpClient(session, 'http://localhost:5000/')
-        response = await client.request('ping')
+        client = aiohttpClient(session, "http://localhost:5000/")
+        response = await client.request("ping")
         print(response.data.result)
 
 loop = asyncio.get_event_loop()

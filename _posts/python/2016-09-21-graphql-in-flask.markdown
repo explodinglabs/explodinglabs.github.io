@@ -31,16 +31,16 @@ from graphene import ObjectType, String, Schema
 from flask_graphql import GraphQLView
 
 class Query(ObjectType):
-    hello = String(description='Hello')
+    hello = String(description="Hello")
     def resolve_hello(self, args, context, info):
-        return 'World'
+        return "World"
 
-view_func = GraphQLView.as_view('graphql', schema=Schema(query=Query))
+view_func = GraphQLView.as_view("graphql", schema=Schema(query=Query))
 
 app = Flask(__name__)
-app.add_url_rule('/', view_func=view_func)
+app.add_url_rule("/", view_func=view_func)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()
 ```
 Start the server:
@@ -69,9 +69,9 @@ import json
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
 
-transport = RequestsHTTPTransport('http://localhost:5000/')
+transport = RequestsHTTPTransport("http://localhost:5000/")
 client = Client(transport=transport)
-response = client.execute(gql('{hello}'))
+response = client.execute(gql("{hello}"))
 ```
 ```python
 >>> json.dumps(response)

@@ -18,9 +18,9 @@ pip install "jsonrpcclient[requests]"
 ```
 
 ```python
->>> from jsonrpcclient.clients.http_client import HTTPClient
+>>> from jsonrpcclient import request
 >>> params = {"file": "plugin://plugin.video.youtube/?action=play_video&videoid=QwSazmPRfaI"}
->>> HTTPClient("http://kodi:8080/jsonrpc").request("Player.Open", item=params).data.result
+>>> request("http://kodi:8080/jsonrpc", "Player.Open", item=params).data.result
 'OK'
 ```
 
