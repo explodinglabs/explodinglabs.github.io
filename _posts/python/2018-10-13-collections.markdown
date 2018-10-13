@@ -11,13 +11,11 @@ permalink: /python/collections
 
 These are the most commonly used collections:
 
-+----------+-------------------+-----------------+
 |          | Immutable         | Mutable         |
-+----------+-------------------+-----------------+
+|----------|-------------------|-----------------|
 | Set      | frozenset         | set             |
 | Sequence | tuple, str, bytes | list, bytearray |
 | Mapping  |                   | dict            |
-+----------+-------------------+-----------------+
 
 Put another way:
 

@@ -140,7 +140,6 @@ p, ul, ol, .post-meta {
 p, ul, ol {
     color: #3E4349;
     line-height: 160%;
-    font-size: 120%;
 }
 
 @media screen and (min-width: 751px) {
@@ -257,7 +256,7 @@ pre {
     }
 }
 
-.mbtablestyle {
+table {
 
     border-collapse: collapse;
     margin-bottom: $spacing-unit;
@@ -265,11 +264,12 @@ pre {
     th, td {
         text-align: left;
         padding: $spacing-unit/1.5 $spacing-unit;
-        border: 1px solid orange;
+        border: 1px solid blue;
     }
 
     th {
-        background-color: $yellow-light;
+        background-color: blue;
+        color: white;
     }
 
 }
