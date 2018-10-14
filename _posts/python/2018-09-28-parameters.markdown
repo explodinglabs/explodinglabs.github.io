@@ -68,7 +68,7 @@ given a name; it would have no purpose without one.
 ## Footnotes
 
 When _calling_ a function or class, pass unnamed, then named, then unpack
-sequences, then unpack mappings.
+unnamed, then unpack named.
 
 ```python
 f(unnamed, named="foo", *unpack_unnamed, **unpack_named)
