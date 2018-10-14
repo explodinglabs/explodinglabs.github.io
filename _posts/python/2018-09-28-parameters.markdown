@@ -17,7 +17,7 @@ _Is the parameter required, or can we use a default value?_
 def f(required, optional=None):
 ```
 
-But there's another question to be asked about the parameter:
+But there's another question to ask:
 
 _Is its purpose obvious, or should it be named by the caller?_
 
@@ -71,7 +71,7 @@ When _calling_ a function or class, pass unnamed, then named, then unpack
 sequences, then unpack mappings.
 
 ```python
-f(unnamed, named="foo", *unpack_sequence, **unpack_mapping)
+f(unnamed, named="foo", *unpack_unnamed, **unpack_named)
 ```
 
 There are a couple of PEPs ([1](https://www.python.org/dev/peps/pep-0457/),
