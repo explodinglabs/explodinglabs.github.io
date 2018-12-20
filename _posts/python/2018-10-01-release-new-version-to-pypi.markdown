@@ -43,8 +43,7 @@ git push --tags
 Create the sdist and upload it:
 ```
 rm -r dist
-pip install -U pip
-pip install -U setuptools twine
+pip install -U pip setuptools twine
 python setup.py sdist
 twine check dist/*
 twine upload dist/*
