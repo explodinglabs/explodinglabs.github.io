@@ -1,3 +1,17 @@
+---
+layout: post
+category: python
+date: 2018-10-01
+title: "Release a version to PyPI"
+permalink: /python/release-to-pypi
+---
+<div class="wide-logos" markdown="1">
+![python](/assets/python.png)
+</div>
+
+This are the steps I take when releasing a version of my Python package to
+PyPI.
+
 Run some checks/cleaning. If any fail, start again.
 _Recommend puttting these into pre-commit hooks._
 ```sh
