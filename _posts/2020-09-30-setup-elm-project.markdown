@@ -1,18 +1,29 @@
-# Development
+---
+layout: post
+title: "Setup an Elm project"
+permalink: /elm/setup
+---
+This is how I setup a new elm project for development.
 
-Create an elm.json, package.json and tests directory.
+In a fresh directory:
 ```sh
 elm init
-npm init
 ```
 
 Install elm-live and start server.
 ```sh
-npm install elm-live
+npm init
+npm install --save-dev elm-live
 node_modules/.bin/elm-live src/Main.elm
 ```
 
-Pre-commit.
+Install elm-test.
+```sh
+npm install --save-dev elm-test
+elm-test init
+```
+
+Install pre-commit hooks.
 ```sh
 npm install --save-dev husky lint-staged
 ```
@@ -32,15 +43,9 @@ Then add to elm.json.
   },
 ```
 
-Elm-test
-```sh
-npm install -g elm-test  # Install elm-test globally first
-elm-test init
-```
-
 Elm-review & elm-review-unused.
 ```sh
-npm install elm-review
+npm install --save-dev elm-review
 npx elm-review init
 cd review
 elm install jfmengels/elm-review-unused
