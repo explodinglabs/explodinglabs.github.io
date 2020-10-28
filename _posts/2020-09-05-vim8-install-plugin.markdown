@@ -1,3 +1,8 @@
+---
+layout: post
+title: "Vim 8: Install plugin from Github"
+permalink: /vim8-install-plugin
+---
 For example, to install ElmCast/elm-vim from github:
 
 ```sh
