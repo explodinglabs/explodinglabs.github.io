@@ -1,0 +1,20 @@
+## DAG
+
+- start_date: The timestamp from which the scheduler will attempt to
+    backfill. This is no longer required.
+- end_date: A date beyond which your DAG won't run. Default is None, meaning
+    open ended scheduling (no end date).
+
+Unless backfilling, in most cases there is no need to set these dates for a
+DAG, and the values don't really serve any interesting value.
+
+## DagRun
+
+- start_date:
+- end_date:
+- execution_date:
+
+## TaskInstance
+    start_date:
+    end_date:
+    execution_date:
