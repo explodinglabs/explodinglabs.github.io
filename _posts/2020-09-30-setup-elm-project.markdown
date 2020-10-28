@@ -80,3 +80,9 @@ config =
     , NoUnused.Variables.rule
     ]
 ```
+
+
+To build the production `elm.js` file:
+```sh
+elm make src/Main.elm --optimize --output docs/elm.js
+```
