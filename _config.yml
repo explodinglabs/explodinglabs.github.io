@@ -29,5 +29,5 @@ social:
 title: Beau Barker
 twitter:
   username: bbmelb
-url: "https://bcb.github.io" # the base hostname & protocol for your site
+url: "https://beau.click" # the base hostname & protocol for your site
 include: ['_pages']
