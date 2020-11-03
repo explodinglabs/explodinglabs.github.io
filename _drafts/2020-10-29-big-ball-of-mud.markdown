@@ -16,4 +16,4 @@ What to do if you have big ball of mud:
 - Start peeling off pieces of code into the new application, starting with the least entangled parts.
 - Emit events from the old system to a message queue which can be consumed by the new system. 
 
-If management aren’t interested in these things and just want to keep adding features to the pile, leave and go help someone else.
+If management aren’t interested in these things and just want to keep adding features to the trash pile, leave and go help someone else.
