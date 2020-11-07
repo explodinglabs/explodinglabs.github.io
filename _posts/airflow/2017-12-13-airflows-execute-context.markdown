@@ -13,11 +13,8 @@ permalink: /airflow/execute-context
 ![airflow](/assets/airflow.png)
 </div>
 
-I often forget the contents of the `context` dict, and it's not well
-documented.
-
-It can be found in `airflow/models.py`, in the
-`TaskInstance.get_template_context` method.
+Airflow's context dictionary can be found in the `get_template_context` method,
+in `airflow/models.py`.
 
 ```python
 return {
@@ -47,6 +44,9 @@ return {
     'yesterday_ds_nodash': yesterday_ds_nodash,
 }
 ```
+
+An explanation of each item is found  in Airflow's documentation under
+[macros](https://airflow.apache.org/docs/stable/macros-ref.html).
 
 As a side note, you can generate the context from a TaskInstance object.
 

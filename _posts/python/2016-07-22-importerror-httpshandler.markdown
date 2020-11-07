@@ -6,10 +6,6 @@ title: "ImportError: cannot import name HTTPSHandler"
 permalink: /python/importerror-httpshandler
 redirect_from: /importerror-httpshandler
 ---
-<div class="wide-logos" markdown="1">
-![python](/assets/python.png)
-</div>
-
 Running tox tests tonight, had some failures on some Python 3.x versions:
 
     ImportError: cannot import name HTTPSHandler

@@ -13,9 +13,9 @@ permalink: /airflow/run-dag-and-watch-logs
 ![airflow](/assets/airflow.png)
 </div>
 
-I prefer the command-line over web interfaces. I want to run dags and watch the
-log output in the terminal. Each time an Airflow task is run, a new timestamped
-directory and file is created. Something like:
+I want to run dags and watch the log output in the terminal. Each time an
+Airflow task is run, a new timestamped directory and file is created. Something
+like:
 
 ```sh
 ~/airflow/logs/my-dag/my-task/2018-03-06T09:59:10.427477/1.log
