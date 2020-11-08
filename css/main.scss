@@ -104,8 +104,10 @@ h2 {
 }
 
 a {
-    color: #0365d6;
+    /* color: #0365d6; Github blue */
+    color: red;
     text-decoration: none;
+    border-bottom: 1px dotted red;
     &:hover {
         color: orange;
     }
