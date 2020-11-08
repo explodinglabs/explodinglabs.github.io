@@ -3,15 +3,12 @@ layout: post
 title: "What to do if you have a Big Ball of Mud"
 permalink: /big-ball-of-mud
 ---
-A big ball of mud is a software system that lacks structure or good design.
+A big ball of mud is a software system that lacks perceivable architecture.
 
-Wikipedia describes it as:
-
-> .. a software system that lacks a perceivable architecture.  Although
-> undesirable from a software engineering point of view, such systems are
-> common in practice due to business pressures, developer turnover and code
+> Although undesirable from a software engineering point of view, such systems
+> are common in practice due to business pressures, developer turnover and code
 > entropy. They are a type of design anti-pattern.
-> -- <cite>[Wikipedia](https://en.wikipedia.org/wiki/Big_ball_of_mud)</cite>
+> <cite>[Wikipedia](https://en.wikipedia.org/wiki/Big_ball_of_mud)</cite>
 
 The original term comes from a 1997 conference:
 
@@ -30,16 +27,16 @@ The original term comes from a 1997 conference:
 > comfortable with the inertia of the day-to-day chore of patching the holes in
 > these failing dikes, are content to work on such systems.
 >
-> — Brian Foote and Joseph Yoder, Big Ball of Mud. Fourth Conference on
+> <cite>Brian Foote and Joseph Yoder, Big Ball of Mud. Fourth Conference on
 > Patterns Languages of Programs (PLoP '97/EuroPLoP '97) Monticello, Illinois,
-> September 1997
+> September 1997</cite>
 
 
 What to do if you have BBOM:
 
-- Any new work coming in goes into a new application (or applications).
-- Start peeling off pieces of code into the new application, starting with the
-  least entangled parts.
+- Any new work coming in goes into a new application (or _applications_).
+- Start peeling off pieces of code into the new application(s), starting with
+  the least entangled parts.
 - Emit events from the old system to a message queue which can be consumed by
   the new system.
 
