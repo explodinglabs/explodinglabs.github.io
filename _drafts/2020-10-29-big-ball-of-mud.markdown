@@ -31,7 +31,7 @@ The original term comes from a 1997 conference:
 > Patterns Languages of Programs (PLoP '97/EuroPLoP '97) Monticello, Illinois,
 > September 1997</cite>
 
-What to do if you have BBOM:
+What to do if you have a BBOM:
 
 - Any new work coming in goes into a new application (or _applications_).
 - Start peeling off pieces of code into the new application(s), starting with
