@@ -12,6 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
 email: beauinmelbourne@gmail.com
 future: true # Include posts with a date in the future
 github_username: bcb
+google_analytics_4: 251967027
 google_analytics: UA-81795603-1
 highlighter: rouge
 markdown: kramdown
