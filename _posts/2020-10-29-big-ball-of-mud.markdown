@@ -3,7 +3,7 @@ layout: post
 title: "Big Ball of Mud"
 permalink: /big-ball-of-mud
 ---
-A big ball of mud is **a software system that lacks perceivable architecture**.
+A big ball of mud is a software system that lacks any perceivable architecture.
 
 > Although undesirable from a software engineering point of view, such systems
 > are common in practice due to business pressures, developer turnover and code
