@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What to do if you have a Big Ball of Mud"
+title: "Big Ball of Mud"
 permalink: /big-ball-of-mud
 ---
 A big ball of mud is a software system that lacks perceivable architecture.
