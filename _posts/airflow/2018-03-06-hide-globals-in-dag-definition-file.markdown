@@ -1,6 +1,5 @@
 ---
 layout: post
-date: 2018-03-06
 title: Hide globals in a DAG definition file
 description:
     Don't instantiate the DAG and operators when importing your DAG definition

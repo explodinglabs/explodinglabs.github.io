@@ -1,6 +1,5 @@
 ---
 layout: post
-date: 2017-12-13
 title: Airflow's execute context
 description:
     Showing the contents of the context dictionary, which is available in an

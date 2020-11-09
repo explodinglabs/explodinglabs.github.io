@@ -1,7 +1,6 @@
 ---
 layout: post
 category: python
-date: 2018-10-01
 title: "Release a version to PyPI"
 permalink: /python/release-to-pypi
 ---
@@ -9,11 +8,11 @@ permalink: /python/release-to-pypi
 ![python](/assets/python.png)
 </div>
 
-This are the steps I take when releasing a version of my Python package to
+These are the steps I take when releasing a version of my Python package to
 PyPI.
 
 Run some checks/cleaning. If any fail, start again.
-_Recommend puttting these into pre-commit hooks._
+_I recommend puttting these into pre-commit hooks._
 ```sh
 pylint --disable=all --enable=unused-import **/*.py
 mypy --disallow-untyped-defs --strict-optional package
@@ -42,7 +41,6 @@ git push --tags
 
 Create the sdist and upload it:
 ```
-rm -r dist
 pip install -U pip setuptools twine
 python setup.py sdist
 twine check dist/*
@@ -51,7 +49,7 @@ twine upload dist/*
 
 Update coverage badge:
 ```sh
-pytest --cov-report term-missing --cov package tests
+pytest --cov-report term-missing --cov package tests  # requires pytest-cov
 coveralls  # requires coveralls and pyyaml installed
 ```
 

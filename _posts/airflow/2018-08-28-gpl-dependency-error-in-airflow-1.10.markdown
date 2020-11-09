@@ -1,6 +1,5 @@
 ---
 layout: post
-date: 2018-08-28
 title: GPL dependency error installing Airflow 1.10
 category: airflow
 permalink: /airflow/gpl-dependency-error-with-pip

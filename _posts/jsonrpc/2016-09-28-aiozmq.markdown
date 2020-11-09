@@ -1,7 +1,6 @@
 ---
 layout: post
 category: jsonrpc
-date: 2016-09-28
 title: JSON-RPC in Python over ZeroMQ, asynchronously
 permalink: /jsonrpc/zeromq-async
 ---

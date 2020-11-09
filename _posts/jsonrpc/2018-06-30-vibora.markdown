@@ -1,7 +1,6 @@
 ---
 layout: post
 category: jsonrpc
-date: 2018-06-30
 title: JSON-RPC in Python with Vibora
 permalink: /jsonrpc/vibora
 ---

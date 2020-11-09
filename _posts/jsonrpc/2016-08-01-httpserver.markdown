@@ -1,7 +1,6 @@
 ---
 layout: post
 category: jsonrpc
-date: 2016-08-01
 title: JSON-RPC in Python with http.server
 permalink: /jsonrpc/httpserver
 ---

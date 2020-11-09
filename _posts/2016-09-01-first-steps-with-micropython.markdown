@@ -3,7 +3,6 @@ layout: post
 title: First steps with Micropython on a NodeMCU
 category: micropython
 permalink: /micropython/first-steps
-date: 2016-09-01
 ---
 <div style="float: right" markdown="1">
 ![micropython](/assets/micropython.png)

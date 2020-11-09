@@ -1,7 +1,6 @@
 ---
 layout: post
 category: python
-date: 2017-12-15
 title: "cx_Oracle cursor context"
 permalink: /python/cx-oracle-cursor-context
 redirect_from: /cx_oracle/cursor-context

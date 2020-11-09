@@ -1,7 +1,6 @@
 ---
 layout: post
 category: python
-date: 2017-01-27
 title: "Django REST Framework: Permissions Matrix"
 permalink: /python/drf-permissions-cheatsheet
 redirect_from:

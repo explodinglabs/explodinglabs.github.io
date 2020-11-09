@@ -1,7 +1,6 @@
 ---
 layout: post
 category: python
-date: 2018-03-23
 title: Convert a dictionary to postfix notation
 image: /assets/python-wide.png
 permalink: /python/convert-dict-to-postfix-notation

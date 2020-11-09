@@ -3,7 +3,6 @@ layout: post
 title: Copy files to a Micropython device
 category: micropython
 permalink: /micropython/mipy
-date: 2016-09-02
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
 

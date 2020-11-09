@@ -1,7 +1,6 @@
 ---
 layout: post
 category: python
-date: 2018-10-13
 title: "Python's collections"
 permalink: /python/collections
 ---

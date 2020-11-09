@@ -1,7 +1,6 @@
 ---
 layout: post
 category: python
-date: 2016-09-21
 title: "GraphQL in Python with Flask"
 permalink: /python/graphql-flask
 redirect_from: /graphql/flask

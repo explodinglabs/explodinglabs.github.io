@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Natural scrolling in Xorg"
-date: 2016-07-20
 permalink: /natural-scrolling-in-xorg
 ---
 

@@ -1,6 +1,5 @@
 ---
 layout: post
-date: 2018-03-05
 title: Run an Airflow DAG from the command-line and watch the log output
 description:
     Explains how to run a DAG, completely from the command-line, and watch the

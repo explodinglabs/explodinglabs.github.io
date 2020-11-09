@@ -1,6 +1,5 @@
 ---
 layout: post
-date: 2017-10-20
 title: Testing Airflow DAGs
 description: How to test an Airflow DAG by writing unit tests for individual operators.
 category: airflow

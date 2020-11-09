@@ -2,7 +2,6 @@
 layout: post
 title: "Warmest 100"
 permalink: /warmest-100
-date: 2016-08-15
 ---
 Justin Warren gave a [talk](https://www.youtube.com/watch?v=qjTc5q7MsMg) at
 Pycon on the *Warmest 100*, which is an attempt at predicting the Triple J

@@ -1,7 +1,6 @@
 ---
 layout: post
 category: python
-date: 2016-07-22
 title: "Python 3.3 failing to install on Arch Linux"
 permalink: /python/archlinux-python33-install-fails
 redirect_from: /archlinux-python33-install-fails

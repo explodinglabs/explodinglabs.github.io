@@ -1,7 +1,6 @@
 ---
 layout: post
 category: jsonrpc
-date: 2016-09-23
 title: JSON-RPC in Python with Websockets
 permalink: /jsonrpc/websockets
 ---

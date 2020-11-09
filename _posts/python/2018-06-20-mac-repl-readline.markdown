@@ -1,7 +1,6 @@
 ---
 layout: post
 category: python
-date: 2018-06-20
 title: Readline in the Python REPL on MacOS
 image: /assets/python-wide.png
 permalink: /python/mac-repl-readline

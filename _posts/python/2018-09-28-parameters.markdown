@@ -1,7 +1,6 @@
 ---
 layout: post
 category: python
-date: 2018-09-28
 title: "Writing parameters in a Python function signature"
 permalink: /python/parameters
 ---

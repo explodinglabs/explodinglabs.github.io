@@ -1,6 +1,5 @@
 ---
 layout: post
-date: 2018-01-12
 title: Generate a Fernet key for Airflow
 description:
     How to create a fernet key which is required for storing encrypted

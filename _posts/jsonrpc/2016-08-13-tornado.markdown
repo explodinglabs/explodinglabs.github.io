@@ -1,7 +1,6 @@
 ---
 layout: post
 category: jsonrpc
-date: 2016-09-13
 title: JSON-RPC in Python with Tornado
 permalink: /jsonrpc/tornado
 ---

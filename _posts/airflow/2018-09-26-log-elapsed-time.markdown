@@ -1,6 +1,5 @@
 ---
 layout: post
-date: 2018-09-26
 title: Log elapsed time between Airflow tasks
 description: How to get the elapsed time since the dag run began, or another task began, and log it.
 category: airflow

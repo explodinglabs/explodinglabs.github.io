@@ -1,7 +1,6 @@
 ---
 layout: post
 category: python
-date: 2017-01-16
 title: "Restart Django Migrations"
 permalink: /python/restart-django-migrations
 redirect_from: /django/restart-migrations

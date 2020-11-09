@@ -1,7 +1,6 @@
 ---
 layout: post
 category: python
-date: 2016-07-22
 title: "ImportError: cannot import name HTTPSHandler"
 permalink: /python/importerror-httpshandler
 redirect_from: /importerror-httpshandler

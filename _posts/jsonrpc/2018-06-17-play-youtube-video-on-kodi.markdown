@@ -1,7 +1,6 @@
 ---
 layout: post
 category: jsonrpc
-date: 2018-06-17
 title: Play a Youtube video on Kodi with JSON-RPC
 permalink: /jsonrpc/kodi-youtube
 ---
