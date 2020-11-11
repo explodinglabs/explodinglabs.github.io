@@ -24,8 +24,12 @@ This makes it hard to tail-follow the logs. Thankfully, starting from Airflow
 1.9, logging can be configured easily, allowing you to put all of a dag's logs
 into one file.
 
-_Note: If you make this change, you won't be able to view task logs in the web
-UI, only in the terminal._
+_Note 1: If you make this change, you won't be able to view task logs in the
+web UI._
+
+_Note 2: This is useful for development (using SequentialExecutor), but it's
+not recommended in production because issues will arise when multiple tasks
+attempt to write to the same log file at once.
 
 ## Easy Solution (Airflow 1.10+)
 
