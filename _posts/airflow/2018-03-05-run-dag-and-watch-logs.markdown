@@ -27,7 +27,7 @@ into one file.
 _Note: If you make this change, you won't be able to view task logs in the web
 UI, only in the terminal._
 
-## Easy Solution (Airflow 1.10 only)
+## Easy Solution (Airflow 1.10+)
 
 Set the `FILENAME_TEMPLATE` setting.
 
