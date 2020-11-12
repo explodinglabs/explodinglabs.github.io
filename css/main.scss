@@ -98,7 +98,7 @@ h1,h2,h3 {
 }
 
 h1 {
-    font-size: calc(26px + (0.01 * (-800px + 100vw)));
+    font-size: 24px;
     font-weight: 500;
     line-height: 130%;
     margin-bottom: $spacing-unit * 0.5;
@@ -106,7 +106,7 @@ h1 {
 
 h2 {
     margin: $spacing-unit * 1.5 0 $spacing-unit 0;
-    font-size: calc(20px + (0.01 * (-800px + 100vw)));
+    font-size: 20px;
     font-weight: 500;
 }
 
