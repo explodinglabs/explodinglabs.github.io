@@ -19,15 +19,13 @@ agent, and has been registered into an ECS cluster.
 * TOC
 {:toc}
 
-Create an Instance Profile
-==========================
+## Create an Instance Profile
 
 First we need to create an instance profile for the instance.
 
 And before that, setup the roles for the profile.
 
-Create a role for the profile
------------------------------
+### Create a role for the profile
 
 Create two role policy files.
 
@@ -87,19 +85,16 @@ Create a role with the two policies:
     aws iam create-role --role-name ecsRole --assume-role-policy-document file://ecs-policy.json
     aws iam put-role-policy --role-name ecsRole --policy-name ecsRolePolicy  --policy-document file://role-policy.json
 
-Create the instance profile
----------------------------
+### Create the instance profile
 
 Finally, create the instance profile with the new role:
 
     aws iam create-instance-profile --instance-profile-name webserver
     aws iam add-role-to-instance-profile --instance-profile-name webserver --role-name ecsRole
 
-Launch an EC2 Instance
-======================
+## Launch an EC2 Instance
 
-Create a security group for the Instance
-----------------------------------------
+### Create a security group for the Instance
 
 Open ports 22 and 80:
 
@@ -109,8 +104,7 @@ Open ports 22 and 80:
 
 *Note the security group id, which is needed when launching an EC2 instance.*
 
-Launch an instance
-------------------
+### Launch an instance
 
 We'll be launching an EC2 instance in an ECS cluster.
 
@@ -129,11 +123,9 @@ Launch an instance inside the cluster:
 
 Now you can run tasks and services on the instance.
 
-Start a container
-=================
+## Start a container
 
-Register a task
----------------
+### Register a task
 
 Describe your task in a *Task Definition* file, which I named `ecs-task.json`:
 
@@ -166,8 +158,7 @@ List tasks:
 
     aws ecs list-tasks --cluster my-cluster
 
-Run the task
-------------
+### Run the task
 
     aws ecs run-task --cluster my-cluster --count 1 --task-definition web-app:1
 
@@ -176,11 +167,10 @@ To deregister a task:
     aws ecs deregister-task-definition --task-definition web-app:1
 
 {% comment %}
-Services
-========
 
-Create a service
-----------------
+## Services
+
+### Create a service
 
 Define your service in a *Service Definition* file, which I named `ecs-service.json`:
 
@@ -198,13 +188,11 @@ Create the service:
 
     aws ecs create-service --cluster my-cluster --service-name web-app --task-definition web-app:1 --desired-count 2
 
-List services
--------------
+### List services
 
     aws ecs list-services --cluster my-cluster
 
-Delete a service
-----------------
+### Delete a service
 
 (You'll need to stop the tasks first)
 

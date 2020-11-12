@@ -53,8 +53,7 @@ Start the server:
 $ python server.py
 ```
 
-Synchronous client
-==================
+## Synchronous client
 
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests.
 
@@ -70,8 +69,7 @@ $ python
 'pong'
 ```
 
-Asynchronous client with Tornado
-================================
+## Asynchronous client with Tornado
 
 We can send asynchronous requests in Tornado with jsonrpcclient (thanks to
 [saaj](https://github.com/saaj/)):

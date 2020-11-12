@@ -50,8 +50,8 @@ $ python server.py
 # Vibora (0.0.7) # http://127.0.0.1:5000
 ```
 
-Client
-======
+## Client
+
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ```sh

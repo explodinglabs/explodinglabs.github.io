@@ -6,20 +6,13 @@ permalink: /c/zeromq/request-reply
 * TOC
 {:toc}
 
-Server
-======
+## Server
 
 The server should handle incoming JSON-RPC requests on port 5000.
 
-Install dependencies
---------------------
-
 Install the [czmq](https://github.com/zeromq/czmq) library.
 
-Write server script
--------------------
-
-Create a `server.c`:
+Write a server script, `server.c`:
 
 ```c
 #include <czmq.h>
@@ -39,19 +32,16 @@ int main(void) {
 }
 ```
 
-Build and start the server
---------------------------
+Build and start the server:
 
 ```sh
 $ gcc -lczmq server.c -o server
 $ ./server
 ```
 
-Client
-======
+## Client
 
-Write client script
--------------------
+Write client script:
 
 ```c
 #include <czmq.h>
@@ -71,8 +61,7 @@ int main(void) {
 }
 ```
 
-Build and run
--------------
+Build and run:
 
 ```sh
 $ gcc -lczmq client.c -o client

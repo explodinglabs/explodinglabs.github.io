@@ -46,14 +46,15 @@ Start the server:
 $ python ./server.py
 ```
 
-Client
-======
+## Client
+
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ``` shell
 $ pip install "jsonrpcclient[pyzmq]"
 $ python
 ```
+
 ```python
 >>> from jsonrpcclient.clients.zeromq_client import ZeroMQClient
 >>> ZeroMQClient('tcp://localhost:5000').request('ping').data.result

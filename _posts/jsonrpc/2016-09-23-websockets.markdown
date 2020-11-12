@@ -45,8 +45,8 @@ Start the server:
 $ python server.py
 ```
 
-Client
-======
+## Client
+
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ```sh

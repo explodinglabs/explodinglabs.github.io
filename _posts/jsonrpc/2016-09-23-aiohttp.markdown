@@ -52,8 +52,8 @@ $ python server.py
 (Press CTRL+C to quit)
 ```
 
-Synchronous client
-==================
+## Synchronous client
+
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ```sh
@@ -66,8 +66,8 @@ $ python
 'pong'
 ```
 
-Asynchronous client with aiohttp
-================================
+## Asynchronous client with aiohttp
+
 ```sh
 $ pip install "jsonrpcclient[aiohttp]"
 ```

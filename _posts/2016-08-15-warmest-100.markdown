@@ -11,16 +11,14 @@ I've often wondered if the listeners only vote for what's played on the radio
 the most. So I set out to see if that was true. (It'll give me a chance to try
 Python's pandas library.)
 
-Gathering the data
-==================
+## Gathering the data
 
 I needed two lists:
 
 1. The Hottest 100 for 2015.
 2. The Triple J playlist for 2015.
 
-Getting the Hottest 100 results
--------------------------------
+### Getting the Hottest 100 results
 
 The list was scraped from the [Hottest 100
 2015](http://www.abc.net.au/triplej/hottest100/15/countdown/) web page, using
@@ -57,8 +55,7 @@ def get():
 
 I cleaned it up a bit, such as removing *{Radio edit}* from one song title.
 
-Getting the playlist for all of 2015
-------------------------------------
+### Getting the playlist for all of 2015
 
 Justin pointed me to [@triplejplays](https://twitter.com/triplejplays) which is
 a feed of songs being played, but it turns out Triple J has an api which lets
@@ -99,8 +96,8 @@ it up.
 
 Eventually we have the playlist - 16261 songs played 98330 times.
 
-Analysis
-========
+## Analysis
+
 I'll load the hottest and warmest lists and merge them.
 
 ```python

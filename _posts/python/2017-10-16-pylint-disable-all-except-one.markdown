@@ -11,7 +11,7 @@ redirect_from:
 ![python](/assets/python.png)
 </div>
 
-To disable all errors except one, for example, *unused imports*:
+To disable all errors except one, for example, unused imports:
 
 ```zsh
 pylint --disable=all --enable=unused-import my_file.py

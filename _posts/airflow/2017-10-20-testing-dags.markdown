@@ -23,13 +23,16 @@ class MyOperator(BaseOperator):
         return 'foo'
 ```
 
-To test an operator's method in a unit test, you need to create three objects,
-a dag, a task (the operator we're testing), and a TaskInstance. Here we test
-`MyOperator.execute`.
+To test the operator, first instantiate three objects:
+
+1. a DAG,
+2. a task (the operator we're testing), and
+3. a TaskInstance.
+
+Then call the execute method.
 
 ```python
 class TestMyOperator(TestCase):
-
     def test_execute(self):
         dag = DAG(dag_id='foo', start_date=datetime.now())
         task = MyOperator(dag=dag, task_id='foo')

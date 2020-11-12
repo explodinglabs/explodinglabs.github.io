@@ -51,8 +51,8 @@ Starting development server at http://127.0.0.1:5000/
 Quit the server with CONTROL-C.
 ```
 
-Client
-======
+## Client
+
 Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
 
 ```sh

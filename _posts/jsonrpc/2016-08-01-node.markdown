@@ -53,8 +53,8 @@ Start the server:
 $ node server.js
 ```
 
-Client
-======
+## Client
+
 Use curl to send requests:
 
 ```sh

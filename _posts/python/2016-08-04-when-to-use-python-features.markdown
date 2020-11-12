@@ -8,25 +8,25 @@ permalink: /python/when-to-use
 ![python](/assets/python.png)
 </div>
 
-When to use Decorators
-======================
+## When to use Decorators
+
 - Add functionality before or after a method is executed.
 - Data sanitization or addition.
 - Function or class registration.
 - Logging.
 
-When to use Context Managers
-============================
+## When to use Context Managers
+
 - Resource cleanliness (cleaning up after your code block).
 - Handling exceptions, avoiding repetition.
 
-When to use Generators
-======================
+## When to use Generators
+
 - Accessing data in pieces.
 - Computing data in pieces.
 
-When to use Metaclasses
-=======================
+## When to use Metaclasses
+
 - Modify class structure from the way it was declared, (e.g. Django model).
 - Class verification (ensure class conforms to a particular interface).
 - Non-inheriting attributes. e.g. make an abstract class not inherit attributes.

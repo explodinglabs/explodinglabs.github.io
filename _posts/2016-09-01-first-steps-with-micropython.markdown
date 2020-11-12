@@ -1,7 +1,7 @@
 ---
 layout: post
-title: First steps with Micropython on a NodeMCU
 category: micropython
+title: First steps with Micropython on a NodeMCU
 permalink: /micropython/first-steps
 ---
 My NodeMCU arrived so I went right ahead and installed Micropython on it.
