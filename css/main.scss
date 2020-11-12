@@ -6,6 +6,7 @@
 @charset "utf-8";
 
 $spacing-unit: 20px;
+$paragraph_line_height: 160%;
 
 // Colours
 $grey: #444;
@@ -82,7 +83,7 @@ header {
 
 .links {
     font-size: smaller;
-    margin-bottom: $spacing-unit * 2;
+    margin-bottom: $spacing-unit;
 }
 
 /* Basic styling */
@@ -129,7 +130,7 @@ blockquote, ul, ol, dl, figure, %vertical-rhythm {
 
 p, ul, ol {
     color: #3E4349;
-    line-height: 150%;
+    line-height: $paragraph_line_height;
 }
 
 @media screen and (min-width: 751px) {
@@ -159,7 +160,7 @@ pre, blockquote {
     border-radius: 3px;
     overflow-x: auto;
     background-color: #eee;
-    line-height: 150%;
+    line-height: $paragraph_line_height;
     padding: $spacing-unit/2;
 }
 
