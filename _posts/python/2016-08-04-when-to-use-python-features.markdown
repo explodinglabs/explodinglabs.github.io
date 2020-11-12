@@ -10,7 +10,7 @@ permalink: /python/when-to-use
 
 ## When to use Decorators
 
-- Add functionality before or after a method is executed.
+- Add functionality before or after a function is executed.
 - Data sanitization or addition.
 - Function or class registration.
 - Logging.
