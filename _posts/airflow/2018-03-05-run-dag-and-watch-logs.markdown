@@ -31,7 +31,9 @@ _Note 2:_ Logging to a single file is useful for development (using
 SequentialExecutor), but it's **not recommended in production** because issues
 will arise when multiple tasks attempt to write to the same log file at once.
 
-## Easy Solution (Airflow 1.10+)
+## Easy Solution
+
+_Requires Airflow 1.10+_
 
 Set the `FILENAME_TEMPLATE` setting.
 
@@ -39,7 +41,9 @@ Set the `FILENAME_TEMPLATE` setting.
 {% raw %}export AIRFLOW__CORE__LOG_FILENAME_TEMPLATE="{{ ti.dag_id }}.log"{% endraw %}
 ```
 
-## Advanced Solution (Airflow 1.9+) - Recommended
+## Advanced Solution - Recommended
+
+_Requires Airflow 1.9+_
 
 Since Airflow 1.9, logging is configured pythonically.
 

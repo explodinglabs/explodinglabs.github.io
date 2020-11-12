@@ -38,7 +38,7 @@ header {
 .page-content {
     margin-top: $spacing-unit * 2;
     @include media-query($on-palm) {
-        margin-top: $spacing-unit * 2;
+        margin-top: $spacing-unit * 1.5;
     }
 }
 
@@ -57,20 +57,30 @@ header {
         font-size: small;
         display: block;
     }
-    a {
-    }
 }
 
 .post-meta {
     font-size: smaller;
-    margin-bottom: $spacing-unit * 1.5;
+    margin-bottom: $spacing-unit;
+    color: grey;
+    a { color: grey; }
 }
 
 .post-content {
     margin-bottom: $spacing-unit * 2;
 }
 
+.post-filter {
+    font-size: smaller;
+    margin-bottom: $spacing-unit * 1.5;
+}
+
 .site-footer {
+    font-size: smaller;
+    margin-bottom: $spacing-unit * 2;
+}
+
+.links {
     font-size: smaller;
     margin-bottom: $spacing-unit * 2;
 }
@@ -86,21 +96,17 @@ h1,h2,h3 {
     color: black;
 }
 
-h1.page-title {
-    font-size: 150%;
-    margin-bottom: $spacing-unit;
-}
-
-h1:not(.page-title) {
-    margin-top: $spacing-unit * 1.5;
-    margin-bottom: $spacing-unit;
-    font-size: 150%;
+h1 {
+    font-size: calc(26px + (0.01 * (-800px + 100vw)));
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: $spacing-unit * 0.5;
 }
 
 h2 {
-    margin: $spacing-unit*1.5 0 $spacing-unit 0;
-    font-size: 120%;
-    font-weight: bold;
+    margin: $spacing-unit * 1.5 0 $spacing-unit 0;
+    font-size: calc(20px + (0.01 * (-800px + 100vw)));
+    font-weight: 500;
 }
 
 a {
@@ -113,7 +119,11 @@ a {
     }
 }
 
-p, blockquote, ul, ol, dl, figure, %vertical-rhythm {
+p {
+    margin-bottom: $spacing-unit * 0.5;
+}
+
+blockquote, ul, ol, dl, figure, %vertical-rhythm {
     margin-bottom: $spacing-unit;
 }
 
@@ -141,14 +151,15 @@ img {
 /* Code formatting */
 pre, code {
     font-family: 'Droid Sans Mono', monospace;
+    margin-top: $spacing-unit;
+    margin-bottom: $spacing-unit;
 }
 
 pre, blockquote {
     border-radius: 3px;
     overflow-x: auto;
     background-color: #eee;
-    line-height: 140%;
-    margin-bottom: $spacing-unit;
+    line-height: 150%;
     padding: $spacing-unit/2;
 }
 
