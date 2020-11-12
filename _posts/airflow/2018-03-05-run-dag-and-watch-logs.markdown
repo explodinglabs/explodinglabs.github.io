@@ -27,9 +27,9 @@ into one file.
 _Note 1:_ If you make this change, you won't be able to view task logs in the
 web UI.
 
-_Note 2:_ This is useful for development (using SequentialExecutor), but it's
-**not recommended in production** because issues will arise when multiple tasks
-attempt to write to the same log file at once.
+_Note 2:_ Logging to a single file is useful for development (using
+SequentialExecutor), but it's **not recommended in production** because issues
+will arise when multiple tasks attempt to write to the same log file at once.
 
 ## Easy Solution (Airflow 1.10+)
 
