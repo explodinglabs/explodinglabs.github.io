@@ -12,9 +12,10 @@ permalink: /airflow/run-dag-and-watch-logs
 ![airflow](/assets/airflow.png)
 </div>
 
-I want to run dags and watch the log output in the terminal. Each time an
-Airflow task is run, a new timestamped directory and file is created. Something
-like:
+I want to run Airflow dags and watch the logs in the terminal.
+
+Trouble is, each time a task is run a new directory and file is created.
+Something like:
 
 ```sh
 ~/airflow/logs/my-dag/my-task/2018-03-06T09:59:10.427477/1.log
@@ -24,12 +25,15 @@ This makes it hard to tail-follow the logs. Thankfully, starting from Airflow
 1.9, logging can be configured easily, allowing you to put all of a dag's logs
 into one file.
 
-_Note 1:_ If you make this change, you won't be able to view task logs in the
-web UI.
+_Important notes:_
 
-_Note 2:_ Logging to a single file is useful for development (using
-SequentialExecutor), but it's **not recommended in production** because issues
-will arise when multiple tasks attempt to write to the same log file at once.
+1. If you make this change, you won't be able to view task logs in the web UI,
+   because the UI expects log filenames to be in the normal format.
+
+2. Logging to a single file is useful for development (using the
+   SequentialExecutor), but it's **not recommended in production** because
+   issues will arise when multiple tasks attempt to write to the same log file
+   at once._
 
 ## Easy Solution
 
