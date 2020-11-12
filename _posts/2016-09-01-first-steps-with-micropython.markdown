@@ -1,6 +1,5 @@
 ---
 layout: post
-category: micropython
 title: First steps with Micropython on a NodeMCU
 permalink: /micropython/first-steps
 ---

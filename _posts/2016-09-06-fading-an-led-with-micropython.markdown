@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Fading an LED with Micropython
-category: micropython
 permalink: /micropython/fading-an-led
 redirect_from: /fading-an-led-with-micropython
 ---
