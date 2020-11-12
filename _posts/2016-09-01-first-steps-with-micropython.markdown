@@ -4,16 +4,11 @@ title: First steps with Micropython on a NodeMCU
 category: micropython
 permalink: /micropython/first-steps
 ---
-<div style="float: right" markdown="1">
-![micropython](/assets/micropython.png)
-</div>
-
 My NodeMCU arrived so I went right ahead and installed Micropython on it.
 
 ![nodemcu](/assets/nodemcu.png)
 
-Install the Micropython firmware
-================================
+## Install the Micropython firmware
 
 To copy the firmware onto the board, you can use *esptool*. It can be installed
 with pip, so I created a virtualenv for installing it. Esptool requires Python
@@ -47,8 +42,7 @@ $ esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=8m -fm d
 
 Now **replug the device** (or hit the **RST** button).
 
-Enter the REPL
-==============
+## Enter the REPL
 
 I used picocom.
 
