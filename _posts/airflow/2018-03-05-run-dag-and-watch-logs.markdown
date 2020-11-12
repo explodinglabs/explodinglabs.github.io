@@ -33,7 +33,7 @@ into one file.
 2. Logging to a single file is useful for development (using the
    SequentialExecutor), but it's **not recommended in production** because
    issues will arise when multiple tasks attempt to write to the same log file
-   at once._
+   at once.
 
 ## Easy Solution
 
