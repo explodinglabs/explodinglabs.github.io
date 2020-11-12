@@ -6,7 +6,7 @@
 @charset "utf-8";
 
 $spacing-unit: 20px;
-$paragraph_line_height: 160%;
+$paragraph-line-height: 160%;
 
 // Colours
 $grey: #444;
@@ -136,7 +136,7 @@ blockquote, ul, ol, dl, figure, %vertical-rhythm {
 
 p, ul, ol {
     color: #3E4349;
-    line-height: $paragraph_line_height;
+    line-height: $paragraph-line-height;
 }
 
 @media screen and (min-width: 751px) {
@@ -167,7 +167,7 @@ pre, blockquote {
     border-radius: 3px;
     overflow-x: auto;
     background-color: #eee;
-    line-height: $paragraph_line_height;
+    line-height: 150%;
     padding: $spacing-unit/2;
 }
 
