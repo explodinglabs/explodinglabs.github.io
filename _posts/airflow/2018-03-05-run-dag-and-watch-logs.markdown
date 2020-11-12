@@ -25,7 +25,7 @@ This makes it hard to tail-follow the logs. Thankfully, starting from Airflow
 1.9, logging can be configured easily, allowing you to put all of a dag's logs
 into one file.
 
-_Important notes:_
+**Important:**
 
 1. If you make this change, you won't be able to view task logs in the web UI,
    because the UI expects log filenames to be in the normal format.
