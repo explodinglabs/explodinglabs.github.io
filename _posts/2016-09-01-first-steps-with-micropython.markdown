@@ -80,8 +80,7 @@ Press enter to see the prompt:
 >>>
 ```
 
-Notes
-=====
+## Notes
 
 - **Specify the baudrate** of 115200. Without this it said *Terminal Ready*,
 but there was no prompt and I couldn't communicate at all. Once I specified the
@@ -92,7 +91,6 @@ baudrate with the `-b` option, the prompt appears (after pressing enter).
 
 - To exit use `[C-p]`, ``C-\``, `[C-p]`, `C-x`.
 
-Now see
-=======
+## Now see
 
 [How to copy files to a Micropython device](https://beau.click/micropython/mipy)
