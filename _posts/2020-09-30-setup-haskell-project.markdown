@@ -1,11 +1,19 @@
 ---
 layout: post
-title: "Setup a Haskell project"
+title: "Setup a new Haskell project"
 permalink: /haskell/setup
 ---
-This is how I start a new Haskell project.
+For simple programs (with no dependencies), simply create a `.hs` file and
+compile it with ghc:
 
-Initialize stack (creates a new directory, use `--bare` to use current directory).
+```sh
+ghc main.hs
+```
+
+For more complete programs I use Stack.
+
+Initialize Stack (creates a new directory, use `--bare` to use the current
+directory).
 ```sh
 stack new myapp
 ```
