@@ -47,9 +47,8 @@ return {
 An explanation of each item is found  in Airflow's documentation under
 [Macros](https://airflow.apache.org/docs/stable/macros-ref.html).
 
-As a side note, you can generate the context from a TaskInstance object.
+As a side note, you can generate the context from a TaskInstance.
 
 ```python
-ti = TaskInstance(task=task, execution_date=datetime.now())
-task.execute(context=ti.get_template_context())
+context = TaskInstance(task=task, execution_date=datetime.now()).get_template_context()
 ```
