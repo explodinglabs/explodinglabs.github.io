@@ -1,5 +1,6 @@
 ---
 layout: post
+category: haskell
 title: "Setup a new Haskell project"
 permalink: /haskell/setup
 ---
