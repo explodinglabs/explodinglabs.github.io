@@ -19,10 +19,7 @@ directory).
 stack new myapp
 ```
 
-Add dependencies to `package.yaml` and then
-```sh
-stack install
-```
+Add dependencies to `package.yaml`.
 
 Place source files in `app` directory and then
 ```sh
