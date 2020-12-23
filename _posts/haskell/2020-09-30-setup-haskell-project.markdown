@@ -19,7 +19,7 @@ directory).
 stack new myapp
 ```
 
-Add dependencies to `package.yaml`.
+Add any dependencies to `package.yaml` under the "dependencies" section.
 
 Place source files in `app` directory and then
 ```sh
