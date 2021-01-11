@@ -33,14 +33,11 @@ This is the tendency of the paranoid programmer -- every line of code they
 write brings fear, "something could go wrong here, I'd better handle it and log
 a nice message, at least it'll show we foresaw the problem happening!"
 
-Usually one or two exceptions are caught, but there are untold number of
-exceptions that could occur, why catch just those?
+The rule of exceptions is to "throw early, catch late". Catch late if you need
+to handle exceptions. Don't wrap every line in a try block.
 
 Maybe you're catching the exception to ignore it. This is usually a bad idea as
 well.
-
-The rule of exceptions is to "throw early, catch late". Catch late if you need
-to handle exceptions. Don't wrap every line in a try block.
 
 Just let the exception occur.
 
