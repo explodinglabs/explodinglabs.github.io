@@ -36,7 +36,7 @@ The interpreter will log the exception. You don't need to do it yourself.
 Maybe you're catching the exception to ignore it, this is usually a bad idea as
 well.
 
-Just let exceptions occur. Stop wrapping everything in a net.
+Just let exceptions occur. Stop wrapping everything in little nets.
 
 _You're only adding noise to the code._
 
