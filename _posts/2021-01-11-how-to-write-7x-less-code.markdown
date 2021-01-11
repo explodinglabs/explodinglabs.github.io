@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "How to write 7x more code than is necessary"
-permalink: /how-to-write-7x-more-code-than-is-necessary
+title: "How to write 7x less code"
+permalink: /how-to-write-7x-less-code
 ---
 I see this repeatedly in my job as a software engineer (using impure imperative
 languages):
