@@ -29,10 +29,9 @@ _You're only adding noise to the logs, and noise to the code._
 
 This is the tendency of the paranoid programmer, every line of code brings
 fear. "Something could go wrong here, I'd better handle it and log a nice
-message. At least it'll show we foresaw the problem happening!"
+message. At least it'll show we foresaw the problem happening."
 
-The Python interpreter will log the exception. You don't need to do it
-yourself.
+The interpreter will log the exception. You don't need to do it yourself.
 
 Maybe you're catching the exception to ignore it, this is usually a bad idea as
 well.
