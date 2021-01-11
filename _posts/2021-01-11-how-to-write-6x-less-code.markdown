@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "How to write 7x less code"
-permalink: /how-to-write-7x-less-code
+title: "How to write 6x less code"
+permalink: /how-to-write-6x-less-code
 ---
 I see this repeatedly in my job as a software engineer (using impure imperative
 languages):
@@ -13,7 +13,6 @@ try:
     log("Did something")
 except:
     log("There was an error")
-    raise
 ```
 _Followed by the same again ad infinitum._
 
@@ -26,16 +25,19 @@ _You don't need to log after doing everything._ "We succeeded, yay!" Who cares?
 
 _You're only adding noise to the logs, and noise to the code._
 
-## Handling exceptions caused by every f------ thing
+## Trying to catch every f------ exception
 
-This is the tendency of the paranoid programmer -- every line of code they
-write brings fear, "something could go wrong here, I'd better handle it and log
-a nice message, at least it'll show we foresaw the problem happening!"
+This is the tendency of the paranoid programmer, every line of code brings
+fear. "Something could go wrong here, I'd better handle it and log a nice
+message. At least it'll show we foresaw the problem happening!"
 
-Maybe you're catching the exception to ignore it. This is usually a bad idea as
+The Python interpreter will log the exception. You don't need to do it
+yourself.
+
+Maybe you're catching the exception to ignore it, this is usually a bad idea as
 well.
 
-Just let exceptions occur. Don't worry about it.
+Just let exceptions occur. Stop wrapping everything in a net.
 
 _You're only adding noise to the code._
 
