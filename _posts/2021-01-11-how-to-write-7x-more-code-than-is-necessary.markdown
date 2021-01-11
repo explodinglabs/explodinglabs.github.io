@@ -19,11 +19,10 @@ _Followed by the same again ad infinitum._
 
 ## Logging before and after every f------ thing
 
-_There's rarely any need to log before doing something._ "Get ready, here it
-comes!" Who cares! Just do the thing!
+_You don't need to log before doing everything._ "Get ready, here it comes!"
+Who cares! Just do the thing!
 
-_There's rarely any need to log after doing something._ "We succeeded, yay!"
-Who cares?
+_You don't need to log after doing everything._ "We succeeded, yay!" Who cares?
 
 _You're only adding noise to the logs, and noise to the code._
 
@@ -36,7 +35,7 @@ a nice message, at least it'll show we foresaw the problem happening!"
 Maybe you're catching the exception to ignore it. This is usually a bad idea as
 well.
 
-Just let the exception occur.
+Just let exceptions occur. Don't worry about it.
 
 _You're only adding noise to the code._
 
