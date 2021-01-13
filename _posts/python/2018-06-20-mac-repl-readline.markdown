@@ -46,7 +46,7 @@ else:
         open(history_file, 'a').close()
 
     atexit.register(readline.write_history_file, history_file)
-    print('Booted ~/pythonstartup.py.')
+    print('Booted pythonstartup.py.')
 ```
 
 Set the `PYTHONSTARTUP` env var:
@@ -60,6 +60,6 @@ $ python
 Python 3.6.5 (default, Mar 29 2018, 15:37:32)
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.39.2)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
-Booted ~/pythonstartup.py.
+Booted pythonstartup.py.
 >>>
 ```
