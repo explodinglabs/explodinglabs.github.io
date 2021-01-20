@@ -1,5 +1,6 @@
 ---
 layout: post
+category: python
 title: Use Black formatter in vim, git pre-commit hooks, and CI/CD
 permalink: /black
 ---
