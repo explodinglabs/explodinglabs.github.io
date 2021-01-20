@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: "Release a version to PyPI"
+title: Release a version to PyPI
 permalink: /python/release-to-pypi
 ---
 <div class="wide-logos" markdown="1">

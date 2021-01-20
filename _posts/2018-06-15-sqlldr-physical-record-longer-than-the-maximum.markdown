@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SQL*Loader: Physical record longer than the maximum"
+title: SQL*Loader - Physical record longer than the maximum
 permalink: /oracle/sqlldr-physical-record-longer-than-maximum
 redirect_from: /sqlldr/physical-record-longer-than-maximum
 ---

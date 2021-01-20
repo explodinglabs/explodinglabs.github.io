@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: "Sphinx Autodoc ImportError"
+title: Sphinx Autodoc ImportError
 permalink: /python/sphinx-autodoc-importerror
 redirect_from: /sphinx-autodoc-importerror
 ---

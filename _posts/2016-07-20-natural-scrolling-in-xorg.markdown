@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Natural scrolling in Xorg"
+title: Natural scrolling in Xorg
 permalink: /natural-scrolling-in-xorg
 ---
 

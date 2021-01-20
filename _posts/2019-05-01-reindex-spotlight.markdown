@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Outlook for Mac: Search not finding emails"
+title: Outlook for Mac - Search not finding emails
 permalink: /macos/outlook-search-not-finding-emails
 ---
 Outlook for Mac wasn't finding all my emails when I searched.

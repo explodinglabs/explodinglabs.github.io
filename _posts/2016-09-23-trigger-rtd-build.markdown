@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Trigger a Readthedocs build from the commandline"
+title: Trigger a Readthedocs build from the commandline
 permalink: /trigger-rtd-build
 ---
 You can use curl to trigger a build:

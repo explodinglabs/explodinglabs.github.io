@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Setup an Elm project"
+title: Setup an Elm project
 permalink: /elm/setup
 ---
 This is how I setup a new elm project for development.

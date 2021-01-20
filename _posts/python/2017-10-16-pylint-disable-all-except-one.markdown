@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: "Pylint: Show only one error type"
+title: Pylint - Show only one error type
 permalink: /python/show-only-one-pylint-error
 redirect_from:
     - /pylint/show-only-one-type

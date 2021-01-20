@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: "Python's collections"
+title: Python's collections
 permalink: /python/collections
 ---
 <div class="wide-logos" markdown="1">

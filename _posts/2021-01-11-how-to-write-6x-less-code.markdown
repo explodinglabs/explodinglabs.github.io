@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to write 6x less code"
+title: How to write 6x less code
 permalink: /how-to-write-6x-less-code
 ---
 I see this repeatedly in my job as a software engineer (using impure imperative

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Launch an ECS Container Instance and run a Container"
+title: Launch an ECS Container Instance and run a Container
 permalink: /aws/ecs
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}
