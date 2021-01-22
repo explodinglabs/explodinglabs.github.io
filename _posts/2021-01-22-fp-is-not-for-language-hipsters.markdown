@@ -1,6 +1,6 @@
 ---
 layout: post
-title: FP is not for language hipsters
+title: Functional programming is not for language hipsters
 permalink: /fp-is-not-for-language-hipsters
 ---
 Eric Normand talking about how functional programming is actually the more
