@@ -16,6 +16,6 @@ pragmatic, conservative choice:
 > Clojure is not for the cool kids who just want to be different, it's for the
 > old cranky people who are tired of dealing with poorly designed languages
 > with fast-moving ecosystems that don't ever solve the problems they talk
-> about solving."
+> about solving.
 
 [Link](https://lispcast.com/is-clojure-a-language-for-hipsters/)
