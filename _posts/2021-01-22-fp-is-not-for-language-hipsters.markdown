@@ -3,8 +3,8 @@ layout: post
 title: Functional programming is not for language hipsters
 permalink: /fp-is-not-for-language-hipsters
 ---
-Eric Normand talking about how functional programming is actually the more
-pragmatic, conservative choice:
+Eric Normand says functional programming is actually the more pragmatic,
+conservative choice:
 
 > I actually wonder, how much of Clojure's perception is that it is a new
 > language, like it's a new way to program, when it's actually a much older way
