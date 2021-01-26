@@ -10,8 +10,4 @@ permalink: /python/dont-use-staticmethod
 
 In Python, don't use the `@staticmethod` decorator.
 
-Just write a plain function instead.
-
-You might say "it groups the function with the related class".
-
-But that's what modules are for.
+Write a plain function instead.
