@@ -10,5 +10,6 @@ permalink: /python/dont-use-staticmethod
 
 In Python, don't use the `@staticmethod` decorator.
 
-A static method is just a function, it doesn't need to be inside a class. So
-move it out, write a plain function instead.
+A static method is just a function. It doesn't need to be inside a class.
+
+So move it out of the class, write a plain function instead.
