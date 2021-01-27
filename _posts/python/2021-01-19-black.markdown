@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: Use Black formatter in Vim, Pre-commit hooks and CI/CD
+title: Use Black in Vim, pre-commit hooks and CI/CD
 permalink: /black
 ---
 <div class="wide-logos" markdown="1">
@@ -36,8 +36,8 @@ Next time you open a Python file in Vim, Black will install.
 
 ## Pre-commit hooks
 
-Add to the `.pre-commit-config.yaml` file in the root of your repository, under
-the repos section, _replacing 20.8b1 with the Black version you want to use._
+Add to the `.pre-commit-config.yaml` file in the root of your repository,
+_replacing 20.8b1 with the Black version you want to use._
 
 ```yaml
 repos:
