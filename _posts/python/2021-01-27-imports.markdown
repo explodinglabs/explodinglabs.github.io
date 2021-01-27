@@ -8,8 +8,10 @@ permalink: /python/imports
 ![python](/assets/python.png)
 </div>
 
-An important but often ignored part of he Style Guide for Python Code" (PEP-8)
+An often ignored but important part of the Style Guide for Python Code" (PEP-8)
 is the [Imports section](https://www.python.org/dev/peps/pep-0008/#imports).
+
+This part on **grouping imports** is particularly important:
 
 > Imports should be grouped in the following order:
 >
@@ -19,7 +21,38 @@ is the [Imports section](https://www.python.org/dev/peps/pep-0008/#imports).
 >
 > You should put a blank line between each group of imports.
 
-Here's an example of imports:
+## The first group: Standard library imports
+
+These are from the Python's built-in standard library.
+
+```python
+from typing import Any
+import os
+```
+
+## The second group: Related third party imports
+
+These are imports from installed libraries. The PEP says "third-party" which
+confuses a lot of people. To me it could be a library maintained by yourself or
+the same organisation, but is kept as a separate repository and installed as a
+separate package.
+
+```python
+from airflow.utils.decorators import apply_defaults
+from cx_Oracle import NUMBER
+```
+
+## The third group: Local application/library specific imports
+
+I take to mean "imports from the same repository".
+
+```python
+from .stored_procedure_operator import StoredProcedureOperator
+```
+
+## Putting it together
+
+Separate each group by a blank line.
 
 ```
 from typing import Any
@@ -31,13 +64,5 @@ from cx_Oracle import NUMBER
 from .stored_procedure_operator import StoredProcedureOperator
 ```
 
-1. The first group is from the Python's standard library.
-
-2. The second group has libraries external to the current repository. The PEP
-   says "third-party" which confuses a lot of people. To me it could be a
-   library maintained by yourself or the same organisation, but is kept as a
-   separate repository and installed as a separate package.
-
-3. The last group I take to mean "imports from the same repository".
-
-Within each group, sort the lines alphabetically.
+Within each group, sort the lines alphabetically (this is just my preference,
+not part of the style guide).
