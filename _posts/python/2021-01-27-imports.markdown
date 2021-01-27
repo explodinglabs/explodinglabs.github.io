@@ -32,7 +32,7 @@ import os
 
 ## The second group: Related third party imports
 
-These are imports from installed libraries. The PEP says "third-party" which
+These are imports from installed libraries. The PEP says "third party" which
 confuses a lot of people. To me it could be a library maintained by yourself or
 the same organisation, but is kept as a separate repository and installed as a
 separate package.
