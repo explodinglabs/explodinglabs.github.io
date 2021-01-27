@@ -9,7 +9,7 @@ permalink: /python/imports
 </div>
 
 An important but often ignored part of he Style Guide for Python Code" (PEP-8)
-is the [Imports](https://www.python.org/dev/peps/pep-0008/#imports) section.
+is the [Imports section](https://www.python.org/dev/peps/pep-0008/#imports).
 
 > Imports should be grouped in the following order:
 >
