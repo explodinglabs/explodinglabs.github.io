@@ -1,0 +1,41 @@
+---
+layout: post
+category: python
+title: Use Pylint in pre-commit hooks and CI/CD
+permalink: /pylint
+---
+<div class="wide-logos" markdown="1">
+![python](/assets/python.png)
+</div>
+
+Pylint can check for many problems, but personally I only use the
+`unused-import` rule which ensures nothing is imported that isn't used. If you
+want to use more rules, adjust the below commands accordingly.
+
+## Pre-commit hooks
+
+Add to the `.pre-commit-config.yaml` file in the root of your repository,
+_replacing v2.4.2 with the Pylint version you want to use._
+
+```yaml
+repos:
+  - repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v2.4.2
+    hooks:
+      - id: pylint
+        args: [--disable=all, --enable=unused-import]
+```
+
+This will abort a commit if an import isn't used.
+
+## CI/CD
+
+To fail the build if Pylint finds an error, add the following to your build
+scripts.
+
+```sh
+pylint --disable=all --enable=unused-import /path/to/code/**/*.py
+```
+
+Pylint will exit with a non-zero exit status if it finds an error, which should
+fail your build.
