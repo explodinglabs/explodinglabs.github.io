@@ -35,8 +35,8 @@ from .stored_procedure_operator import StoredProcedureOperator
 
 2. The second group has libraries external to the current repository. The PEP
    says "third-party" which confuses a lot of people. To me it could be a
-   library maintained by yourself or the same organisation, but it's kept as a
-   separate repository, installed as a separate package.
+   library maintained by yourself or the same organisation, but is kept as a
+   separate repository and installed as a separate package.
 
 3. The last group I take to mean "imports from the same repository".
 
