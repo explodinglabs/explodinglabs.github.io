@@ -2,7 +2,7 @@
 layout: post
 category: python
 title: Group your Python imports
-permalink: /python/group-imports
+permalink: /python/imports
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)
