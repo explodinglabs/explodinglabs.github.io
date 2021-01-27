@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: How to use Python virtual environments
+title: Use Python virtual environments
 permalink: /python/virtualenv
 ---
 <div class="wide-logos" markdown="1">

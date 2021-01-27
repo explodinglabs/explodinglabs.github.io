@@ -1,7 +1,8 @@
 ---
 layout: post
-title: How to write 6x less code
-permalink: /how-to-write-6x-less-code
+title: Write 6x less code
+permalink: /write-6x-less-code
+redirect_from: /how-to-write-6x-less-code
 ---
 I see this repeatedly in my job as a software engineer (using impure imperative
 languages):
