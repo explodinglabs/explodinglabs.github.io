@@ -1,0 +1,40 @@
+---
+layout: post
+category: python
+title: Use Mypy in pre-commit hooks and CI/CD
+permalink: /mypy
+---
+<div class="wide-logos" markdown="1">
+![python](/assets/python.png)
+</div>
+
+In this post I've used the Mypy rules I prefer, adjust them to your liking.
+
+## Pre-commit hooks
+
+Add to the `.pre-commit-config.yaml` file in the root of your repository,
+_replacing v0.730 with the Mypy version you want to use._
+
+```yaml
+repos:
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.730
+    hooks:
+      - id: mypy
+        exclude: ^tests/
+        args: [--disallow-untyped-calls, --disallow-untyped-defs, --check-untyped-defs, --ignore-missing-imports, --no-strict-optional]
+```
+
+This will abort a commit if there's a type error.
+
+## CI/CD
+
+To fail the build if Mypy finds an error, add the following to your build
+script.
+
+```sh
+mypy --disallow-untyped-calls --disallow-untyped-defs --check-untyped-defs --ignore-missing-imports --no-strict-optional /path/to/code
+```
+
+Mypy will exit with a non-zero exit status if it finds an error, which should
+fail your build.
