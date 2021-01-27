@@ -1,0 +1,43 @@
+---
+layout: post
+category: python
+title: Group your Python imports
+permalink: /python/group-imports
+---
+<div class="wide-logos" markdown="1">
+![python](/assets/python.png)
+</div>
+
+An important but often ignored part of he Style Guide for Python Code" (PEP-8)
+is the [Imports](https://www.python.org/dev/peps/pep-0008/#imports) section.
+
+> Imports should be grouped in the following order:
+>
+> - Standard library imports.
+> - Related third party imports.
+> - Local application/library specific imports.
+>
+> You should put a blank line between each group of imports.
+
+Here's an example of imports:
+
+```
+from typing import Any
+import os
+
+from airflow.utils.decorators import apply_defaults
+from cx_Oracle import NUMBER
+
+from .stored_procedure_operator import StoredProcedureOperator
+```
+
+1. The first group is from the Python's standard library.
+
+2. The second group has libraries external to the current repository. The PEP
+   says "third-party" which confuses a lot of people. To me it could be a
+   library maintained by yourself or the same organisation, but it's kept as a
+   separate repository, installed as a separate package.
+
+3. The last group I take to mean "imports from the same repository".
+
+Within each group, sort the lines alphabetically.
