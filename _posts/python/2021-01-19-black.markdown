@@ -1,34 +1,16 @@
 ---
 layout: post
 category: python
-title: Use Black formatter in Vim, Pre-commit hooks, and CI/CD
+title: Use Black formatter in Pre-commit hooks, CI/CD, and Vim
 permalink: /black
 ---
+<div class="wide-logos" markdown="1">
+![python](/assets/python.png)
+</div>
+
 It's important to choose a specific Black version to use (rather than just
 "master"). The versions you use in Vim, pre-commit, and used by other
 contributors must be the same so there are no inconsistencies.
-
-## Vim
-
-This method requires Vim 8+.
-
-Remove any existing black plugin installed.
-```sh
-rm -r ~/.vim/black
-```
-
-Download the vim plugin, _replacing 20.8b1 with the Black version you want to
-use._
-```sh
-curl https://raw.githubusercontent.com/psf/black/20.8b1/plugin/black.vim -o ~/.vim/pack/python/start/black/plugin/black.vim
-```
-
-Add the following to `~/.vimrc` to format with Black every time you save.
-```
-autocmd BufWritePre *.py execute ':Black'
-```
-
-Next time you open a Python file, Black will install.
 
 ## Pre-commit hooks
 
@@ -55,3 +37,25 @@ black --diff --check /path/to/code
 
 Black will exit with a non-zero exit status if code isn't formatted, which
 should fail your build.
+
+## Vim
+
+This method requires Vim 8+.
+
+Remove any existing black plugin installed.
+```sh
+rm -r ~/.vim/black
+```
+
+Download the vim plugin, _replacing 20.8b1 with the Black version you want to
+use._
+```sh
+curl https://raw.githubusercontent.com/psf/black/20.8b1/plugin/black.vim -o ~/.vim/pack/python/start/black/plugin/black.vim
+```
+
+Add the following to `~/.vimrc` to format with Black every time you save.
+```
+autocmd BufWritePre *.py execute ':Black'
+```
+
+Next time you open a Python file, Black will install.

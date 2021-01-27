@@ -13,5 +13,5 @@ In Python, don't use the `@staticmethod` decorator.
 A static method is just a function that doesn't use the class or object its
 contained in.
 
-In other words, it doesn't need to be inside a class. So write a plain function
+In other words, it doesn't need to be inside a class, so write a plain function
 instead.
