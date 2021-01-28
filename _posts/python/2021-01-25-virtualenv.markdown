@@ -19,8 +19,8 @@ Add the following to your startup script (e.g. `~/.zshenv`, `~/.bashrc`):
 ```sh
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/opt/local/bin/python3.8
-export VIRTUALENVWRAPPER_VIRTUALENV=/Users/beaubarker/Library/Python/3.8/bin/virtualenv
-source /Users/beaubarker/Library/Python/3.8/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_VIRTUALENV=~/Library/Python/3.8/bin/virtualenv
+source ~/Library/Python/3.8/bin/virtualenvwrapper.sh
 ```
 
 Source your startup script to bring the changes into your environment:
