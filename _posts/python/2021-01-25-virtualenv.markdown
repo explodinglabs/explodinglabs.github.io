@@ -8,15 +8,20 @@ permalink: /python/virtualenv
 ![python](/assets/python.png)
 </div>
 
-## Setup
+## Installation
 
-Install virtualenvwrapper.
+Install
+[virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/).
+
+Basically this is how I install it.
+
 ```sh
 PIP_REQUIRE_VIRTUALENV=false pip3 install --user --upgrade virtualenvwrapper
 ```
 
 Add the following to your startup script (e.g. `~/.zshenv`, `~/.bashrc`):
 ```sh
+export PIP_REQUIRE_VIRTUALENV=true
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/opt/local/bin/python3.8
 export VIRTUALENVWRAPPER_VIRTUALENV=~/Library/Python/3.8/bin/virtualenv
@@ -26,13 +31,6 @@ source ~/Library/Python/3.8/bin/virtualenvwrapper.sh
 Source your startup script to bring the changes into your environment:
 ```sh
 source ~/.zshenv
-```
-
-I like to disallow Pip from working when no virtualenv is active. This way we
-don't accidentally modify the global system. Add the following to your startup
-script:
-```sh
-export PIP_REQUIRE_VIRTUALENV=true
 ```
 
 ## Usage
