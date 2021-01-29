@@ -22,10 +22,8 @@ Use `collections.namedtuple`.
 ```python
 >>> from collections import namedtuple
 >>> data = {'id': 1, 'name': 'foo'}
->>> Obj = namedtuple('Obj', data.keys())
->>> obj = Obj(**data)
->>> obj.name
-'foo'
+>>> namedtuple("Obj", data.keys())(**data)
+Obj(id=1, name='foo')
 ```
 
 ## Convert to a mutable object
@@ -34,10 +32,8 @@ Use `types.SimpleNamespace`.
 
 ```python
 >>> from types import SimpleNamespace
->>> data = {'id': 1, 'name': 'foo'}
->>> obj = SimpleNamespace(**data)
->>> obj.name
-'foo'
+>>> SimpleNamespace(**{'id': 1, 'name': 'foo'})
+namespace(id=1, name='foo')
 ```
 
 See also: [Convert a sequence to postfix notation](/convert-sequence-to-postfix-notation)
