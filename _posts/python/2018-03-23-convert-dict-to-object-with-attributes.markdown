@@ -13,7 +13,7 @@ redirect_from:
 </div>
 
 We have a dictionary, and want to convert it to a an object with postfix
-notation ('obj.name').
+notation like `obj.name`.
 
 ## Convert to an immutable object
 
@@ -21,7 +21,7 @@ Use `collections.namedtuple`.
 
 ```python
 >>> from collections import namedtuple
->>> data = {'id': 1, 'name': 'foo'}
+>>> data = {"id": 1, "name": "foo"}
 >>> namedtuple("Obj", data.keys())(**data)
 Obj(id=1, name='foo')
 ```
@@ -32,8 +32,8 @@ Use `types.SimpleNamespace`.
 
 ```python
 >>> from types import SimpleNamespace
->>> SimpleNamespace(**{'id': 1, 'name': 'foo'})
-namespace(id=1, name='foo')
+>>> SimpleNamespace(**{"id": 1, "name": "foo"})
+namespace(id=1, name="foo")
 ```
 
 See also: [Convert a sequence to postfix notation](/convert-sequence-to-postfix-notation)
