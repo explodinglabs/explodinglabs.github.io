@@ -11,14 +11,22 @@ mind. Our brains can only deal with a small number of concepts at a time. So we
 break down problems, and break them down again until we can mentally digest
 them.
 
-In programming we write small solutions as functions. Here we zoom in. In
-Haskell the body of a function is always an expression; there are no statements
-in functions. In a way this guides you to making sure functions are small.
+In programming we write small solutions as functions. Here we zoom in.
+
+> The psychological profiling (of a programmer) is mostly the ability to shift
+> levels of abstraction, from low level to high level. To see something in the
+> small and to see something in the large.
+> — An interview with Donald Knuth. Dr. Dobb’s Journal, pages 16–22 (April
+> 1996)
+
+In Haskell the body of a function is always an expression; there are no
+statements in functions. In a way this guides you to making sure functions are
+small.
 
 Finally we combine the solutions.
 
 Programming is about composition. Decomposing problems and composing the
-solutions. Even the small solutions are compositions of other small solutions.
+solutions. Even the solutions are compositions of other solutions.
 
 “Being able to decompose bigger problems into smaller problems, and then
 combine the solutions, that’s essentially the description of... well, I don’t
@@ -28,13 +36,13 @@ what I’m doing as a mathematician, and a physicist will say that’s what I’
 doing as a physicist. It’s like, everybody’s doing this, this is the essence of
 all human activity.”
 
-In c or Python there’s no built-in way of composing two functions. Something as
-fundamental as combining functions is not built into the language.
+In most languages there’s no built-in way of composing two functions. Something
+as fundamental as combining functions is not built into the language.
 
 Haskell is built around composition. In Haskell, as in math, composition is
 represented as a dot.
 
 “Once you realise how simple things are in Haskell, the inability to express
-straightforward concepts in other languages is a little embarrassing.“
+straightforward concepts in C++ is a little embarrassing.“
 
 Compare with Unix.
