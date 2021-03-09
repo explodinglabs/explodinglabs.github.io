@@ -3,6 +3,8 @@ layout: post
 title: Composition is the essence of programming
 permalink: /composition
 ---
+*This post is a work in progress.*
+
 Engineers achieve big things by solving little problems. If we can solve all
 the little problems, we can combine the solutions to solve bigger problems.
 
