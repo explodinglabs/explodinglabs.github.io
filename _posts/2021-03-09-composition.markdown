@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Composition is the essence of programming
+title: Composition
 permalink: /composition
 ---
 *This post is a work in progress.*
