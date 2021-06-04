@@ -12,8 +12,7 @@ In this post I've used the Mypy rules I prefer, adjust them to your liking.
 
 ## Pre-commit hooks
 
-Add to the `.pre-commit-config.yaml` file in the root of your repository,
-_replacing v0.730 with the Mypy version you want to use._
+Add to the `.pre-commit-config.yaml` file in the root of your repository:
 
 ```yaml
 repos:
@@ -22,10 +21,12 @@ repos:
     hooks:
       - id: mypy
         exclude: ^tests/
-        args: [--disallow-untyped-calls, --disallow-untyped-defs, --check-untyped-defs, --ignore-missing-imports, --no-strict-optional]
+        args: [--disallow-untyped-calls, --disallow-untyped-defs, --check-untyped-defs, --ignore-missing-imports]
 ```
 
 This will abort a commit if there's a type error.
+
+Replace v0.730 with the Mypy version you want to use.
 
 ## CI/CD
 
@@ -33,7 +34,7 @@ To fail the build if Mypy finds an error, add the following to your build
 script.
 
 ```sh
-mypy --disallow-untyped-calls --disallow-untyped-defs --check-untyped-defs --ignore-missing-imports --no-strict-optional /path/to/code
+mypy --disallow-untyped-calls --disallow-untyped-defs --check-untyped-defs --ignore-missing-imports /path/to/code
 ```
 
 Mypy will exit with a non-zero exit status if it finds an error, which should
