@@ -47,3 +47,7 @@ _You're only adding noise to the code._
 ```python
 do_something()
 ```
+
+Worth adding: Logging and exceptions are side effects, so they come with all
+the issues related to them; you lose referential transparency, more difficult
+testability, etc. Use with care.
