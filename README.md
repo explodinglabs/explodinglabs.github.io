@@ -1,12 +1,18 @@
+## Installation
+
+```sh
+sudo port install rbenv ruby-build
+rbenv init
+```
+
 Put these in your shell config file (for me, `~/.zshenv`)
 ```sh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$PATH:$HOME/.gem/ruby/2.7.2/bin"
 ```
 
+Continuing...
 ```sh
-sudo port install rbenv ruby-build
-rbenv init
 rbenv install 2.7.2
 rbenv global 2.7.2
 gem install --user-install bundler jekyll
