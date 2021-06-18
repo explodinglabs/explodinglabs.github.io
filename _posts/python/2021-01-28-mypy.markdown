@@ -40,3 +40,8 @@ mypy --disallow-untyped-calls --disallow-untyped-defs --check-untyped-defs --ign
 
 Mypy will exit with a non-zero exit status if it finds an error, which should
 fail your build.
+
+## See also
+
+- [Use Black in Vim, pre-commit hooks and CI/CD](/black)
+- [Use Pylint in pre-commit hooks and CI/CD](/pylint)
