@@ -8,9 +8,9 @@ permalink: /mypy
 ![python](/assets/python.png)
 </div>
 
-In this post I've used the Mypy rules I prefer, adjust them to your liking.
-
 ## Pre-commit hooks
+
+Install [pre-commit](https://pre-commit.com).
 
 Add to the `.pre-commit-config.yaml` file in the root of your repository:
 
@@ -21,16 +21,17 @@ repos:
     hooks:
       - id: mypy
         exclude: ^tests/
-        args: [--disallow-untyped-calls, --disallow-untyped-defs, --check-untyped-defs, --ignore-missing-imports]
+        args: [--disallow-untyped-calls, --disallow-untyped-defs, --check-untyped-defs]
 ```
 
-This will abort a commit if there's a type error.
-
-Replace v0.730 with the Mypy version you want to use.
+Install your git hooks:
+```sh
+pre-commit install  # or "autoupdate" if you've already installed previously.
+```
 
 ## CI/CD
 
-To fail the build if Mypy finds an error, add the following to your build
+To fail the build if Mypy finds an type error, add the following to your build
 script.
 
 ```sh
