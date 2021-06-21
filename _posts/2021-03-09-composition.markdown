@@ -35,11 +35,6 @@ represented as a dot.
 A brief mention of category theory?  
 Compare with Unix's simplicity?  
 
-> Once you realise how simple things are in Haskell, the inability to express
-> straightforward concepts in C++ is a little embarrassing.
->
-> <cite>Bartosz Milewski, Category Theory for Programmers.</cite>
-
 > Being able to decompose bigger problems into smaller problems, and then
 > combine the solutions, that’s essentially the description of... well, I don’t
 > know it depends on who you are, you will say that’s the description of what
