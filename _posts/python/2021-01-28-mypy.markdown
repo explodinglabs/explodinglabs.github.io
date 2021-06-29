@@ -35,7 +35,7 @@ To fail the build if Mypy finds an type error, add the following to your build
 script.
 
 ```sh
-mypy --disallow-untyped-calls --disallow-untyped-defs --check-untyped-defs --ignore-missing-imports /path/to/code
+mypy --disallow-untyped-calls --disallow-untyped-defs --check-untyped-defs /path/to/code
 ```
 
 Mypy will exit with a non-zero exit status if it finds an error, which should
