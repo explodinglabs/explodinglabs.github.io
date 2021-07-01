@@ -44,8 +44,8 @@ stages to ensure Python code is somewhat OK before deploying.
     typing which is better than nothing. A separate tool needs to be run to
     check for type errors. I use Mypy.
 
-A fourth would be _Pytest_, but this can take some time to run, so maybe only
-run this manually, or only in the build script before deploying.
+A fourth would be _Pytest_, but this can take some time to run, so I run this
+manually (though I do include it in the build script before deploying).
 
 ## Pre-commit hooks
 
