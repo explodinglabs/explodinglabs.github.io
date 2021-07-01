@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: Use Black in Vim 8, pre-commit hooks and CI/CD
+title: How to use Black in Vim 8, pre-commit hooks, Github Actions and continuous integration
 permalink: /black
 ---
 <div class="wide-logos" markdown="1">
@@ -9,8 +9,8 @@ permalink: /black
 </div>
 
 It's important to choose a specific Black version to use (rather than just
-"master"). The versions you use in Vim, pre-commit, and used by other
-contributors must be the same so there are no inconsistencies.
+"master"). The versions you use everywhere (in your editor/IDE, pre-commit, and
+used by other contributors) must be the same so there are no inconsistencies.
 
 ## Vim 8
 
@@ -31,8 +31,10 @@ Next time you open a Python file in Vim, Black will install.
 
 ## Pre-commit hooks
 
-Add to the `.pre-commit-config.yaml` file in the root of your repository,
-_replacing 20.8b1 with the Black version you want to use._
+Install [pre-commit](https://pre-commit.com).
+
+Add the following `.pre-commit-config.yaml` file to the root of your
+repository.
 
 ```yaml
 repos:
@@ -43,15 +45,50 @@ repos:
         args: [--diff, --check]
 ```
 
-This will abort a commit if a module hasn't been formatted.
+Install the git hooks:
+```sh
+pre-commit install  # or "autoupdate" if you've already installed previously.
+```
 
-## CI/CD
+This will abort a commit if code hasn't been formatted.
+
+## Github Actions
+
+Create a `.github/workflows/checks.yml` file in the root of your repository and
+add the following.
+
+```sh
+name: Checks
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Checks
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+    - run: |
+        pip install --upgrade pip
+        pip install black==21.6b0
+        black --diff --check mypackage
+```
+
+## Continuous Integration
 
 I like to fail builds if code hasn't been formatted. This ensures every
-developer must format their code. Add the following to your build scripts.
+developer must format their code. Simply call black in your build script.
+
 ```sh
 black --diff --check /path/to/code
 ```
 
 Black will exit with a non-zero exit status if code isn't formatted, which
-should fail your build.
+should fail the build.
+
+## See also
+
+- [Use Mypy in pre-commit hooks, Github Actions and continuous integration](/mypy)
+- [Use Pylint in pre-commit hooks, Github Actions and continuous integration](/pylint)

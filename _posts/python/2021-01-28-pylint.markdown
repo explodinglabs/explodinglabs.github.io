@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: Use Pylint in pre-commit hooks, Github Actions and continuous integration
+title: How to use Pylint in pre-commit hooks, Github Actions and continuous integration
 permalink: /pylint
 ---
 <div class="wide-logos" markdown="1">
@@ -9,14 +9,15 @@ permalink: /pylint
 </div>
 
 Pylint can check for many problems, but my first go-to with linters is always
-the `unused-import` rule which ensures nothing is imported that isn't used. If
+the "unused import" rule which ensures nothing is imported that isn't used. If
 you want to use more rules, adjust the below commands accordingly.
 
 ## Pre-commit hooks
 
 Install [pre-commit](https://pre-commit.com).
 
-Add to the `.pre-commit-config.yaml` file in the root of your repository:
+Add the following `.pre-commit-config.yaml` file to the root of your
+repository.
 
 ```yaml
 repos:
@@ -27,17 +28,41 @@ repos:
         args: [--disable=all, --enable=unused-import]
 ```
 
-Install your git hooks:
+Install the git hooks:
 ```sh
 pre-commit install  # or "autoupdate" if you've already installed previously.
 ```
 
 This will abort a commit if an import isn't used.
 
-## CI/CD
+## Github Actions
 
-To fail the build if Pylint finds an error, add the following to your build
-scripts.
+Create a `.github/workflows/checks.yml` file in the root of your repository and
+add the following.
+
+```sh
+name: Checks
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Checks
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+    - run: |
+        pip install --upgrade pip
+        pip install pylint==v3.0.0a3
+        pylint --disable=all --enable=unused-import mypackage
+```
+
+## Continuous Integration
+
+To fail the build if Pylint finds an error, simply call Pylint in your build
+script.
 
 ```sh
 pylint --disable=all --enable=unused-import /path/to/code

@@ -12,7 +12,8 @@ permalink: /mypy
 
 Install [pre-commit](https://pre-commit.com).
 
-Add to the `.pre-commit-config.yaml` file in the root of your repository:
+Add the following `.pre-commit-config.yaml` file to the root of your
+repository.
 
 ```yaml
 repos:
@@ -24,7 +25,7 @@ repos:
         args: [--disallow-untyped-calls, --disallow-untyped-defs, --check-untyped-defs]
 ```
 
-Install your git hooks:
+Install the git hooks:
 ```sh
 pre-commit install  # or "autoupdate" if you've already installed previously.
 ```
@@ -34,7 +35,7 @@ This will abort a commit if there's a type error.
 ## Github Actions
 
 Create a `.github/workflows/checks.yml` file in the root of your repository and
-add the following:
+add the following.
 
 ```sh
 name: Checks
@@ -51,7 +52,7 @@ jobs:
         python-version: 3.x
     - run: |
         pip install --upgrade pip
-        pip install black==21.6b0
+        pip install mypy==v0.902
         mypy --disallow-untyped-defs --disallow-untyped-calls --check-untyped-defs mypackage
 ```
 
