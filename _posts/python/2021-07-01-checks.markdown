@@ -29,10 +29,9 @@ Here are the tools I use.
     it's not negotiable - developers must format their code if they want to
     contribute to the project.
 
-    It's important to choose a specific Black version to use and be consistent
-    with it. The version you use everywhere must be the same so there are no
-    inconsistencies. The formatting often changes between Black versions, so
-    what's considered "formatted" in one version may not be in another.
+    It's important to choose a specific Black version and be consistent with
+    it. The formatting often changes between Black versions, so what's
+    considered "formatted" in one version may not be in another.
 
     If you have an existing project with unformatted code, _format the entire
     codebase all at once_. Don't do it gradually.
