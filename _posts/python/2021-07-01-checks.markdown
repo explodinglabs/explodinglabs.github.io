@@ -4,11 +4,12 @@ category: python
 title: |
     How to run Black, Pylint and Mypy in pre-commit hooks, Github Actions and
     deployments
-permalink: /checks
+permalink: /python/checks
 redirect_from:
     - /pylint
     - /mypy
     - /black
+    - /checks
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)
