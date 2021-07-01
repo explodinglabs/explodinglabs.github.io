@@ -23,34 +23,20 @@ should be the first action to take_.
 
 Here are the tools I use.
 
-1. **Black code formatter**
+1. **Black** - I like to enforce code formatting. Some find this a step too far
+   but to me it's not negotiable - developers must format their code if they
+   want to contribute to the project.
 
-    I like to enforce code formatting. Some find this a step too far but to me
-    it's not negotiable - developers must format their code if they want to
-    contribute to the project.
+2. **Pylint** - A linter can check for many problems, but my go-to is always
+   the "unused import" rule which ensures nothing is imported that isn't used.
 
-    It's important to choose a specific Black version and be consistent with
-    it. The formatting often changes between Black versions, so what's
-    considered "formatted" in one version may not be in another.
-
-    If you have an existing project with unformatted code, _format the entire
-    codebase all at once_. Don't do it gradually.
-
-2. **Pylint linter**
-
-    A linter can check for many problems, but my go-to is always the "unused
-    import" rule which ensures nothing is imported that isn't used. If you want
-    to use more rules, adjust the command accordingly.
-
-3. **Mypy type checker**
-
-    Python is a dynamically typed language but recent versions allow type
-    annotations which is better than nothing. A separate tool needs to be run
-    to check for type errors. I use Mypy.
+3. **Mypy** - Python is a dynamically typed language but recent versions allow
+   type annotations which is better than nothing. A separate tool needs to be
+   run to check for type errors. I use Mypy.
 
 A fourth is **Pytest**, but this can take some time to run so I run it manually
-and not automated. Though I do include it in deployment scripts as we can't
-allow deployments unless tests are passing.
+and not automated. The exception being in deployment scripts - we can't allow
+deployments unless tests are passing.
 
 ## Pre-commit hooks
 
@@ -138,6 +124,14 @@ pytest /path/to/tests
 Each of the commands will exit with a non-zero status if they find a problem,
 which will abort the script and should fail your build.
 
+## Footnotes
+
+- It's important to choose a specific Black version and be consistent with it.
+  The formatting often changes between Black versions, so what's considered
+  "formatted" in one version may not be in another.
+
+- If you have an existing project with unformatted code, _format the entire
+  codebase all at once_. Don't do it gradually.
 
 ## See also
 
