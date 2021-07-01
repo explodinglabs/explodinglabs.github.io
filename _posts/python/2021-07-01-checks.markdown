@@ -31,8 +31,8 @@ Here are the tools I use.
    the "unused import" rule which ensures nothing is imported that isn't used.
 
 3. **Mypy** - Python is a dynamically typed language but recent versions allow
-   type annotations which is better than nothing. A separate tool needs to be
-   run to check for type errors. I use Mypy.
+   type annotations which is better than nothing. A separate tool is needed to
+   check for type errors. I use Mypy.
 
 A fourth is **Pytest**, but this can take some time to run so I run it manually
 and not automated. The exception being in deployment scripts - we can't allow
