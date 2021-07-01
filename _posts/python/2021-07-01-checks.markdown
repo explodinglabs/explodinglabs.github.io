@@ -135,4 +135,4 @@ which will abort the script and should fail your build.
 
 ## See also
 
-- [How to format Python code from Vim with Black](/black-vim)
+- [Install Black in Vim 8 and format when saving](/black-vim)
