@@ -1,21 +1,22 @@
 ---
 layout: post
 category: python
-title: Use Pylint in pre-commit hooks and CI/CD
+title: Use Pylint in pre-commit hooks, Github Actions and continuous integration
 permalink: /pylint
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)
 </div>
 
-Pylint can check for many problems, but personally I only use the
-`unused-import` rule which ensures nothing is imported that isn't used. If you
-want to use more rules, adjust the below commands accordingly.
+Pylint can check for many problems, but my first go-to with linters is always
+the `unused-import` rule which ensures nothing is imported that isn't used. If
+you want to use more rules, adjust the below commands accordingly.
 
 ## Pre-commit hooks
 
-Add to the `.pre-commit-config.yaml` file in the root of your repository,
-_replacing v2.4.2 with the Pylint version you want to use._
+Install [pre-commit](https://pre-commit.com).
+
+Add to the `.pre-commit-config.yaml` file in the root of your repository:
 
 ```yaml
 repos:
@@ -26,6 +27,11 @@ repos:
         args: [--disable=all, --enable=unused-import]
 ```
 
+Install your git hooks:
+```sh
+pre-commit install  # or "autoupdate" if you've already installed previously.
+```
+
 This will abort a commit if an import isn't used.
 
 ## CI/CD
@@ -34,8 +40,13 @@ To fail the build if Pylint finds an error, add the following to your build
 scripts.
 
 ```sh
-pylint --disable=all --enable=unused-import /path/to/code/**/*.py
+pylint --disable=all --enable=unused-import /path/to/code
 ```
 
 Pylint will exit with a non-zero exit status if it finds an error, which should
-fail your build.
+fail the build.
+
+## See also
+
+- [Use Black in Vim, pre-commit hooks, Github Actions and continuous integration](/black)
+- [Use Mypy in pre-commit hooks, Github Actions and continuous integration](/mypy)

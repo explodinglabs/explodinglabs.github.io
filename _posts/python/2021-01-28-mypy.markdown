@@ -29,6 +29,8 @@ Install your git hooks:
 pre-commit install  # or "autoupdate" if you've already installed previously.
 ```
 
+This will abort a commit if there's a type error.
+
 ## Github Actions
 
 Create a `.github/workflows/checks.yml` file in the root of your repository and
@@ -68,4 +70,4 @@ fail the build.
 ## See also
 
 - [Use Black in Vim, pre-commit hooks, Github Actions and continuous integration](/black)
-- [Use Pylint in pre-commit hooks, Github Actions and continuout integration](/pylint)
+- [Use Pylint in pre-commit hooks, Github Actions and continuous integration](/pylint)
