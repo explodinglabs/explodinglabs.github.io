@@ -73,7 +73,7 @@ repos:
 
 Install them as git hooks:
 ```sh
-pre-commit install  # or "autoupdate" if you've already installed previously.
+pre-commit install
 ```
 
 ## Github Actions
