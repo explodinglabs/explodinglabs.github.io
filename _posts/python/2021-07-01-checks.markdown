@@ -15,8 +15,11 @@ redirect_from:
 </div>
 
 Python's not the strictest language, so to have any confidence in your code you
-need to hit it with a barrage of checks. Here are the tools I run at various
-stages to ensure Python code is somewhat OK before deploying.
+need to hit it with a barrage of checks, run at various stages, to ensure the
+code at least meets some standard of quality. When taking on a new or existing
+project, _setting up these checks should be the first action to take_.
+
+Here are the tools I use.
 
 1. **Black** (code formatter)
 
