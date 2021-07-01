@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: Use Mypy in pre-commit hooks and CI/CD
+title: How to use Mypy in pre-commit hooks, Github Actions and continuous integration
 permalink: /mypy
 ---
 <div class="wide-logos" markdown="1">
@@ -29,9 +29,33 @@ Install your git hooks:
 pre-commit install  # or "autoupdate" if you've already installed previously.
 ```
 
-## CI/CD
+## Github Actions
 
-To fail the build if Mypy finds an type error, add the following to your build
+Create a `.github/workflows/checks.yml` file in the root of your repository and
+add the following:
+
+```sh
+name: Checks
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Checks
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+    - run: |
+        pip install --upgrade pip
+        pip install black==21.6b0
+        mypy --disallow-untyped-defs --disallow-untyped-calls --check-untyped-defs mypackage
+```
+
+## Continuous Integration
+
+To fail the build if Mypy finds an type error, simply call mypy in your build
 script.
 
 ```sh
@@ -39,9 +63,9 @@ mypy --disallow-untyped-calls --disallow-untyped-defs --check-untyped-defs /path
 ```
 
 Mypy will exit with a non-zero exit status if it finds an error, which should
-fail your build.
+fail the build.
 
 ## See also
 
-- [Use Black in Vim, pre-commit hooks and CI/CD](/black)
-- [Use Pylint in pre-commit hooks and CI/CD](/pylint)
+- [Use Black in Vim, pre-commit hooks, Github Actions and continuous integration](/black)
+- [Use Pylint in pre-commit hooks, Github Actions and continuout integration](/pylint)
