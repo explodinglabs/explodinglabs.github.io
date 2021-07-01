@@ -1,0 +1,28 @@
+---
+layout: post
+category: python
+title: Install Black in Vim 8 and format when saving
+permalink: /black-vim
+redirect_from:
+    - /pylint
+    - /mypy
+    - /black
+---
+<div class="wide-logos" markdown="1">
+![python](/assets/python.png)
+</div>
+
+This method of installing Black uses the built-in plugin management in Vim 8+.
+
+```sh
+sudo rm -rf ~/.vim/black
+mkdir -p ~/.vim/pack/start/black/plugin
+curl https://raw.githubusercontent.com/psf/black/21.6b0/plugin/black.vim -o ~/.vim/pack/start/black/plugin/black.vim
+```
+
+Next time you open a Python file in Vim, Black will install.
+
+Add the following to `~/.vimrc` to format with Black every time you save.
+```
+autocmd BufWritePre *.py execute ':Black'
+```

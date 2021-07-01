@@ -1,0 +1,138 @@
+---
+layout: post
+category: python
+title: |
+    How to run checks (Black, Pylint, Mypy, Pytest) in pre-commit hooks, Github
+    Actions and deployments
+permalink: /checks
+redirect_from:
+    - /pylint
+    - /mypy
+    - /black
+---
+<div class="wide-logos" markdown="1">
+![python](/assets/python.png)
+</div>
+
+Python's not the strictest language, so to have any confidence in your code you
+need to hit it with a barrage of checks. Here are the tools I run at various
+stages to ensure Python code is somewhat OK before deploying.
+
+1. **Black** (code formatter)
+
+    I like to enforce code formatting. Some find this a step too far but to me
+    it's not negotiable - developers must format their code if they want to
+    contribute to the project.
+
+    It's important to choose a specific Black version to use and be consistent
+    with it. The version you use everywhere must be the same so there are no
+    inconsistencies. The formatting often changes between Black versions, so
+    what's considered "formatted" in one version may not be in another.
+
+    If you have an existing project with unformatted code, _format the entire
+    codebase all at once_. Don't do it gradually.
+
+2. **Pylint** (linter)
+
+    A linter can check for many problems, but my go-to is always the "unused
+    import" rule which ensures nothing is imported that isn't used. If you want
+    to use more rules, adjust the command accordingly.
+
+3. **Mypy** (type checker)
+
+    Python is a dynamically typed language but recent versions allow gradual
+    typing which is better than nothing. A separate tool needs to be run to
+    check for type errors. I use Mypy.
+
+A fourth would be _Pytest_, but this can take some time to run, so maybe only
+run this manually, or only in the build script before deploying.
+
+## Pre-commit hooks
+
+This is the first place to setup the checks because it doesn't impact others.
+It runs the checks locally on your development machine when you try to commit.
+
+Install [pre-commit](https://pre-commit.com).
+
+Add the following `.pre-commit-config.yaml` file to the root of your
+repository.
+
+```yaml
+repos:
+  - repo: https://github.com/ambv/black
+    rev: 21.6b0
+    hooks:
+      - id: black
+        args: [--diff, --check]
+
+  - repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v3.0.0a3
+    hooks:
+      - id: pylint
+        args: [--disable=all, --enable=unused-import]
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.902
+    hooks:
+      - id: mypy
+        exclude: ^tests/
+        args: [--disallow-untyped-defs, --disallow-untyped-calls, --check-untyped-defs]
+```
+
+Install the git hooks:
+```sh
+pre-commit install  # or "autoupdate" if you've already installed previously.
+```
+
+## Github Actions
+
+This will run the checks when a Github pull request is created, allowing a
+reviewer to see any potential issues straight up before beginning their review
+and deciding whether the change should be merged.
+
+Add the following to your repository in `.github/workflows/checks.yml`.
+
+```sh
+name: Checks
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Checks
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+    - run: |
+        pip install --upgrade pip
+        pip install black==21.6b0 pylint==v3.0.0a3 mypy==v0.902
+        black --diff --check mypackage
+        pylint --disable=all --enable=unused-import mypackage
+        mypy --disallow-untyped-defs --disallow-untyped-calls --check-untyped-defs mypackage
+```
+
+## Deployments
+
+This is the most important place to run the checks because it's the last line
+of defense, so if you only run these checks in one place, make it here.
+
+Run the commands in your build script, before deploying, to fail the deployment
+if the checks don't pass.
+
+```sh
+set -e  # Stop on any error (you can also set this in the shebang)
+black --diff --check /path/to/code
+pylint --disable=all --enable=unused-import /path/to/code
+mypy --disallow-untyped-calls --disallow-untyped-defs --check-untyped-defs /path/to/code
+pytest /path/to/tests
+```
+
+Each of the commands will exit with a non-zero status if they find a problem,
+which will abort the script and should fail your build.
+
+
+## See also
+
+- [How to format Python code from Vim with Black](/black-vim)
