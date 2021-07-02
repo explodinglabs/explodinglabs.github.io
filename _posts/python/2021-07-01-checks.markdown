@@ -18,7 +18,7 @@ Python's not the strictest language, so to have any confidence in your code you
 need to hit it with a barrage of checks to ensure the code at least meets some
 level of quality.
 
-The tools I use are Black, Pylint and Mypy. A fourth is Pytest, but this can take some time to run so I run it manually
+The tools I use are Black, Pylint and Mypy. A fourth is Pytest, but this can take some time to run so I run it manually,
 and not automated - the exception being in deployment scripts (we can't allow
 deployments if tests are failing).
 
