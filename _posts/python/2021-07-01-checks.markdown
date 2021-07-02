@@ -2,7 +2,7 @@
 layout: post
 category: python
 title: |
-    How to run Black, Pylint and Mypy in pre-commit hooks, Github Actions and
+    How to run Black, Pylint, Mypy and Pytest in pre-commit hooks, Github Actions and
     deployments
 permalink: /checks
 redirect_from:
