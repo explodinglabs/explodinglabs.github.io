@@ -31,6 +31,9 @@ This is a good first place to setup the checks because it doesn't impact
 others. It runs the checks locally on your development machine when you try to
 commit.
 
+It's more important to have checks in a central location, but still install
+these locally to get fast feedback. 
+
 Install [pre-commit](https://pre-commit.com).
 
 Add the following `.pre-commit-config.yaml` file to the root of your
