@@ -50,6 +50,8 @@ Add the following `.pre-commit-config.yaml` file to the root of your
 repository.
 
 ```yaml
+fail_fast: true
+
 repos:
   - repo: https://github.com/ambv/black
     rev: 21.6b0
@@ -104,6 +106,13 @@ jobs:
         pylint --disable=all --enable=unused-import mypackage
         mypy --disallow-untyped-defs --disallow-untyped-calls --check-untyped-defs mypackage
 ```
+
+I recommend requiring these checks to pass before allowing a pull request to be
+merged. This can be done in the Github repository's settings under `Settings >
+Branches > Branch protection rules`. Click `Add rule`, enter a name under
+Branch name pattern ("Checks"), tick "Require status checks to pass before
+merging".  Search for "checks" in the search bar, and select it. Then click
+`Add rule`.
 
 ## Deployments
 
