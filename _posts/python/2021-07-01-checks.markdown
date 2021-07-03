@@ -96,12 +96,6 @@ jobs:
         mypy --disallow-untyped-defs --disallow-untyped-calls --check-untyped-defs mypackage
 ```
 
-I recommend requiring these checks to pass before allowing a pull request to be
-merged. This can be done in the Github repository's settings under `Settings >
-Branches > Branch protection rules`. Click `Add rule`, type a Branch name
-pattern (e.g. "master"), tick "Require status checks to pass before merging".
-Search for "checks" in the search bar, and select it. Then click `Add rule`.
-
 ## Deployments
 
 This is the most important place to run the checks because it's the last line
