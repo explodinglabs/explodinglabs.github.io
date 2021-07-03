@@ -2,7 +2,7 @@
 layout: post
 category: python
 title: |
-    How to run Black, Pylint and Mypy in pre-commit hooks, Github Actions and
+    How to run Black, Pylint, Mypy and Pytest in pre-commit hooks, Github Actions and
     deployments
 permalink: /checks
 redirect_from:
@@ -18,31 +18,21 @@ Python's not the strictest language, so to have any confidence in your code you
 need to hit it with a barrage of checks to ensure the code at least meets some
 level of quality.
 
+The tools I use are Black, Pylint and Mypy. A fourth is Pytest, but this can take some time to run so I run it manually,
+and not automated - the exception being in deployment scripts (we can't allow
+deployments if tests are failing).
+
 When taking on a new or existing project, _setting up these automated checks
 should be the first action to take_.
-
-Here are the tools I use.
-
-1. **Black** - I like to enforce code formatting. Some find this a step too far
-   but to me it's not negotiable - developers must format their code if they
-   want to contribute to the project.
-
-2. **Pylint** - A linter can check for many problems, but my go-to is always
-   the "unused import" rule which ensures nothing is imported that isn't used.
-
-3. **Mypy** - Python is a dynamically typed language but recent versions allow
-   type annotations which is better than nothing. A separate tool is needed to
-   check for type errors. I use Mypy.
-
-A fourth is **Pytest**, but this can take some time to run so I run it manually
-and not automated. The exception being in deployment scripts - we can't allow
-deployments unless tests are passing.
 
 ## Pre-commit hooks
 
 This is a good first place to setup the checks because it doesn't impact
 others. It runs the checks locally on your development machine when you try to
 commit.
+
+It's more important to have checks in a central location, but still install
+these locally to get fast feedback. 
 
 Install [pre-commit](https://pre-commit.com).
 
@@ -81,8 +71,7 @@ pre-commit install
 ## Github Actions
 
 This will run the checks when a pull request is created, allowing a
-reviewer to see any potential issues straight up before beginning their review
-and deciding whether the change should be merged.
+reviewer to see any potential issues straight up before beginning their review.
 
 Add the following to your repository in `.github/workflows/checks.yml`.
 
@@ -117,10 +106,9 @@ merging".  Search for "checks" in the search bar, and select it. Then click
 ## Deployments
 
 This is the most important place to run the checks because it's the last line
-of defense, so if you only run these checks in one place, make it here.
+of defence, so if you only run these checks in only one place, make it here.
 
-Run the commands in your build script, before deploying, to fail the deployment
-if the checks don't pass.
+Put the commands in your build script, before deploying. 
 
 ```sh
 set -e  # Stop on any error (you can also set this in the shebang)
