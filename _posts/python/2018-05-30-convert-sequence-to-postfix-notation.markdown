@@ -20,8 +20,7 @@ Use `collections.namedtuple`.
 ```python
 >>> from collections import namedtuple
 >>> data = (1, 'foo')
->>> Obj = namedtuple('Obj', ['id', 'name'])
->>> obj = Obj(*data)
+>>> obj = namedtuple('Obj', ['id', 'name'])(*data)
 >>> obj.name
 'foo'
 ```
@@ -33,8 +32,7 @@ Use `types.SimpleNamespace`.
 ```python
 >>> from types import SimpleNamespace
 >>> data = (1, 'foo')
->>> dictionary = dict(zip(['id', 'name'], data))
->>> obj = SimpleNamespace(**dictionary)
+>>> obj = SimpleNamespace(**dict(zip(['id', 'name'], data)))
 >>> obj.name
 'foo'
 ```
