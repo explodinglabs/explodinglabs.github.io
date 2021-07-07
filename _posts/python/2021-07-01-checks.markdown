@@ -18,7 +18,11 @@ Python's not the strictest language, so to have any confidence in your code you
 need to hit it with a barrage of checks to ensure the code at least meets some
 level of quality.
 
-The tools I use are Black, to ensure code is formatted, Pylint, to ensure nothing is imported that isn't used, and Mypy for type checking.
+The tools I use are
+- Black, to ensure code is formatted
+- Pylint, to ensure nothing is imported that isn't used, and
+- Mypy for type checking.
+
 A fourth is Pytest (unit test runner), but this can take some time to run so I run it manually,
 and not automated - the exception being in deployment scripts (we can't allow
 deployments if tests are failing).
@@ -28,12 +32,8 @@ should be the first action to take_.
 
 ## Pre-commit hooks
 
-This is a good first place to setup the checks because it doesn't impact
-others. It runs the checks locally on your development machine when you try to
+This runs the checks locally on your development machine when you try to
 commit.
-
-It's more important to have checks in a central location, but still install
-these locally to get fast feedback. 
 
 Install [pre-commit](https://pre-commit.com).
 
