@@ -19,13 +19,13 @@ need to hit it with a barrage of checks to ensure the code at least meets some
 level of quality.
 
 The tools I use are
-- Black, to ensure code is formatted
-- Pylint, to ensure nothing is imported that isn't used, and
-- Mypy for type checking.
+- **Black**, to ensure code is formatted
+- **Pylint**, to ensure nothing is imported that isn't used, and
+- **Mypy** for type checking.
 
-A fourth is Pytest (unit test runner), but this can take some time to run so I run it manually,
-and not automated - the exception being in deployment scripts (we can't allow
-deployments if tests are failing).
+A fourth is **Pytest** (unit test runner), but this can take some time to run
+so I run it manually, and not automated - the exception being in deployment
+scripts (we can't allow deployments if tests are failing).
 
 When taking on a new or existing project, _setting up these automated checks
 should be the first action to take_.
