@@ -20,7 +20,7 @@ level of quality.
 
 The tools I use are
 - **Black**, to ensure code is formatted
-- **Pylint**, to ensure nothing is imported that isn't used, and
+- **Pylint**, to ensure there are no unused imports, and
 - **Mypy** for type checking.
 
 A fourth is **Pytest** (unit test runner), but this can take some time to run
