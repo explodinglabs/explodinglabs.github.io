@@ -10,7 +10,7 @@ Compose
 (>=>) :: (a -> m b) -> (b -> m c) -> (a -> m c)
 ```
 
-Apply
+Map, apply, bind
 ```haskell
 fmap :: (a -> b)   -> f a        -> f b
 ap   :: f (a -> b) -> f a        -> f b
