@@ -26,7 +26,6 @@ tox  # Continue below while this is running
 ```
 
 Update version in setup.py  
-Update supported Python versions in setup.py  
 Update CHANGELOG.md  
 Update documentation.  
 
@@ -40,10 +39,10 @@ git push --tags
 
 Create the sdist and upload it:
 ```
-pip install -U pip setuptools twine
+pip install --upgrade pip setuptools twine
 python setup.py sdist
-twine check dist/*
-twine upload dist/*
+twine check dist/my_package-x.x.x.tar.gz
+twine upload dist/my_package-x.x.x.tar.gz
 ```
 
 Update coverage badge:
