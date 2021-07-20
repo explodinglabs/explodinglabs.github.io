@@ -14,10 +14,9 @@ PyPI.
 Run some checks/cleaning. If any fail, start again.
 _I recommend puttting these into pre-commit hooks._
 ```sh
+black --diff --check **/*.py
 pylint --disable=all --enable=unused-import **/*.py
-mypy --disallow-untyped-defs --strict-optional package
-isort -rc package
-black **/*.py
+mypy --strict package
 ```
 Run tests.
 ```sh
