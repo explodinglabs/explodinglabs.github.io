@@ -119,7 +119,7 @@ pytest /path/to/tests
 Each of the commands will exit with a non-zero status if they find a problem,
 which will abort the script and should fail your build.
 
-## Footnotes
+## Notes
 
 - It's important to choose a specific Black version and be consistent with it.
   The formatting often changes between Black versions, so what's considered
