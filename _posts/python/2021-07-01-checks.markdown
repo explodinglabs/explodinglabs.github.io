@@ -20,7 +20,7 @@ level of quality.
 
 The tools I use are
 - **Black**, to ensure code is formatted
-- **Pylint**, to ensure nothing is imported that isn't used, and
+- **Pylint**, I use this to disallow unused imports, and
 - **Mypy** for type checking.
 
 A fourth is **Pytest** (unit test runner), but this can take some time to run
@@ -61,7 +61,7 @@ repos:
     hooks:
       - id: mypy
         exclude: ^tests/
-        args: [--disallow-untyped-defs, --disallow-untyped-calls, --check-untyped-defs]
+        args: [--strict]
 ```
 
 Install them as git hooks:
@@ -94,7 +94,7 @@ jobs:
         pip install black==21.6b0 pylint==v3.0.0a3 mypy==v0.902
         black --diff --check mypackage
         pylint --disable=all --enable=unused-import mypackage
-        mypy --disallow-untyped-defs --disallow-untyped-calls --check-untyped-defs mypackage
+        mypy --strict mypackage
 ```
 
 Even though we're running the same checks as in pre-commit, this can actually
@@ -112,7 +112,7 @@ Put the commands in your build script, before deploying.
 set -e  # Stop on any error (you can also set this in the shebang)
 black --diff --check /path/to/code
 pylint --disable=all --enable=unused-import /path/to/code
-mypy --disallow-untyped-calls --disallow-untyped-defs --check-untyped-defs /path/to/code
+mypy --strict /path/to/code
 pytest /path/to/tests
 ```
 
