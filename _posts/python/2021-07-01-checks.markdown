@@ -103,8 +103,9 @@ but forgotten to add it to the repository.
 
 ## Deployments
 
-This will run final checks before deploying. It's the most important place to
-run the checks because it's the last line of defense.
+This will run final checks before deploying. These are the most important
+checks because this is your last line of defense. These checks should not be
+skippable.
 
 Put the commands in your build script, before deploying.
 
