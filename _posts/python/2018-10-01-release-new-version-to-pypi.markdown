@@ -11,13 +11,9 @@ permalink: /python/release-to-pypi
 These are the steps I take when releasing a version of my Python package to
 PyPI.
 
-Run some checks/cleaning. If any fail, start again.
-_I recommend puttting these into pre-commit hooks._
-```sh
-black --diff --check **/*.py
-pylint --disable=all --enable=unused-import **/*.py
-mypy --strict package
-```
+First run your checks/cleaning. I have a post about this [here](/checks). If
+any fail, start again.
+
 Run tests.
 ```sh
 pytest
