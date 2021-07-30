@@ -17,8 +17,7 @@ any fail, start again.
 Run tests.
 ```sh
 pytest
-rm -r .tox
-tox  # Continue below while this is running
+rm -r .tox; tox  # Continue below while this is running
 ```
 
 Update version in setup.py  
