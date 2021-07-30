@@ -20,17 +20,14 @@ pytest
 rm -r .tox; tox  # Continue below while this is running
 ```
 
-Update version in setup.py  
-Update CHANGELOG.md  
-Update documentation.  
+In a new branch:
+- Update version in setup.py
+- Update CHANGELOG.md
+- Update documentation.
 
-Commit:
-```sh
-git commit
-git push
-git tag (version)
-git push --tags
-```
+Commit, push and merge.
+
+Tag the commit and push the tag.
 
 Create the sdist and upload it:
 ```
