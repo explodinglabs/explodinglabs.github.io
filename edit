@@ -5,5 +5,5 @@ found=$(find _posts/$1 -name "*$2*.markdown")
 if [[ $found ]]; then
     vim $(echo "$found" | head -n1)
 else
-    vim -c ':r ~/.vim/templates/post.markdown' "_posts/$1/$(date +%Y-%m-%d)-$2.markdown"
+    vim -c ':r _templates/post.markdown' "_posts/$1/$(date +%Y-%m-%d)-$2.markdown"
 fi
