@@ -14,31 +14,36 @@ We'll use Websockets to take [JSON-RPC](http://www.jsonrpc.org/) requests. It
 should respond to "ping" with "pong".
 
 Install [websockets](http://websockets.readthedocs.io/) to take requests and
-[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
+[jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
 $ pip install websockets jsonrpcserver
 ```
+
 Create a `server.py`:
 
 ```python
 import asyncio
+
+from jsonrpcserver import method, Success, Result, async_dispatch
 import websockets
-from jsonrpcserver import method, async_dispatch as dispatch
+
 
 @method
-async def ping():
-    return "pong"
+async def ping() -> Result:
+    return Success("pong")
+
 
 async def main(websocket, path):
-    response = await dispatch(await websocket.recv())
-    if response.wanted:
-        await websocket.send(str(response))
+    if response := await async_dispatch(await websocket.recv()):
+        await websocket.send(response)
+
 
 start_server = websockets.serve(main, "localhost", 5000)
 asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever()
 ```
+
 Start the server:
 
 ```sh
@@ -47,7 +52,7 @@ $ python server.py
 
 ## Client
 
-Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
+Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
 
 ```sh
 $ pip install "jsonrpcclient[websockets]"

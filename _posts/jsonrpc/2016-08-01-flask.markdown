@@ -15,32 +15,37 @@ We'll use [Flask](http://flask.pocoo.org) to take
 "pong".
 
 Install Flask to take requests and
-[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
+[jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
 $ pip install flask jsonrpcserver
 ```
+
 Create a `server.py`:
 
 ```python
-from flask import Flask, request, Response
-from jsonrpcserver import method, dispatch
+from flask import Flask, Response, request
+from jsonrpcserver import method, Result, Success, dispatch
 
 app = Flask(__name__)
 
+
 @method
-def ping():
-    return "pong"
+def ping() -> Result:
+    return Success("pong")
+
 
 @app.route("/", methods=["POST"])
 def index():
-    req = request.get_data().decode()
-    response = dispatch(req)
-    return Response(str(response), response.http_status, mimetype="application/json")
+    return Response(
+        dispatch(request.get_data().decode()), content_type="application/json"
+    )
+
 
 if __name__ == "__main__":
     app.run()
 ```
+
 Start the server:
 
 ```sh
@@ -52,7 +57,7 @@ $ python server.py
 
 ## Client
 
-Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
+Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
 
 ```sh
 $ pip install "jsonrpcclient[requests]"

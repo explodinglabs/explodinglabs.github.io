@@ -16,7 +16,7 @@ We'll use [ZeroMQ](http://zeromq.org) to take
 "ping" with "pong".
 
 Install [aiozmq](https://aiozmq.readthedocs.io/) to take requests and
-[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
+[jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
 $ pip install aiozmq jsonrpcserver
@@ -24,26 +24,30 @@ $ pip install aiozmq jsonrpcserver
 Create a `server.py`:
 
 ```python
-import asyncio
+from jsonrpcserver import method, Result, Success, async_dispatch
 import aiozmq
+import asyncio
 import zmq
-from jsonrpcserver import method, async_dispatch as dispatch
+
 
 @method
-async def ping():
-    return "pong"
+async def ping() -> Result:
+    return Success("pong")
+
 
 async def main():
     rep = await aiozmq.create_zmq_stream(zmq.REP, bind="tcp://*:5000")
     while True:
-        request = await rep.read()
-        response = await dispatch(request[0].decode())
-        rep.write((str(response).encode(),))
+        request = (await rep.read())[0].decode()
+        if response := (await async_dispatch(request)).encode():
+            rep.write((response,))
+
 
 if __name__ == "__main__":
     asyncio.set_event_loop_policy(aiozmq.ZmqEventLoopPolicy())
     asyncio.get_event_loop().run_until_complete(main())
 ```
+
 Start the server:
 
 ```sh
@@ -52,7 +56,7 @@ $ python server.py
 
 ## Client
 
-Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
+Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
 
 ``` shell
 $ pip install "jsonrpcclient[pyzmq]"

@@ -18,7 +18,7 @@ We'll use [Socket.IO](http://socket.io/) to take
 Install [Flask](http://flask.pocoo.org),
 [Flask-SocketIO](https://flask-socketio.readthedocs.org/) and
 [eventlet](http://eventlet.net/) to take requests and
-[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
+[jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
 $ pip install flask flask-socketio eventlet jsonrpcserver
@@ -28,24 +28,27 @@ Create a `server.py`:
 ```python
 from flask import Flask
 from flask_socketio import SocketIO, send
-from jsonrpcserver import method, dispatch
+from jsonrpcserver import method, Result, Success, dispatch
 
 app = Flask(__name__)
 socketio = SocketIO(app)
 
+
 @method
-def ping():
-    return "pong"
+def ping() -> Result:
+    return Success("pong")
+
 
 @socketio.on("message")
 def handle_message(request):
-    response = dispatch(request)
-    if response.wanted:
+    if response := dispatch(request):
         send(response, json=True)
+
 
 if __name__ == "__main__":
     socketio.run(app, port=5000)
 ```
+
 Start the server:
 
 ```sh

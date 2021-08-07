@@ -15,30 +15,34 @@ We'll use [Werkzeug](http://werkzeug.pocoo.org) to take
 'pong'.
 
 Install Werkzeug to take requests and
-[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
+[jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ``` shell
 $ pip install werkzeug jsonrpcserver
 ```
+
 Create a `server.py`:
 
 ```python
-from werkzeug.wrappers import Request, Response
+from jsonrpcserver import method, Result, Success, dispatch
 from werkzeug.serving import run_simple
-from jsonrpcserver import method, dispatch
+from werkzeug.wrappers import Request, Response
+
 
 @method
-def ping():
-    return "pong"
+def ping() -> Result:
+    return Success("pong")
+
 
 @Request.application
 def application(request):
-    response = dispatch(request.data.decode())
-    return Response(str(response), response.http_status, mimetype="application/json")
+    return Response(dispatch(request.data.decode()), 200, mimetype="application/json")
+
 
 if __name__ == "__main__":
     run_simple("localhost", 5000, application)
 ```
+
 Start the server:
 
 ``` shell
@@ -48,7 +52,7 @@ $ python server.py
 
 ## Client
 
-Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
+Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
 
 ```sh
 $ pip install "jsonrpcclient[requests]"

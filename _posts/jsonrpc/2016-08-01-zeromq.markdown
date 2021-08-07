@@ -16,7 +16,7 @@ We'll use [ZeroMQ](http://zeromq.org) to take
 "pong".
 
 Install [pyzmq](https://pyzmq.readthedocs.io/) to take requests and
-[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
+[jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ``` shell
 $ pip install pyzmq jsonrpcserver
@@ -24,22 +24,24 @@ $ pip install pyzmq jsonrpcserver
 Create a `server.py`:
 
 ```python
+from jsonrpcserver import method, Result, Success, dispatch
 import zmq
-from jsonrpcserver import method, dispatch
 
 socket = zmq.Context().socket(zmq.REP)
 
+
 @method
-def ping():
-    return "pong"
+def ping() -> Result:
+    return Success("pong")
+
 
 if __name__ == "__main__":
     socket.bind("tcp://*:5000")
     while True:
         request = socket.recv().decode()
-        response = dispatch(request)
-        socket.send_string(str(response))
+        socket.send_string(dispatch(request))
 ```
+
 Start the server:
 
 ``` shell
@@ -48,7 +50,7 @@ $ python ./server.py
 
 ## Client
 
-Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
+Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
 
 ``` shell
 $ pip install "jsonrpcclient[pyzmq]"

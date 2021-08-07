@@ -15,7 +15,7 @@ We'll use [aiohttp](http://aiohttp.readthedocs.io/) to take
 "pong".
 
 Install aiohttp to take requests and
-[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
+[jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
 $ pip install aiohttp jsonrpcserver
@@ -24,19 +24,19 @@ Create a `server.py`:
 
 ```python
 from aiohttp import web
-from jsonrpcserver import method, async_dispatch as dispatch
+from jsonrpcserver import method, Result, Success, async_dispatch
+
 
 @method
-async def ping():
-    return "pong"
+async def ping() -> Result:
+    return Success("pong")
+
 
 async def handle(request):
-    request = await request.text()
-    response = await dispatch(request)
-    if response.wanted:
-        return web.json_response(response.deserialized(), status=response.http_status)
-    else:
-        return web.Response()
+    return web.Response(
+        text=await async_dispatch(await request.text()), content_type="application/json"
+    )
+
 
 app = web.Application()
 app.router.add_post("/", handle)
@@ -44,6 +44,7 @@ app.router.add_post("/", handle)
 if __name__ == "__main__":
     web.run_app(app, port=5000)
 ```
+
 Start the server:
 
 ```sh
@@ -54,7 +55,7 @@ $ python server.py
 
 ## Synchronous client
 
-Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
+Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
 
 ```sh
 $ pip install "jsonrpcclient[requests]"

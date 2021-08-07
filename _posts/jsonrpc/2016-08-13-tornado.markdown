@@ -15,7 +15,7 @@ We'll use [Tornado](http://www.tornadoweb.org/) to take
 "pong".
 
 Install Tornado to take requests and
-[jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process them:
+[jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
 $ pip install tornado jsonrpcserver
@@ -23,22 +23,20 @@ $ pip install tornado jsonrpcserver
 Create a `server.py`:
 
 ```python
+from jsonrpcserver import method, Result, Success, async_dispatch
 from tornado import ioloop, web
-from jsonrpcserver import method, async_dispatch as dispatch
 
 
 @method
-async def ping():
-    return "pong"
+async def ping() -> Result:
+    return Success("pong")
 
 
 class MainHandler(web.RequestHandler):
-    async def post(self):
+    async def post(self) -> None:
         request = self.request.body.decode()
-        response = await dispatch(request)
-        print(response)
-        if response.wanted:
-            self.write(str(response))
+        if response := await async_dispatch(request):
+            self.write(response)
 
 
 app = web.Application([(r"/", MainHandler)])
@@ -47,6 +45,7 @@ if __name__ == "__main__":
     app.listen(5000)
     ioloop.IOLoop.current().start()
 ```
+
 Start the server:
 
 ```sh
@@ -55,7 +54,7 @@ $ python server.py
 
 ## Synchronous client
 
-Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests.
+Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests.
 
 ```sh
 $ pip install "jsonrpcclient[requests]"

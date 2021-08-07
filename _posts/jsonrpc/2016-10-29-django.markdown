@@ -14,30 +14,33 @@ We'll use [Django](hFlas://www.djangoproject.com/) to take
 [JSON-RPC](http://www.jsonrpc.org/) requests. It should respond to "ping" with
 "pong".
 
-Install [jsonrpcserver](http://jsonrpcserver.readthedocs.io/) to process the
+Install [jsonrpcserver](https://www.jsonrpcserver.com/) to process the
 JSON-RPC requests:
 
 ```sh
 $ pip install jsonrpcserver
 ```
+
 Create a `views.py`:
 
 ```python
-from django.http import JsonResponse
+from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from jsonrpcserver import method, dispatch
+from jsonrpcserver import method, Result, Success, dispatch
+
 
 @method
-def ping():
-    return "pong"
+def ping() -> Result:
+    return Success("pong")
+
 
 @csrf_exempt
 def jsonrpc(request):
-    response = dispatch(request.body.decode())
-    return JsonResponse(
-        response.deserialized(), status=response.http_status, safe=False
+    return HttpResponse(
+        dispatch(request.body.decode()), content_type="application/json"
     )
 ```
+
 Start the development server on port 5000:
 
 ```sh
@@ -53,7 +56,7 @@ Quit the server with CONTROL-C.
 
 ## Client
 
-Use [jsonrpcclient](http://jsonrpcclient.readthedocs.io/) to send requests:
+Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
 
 ```sh
 $ pip install "jsonrpcclient[requests]"
