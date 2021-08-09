@@ -10,17 +10,16 @@ a few important changes.
 
 Writing a method is the same as before except for the return value.
 
+You now return Success or Error.
+
 ```python
 @method
 def ping() -> Result:
     return Success("pong")
 ```
 
-For errors, return
-[Error](https://www.jsonrpcserver.com/en/latest/methods.html#responses).
-
-These return values are the JSON-RPC responses objects [see the
-specification](https://www.jsonrpc.org/specification#response_object), minus
+These return values are the JSON-RPC responses objects (see the 
+[specification](https://www.jsonrpc.org/specification#response_object)), minus
 the "jsonrpc" and "id" parts (the library takes care of those for you).
 
 ## Dispatch returns JSON
