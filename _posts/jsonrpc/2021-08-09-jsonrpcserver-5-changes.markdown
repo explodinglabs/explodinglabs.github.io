@@ -8,9 +8,7 @@ a few important changes.
 
 ## Methods return a Result
 
-Writing a method is the same as before except for the return value.
-
-You now return Success or Error.
+Writing a method is the same as before except for the return value which is now `Success` or `Error`.
 
 ```python
 @method
