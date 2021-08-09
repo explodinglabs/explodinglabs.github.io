@@ -48,8 +48,8 @@ dispatch(request, methods={"ping": lambda: Success("pong")})
 
 ## Logging removed
 
-The library will no longer log requests and responses. This can be done by the
-user. See [issue #152](https://github.com/bcb/jsonrpcserver/issues/152).
+The library will no longer log requests and responses. Logging can be done by the
+user, outside of the library. See [issue #152](https://github.com/bcb/jsonrpcserver/issues/152).
 
 ## Configuration file removed
 
