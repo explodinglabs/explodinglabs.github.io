@@ -40,8 +40,8 @@ back](https://www.jsonrpcserver.com/en/latest/async.html#notifications).
 
 ## Methods collection is now a dict
 
-There's an optional parameter to `dispatch` that allows you to
-specify which methods to dispatch to. This parameter remains, but the value
+There's an optional parameter to `dispatch` that lets you
+specify a collection of methods to dispatch to. This parameter remains, but the value
 which was previously an instance of a Methods class is now simply a `dict`.
 
 ```python
