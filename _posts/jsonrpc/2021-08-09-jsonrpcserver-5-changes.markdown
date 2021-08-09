@@ -18,8 +18,7 @@ def ping() -> Result:
     return Success("pong")
 ```
 
-These return values are the JSON-RPC responses objects (see the 
-[specification](https://www.jsonrpc.org/specification#response_object)), minus
+These return values are the [JSON-RPC responses objects](https://www.jsonrpc.org/specification#response_object), minus
 the "jsonrpc" and "id" parts (the library takes care of those for you).
 
 ## Dispatch returns JSON
