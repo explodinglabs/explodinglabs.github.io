@@ -49,7 +49,7 @@ The "trim log values" and "convert camel case" options have been removed.
 
 ## Configuration file removed
 
-Version 4 allowed you to configure the library with a config file, this has
+Version 4 allowed you to configure the library with a config file. This has
 been removed. Pass arguments to `dispatch` instead.
 
 ## Methods collection is now a dict
