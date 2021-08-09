@@ -45,8 +45,7 @@ specify a collection of methods to dispatch to. This parameter remains, but the 
 which was previously an instance of a Methods class is now simply a `dict`.
 
 ```python
->>> dispatch(request, methods={"ping": lambda: Success("pong")})
-'{"jsonrpc": "2.0", "result": "pong", "id": 1}'
+dispatch(request, methods={"ping": lambda: Success("pong")})
 ```
 
 ## Logging removed
