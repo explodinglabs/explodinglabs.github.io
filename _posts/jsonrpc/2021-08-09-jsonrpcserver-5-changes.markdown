@@ -25,8 +25,8 @@ the "jsonrpc" and "id" parts (the library takes care of those for you).
 ## Dispatch returns JSON
 
 Previously the `dispatch` function gave you an object which you had to apply
-`str()` to in order to get the json response. Now *you just get the json
-string*.
+`str()` to in order to get the json response. Now you just get the json
+string.
 
 ```python
 >>> dispatch('{"jsonrpc": "2.0", "method": "ping", "id": 1}')
