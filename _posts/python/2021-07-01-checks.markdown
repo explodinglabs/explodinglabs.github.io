@@ -23,7 +23,7 @@ The tools I use are
 - **Pylint**, I use this to disallow unused imports, and
 - **Mypy** for type checking.
 
-A fourth is **Pytest** (unit test runner), but this can take some time to run
+A fourth is **Pytest**, but this can take some time to run
 so I run it manually, and not automated - the exception being in deployment
 scripts (we can't allow deployments if tests are failing).
 
