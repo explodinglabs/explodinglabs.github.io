@@ -34,16 +34,6 @@ For notifications you get an empty string. For async protocols (sockets,
 message queues), [don't send the empty string
 back](https://www.jsonrpcserver.com/en/latest/async.html#notifications).
 
-## Methods collection is now a dict
-
-There's an optional parameter to `dispatch` that lets you
-specify a collection of methods to dispatch to. This parameter remains, but the value
-which was previously an instance of a Methods class is now simply a `dict`.
-
-```python
-dispatch(request, methods={"ping": lambda: Success("pong")})
-```
-
 ## Logging removed
 
 The library will no longer log requests and responses. Logging can be done by the
@@ -58,3 +48,12 @@ been removed. Pass arguments to `dispatch` instead.
 
 The "trim log values" and "convert camel case" options have been removed.
 
+## Methods collection is now a dict
+
+There's an optional parameter to `dispatch` that lets you
+specify a collection of methods to dispatch to. This parameter remains, but the value
+which was previously an instance of a Methods class is now simply a `dict`.
+
+```python
+dispatch(request, methods={"ping": lambda: Success("pong")})
+```
