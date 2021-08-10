@@ -3,8 +3,9 @@ layout: post
 title: Changes in jsonrpcserver 5
 permalink: /jsonrpcserver-5-changes
 ---
-Version 5 is a complete rebuild. The usage remains mostly the same except for
-a few important changes.
+Version 5 is a complete rebuild. The usage remains mostly the same except for a
+few important changes. For the full version 5 documentation, go
+[here](https://www.jsonrpcserver.com/en/latest/).
 
 ## Methods return a Result
 
