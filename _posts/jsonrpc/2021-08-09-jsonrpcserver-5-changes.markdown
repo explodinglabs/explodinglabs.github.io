@@ -1,8 +1,15 @@
 ---
 layout: post
+category: jsonrpc
 title: Changes in jsonrpcserver 5
 permalink: /jsonrpcserver-5-changes
 ---
+<div class="wide-logos" markdown="1">
+![flask](/assets/flask.png)
+![plus](/assets/plus.png)
+![json](/assets/json.png)
+</div>
+
 Version 5 is a complete rebuild. The usage remains mostly the same except for a
 few important changes. For the full version 5 documentation, go
 [here](https://www.jsonrpcserver.com/en/latest/).
