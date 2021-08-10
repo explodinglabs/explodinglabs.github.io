@@ -5,8 +5,6 @@ title: Changes in jsonrpcserver 5
 permalink: /jsonrpcserver-5-changes
 ---
 <div class="wide-logos" markdown="1">
-![flask](/assets/flask.png)
-![plus](/assets/plus.png)
 ![json](/assets/json.png)
 </div>
 
