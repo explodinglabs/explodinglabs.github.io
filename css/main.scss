@@ -223,11 +223,11 @@ blockquote {
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
     }
     @extend %clearfix;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+    padding-right: $spacing-unit * 2;
+    padding-left: $spacing-unit * 2;
     @include media-query($on-palm) {
-        padding-right: 15px;
-        padding-left: 15px;
+        padding-right: $spacing-unit;
+        padding-left: $spacing-unit;
     }
 }
 
