@@ -11,7 +11,7 @@ description: > # this means to ignore newlines until "baseurl:"
   ...
 email: beauinmelbourne@gmail.com
 future: true # Include posts with a date in the future
-github_username: bcb
+github_username: explodinglabs
 highlighter: rouge
 markdown: kramdown
 permalink: /:categories/:title
@@ -19,12 +19,12 @@ plugins:
     - jekyll-redirect-from
     - jekyll-sitemap
     - jekyll-seo-tag
-repository: bcb/bcb.github.io
+repository: explodinglabs/explodinglabs.github.io
 social:
   name: Beau Barker
   links:
     - https://www.linkedin.com/in/beaub
-    - https://github.com/bcb
+    - https://github.com/explodinglabs
 title: Beau Barker
-url: "https://beau.click" # the base hostname & protocol for your site
+url: "https://blog.explodinglabs.com" # the base hostname & protocol for your site
 include: ['_pages']

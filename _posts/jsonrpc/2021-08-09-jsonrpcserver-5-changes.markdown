@@ -38,7 +38,7 @@ back](https://www.jsonrpcserver.com/en/latest/async.html#notifications).
 ## Logging removed
 
 The library will no longer log requests and responses. Logging can be done by the
-user, outside of the library. See [issue #152](https://github.com/bcb/jsonrpcserver/issues/152).
+user, outside of the library. See [issue #152](https://github.com/explodinglabs/jsonrpcserver/issues/152).
 
 ## Configuration file removed
 
