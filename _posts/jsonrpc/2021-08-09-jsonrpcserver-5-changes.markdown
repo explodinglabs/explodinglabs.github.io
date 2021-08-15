@@ -9,7 +9,7 @@ permalink: /jsonrpcserver-5-changes
 </div>
 
 Version 5 is a complete rebuild. The usage remains mostly the same except for a
-few important changes. For the full version 5 documentation, go
+few important changes. Full version 5 documentation is
 [here](https://www.jsonrpcserver.com/en/latest/).
 
 <div class="video-container">
