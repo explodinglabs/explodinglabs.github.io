@@ -5,11 +5,11 @@ title: |
     How to run Black, Pylint, Mypy and Pytest in pre-commit hooks, Github Actions and
     deployments
 permalink: /python/checks
-redirect_from: /checks
 redirect_from:
     - /black
     - /mypy
     - /pylint
+    - /checks
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)
