@@ -1,7 +1,7 @@
 ---
 layout: post
 category: jsonrpc
-title: Changes in jsonrpcserver 5
+title: Changes in Jsonrpcserver 5
 permalink: /jsonrpcserver-5-changes
 ---
 <div class="wide-logos" markdown="1">
