@@ -10,4 +10,7 @@ Build your docs:
 $ sphinx-build -a doc /tmp/mydocs
 ```
 
-Open the html file in your browser.
+Open the html file in your browser, for example:
+```
+file:///tmp/jsonrpcserver/index.html
+```
