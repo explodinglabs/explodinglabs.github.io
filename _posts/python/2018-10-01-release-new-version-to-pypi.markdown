@@ -22,12 +22,13 @@ rm -r .tox; tox  # Continue below while this is running
 
 In a new branch:
 - Update version in setup.py
+- Update README.md
 - Update CHANGELOG.md
 - Update documentation.
 
-Commit, push and merge.
+Commit, push and merge into master.
 
-Tag the commit and push the tag.
+Pull master, tag the commit and push the tag.
 
 Create the sdist and upload it:
 ```
@@ -43,5 +44,7 @@ pytest --cov-report term-missing --cov package tests  # requires pytest-cov
 coveralls  # requires coveralls and pyyaml installed
 ```
 
-Build readthedocs if there's been changes.  
+[Build readthedocs](https://blog.explodinglabs.com/trigger-rtd-build) if
+there's been changes.  
+
 Update related blog posts.  
