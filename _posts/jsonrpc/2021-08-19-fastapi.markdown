@@ -1,0 +1,63 @@
+---
+layout: post
+category: jsonrpc
+title: JSON-RPC in Python with FastAPI
+permalink: /jsonrpc/fastapi
+---
+<div class="wide-logos" markdown="1">
+![fastapi](/assets/fastapi.png)
+![plus](/assets/plus.png)
+![json](/assets/json.png)
+</div>
+
+We'll use [FastAPI](https://fastapi.tiangolo.com) to take
+[JSON-RPC](http://www.jsonrpc.org/) requests. It should respond to "ping" with
+"pong".
+
+Install FastAPI and Uvicorn to take requests and
+[jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
+
+```sh
+$ pip install fastapi uvicorn jsonrpcserver
+```
+
+Create a `server.py`:
+
+```python
+from fastapi import FastAPI, Request, Response
+from jsonrpcserver import Result, Success, dispatch, method
+import uvicorn
+
+app = FastAPI()
+
+
+@method
+def ping() -> Result:
+    return Success("pong")
+
+
+@app.post("/")
+async def index(request: Request):
+    return Response(dispatch(await request.body()))
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, port=5000)
+```
+
+Start the server:
+```sh
+$ python server.py
+INFO:     Started server process [5377]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+```
+
+## Test it
+
+Use curl to send a request:
+```sh
+$ curl -X POST http://localhost:5000 -d '{"jsonrpc": "2.0", "method": "ping", "id": 1}'
+{"jsonrpc": "2.0", "result": "pong", "id": 1}
+```

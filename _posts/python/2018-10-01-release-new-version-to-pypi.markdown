@@ -40,7 +40,7 @@ twine upload dist/my_package-x.x.x.tar.gz
 
 Update coverage badge:
 ```sh
-pytest --cov-report term-missing --cov package tests  # requires pytest-cov
+pytest --cov-branch --cov-report term-missing --cov mypackage tests  # requires pytest-cov
 coveralls  # requires coveralls and pyyaml installed
 ```
 
