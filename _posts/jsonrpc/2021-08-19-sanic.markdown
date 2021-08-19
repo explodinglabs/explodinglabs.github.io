@@ -1,0 +1,62 @@
+---
+layout: post
+category: jsonrpc
+title: JSON-RPC in Python with Sanic
+permalink: /jsonrpc/sanic
+---
+<div class="wide-logos" markdown="1">
+![fastapi](/assets/sanic.png)
+![plus](/assets/plus.png)
+![json](/assets/json.png)
+</div>
+
+We'll use [Sanic](https://sanic.readthedocs.io/) to take
+[JSON-RPC](http://www.jsonrpc.org/) requests. It should respond to "ping" with
+"pong".
+
+Install Sanic to take requests and
+[jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
+
+```sh
+$ pip install sanic jsonrpcserver
+```
+
+Create a `server.py`:
+
+```python
+from sanic import Sanic
+from sanic.request import Request
+from sanic.response import json
+from jsonrpcserver import Result, Success, dispatch_to_serializable, method
+
+app = Sanic("JSON-RPC app")
+
+
+@method
+def ping() -> Result:
+    return Success("pong")
+
+
+@app.route("/", methods=["POST"])
+async def test(request: Request):
+    return json(dispatch_to_serializable(request.body))
+
+
+if __name__ == "__main__":
+    app.run(port=5000)
+```
+
+Start the server:
+```sh
+$ python server.py
+[2021-08-19 20:54:48 +1000] [6671] [INFO] Goin' Fast @ http://127.0.0.1:5000
+[2021-08-19 20:54:48 +1000] [6671] [INFO] Starting worker [6671]
+```
+
+## Test it
+
+Use curl to send a request:
+```sh
+$ curl -X POST http://localhost:5000 -d '{"jsonrpc": "2.0", "method": "ping", "id": 1}'
+{"jsonrpc":"2.0","result":"pong","id":1}
+```
