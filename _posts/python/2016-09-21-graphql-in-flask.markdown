@@ -7,7 +7,6 @@ redirect_from: /graphql/flask
 ---
 <div class="wide-logos" markdown="1">
 ![Flask](/assets/flask.png)
-![plus](/assets/plus.png)
 ![GraphQL](/assets/graphql.png)
 </div>
 

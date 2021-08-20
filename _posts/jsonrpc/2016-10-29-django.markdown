@@ -6,7 +6,6 @@ permalink: /jsonrpc/django
 ---
 <div class="wide-logos" markdown="1">
 ![flask](/assets/django.png)
-![plus](/assets/plus.png)
 ![json](/assets/json.png)
 </div>
 

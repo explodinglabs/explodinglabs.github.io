@@ -6,7 +6,6 @@ permalink: /jsonrpc/aiohttp
 ---
 <div class="wide-logos" markdown="1">
 ![flask](/assets/aiohttp.png)
-![plus](/assets/plus.png)
 ![json](/assets/json.png)
 </div>
 

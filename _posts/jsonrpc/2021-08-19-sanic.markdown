@@ -6,7 +6,6 @@ permalink: /jsonrpc/sanic
 ---
 <div class="wide-logos" markdown="1">
 ![fastapi](/assets/sanic.png)
-![plus](/assets/plus.png)
 ![json](/assets/json.png)
 </div>
 

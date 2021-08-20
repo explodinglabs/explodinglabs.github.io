@@ -7,7 +7,6 @@ redirect_from: /jsonrpc/flask-socketio
 ---
 <div class="wide-logos" markdown="1">
 ![socketio](/assets/socketio.png)
-![plus](/assets/plus.png)
 ![json](/assets/json.png)
 </div>
 

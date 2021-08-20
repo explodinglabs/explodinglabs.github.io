@@ -6,7 +6,6 @@ permalink: /jsonrpc/websockets
 ---
 <div class="wide-logos" markdown="1">
 ![websockets](/assets/websockets.png)
-![plus](/assets/plus.png)
 ![json](/assets/json.png)
 </div>
 

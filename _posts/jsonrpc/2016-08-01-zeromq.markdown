@@ -7,7 +7,6 @@ redirect_from: /jsonrpc/pyzmq
 ---
 <div class="wide-logos" markdown="1">
 ![zeromq](/assets/zeromq.png)
-![plus](/assets/plus.png)
 ![json](/assets/json.png)
 </div>
 

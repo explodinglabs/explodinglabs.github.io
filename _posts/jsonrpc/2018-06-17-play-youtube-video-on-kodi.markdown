@@ -6,7 +6,6 @@ permalink: /jsonrpc/kodi-youtube
 ---
 <div class="wide-logos" markdown="1">
 ![kodi](/assets/kodi.png)
-![plus](/assets/plus.png)
 ![json](/assets/json.png)
 </div>
 

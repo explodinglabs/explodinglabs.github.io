@@ -6,7 +6,6 @@ permalink: /jsonrpc/httpserver
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)
-![plus](/assets/plus.png)
 ![json](/assets/json.png)
 </div>
 
