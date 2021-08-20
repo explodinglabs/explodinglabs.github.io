@@ -1,21 +1,13 @@
 ---
 layout: all
 ---
-<header>
-    <a href="/"><h1 class="post-title">Exploding Labs</h1></a>
-
-    <div class="links">
-        <a href="https://github.com/explodinglabs">Github</a>
-    </div>
-
-    <div class="post-filter">
-        <a href="/">All posts</a> ({{ site.posts |size }}),
-        <a href="/python/">Python</a> ({{ site.categories.python |size }}),
-        <a href="/jsonrpc/">JSON-RPC</a> ({{ site.categories.jsonrpc |size }}),
-        <a href="/airflow/">Airflow</a> ({{ site.categories.airflow |size }}),
-        <a href="/haskell/">Haskell</a> ({{ site.categories.haskell |size }})
-    </div>
-</header>
+<div class="post-filter">
+    <a href="/">All posts</a> ({{ site.posts | size }}),
+    <a href="/python/">Python</a> ({{ site.categories.python | size }}),
+    <a href="/jsonrpc/">JSON-RPC</a> ({{ site.categories.jsonrpc | size }}),
+    <a href="/airflow/">Airflow</a> ({{ site.categories.airflow | size }}),
+    <a href="/haskell/">Haskell</a> ({{ site.categories.haskell | size }})
+</div>
 
 <article class="post">
     <div class="post-content">

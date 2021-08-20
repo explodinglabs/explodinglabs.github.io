@@ -3,8 +3,6 @@ layout: post
 title: Composition
 permalink: /composition
 ---
-*This post is a work in progress.*
-
 Engineers achieve big things by solving little problems. If we can solve all
 the little problems, we can combine the solutions to solve bigger problems.
 
@@ -17,8 +15,7 @@ focus on a single task, ignoring everything else.
 
 In Haskell, the body of a function is always an expression; there are no
 statements in functions. In a way this guides you into making sure functions
-are small. A Haskell function does no more than calculate a value based on an
-argument.
+are small. A function does no more than give you a value based on an argument.
 
 Finally, we combine the solutions.
 
@@ -28,12 +25,6 @@ solutions.
 In a language like C or Python there’s no built-in way of composing two
 functions. Something as fundamental as combining functions is not built into
 the language.
-
-Haskell is built around composition. In Haskell, as in math, composition is
-represented as a dot.
-
-A brief mention of category theory?  
-Compare with Unix's simplicity?  
 
 > Being able to decompose bigger problems into smaller problems, and then
 > combine the solutions, that’s essentially the description of... well, I don’t
