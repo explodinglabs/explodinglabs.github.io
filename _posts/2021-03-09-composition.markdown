@@ -22,10 +22,6 @@ Finally, we combine the solutions.
 So programming is about composition -- decomposing problems and composing the
 solutions.
 
-In a language like C or Python there’s no built-in way of composing two
-functions. Something as fundamental as combining functions is not built into
-the language.
-
 > Being able to decompose bigger problems into smaller problems, and then
 > combine the solutions, that’s essentially the description of... well, I don’t
 > know it depends on who you are, you will say that’s the description of what
