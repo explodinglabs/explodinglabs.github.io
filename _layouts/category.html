@@ -1,18 +1,17 @@
 ---
 layout: page
 ---
-<img src="/assets/{{page.subcategory}}.png" align="right"/>
+<img src="/assets/{{page.subcategory}}.png" style="display: block; margin: auto" />
 
 <h2 class="page-title">{{page.title}}</h1>
+
+{% include categories.html %}
 
 <ul class="post-list">
     {% assign posts = site.posts | sort: 'date' | reverse %}
     {% for post in posts %}
         {% if post.category == page.subcategory %}
-            <li class="post-link">
-                <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
-                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </li>
+            {% include post_link.html %}
         {% endif %}
     {% endfor %}
 </ul>

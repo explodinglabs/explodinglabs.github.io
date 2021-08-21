@@ -2,12 +2,13 @@
 layout: page
 title: Beau Barker
 ---
+<h2 class="page-title">A blog about programming.</h2>
+
+{% include categories.html %}
+
 <ul class="post-list">
     {% assign all_posts_date = site.posts | sort: 'date' | reverse %}
     {% for post in all_posts_date %}
-        <li class="post-link">
-            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </li>
+        {% include post_link.html %}
     {% endfor %}
 </ul>

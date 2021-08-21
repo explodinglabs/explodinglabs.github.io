@@ -42,6 +42,10 @@ header {
     text-align: center;
 }
 
+.page-title {
+    text-align: center;
+}
+
 /* Page content */
 .post-list {
     margin-left: 0;
@@ -57,11 +61,16 @@ header {
         font-size: small;
         display: block;
     }
+    a {
+        font-size: 1.1em;
+        font-weight: 500;
+        border: 0;
+    }
 }
 
 .post-meta {
     font-size: smaller;
-    a { color: grey; }
+    a { color: grey; border: 0; }
     margin-bottom: $space * 1.5;
 }
 
@@ -72,6 +81,8 @@ header {
 .post-filter {
     font-size: smaller;
     margin-bottom: $space * 1.5;
+    text-align: center;
+    line-height: 150%;
 }
 
 .site-footer {
