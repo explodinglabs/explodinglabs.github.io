@@ -4,7 +4,10 @@ layout: all
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <div class="post-meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }} | By: Beau Barker {% include email.html %}</time>
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ page.date | date: "%b %-d, %Y" }} |
+            Beau Barker {% include email.html %}
+        </time>
     </div>
     <div class="post-content" itemprop="articleBody">
         {{ content }}
