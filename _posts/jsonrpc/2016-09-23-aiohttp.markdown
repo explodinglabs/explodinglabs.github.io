@@ -52,42 +52,9 @@ $ python server.py
 (Press CTRL+C to quit)
 ```
 
-## Synchronous client
-
-Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
+## Test it
 
 ```sh
-$ pip install "jsonrpcclient[requests]"
-$ python
-```
-```python
->>> from jsonrpcclient import request
->>> request("http://localhost:5000/", "ping").data.result
-'pong'
-```
-
-## Asynchronous client with aiohttp
-
-```sh
-$ pip install "jsonrpcclient[aiohttp]"
-```
-Create a `client.py`:
-
-```python
-import aiohttp
-import asyncio
-from jsonrpcclient.clients.aiohttp_client import aiohttpClient
-
-async def main(loop):
-    async with aiohttp.ClientSession(loop=loop) as session:
-        client = aiohttpClient(session, "http://localhost:5000/")
-        response = await client.request("ping")
-        print(response.data.result)
-
-loop = asyncio.get_event_loop()
-loop.run_until_complete(main(loop))
-```
-```sh
-$ python client.py
-pong
+$ curl -X POST http://localhost:5000 -d '{"jsonrpc": "2.0", "method": "ping", "id": 1}'
+{"jsonrpc": "2.0", "result": "pong", "id": 1}
 ```

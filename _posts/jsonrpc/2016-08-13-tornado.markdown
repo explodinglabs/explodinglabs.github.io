@@ -51,49 +51,9 @@ Start the server:
 $ python server.py
 ```
 
-## Synchronous client
-
-Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests.
+## Test it
 
 ```sh
-$ pip install "jsonrpcclient[requests]"
-$ python
-```
-```python
->>> import jsonrpcclient
->>> jsonrpcclient.request('http://localhost:5000/', 'ping')
---> {"jsonrpc": "2.0", "method": "ping", "id": 1}
-<-- {"jsonrpc": "2.0", "result": "pong", "id": 1} (200 OK)
-'pong'
-```
-
-## Asynchronous client with Tornado
-
-We can send asynchronous requests in Tornado with jsonrpcclient (thanks to
-[saaj](https://github.com/saaj/)):
-
-```sh
-$ pip install "jsonrpcclient[tornado]"
-```
-Create a `client.py`:
-
-```python
-from tornado import ioloop
-from jsonrpcclient.clients.tornado_client import TornadoClient
-
-client = TornadoClient('http://localhost:5000/')
-
-async def main():
-    result = await client.request('ping')
-    print(result)
-
-ioloop.IOLoop.current().run_sync(main)
-```
-The `async`/`await` syntax requires Python 3.5+. Prior to that use
-[@gen.coroutine and
-yield](http://tornado.readthedocs.io/en/stable/guide/coroutines.html#python-3-5-async-and-await).
-
-```sh
-$ python client.py
-pong
+$ curl -X POST http://localhost:5000 -d '{"jsonrpc": "2.0", "method": "ping", "id": 1}'
+{"jsonrpc": "2.0", "result": "pong", "id": 1}
 ```

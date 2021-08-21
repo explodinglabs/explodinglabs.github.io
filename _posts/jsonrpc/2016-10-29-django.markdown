@@ -53,12 +53,9 @@ Starting development server at http://127.0.0.1:5000/
 Quit the server with CONTROL-C.
 ```
 
-## Client
-
-Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
+## Test it
 
 ```sh
-$ pip install "jsonrpcclient[requests]"
-$ jsonrpc --send http://localhost:5000 ping
-'pong'
+$ curl -X POST http://localhost:5000 -d '{"jsonrpc": "2.0", "method": "ping", "id": 1}'
+{"jsonrpc": "2.0", "result": "pong", "id": 1}
 ```
