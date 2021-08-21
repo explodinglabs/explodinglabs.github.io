@@ -1,5 +1,5 @@
 ---
-visible: 0
-hidden: true
+visible: false
+sitemap: false
 ---
 Removed.
