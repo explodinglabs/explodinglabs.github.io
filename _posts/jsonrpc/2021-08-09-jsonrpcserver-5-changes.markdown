@@ -28,7 +28,7 @@ the "jsonrpc" and "id" parts, the library takes care of those for you).
 ## Dispatch returns JSON
 
 Previously the `dispatch` function gave you an object which you had to apply
-`str()` to in order to get the json response. Now you just get the json
+`str` to in order to get the json response. Now you just get the json
 string.
 
 ```python
