@@ -38,7 +38,7 @@ body {
 nav {
     padding-top: $space;
     padding-bottom: $space / 1.5;
-    margin-bottom: $space * 2;
+    margin-bottom: $space * 1;
     background-color: #0096FF;
     text-align: center;
     a {
@@ -93,7 +93,7 @@ hr {
 }
 
 article {
-    margin-top: $space * 1.5;
+    margin-top: $space * 2;
 
     .post-meta {
         font-size: smaller;
