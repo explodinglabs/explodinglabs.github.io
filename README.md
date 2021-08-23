@@ -31,3 +31,5 @@ To remove a post from the list, add to post meta:
 ```
 sitemap: false
 ```
+This removes the post from the sitemap, and also the post listing because we
+have a condition checking for that.
