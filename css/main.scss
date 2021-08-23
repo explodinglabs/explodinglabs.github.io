@@ -67,15 +67,17 @@ nav {
 }
 
 .post-list {
+    margin-top: $space * 2;
     h2 {
         margin-top: $space;
-        margin-bottom: $space;
+        margin-bottom: $space * 2;
         text-align: center;
     }
 
     ul {
-        margin-left: 0;
+        font-size: 1.1em;
         list-style: none;
+        margin: 0;
         > li {
             margin-bottom: $space;
         }
@@ -134,7 +136,7 @@ h3 {
 }
 
 a {
-    color: #0365d6;
+    color: #ff007f;
     text-decoration: none;
     &:hover { color: orange; }
 }
@@ -171,20 +173,24 @@ pre, code {
     font-style: normal;
     font-variant-caps: normal;
     font-weight: normal;
-    height: auto;
-    line-height: 17px;
+}
 
-    margin-top: $space;
+p code {
+    background-color: #fff9c9;
+    border-radius: 3px;
+    padding: 3px 5px;
+}
+
+pre {
+    background-color: #d9f9ff;
+    padding: $space/2 $space;
     margin-bottom: $space;
 }
 
-pre, blockquote {
-    background-color: #eee;
-    border-radius: 5px;
-    padding: $space;
-}
-
 blockquote {
+    background-color: #c9ffe9;
+    border-left: 5px solid green;
+
     p {
         font-style: italic;
     }
