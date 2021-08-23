@@ -5,6 +5,8 @@ layout: page
 
 <div class="wrapper post-list">
     <h1>Recent posts</h1>
+    <hr />
+
     <ul>
         {% assign all_posts_date = site.posts | sort: 'date' | reverse %}
         {% for post in all_posts_date %}

@@ -60,9 +60,11 @@ nav {
 
 .post-list {
     h1 {
-        margin-top: $space;
-        margin-bottom: $space;
         text-align: center;
+    }
+
+    h1.category-title {
+        margin-top: $space/2;
     }
 
     ul {
@@ -73,6 +75,11 @@ nav {
             margin-bottom: $space;
         }
     }
+}
+
+hr {
+    border-top: 1px solid #eee;
+    margin: $space auto;
 }
 
 .post-link {
@@ -97,7 +104,7 @@ article {
     }
 
     .post-content {
-        margin-bottom: $space * 2;
+        margin-bottom: $space * 1.5;
     }
 
     footer {
