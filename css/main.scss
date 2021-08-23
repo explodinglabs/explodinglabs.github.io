@@ -67,10 +67,18 @@ nav {
 }
 
 .post-list {
-    margin-left: 0;
-    list-style: none;
-    > li {
-        margin-bottom: $space;
+    h2 {
+        margin-top: $space;
+        margin-bottom: $space * 2;
+        text-align: center;
+    }
+
+    ul {
+        margin-left: 0;
+        list-style: none;
+        > li {
+            margin-bottom: $space;
+        }
     }
 }
 
