@@ -6,15 +6,7 @@
 @charset "utf-8";
 
 $space: 20px;
-$paragraph-line-height: 160%;
-
-// Colours
 $grey: #444;
-$grey-light: lighten($grey, 30%);
-$grey-dark: darken($grey, 25%);
-$yellow-light: lighten(yellow, 40%);
-
-// Width of the content area
 $content-width: 800px;
 $on-laptop: 750px;
 $on-palm: 600px;
@@ -175,6 +167,7 @@ pre, code {
     font-weight: normal;
 }
 
+/* Code using backticks */
 p code {
     background-color: #fff9c9;
     border-radius: 3px;
@@ -182,10 +175,11 @@ p code {
 }
 
 pre {
-    background-color: #d9f9ff;
+    background-color: #e9efff;
     padding: $space/2 $space;
     margin-bottom: $space;
     overflow-x: auto;
+    line-height: 20px;
 }
 
 blockquote {
