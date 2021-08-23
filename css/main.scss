@@ -171,20 +171,14 @@ pre, code {
 }
 
 pre, blockquote {
-    border-radius: 3px;
-    overflow-x: auto;
     background-color: #eee;
-    line-height: 150%;
-    padding: $space/2 15px;
+    border-radius: 5px;
+    padding: $space;
 }
 
 blockquote {
     font-style: italic;
     font-family: Georgia, serif;
-
-    p {
-        padding-left: $space;
-    }
 
     p:last-child {
         margin: 0;
@@ -194,9 +188,10 @@ blockquote {
         content: "\201C";
         font-size: 60px;
         position: relative;
-        top: 10px;
-        line-height: 100%;
+        top: 20px;
+        line-height: 0%;
         color: #7a7a7a;
+        padding-right: 5px;
     }
 }
 
