@@ -4,9 +4,9 @@ title: Composed -- A blog about programming.
 ---
 {% include categories.html %}
 
-<div class="wrapper">
+<div class="wrapper post-list">
     <h2>Recent posts</h2>
-    <ul class="post-list">
+    <ul>
         {% assign all_posts_date = site.posts | sort: 'date' | reverse %}
         {% for post in all_posts_date %}
             {% if post.sitemap != false %}
