@@ -168,8 +168,9 @@ pre, code {
 }
 
 /* Code using backticks */
-p code {
+p code, li code {
     background-color: #fff9c9;
+    border: 1px solid orange;
     border-radius: 3px;
     padding: 3px 5px;
 }
