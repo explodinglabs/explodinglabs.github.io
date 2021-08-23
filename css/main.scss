@@ -29,7 +29,16 @@ $on-palm: 600px;
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
-    line-height: 100%;
+
+    background-color: #fcfcfc;
+    color: rgb(36, 39, 41);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Liberation Sans", sans-serif;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-weight: normal;
+    line-height: 22.5px;
 }
 
 /* Site header */
@@ -95,11 +104,6 @@ header {
     margin-bottom: $space;
 }
 
-body {
-    background-color: #fcfcfc;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
 h1,h2,h3 {
     /* Because sometimes the h is a link which changes its color */
     color: black;
@@ -140,8 +144,6 @@ blockquote, ul, ol, dl, figure, %vertical-rhythm {
 }
 
 p, ul, ol {
-    color: #3E4349;
-    line-height: $paragraph-line-height;
 }
 
 @media screen and (min-width: 751px) {
@@ -162,8 +164,15 @@ img {
 
 /* Code formatting */
 pre, code {
-    font-family: 'Droid Sans Mono', monospace;
-    font-size: 95%;
+    font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
+    font-size: 13px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-weight: normal;
+    height: auto;
+    line-height: 17px;
+
     margin-top: $space;
     margin-bottom: $space;
 }
