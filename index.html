@@ -6,7 +6,7 @@ title: Composed -- A blog about programming.
 
 {% include categories.html %}
 
-<ul class="post-list">
+<ul class="wrapper post-list">
     {% assign all_posts_date = site.posts | sort: 'date' | reverse %}
     {% for post in all_posts_date %}
         {% if post.sitemap != false %}

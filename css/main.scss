@@ -44,12 +44,11 @@ body {
     background-color: #fcfcfc;
 }
 
-/* Site header */
-header {
+nav {
     padding-top: $space;
     padding-bottom: $space;
     margin-bottom: $space * 2;
-    background-color: black;
+    background-color: #0096FF;
     color: white;
     text-align: center;
 }
@@ -80,7 +79,7 @@ header {
 .post-meta {
     font-size: smaller;
     color: #666;
-    a { color: #666; border: 0; }
+    a { color: #666; border-bottom: 1px solid #ccc; }
     margin-bottom: $space * 1.5;
 }
 
@@ -95,20 +94,11 @@ header {
     line-height: 150%;
 }
 
-.site-footer {
+footer {
     font-size: smaller;
     margin-bottom: $space * 2;
 }
 
-.links {
-    font-size: smaller;
-    margin-bottom: $space;
-}
-
-h1,h2,h3 {
-    /* Because sometimes the h is a link which changes its color */
-    color: black;
-}
 
 h1 {
     font-size: 24px;
@@ -133,7 +123,7 @@ h3 {
 a {
     color: #0365d6;
     text-decoration: none;
-    border-bottom: 1px dotted #0096ff;
+    border-bottom: 1px dotted #9cf;
     &:hover { color: orange; }
 }
 
@@ -143,9 +133,6 @@ p {
 
 blockquote, ul, ol, dl, figure, %vertical-rhythm {
     margin-bottom: $space;
-}
-
-p, ul, ol {
 }
 
 @media screen and (min-width: 751px) {

@@ -7,7 +7,7 @@ layout: page
 
 {% include categories.html %}
 
-<ul class="post-list">
+<ul class="wrapper post-list">
     {% assign posts = site.posts | sort: 'date' | reverse %}
     {% for post in posts %}
         {% if post.category == page.subcategory and post.sitemap != false %}
