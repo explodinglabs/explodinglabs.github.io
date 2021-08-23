@@ -24,8 +24,7 @@ repository: explodinglabs/explodinglabs.github.io
 social:
   name: Beau Barker
   links:
-    - https://www.linkedin.com/in/beaub
     - https://github.com/explodinglabs
-title: Beau Barker
+title: Composed Blog
 url: "https://blog.explodinglabs.com" # the base hostname & protocol for your site
 include: ['_pages']
