@@ -47,7 +47,7 @@ body {
 nav {
     padding-top: $space;
     padding-bottom: $space;
-    margin-bottom: $space * 2;
+    margin-bottom: $space;
     background-color: #0096FF;
     color: white;
     text-align: center;
@@ -55,6 +55,13 @@ nav {
 
 .page-title {
     text-align: center;
+}
+
+.post-filter {
+    font-size: smaller;
+    margin-bottom: $space;
+    text-align: center;
+    line-height: 150%;
 }
 
 .post-list {
@@ -76,32 +83,28 @@ nav {
     }
 }
 
-.post-meta {
-    font-size: smaller;
-    color: #666;
-    a { color: #666; border-bottom: 1px solid #ccc; }
-    margin-bottom: $space * 1.5;
-}
+article {
+    margin-top: $space * 2;
 
-.post-content {
-    margin-bottom: $space * 2;
-}
+    .post-meta {
+        font-size: smaller;
+        color: #666;
+        a { color: #666; border-bottom: 1px solid #ccc; }
+        margin-bottom: $space * 1.5;
+    }
 
-.post-filter {
-    font-size: smaller;
-    margin-bottom: $space * 1.5;
-    text-align: center;
-    line-height: 150%;
-}
+    .post-content {
+        margin-bottom: $space * 2;
+    }
 
-footer {
-    font-size: smaller;
-    margin-bottom: $space * 2;
+    footer {
+        font-size: smaller;
+        margin-bottom: $space * 2;
+    }
 }
-
 
 h1 {
-    font-size: 24px;
+    font-size: 22px;
     font-stretch: normal;
     font-style: normal;
     font-variant-caps: normal;

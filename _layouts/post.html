@@ -1,9 +1,9 @@
 ---
 layout: all
 ---
-<article class="wrapper post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="wrapper" itemscope itemtype="http://schema.org/BlogPosting">
     <header>
-        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+        <h1>{{ page.title }}</h1>
         <div class="post-meta">
             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 {{ page.date | date: "%b %-d, %Y" }} |
@@ -14,7 +14,7 @@ layout: all
             </time>
         </div>
     </header>
-    <div class="post-content" itemprop="articleBody">
+    <div class="post-content">
         {{ content }}
     </div>
     <footer>
