@@ -25,6 +25,6 @@ social:
   name: Beau Barker
   links:
     - https://github.com/explodinglabs
-title: Composed Blog
-url: "https://blog.explodinglabs.com" # the base hostname & protocol for your site
+title: Composed
+url: "https://composed.blog/" # the base hostname & protocol for your site
 include: ['_pages']
