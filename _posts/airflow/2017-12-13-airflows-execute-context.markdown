@@ -13,7 +13,8 @@ permalink: /airflow/execute-context
 </div>
 
 Airflow's context dictionary can be found in the `get_template_context` method,
-in `airflow/models.py`.
+in Airflow's
+[models.py](https://github.com/databricks/incubator-airflow/blob/master/airflow/models.py).
 
 ```python
 return {
