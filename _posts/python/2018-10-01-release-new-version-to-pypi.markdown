@@ -23,7 +23,7 @@ rm -r .tox; tox  # Continue below while this is running
 In a new branch:
 - Update version in setup.py.
 - Update `README.md`, if any.
-- Update `CHANGELOG.md` - stable releases only.
+- Update `CHANGELOG.md` -- **stable releases only.**
 - Update documentation.
 
 Commit, push and merge into master.
@@ -44,7 +44,7 @@ pytest --cov-branch --cov-report term-missing --cov mypackage tests  # requires 
 coveralls  # requires coveralls and pyyaml installed
 ```
 
-[Build readthedocs](https://blog.explodinglabs.com/trigger-rtd-build) if
+[Build readthedocs](https://composed.blog/trigger-rtd-build) if
 there's been changes.  
 
 Update related blog posts.  
