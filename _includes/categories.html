@@ -1,5 +1,5 @@
 <div class="post-filter">
-    <a href="/">All posts</a> ({{ site.posts | where_exp: "post","post.sitemap != false" | size }}),
+    <a href="/">All</a> ({{ site.posts | where_exp: "post","post.sitemap != false" | size }}),
     <a href="/python/">Python</a> ({{ site.categories.python | where_exp: "post","post.sitemap != false" | size }}),
     <a href="/jsonrpc/">JSON-RPC</a> ({{ site.categories.jsonrpc | where_exp: "post","post.sitemap != false" | size }}),
     <a href="/airflow/">Airflow</a> ({{ site.categories.airflow | where_exp: "post","post.sitemap != false" | size }}),
