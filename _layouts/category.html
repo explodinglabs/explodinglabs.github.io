@@ -10,7 +10,7 @@ layout: page
 <ul class="post-list">
     {% assign posts = site.posts | sort: 'date' | reverse %}
     {% for post in posts %}
-        {% if post.category == page.subcategory %}
+        {% if post.category == page.subcategory and post.sitemap != false %}
             {% include post_link.html %}
         {% endif %}
     {% endfor %}

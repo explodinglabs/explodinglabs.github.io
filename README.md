@@ -24,3 +24,10 @@ If you have problems with Ruby:
 ```sh
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 ```
+
+## Usage
+
+To remove a post from the list, add to post meta:
+```
+sitemap: false
+```

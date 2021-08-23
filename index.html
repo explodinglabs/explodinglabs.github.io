@@ -9,6 +9,8 @@ title: Composed -- A blog about programming.
 <ul class="post-list">
     {% assign all_posts_date = site.posts | sort: 'date' | reverse %}
     {% for post in all_posts_date %}
-        {% include post_link.html %}
+        {% if post.sitemap != false %}
+            {% include post_link.html %}
+        {% endif %}
     {% endfor %}
 </ul>

@@ -1,1 +1,4 @@
+---
+sitemap: false
+---
 Removed since Vibora is not in a working state.
