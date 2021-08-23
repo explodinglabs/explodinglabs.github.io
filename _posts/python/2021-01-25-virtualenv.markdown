@@ -11,7 +11,7 @@ permalink: /python/virtualenv
 Install
 [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/).
 
-Here's how I install it on Mac.
+Here's how I install it on Mac:
 
 ```sh
 PIP_REQUIRE_VIRTUALENV=false pip3 install --user --upgrade virtualenvwrapper
