@@ -47,10 +47,13 @@ body {
 nav {
     padding-top: $space;
     padding-bottom: $space;
-    margin-bottom: $space;
+    margin-bottom: $space / 2;
     background-color: #0096FF;
-    color: white;
     text-align: center;
+    a {
+        font-size: 1.3em;
+        color: white;
+    }
 }
 
 .page-title {
@@ -59,9 +62,8 @@ nav {
 
 .post-filter {
     font-size: smaller;
-    margin-bottom: $space;
     text-align: center;
-    line-height: 150%;
+    margin-bottom: $space;
 }
 
 .post-list {
