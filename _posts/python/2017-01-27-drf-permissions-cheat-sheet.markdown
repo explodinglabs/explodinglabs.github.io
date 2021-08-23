@@ -6,6 +6,7 @@ permalink: /python/drf-permissions-cheatsheet
 redirect_from:
     - /django/drf-permissions-cheatsheet
     - /django/drf-permissions-matrix
+sitemap: false
 ---
 A guide to DRF's built-in permission classes.
 

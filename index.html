@@ -4,7 +4,7 @@ layout: page
 {% include categories.html %}
 
 <div class="wrapper post-list">
-    <h2>Recent posts</h2>
+    <h1>Recent posts</h1>
     <ul>
         {% assign all_posts_date = site.posts | sort: 'date' | reverse %}
         {% for post in all_posts_date %}
