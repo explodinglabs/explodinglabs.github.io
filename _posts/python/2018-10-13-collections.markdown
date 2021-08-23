@@ -3,6 +3,7 @@ layout: post
 category: python
 title: Python's collections
 permalink: /python/collections
+sitemap: false
 ---
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)
