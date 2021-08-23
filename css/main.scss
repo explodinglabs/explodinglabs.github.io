@@ -177,8 +177,9 @@ pre, blockquote {
 }
 
 blockquote {
-    font-style: italic;
-    font-family: Georgia, serif;
+    p {
+        font-style: italic;
+    }
 
     p:last-child {
         margin: 0;
@@ -192,6 +193,11 @@ blockquote {
         line-height: 0%;
         color: #7a7a7a;
         padding-right: 5px;
+    }
+
+    cite {
+        font-size: small;
+        font-style: normal;
     }
 }
 

@@ -30,7 +30,7 @@ solutions.
 > that’s what I’m doing as a physicist. It’s like, everybody’s doing this. This
 > is the essence of all human activity.
 >
-> <cite>Bartosz Milewski</cite>
+> <cite>Bartosz Milewski on the Corecursive podcast</cite>
 
 > The psychological profiling (of a programmer) is mostly the ability to shift
 > levels of abstraction, from low level to high level. To see something in the
