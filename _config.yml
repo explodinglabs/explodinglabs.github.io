@@ -13,6 +13,7 @@ excerpt_separator: "<!--more-->"
 future: true # Include posts with a date in the future
 github_username: explodinglabs
 highlighter: rouge
+locale: en_AU
 markdown: kramdown
 permalink: /:categories/:title
 plugins:
@@ -21,9 +22,10 @@ plugins:
     - jekyll-seo-tag
 repository: explodinglabs/explodinglabs.github.io
 social:
-  name: Beau Barker
+  name: Exploding Labs
   links:
     - https://github.com/explodinglabs
 title: Composed
+tagline: A programming blog
 url: "https://composed.blog/" # the base hostname & protocol for your site
 include: ['_pages']
