@@ -21,6 +21,8 @@ This part on **grouping imports** is particularly important:
 > - Local application/library specific imports.
 >
 > You should put a blank line between each group of imports.
+>
+> <cite>PEP-8: The Style Guide for Python Code</cite>
 
 ## The first group: "Standard library imports"
 
