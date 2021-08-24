@@ -9,7 +9,6 @@ author: Beau Barker
 baseurl: "" # the subpath of your site, e.g. /blog
 description: >
   ...
-email: beauinmelbourne@gmail.com
 excerpt_separator: "<!--more-->"
 future: true # Include posts with a date in the future
 github_username: explodinglabs
