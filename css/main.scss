@@ -35,16 +35,28 @@ body {
     background-color: #fefefe;
 }
 
+#socials {
+    display: none;
+    height: 35px;
+    background-color: #06c;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
 nav {
-    padding-top: 10px;
-    padding-bottom: 5px;
+    height: 71px;
     margin-bottom: $space * 1;
-    background-color: #0096FF;
-    box-shadow: 0 0 10px 0 #666;
+    background-color: rgb(71, 0, 163);
+    box-shadow: 0 5px 10px -2px gray;
     text-align: center;
-    a {
-        font-size: 1.3em;
-        color: white;
+    .logo {
+        white-space: nowrap;
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        img {
+            vertical-align: middle;
+            height: 40px;
+        }
     }
 }
 
@@ -99,8 +111,12 @@ article {
     .post-meta {
         font-size: smaller;
         color: #666;
-        a { color: #666; border-bottom: 1px solid #ccc; }
+        a { color: #666; text-decoration: none; }
         margin-bottom: $space;
+    }
+
+    a {
+        text-decoration: underline;
     }
 
     .post-content {
