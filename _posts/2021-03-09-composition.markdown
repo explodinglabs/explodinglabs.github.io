@@ -16,8 +16,8 @@ problems, and break them down again until we can mentally digest them.
 
 A well decomposed problem yields an elegant solution.
 
-Next we solve the smaller problems (the arrows). Here we zoom in to focus on a
-single task, ignoring everything else.
+Next we solve the smaller problems. Here we zoom in to focus on a
+single arrow, ignoring everything else.
 
 {:refdef: style="text-align: center; margin: 20px 0;"}
 ![composition-full](/assets/composition-zoomed.png)
