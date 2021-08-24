@@ -21,9 +21,8 @@ focus on a single task, ignoring everything else.
 ![composition-full](/assets/composition-zoomed.png)
 {: refdef}
 
-In Haskell, the body of a function is always an expression; there are no
-statements in functions. In a way this guides you into making sure functions
-are small. A function does no more than give you a value based on an argument.
+A function gets you from `a` to `b` _and nothing more_. Given an `a` and no
+more than an `a`, it provides a `b` and does no more than that.
 
 Finally, we combine the solutions.
 
