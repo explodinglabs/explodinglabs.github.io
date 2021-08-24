@@ -14,7 +14,7 @@ Why do we break down problems? This is due to the limitations of the human mind
 -- we can only deal with a small number of concepts at a time. So we break down
 problems, and break them down again until we can mentally digest them.
 
-A well decomposed problem will result in an elegant solution.
+A well decomposed problem yields an elegant solution.
 
 Next we solve the smaller problems (the arrows). Here we zoom in to focus on a
 single task, ignoring everything else.
