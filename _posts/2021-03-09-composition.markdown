@@ -14,15 +14,18 @@ Why do we break down problems? This is due to the limitations of the human mind
 -- we can only deal with a small number of concepts at a time. So we break down
 problems, and break them down again until we can mentally digest them.
 
-In programming we solve small problems by writing functions. Here we zoom in to
-focus on a single task, ignoring everything else.
+A well decomposed problem will result in an elegant solution.
+
+Next we solve the smaller problems (the arrows). Here we zoom in to focus on a
+single task, ignoring everything else.
 
 {:refdef: style="text-align: center; margin: 20px 0;"}
 ![composition-full](/assets/composition-zoomed.png)
 {: refdef}
 
-A function gets you from `a` to `b` _and nothing more_. Given an `a` and no
-more than an `a`, it provides a `b` and does no more than that.
+In programming we solve small problems by writing functions. A function is a
+simple expression that gets you from `a` to `b` _and nothing more_. Given an
+`a` and no more than an `a`, it provides a `b` and does no more than that.
 
 Finally, we combine the solutions.
 
