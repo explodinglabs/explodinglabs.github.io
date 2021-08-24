@@ -14,23 +14,23 @@ problems, and break them down again until we can mentally digest them.
 ![composition-full](/assets/composition-full.png)
 {: refdef}
 
-A well decomposed problem yields an elegant solution.
+A well decomposed problem produces an elegant solution.
 
-Next we solve each problem. Here we zoom in to focus on a
-single arrow, ignoring everything else.
+We solve each problem, zooming in to focus on a single arrow, ignoring
+everything else.
 
 {:refdef: style="text-align: center; margin: 20px 0;"}
 ![composition-full](/assets/composition-zoomed.png)
 {: refdef}
 
 In programming we solve small problems by writing functions. A function is an
-expression that gets you from `a` to `b` _and nothing more_. Given an
-`a` and no more than an `a`, it provides a `b` and does no more than that.
+expression that gets you from `a` to `b` _and nothing more_. Given an `a` and
+no more than an `a`, it provides a `b` and does no more than that.
 
 Finally, we combine the solutions.
 
-So programming is about composition -- decomposing problems and composing the
-solutions.
+So programming and problem solving more generally, is about composition:
+decomposing problems, solving them and then composing the solutions.
 
 > Being able to decompose bigger problems into smaller problems, and then
 > combine the solutions, that’s essentially the description of... well, I don’t
@@ -48,3 +48,8 @@ solutions.
 >
 > <cite>An interview with Donald Knuth. Dr. Dobb’s Journal, pages 16–22 (April
 > 1996)</cite>
+
+> The competent programmer is fully aware of the strictly limited size of his
+> own skull.
+>
+> <cite>Edsger Dijkstra, The Humble Programmer, ACM Turing Lecture 1972</cite>
