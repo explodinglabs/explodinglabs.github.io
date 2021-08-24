@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-found=$(ag -l "$2" _posts/$1)
+found=$(ag -l "$1" _posts)
 
 if [[ $found ]]; then
     vim $(echo "$found" | head -n1)
