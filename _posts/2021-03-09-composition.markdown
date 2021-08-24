@@ -6,12 +6,20 @@ permalink: /composition
 Engineers achieve big things by solving little problems. If we can solve all
 the little problems, we can combine the solutions to solve bigger problems.
 
+{:refdef: style="text-align: center; margin: 20px 0;"}
+![composition-full](/assets/composition-full.png)
+{: refdef}
+
 Why do we break down problems? This is due to the limitations of the human mind
 -- we can only deal with a small number of concepts at a time. So we break down
 problems, and break them down again until we can mentally digest them.
 
 In programming we solve small problems by writing functions. Here we zoom in to
 focus on a single task, ignoring everything else.
+
+{:refdef: style="text-align: center; margin: 20px 0;"}
+![composition-full](/assets/composition-zoomed.png)
+{: refdef}
 
 In Haskell, the body of a function is always an expression; there are no
 statements in functions. In a way this guides you into making sure functions

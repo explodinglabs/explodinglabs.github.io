@@ -21,7 +21,7 @@ rm -r .tox; tox  # Continue below while this is running
 ```
 
 In a new branch:
-- Update version in setup.py.
+- Update version in `setup.py`.
 - Update `README.md`, if any.
 - Update `CHANGELOG.md` -- **stable releases only.**
 - Update documentation.
