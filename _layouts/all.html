@@ -15,8 +15,6 @@
         <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96">
 
-        <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-
         {% if jekyll.environment == 'production' %}
             {% include analytics.html %}
         {% endif %}
