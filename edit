@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-found=$(find _posts/$1 -name "*$2*.markdown")
+found=$(ag -l "$2" _posts/$1)
 
 if [[ $found ]]; then
     vim $(echo "$found" | head -n1)

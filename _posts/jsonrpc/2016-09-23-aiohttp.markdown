@@ -58,3 +58,32 @@ $ python server.py
 $ curl -X POST http://localhost:5000 -d '{"jsonrpc": "2.0", "method": "ping", "id": 1}'
 {"jsonrpc": "2.0", "result": "pong", "id": 1}
 ```
+
+## Send JSON-RPC request with aiohttp
+
+```python
+pip install jsonrpcclient
+```
+
+```python
+import asyncio
+import logging
+
+from aiohttp import ClientSession
+from jsonrpcclient import Ok, request, parse
+
+
+async def main():
+    async with ClientSession() as session:
+        async with session.post(
+            "http://localhost:5000", data=request("ping")
+        ) as response:
+            parsed = parse(await response.json())
+            if isinstance(parsed, Ok):
+                print(parsed.result)
+            else:
+                logging.error(parsed.message)
+
+
+asyncio.get_event_loop().run_until_complete(main())
+```
