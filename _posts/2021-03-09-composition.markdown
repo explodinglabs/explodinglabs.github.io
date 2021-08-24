@@ -23,8 +23,8 @@ single arrow, ignoring everything else.
 ![composition-full](/assets/composition-zoomed.png)
 {: refdef}
 
-In programming we solve small problems by writing functions. A function is a
-simple expression that gets you from `a` to `b` _and nothing more_. Given an
+In programming we solve small problems by writing functions. A function is an
+expression that gets you from `a` to `b` _and nothing more_. Given an
 `a` and no more than an `a`, it provides a `b` and does no more than that.
 
 Finally, we combine the solutions.
