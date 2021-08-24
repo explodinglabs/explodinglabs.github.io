@@ -4,8 +4,8 @@ category: jsonrpc
 title: Changes in Jsonrpcserver 5
 permalink: /jsonrpcserver-5-changes
 ---
-Jsonrpcserver is a Python library that takes a JSON-RPC request, dispatches it
-to your Python functions and gives you a JSON-RPC response.
+Jsonrpcserver is a Python library that dispatches JSON-RPC requests to your
+Python code and gives you a JSON-RPC response.
 
 Version 5 is a complete rebuild. The usage remains mostly the same except for a
 few important changes. [Full version 5 documentation is
