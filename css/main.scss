@@ -108,11 +108,17 @@ hr {
 article {
     margin-top: $space * 2;
 
-    .post-meta {
-        font-size: smaller;
-        color: #666;
-        a { color: #666; text-decoration: none; }
-        margin-bottom: $space;
+    header {
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        .post-meta {
+            font-size: smaller;
+            color: #666;
+            a { color: #666; text-decoration: none; }
+            margin-bottom: $space;
+        }
     }
 
     a {
@@ -198,8 +204,9 @@ p code, li code {
 }
 
 pre {
-    border-radius: 5px;
-    background-color: #e0f0ff;
+    border-radius: 0 5px 5px 0;
+    background-color: #ffe9ff;
+    border-left: 10px solid #ffcfff;
     padding: $space/2 15px;
     margin-bottom: $space;
     overflow-x: auto;

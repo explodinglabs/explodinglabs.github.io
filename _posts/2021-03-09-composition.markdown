@@ -29,7 +29,7 @@ no more than an `a`, it provides a `b` and does no more than that.
 
 Finally, we combine the solutions.
 
-So programming and problem solving more generally, is about composition:
+So programming (and problem solving more generally) is about composition:
 decomposing problems, solving them and then composing the solutions.
 
 > Being able to decompose bigger problems into smaller problems, and then
