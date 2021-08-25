@@ -39,14 +39,13 @@ body {
     display: none;
     height: 35px;
     background-color: #06c;
-    box-shadow: 0 4px 2px -2px gray;
 }
 
 nav {
     height: 71px;
     margin-bottom: $space * 1;
     background-color: rgb(71, 0, 163);
-    box-shadow: 0 5px 10px -2px gray;
+    box-shadow: 0 5px 5px -2px gray;
     text-align: center;
     .logo {
         white-space: nowrap;
