@@ -6,8 +6,8 @@ permalink: /composition
 Engineers achieve big things by solving little problems. If we can solve all
 the little problems, we can combine the solutions to solve bigger problems.
 
-Why do we break down problems? This is due to the limitations of the human mind
-. We can only deal with a small number of concepts at a time, so we break down
+Why do we break down problems? This is due to the limitations of the human mind.
+We can only deal with a small number of concepts at a time, so we break down
 problems, and break them down again until we can mentally digest them.
 
 {:refdef: style="text-align: center; margin: 20px 0;"}
@@ -32,8 +32,6 @@ Finally, we combine the solutions.
 So programming (and problem solving) is about composition: decomposing
 problems, solving them and then composing the solutions.
 
-## Quotes about composition
-
 > Being able to decompose bigger problems into smaller problems, and then
 > combine the solutions, that’s essentially the description of... well, I don’t
 > know it depends on who you are, you will say that’s the description of what
@@ -50,8 +48,3 @@ problems, solving them and then composing the solutions.
 >
 > <cite>An interview with Donald Knuth. Dr. Dobb’s Journal, pages 16–22 (April
 > 1996)</cite>
-
-> The competent programmer is fully aware of the strictly limited size of his
-> own skull.
->
-> <cite>Edsger Dijkstra, The Humble Programmer, ACM Turing Lecture 1972</cite>
