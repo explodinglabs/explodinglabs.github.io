@@ -11,13 +11,13 @@ permalink: /jsonrpcclient-4-changes
 Jsonrpcclient is a Python library that lets you generate JSON-RPC requests and
 parse responses.
 
-Version 4 is a complete rebuild, moving from a framework to a library. It's
-more lightweight and gives the user more control. [Full version 4 documentation
-is here](https://www.jsonrpcclient.com/en/latest/).
+Version 4 is a complete rebuild.
 
 ## Simpler feature set
 
-The previous version did too many things:
+The new version is more lightweight and gives the user more control.
+
+The previous version did too much:
 
 1. Generate a request
 2. Send the request
@@ -40,3 +40,6 @@ response, the library will help you parse it.
 - Instead of doing lots of things poorly, do a couple of things well.
 - JSON-RPC is just a message format, so a JSON-RPC library should only deal with
   JSON-RPC messages, not the transport of them.
+
+[Full version 4 documentation is
+here](https://www.jsonrpcclient.com/en/latest/).
