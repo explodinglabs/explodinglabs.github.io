@@ -4,6 +4,9 @@ category: jsonrpc
 title: JSON-RPC in Python with Flask
 permalink: /jsonrpc/flask
 ---
+<div class="warning">
+    <p>This post uses Jsonrpcserver 5 which requires Python 3.8+.</p>
+</div>
 
 <div class="wide-logos" markdown="1">
 ![flask](/assets/flask.png)
@@ -16,10 +19,6 @@ We'll use [Flask](http://flask.pocoo.org) to take
 
 Install Flask to take requests and
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
-
-<div class="warning">
-    <p>This post uses Jsonrpcserver 5 which requires Python 3.8+.</p>
-</div>
 
 ```sh
 $ pip install flask jsonrpcserver
