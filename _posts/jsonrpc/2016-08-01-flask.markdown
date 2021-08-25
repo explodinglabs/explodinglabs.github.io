@@ -22,7 +22,7 @@ $ pip install flask jsonrpcserver
 ```
 
 <div class="warning">
-    <p>This post uses Jsonrpcserver 5 requires Python 3.8+.</p>
+    <p>This post uses Jsonrpcserver 5 which requires Python 3.8+.</p>
 </div>
 
 Create a `server.py`:
