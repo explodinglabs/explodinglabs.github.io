@@ -5,7 +5,7 @@ title: JSON-RPC in Python with http.server
 permalink: /jsonrpc/httpserver
 ---
 <div class="warning">
-    <p>This post is for Python 3.8+.</p>
+    <p>This post uses Jsonrpcserver 5 which requires Python 3.8+.</p>
 </div>
 
 <div class="wide-logos" markdown="1">
