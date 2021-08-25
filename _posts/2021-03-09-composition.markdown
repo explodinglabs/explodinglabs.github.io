@@ -14,7 +14,7 @@ problems, and break them down again until we can mentally digest them.
 ![composition-full](/assets/composition-full.png)
 {: refdef}
 
-A well decomposed problem produces an elegant solution.
+A well decomposed problem will produce an elegant solution.
 
 We solve each problem, zooming in to focus on a single arrow, ignoring
 everything else.
