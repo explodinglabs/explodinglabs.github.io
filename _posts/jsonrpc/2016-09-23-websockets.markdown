@@ -4,6 +4,10 @@ category: jsonrpc
 title: JSON-RPC in Python with Websockets
 permalink: /jsonrpc/websockets
 ---
+<div class="warning">
+    <p>This post is for Python 3.8+.</p>
+</div>
+
 <div class="wide-logos" markdown="1">
 ![websockets](/assets/websockets.png)
 ![json](/assets/json.png)
