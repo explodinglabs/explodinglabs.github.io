@@ -1,3 +1,5 @@
+![Logo](https://raw.githubusercontent.com/psf/requests/master/assets/composed-logo-large.png)
+
 ## Installation
 
 ```sh
