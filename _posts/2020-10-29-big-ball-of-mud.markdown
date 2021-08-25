@@ -8,6 +8,7 @@ A big ball of mud is a software system that lacks any perceivable architecture.
 > Although undesirable from a software engineering point of view, such systems
 > are common in practice due to business pressures, developer turnover and code
 > entropy. They are a type of design anti-pattern.
+> 
 > <cite>[Wikipedia](https://en.wikipedia.org/wiki/Big_ball_of_mud)</cite>
 
 The original term comes from a 1997 conference:
