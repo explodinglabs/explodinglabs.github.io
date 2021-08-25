@@ -12,7 +12,7 @@ permalink: /airflow/run-dag-and-watch-logs
 ![airflow](/assets/airflow.png)
 </div>
 
-I want to run Airflow dags and watch the logs in the terminal.
+I want to run an Airflow dag and watch the logs in the terminal.
 
 Trouble is, each time a task is run a new directory and file is created.
 Something like:
@@ -25,19 +25,23 @@ This makes it hard to tail-follow the logs. Thankfully, starting from Airflow
 1.9, logging can be configured easily, allowing you to put all of a dag's logs
 into one file.
 
-**Important:**
-
-1. If you make this change, you won't be able to view task logs in the web UI,
+<div class="warning">
+  If you make this change, you won't be able to view task logs in the web UI,
    because the UI expects log filenames to be in the normal format.
+</div>
 
-2. Logging to a single file is useful for development (using the
+<div class="warning">
+  Logging to a single file is useful for development (using the
    SequentialExecutor), but it's **not recommended in production** because
    issues will arise when multiple tasks attempt to write to the same log file
    at once.
+</div>
 
 ## Easy Solution
 
-_Requires Airflow 1.10+_
+<div class="warning">
+  Requires Airflow 1.10+
+</div>
 
 Set the `FILENAME_TEMPLATE` setting.
 
@@ -47,7 +51,9 @@ Set the `FILENAME_TEMPLATE` setting.
 
 ## Advanced Solution - Recommended
 
-_Requires Airflow 1.9+_
+<div class="warning">
+  Requires Airflow 1.9+
+</div>
 
 Since Airflow 1.9, logging is configured pythonically.
 
