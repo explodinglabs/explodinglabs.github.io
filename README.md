@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/psf/requests/master/assets/composed-logo-large.png)
+![Logo](https://github.com/explodinglabs/explodinglabs.github.io/blob/master/assets/composed-logo-large.png?raw=true)
 
 ## Installation
 
