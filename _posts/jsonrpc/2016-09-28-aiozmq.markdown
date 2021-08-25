@@ -58,11 +58,17 @@ $ python server.py
 Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
 
 ``` shell
-$ pip install "jsonrpcclient[pyzmq]"
+$ pip install --pre jsonrpcclient
+$ pip install pyzmq
 $ python
 ```
 ```python
->>> from jsonrpcclient.clients.zeromq_client import ZeroMQClient
->>> ZeroMQClient("tcp://localhost:5000").request("ping").data.result
+>>> from jsonrpcclient import request_json, parse_json, Ok
+>>> import zmq
+>>> socket = zmq.Context().socket(zmq.REQ)
+>>> socket.connect("tcp://localhost:5000")
+>>> socket.send_string(request_json("ping"))
+>>> response = parse_json(socket.recv().decode())
+>>> response.result
 'pong'
 ```
