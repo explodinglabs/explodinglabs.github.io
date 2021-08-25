@@ -12,7 +12,7 @@ permalink: /airflow/run-dag-and-watch-logs
 ![airflow](/assets/airflow.png)
 </div>
 
-I want to run Airflow dags and watch the logs in the terminal.
+I want to run an Airflow dag and watch the logs in the terminal.
 
 Trouble is, each time a task is run a new directory and file is created.
 Something like:
