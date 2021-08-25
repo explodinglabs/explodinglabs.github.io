@@ -14,8 +14,6 @@ problems, and break them down again until we can mentally digest them.
 ![composition-full](/assets/composition-full.png)
 {: refdef}
 
-A well decomposed problem will produce an elegant solution.
-
 We solve each problem, zooming in to focus on a single arrow, ignoring
 everything else.
 
@@ -29,8 +27,8 @@ no more than an `a`, it provides a `b` and does no more than that.
 
 Finally, we combine the solutions.
 
-So programming (and problem solving) is about composition: decomposing
-problems, solving them and then composing the solutions.
+So problem solving is about composition: decomposing problems, solving them and
+then composing the solutions.
 
 > Being able to decompose bigger problems into smaller problems, and then
 > combine the solutions, that’s essentially the description of... well, I don’t
