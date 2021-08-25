@@ -21,14 +21,10 @@ everything else.
 ![composition-full](/assets/composition-zoomed.png)
 {: refdef}
 
-In programming we solve small problems by writing functions. A function is an
-expression that gets you from `a` to `b` _and nothing more_. Given an `a` and
-no more than an `a`, it provides a `b` and does no more than that.
+In programming we solve small problems by writing functions, which are
+expressions that get you from `a` to `b`.
 
-Finally, we combine the solutions.
-
-So problem solving is about composition: decomposing problems, solving them and
-then composing the solutions.
+Finally, we zoom out again to combine the solutions.
 
 > Being able to decompose bigger problems into smaller problems, and then
 > combine the solutions, that’s essentially the description of... well, I don’t
