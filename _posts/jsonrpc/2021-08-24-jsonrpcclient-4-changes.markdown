@@ -4,10 +4,6 @@ category: jsonrpc
 title: Changes in Jsonrpcclient 4
 permalink: /jsonrpcclient-4-changes
 ---
-<div class="warning">
-    <p>Jsonrpcclient 4 requires Python 3.8+.</p>
-</div>
-
 Jsonrpcclient is a Python library that lets you generate JSON-RPC requests and
 parse responses.
 
