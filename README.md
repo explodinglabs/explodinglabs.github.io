@@ -1,4 +1,4 @@
-<img style="margin: 0 auto;" src="https://github.com/explodinglabs/explodinglabs.github.io/blob/master/assets/composed-logo-large.png?raw=true" />
+<img style="margin: 0 auto;" src="https://github.com/explodinglabs/composed.blog/blob/master/assets/logo.png?raw=true" />
 
 ## Installation
 
