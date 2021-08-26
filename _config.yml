@@ -27,5 +27,5 @@ social:
     - https://github.com/explodinglabs
 title: Composed
 tagline: A programming blog
-url: "https://composed.blog/" # the base hostname & protocol for your site
+url: "https://composed.blog" # the base hostname & protocol for your site
 include: ['_pages']
