@@ -63,7 +63,7 @@ body {
 
 nav {
     height: 71px;
-    margin-bottom: $space * 1;
+    margin-bottom: $space;
     background-color: rgb(71, 0, 163);
     box-shadow: 0 5px 5px -2px gray;
     text-align: center;
@@ -106,7 +106,7 @@ nav {
             a {
                 display: inline-block;
                 font-size: 1.2em;
-                margin-bottom: 5px;
+                margin-bottom: 3px;
             }
             .meta {
                 font-size: small;
