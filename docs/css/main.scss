@@ -1,7 +1,6 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-// Import partials from `sass_dir` (defaults to `_sass`)
 @import "pygments";
 @charset "utf-8";
 
@@ -331,7 +330,6 @@ blockquote {
     }
 }
 
-/* Icons */
 .icon {
     > svg {
         display: inline-block;
@@ -352,4 +350,3 @@ blockquote {
         display: none;
     }
 }
-

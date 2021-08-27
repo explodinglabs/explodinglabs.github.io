@@ -15,10 +15,13 @@ title: Composed
         {% endfor %}
     </ul>
 
-    <table>
-        {% for post in posts offset:5 %}
-            {% include post_link_td.html %}
-        {% endfor %}
-    </table>
+    <hr>
+    {% if posts.size > 5 %}
+        <table>
+            {% for post in posts offset:5 %}
+                {% include post_link_td.html %}
+            {% endfor %}
+        </table>
+    {% endif %}
 
 </div>
