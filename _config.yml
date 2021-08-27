@@ -8,7 +8,7 @@
 author: Beau Barker
 baseurl: "" # the subpath of your site, e.g. /blog
 description: >
-  A blog about programming.
+  A programming blog.
 future: true # Include posts with a date in the future
 github_username: explodinglabs
 highlighter: rouge
