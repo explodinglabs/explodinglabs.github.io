@@ -5,7 +5,7 @@ permalink: /install-jekyll-on-mac
 ---
 I like Jekyll but wish I didn't have to deal with Ruby!
 
-## System install
+## Install rbenv
 
 ```sh
 sudo port install rbenv
