@@ -4,8 +4,8 @@ category: jsonrpc
 title: Changes in Jsonrpcclient 4
 permalink: /jsonrpcclient-4-changes
 ---
-Jsonrpcclient is a Python library providing functions that generate JSON-RPC requests and
-parse responses.
+Jsonrpcclient is a Python library that creates JSON-RPC requests and
+parses responses.
 
 Version 4 is a complete rebuild.
 
