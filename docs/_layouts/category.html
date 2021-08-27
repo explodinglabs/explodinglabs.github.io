@@ -2,7 +2,7 @@
 layout: all
 ---
 {% include categories.html %}
-{% assign posts = site.posts | where_exp:"post","post.category == page.category" | where_exp:"post","sitemap != false" | sort: 'date' | reverse %}
+{% assign posts = site.posts | where_exp:"post","post.category == page.category" | where_exp:"post","post.sitemap != false" | sort: 'date' | reverse %}
 
 <div class="wrapper post-list">
     <img src="/assets/{{page.category}}.png" style="display: block; margin: auto" />
