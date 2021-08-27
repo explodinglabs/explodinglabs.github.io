@@ -1,19 +1,24 @@
 ---
-layout: page
+layout: all
 title: Composed
 ---
 {% include categories.html %}
+{% assign posts = site.posts | where_exp:"post","post.sitemap != false" | sort: 'date' | reverse %}
 
 <div class="wrapper post-list">
     <h1>Recent posts</h1>
     <hr />
 
     <ul>
-        {% assign all_posts_date = site.posts | sort: 'date' | reverse %}
-        {% for post in all_posts_date %}
-            {% if post.sitemap != false %}
-                {% include post_link.html %}
-            {% endif %}
+        {% for post in posts limit:5 %}
+            {% include post_link_li.html %}
         {% endfor %}
     </ul>
+
+    <table>
+        {% for post in posts offset:5 %}
+            {% include post_link_td.html %}
+        {% endfor %}
+    </table>
+
 </div>

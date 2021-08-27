@@ -5,11 +5,10 @@
 @import "pygments";
 @charset "utf-8";
 
-$space: 20px;
-$grey: #444;
 $content-width: 800px;
 $on-laptop: 750px;
 $on-palm: 600px;
+$space: 20px;
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
@@ -101,11 +100,40 @@ nav {
     }
 
     ul {
-        font-size: 1.1em;
+        margin: 0 $space 0 $space;
         list-style: none;
-        margin: 0;
         > li {
             margin-bottom: $space;
+            a {
+                display: inline-block;
+                font-size: 1.2em;
+                margin-bottom: 5px;
+            }
+            .meta {
+                font-size: small;
+            }
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        padding: 0;
+
+        td {
+            padding-bottom: 10px;
+            vertical-align: top;
+        }
+
+        td.date {
+            text-align: right;
+            font-size: 0.9em;
+            white-space: nowrap;
+        }
+        td span {
+            padding-right: $space / 2;
+        }
+
+        td.title {
         }
     }
 }
@@ -113,17 +141,6 @@ nav {
 hr {
     border-top: 1px solid #eee;
     margin: $space auto;
-}
-
-.post-link {
-    time {
-        font-size: small;
-        display: block;
-    }
-    a {
-        font-size: 1.1em;
-        border: 0;
-    }
 }
 
 article {
@@ -322,7 +339,7 @@ blockquote {
         height: 16px;
         vertical-align: middle;
         path {
-            fill: $grey;
+            fill: #444;
         }
     }
 }
@@ -336,18 +353,3 @@ blockquote {
     }
 }
 
-table {
-    border-collapse: collapse;
-    margin-bottom: $space;
-
-    th, td {
-        text-align: left;
-        padding: $space/1.5 $space;
-        border: 1px solid blue;
-    }
-
-    th {
-        background-color: blue;
-        color: white;
-    }
-}

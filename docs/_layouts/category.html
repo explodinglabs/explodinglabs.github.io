@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: all
 ---
 {% include categories.html %}
+{% assign posts = site.posts | where_exp:"post","post.category == page.category" | where_exp:"post","sitemap != false" | sort: 'date' | reverse %}
 
 <div class="wrapper post-list">
     <img src="/assets/{{page.category}}.png" style="display: block; margin: auto" />
@@ -9,11 +10,18 @@ layout: page
     <hr />
 
     <ul>
-        {% assign posts = site.posts | sort: 'date' | reverse %}
-        {% for post in posts %}
-            {% if post.category == page.category and post.sitemap != false %}
-                {% include post_link.html %}
+        {% for post in posts limit:5 %}
+            {% if post.category == page.category %}
+                {% include post_link_li.html %}
             {% endif %}
         {% endfor %}
     </ul>
+
+    {% if posts.size > 5 %}
+        <table>
+            {% for post in posts offset:5 %}
+                {% include post_link_td.html %}
+            {% endfor %}
+        </table>
+    {% endif %}
 </div>
