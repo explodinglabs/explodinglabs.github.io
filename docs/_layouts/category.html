@@ -4,14 +4,14 @@ layout: page
 {% include categories.html %}
 
 <div class="wrapper post-list">
-    <img src="/assets/{{page.subcategory}}.png" style="display: block; margin: auto" />
+    <img src="/assets/{{page.category}}.png" style="display: block; margin: auto" />
     <h1 class="category-title">{{page.title}}</h1>
     <hr />
 
     <ul>
         {% assign posts = site.posts | sort: 'date' | reverse %}
         {% for post in posts %}
-            {% if post.category == page.subcategory and post.sitemap != false %}
+            {% if post.category == page.category and post.sitemap != false %}
                 {% include post_link.html %}
             {% endif %}
         {% endfor %}
