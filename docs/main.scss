@@ -4,10 +4,10 @@
 @import "pygments";
 @charset "utf-8";
 
+$space: 20px;
 $content-width: 800px;
 $on-laptop: 750px;
 $on-palm: 600px;
-$space: 20px;
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
