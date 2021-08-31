@@ -36,9 +36,11 @@ Finally, we zoom out again to combine the solutions.
 >
 > <cite>Bartosz Milewski on the Corecursive podcast</cite>
 
+{% comment %}
 > The psychological profiling (of a programmer) is mostly the ability to shift
 > levels of abstraction, from low level to high level. To see something in the
 > small and to see something in the large.
 >
 > <cite>An interview with Donald Knuth. Dr. Dobb’s Journal, pages 16–22 (April
 > 1996)</cite>
+{% endcomment %}

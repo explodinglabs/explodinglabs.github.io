@@ -37,5 +37,32 @@ response, the library will help you parse it.
 - JSON-RPC is just a message format, so a JSON-RPC library should only deal with
   JSON-RPC messages, not the transport of them.
 
+## Usage comparison
+
+Previously (using [requests](https://docs.python-requests.org/en/master/)):
+```python
+from jsonrpcclient.clients.http_client import HTTPClient
+
+client = HTTPClient("http://localhost:5000")
+response = client.request("ping")
+print(response.data.result)
+```
+
+Now:
+```python
+from jsonrpcclient import parse, request
+import requests
+
+response = requests.post("http://localhost:5000/", json=request("ping"))
+parsed = parse(response.json())
+print(parsed.result)
+```
+
+Keep in mind the response may be an error, so in practice you should do runtime
+type checking on the parsed value, or in Python 3.10+, use pattern matching.
+
+[See examples in various
+frameworks.](https://github.com/explodinglabs/jsonrpcclient/tree/master/examples)
+
 [Full version 4 documentation is
 here](https://www.jsonrpcclient.com/en/latest/).
