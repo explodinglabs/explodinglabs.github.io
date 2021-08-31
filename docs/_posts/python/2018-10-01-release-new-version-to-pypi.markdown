@@ -26,6 +26,12 @@ In a new branch:
 - Update `CHANGELOG.md` (stable releases only)
 - Update documentation.
 
+<div class="warning">
+Unlike Github, PyPI will use the readme included in the package, so make sure
+this is right before a stable release, otherwise you'll be releasing another
+version to update it.
+</div>
+
 Commit, push and merge into master.
 
 Pull master, tag the commit and push the tag.
