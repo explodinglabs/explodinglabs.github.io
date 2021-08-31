@@ -26,8 +26,8 @@ In a new branch:
 - Update `CHANGELOG.md` (stable releases only)
 - Update documentation.
 
-<div class="warning">
-Unlike Github, PyPI will use the readme included in the package, so make sure
+<div class="warning" markdown="1">
+Unlike Github, PyPI will use the `README.md` included in the package, so make sure
 this is right before a stable release, otherwise you'll be releasing another
 version to update it.
 </div>

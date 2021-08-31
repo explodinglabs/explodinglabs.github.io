@@ -4,8 +4,7 @@ category: jsonrpc
 title: JSON-RPC in Python with Werkzeug
 permalink: /jsonrpc/werkzeug
 ---
-
-<div class="warning">
+<div class="warning" markdown="1">
     <p>This post uses Jsonrpcserver 5 which requires Python 3.8+.</p>
 </div>
 

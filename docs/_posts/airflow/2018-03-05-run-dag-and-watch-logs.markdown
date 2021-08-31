@@ -25,12 +25,12 @@ This makes it hard to tail-follow the logs. Thankfully, starting from Airflow
 1.9, logging can be configured easily, allowing you to put all of a dag's logs
 into one file.
 
-<div class="warning">
+<div class="warning" markdown="1">
   If you make this change, you won't be able to view task logs in the web UI,
    because the UI expects log filenames to be in the normal format.
 </div>
 
-<div class="warning">
+<div class="warning" markdown="1">
   Logging to a single file is useful for development (using the
    SequentialExecutor), but it's **not recommended in production** because
    issues will arise when multiple tasks attempt to write to the same log file
@@ -39,7 +39,7 @@ into one file.
 
 ## Easy Solution
 
-<div class="warning">
+<div class="warning" markdown="1">
   Requires Airflow 1.10+
 </div>
 
@@ -51,7 +51,7 @@ Set the `FILENAME_TEMPLATE` setting.
 
 ## Advanced Solution - Recommended
 
-<div class="warning">
+<div class="warning" markdown="1">
   Requires Airflow 1.9+
 </div>
 

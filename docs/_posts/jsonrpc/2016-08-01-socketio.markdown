@@ -5,7 +5,7 @@ title: JSON-RPC in Python over Socket.io
 permalink: /jsonrpc/socketio
 redirect_from: /jsonrpc/flask-socketio
 ---
-<div class="warning">
+<div class="warning" markdown="1">
     <p>This post uses Jsonrpcserver 5 which requires Python 3.8+.</p>
 </div>
 
