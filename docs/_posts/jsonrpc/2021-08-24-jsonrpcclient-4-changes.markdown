@@ -58,8 +58,9 @@ parsed = parse(response.json())
 print(parsed.result)
 ```
 
-Keep in mind the response may be an error, so in practice you should do runtime
-type checking on the parsed value, or in Python 3.10+, use pattern matching.
+Keep in mind the response may be an error, so in production code you should do
+runtime type checking on the parsed value, or in Python 3.10+, use pattern
+matching.
 
 [See examples in various
 frameworks.](https://github.com/explodinglabs/jsonrpcclient/tree/master/examples)
