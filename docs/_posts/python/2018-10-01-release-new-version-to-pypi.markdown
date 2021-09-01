@@ -27,7 +27,7 @@ In a new branch:
 - Update documentation.
 
 <div class="warning" markdown="1">
-Unlike Github, PyPI will use the `README.md` included in the package, so make sure
+Unlike Github, PyPI will use the `README.md` included in the package, and readthedocs will use the tagged version, so make sure
 this is right before a stable release, otherwise you'll be releasing another
 version to update it.
 </div>
