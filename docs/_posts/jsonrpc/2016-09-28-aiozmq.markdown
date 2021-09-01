@@ -62,8 +62,7 @@ $ python server.py
 Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
 
 ``` shell
-$ pip install --pre jsonrpcclient
-$ pip install pyzmq
+$ pip install pyzmq jsonrpcclient
 $ python
 ```
 ```python

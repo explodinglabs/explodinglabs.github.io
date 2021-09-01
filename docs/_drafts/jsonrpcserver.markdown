@@ -39,7 +39,7 @@ Client
 ======
 
 ```sh
-$ pip install jsonrpcclient requests
+$ pip install requests jsonrpcclient
 $ python
 ```
 ```python

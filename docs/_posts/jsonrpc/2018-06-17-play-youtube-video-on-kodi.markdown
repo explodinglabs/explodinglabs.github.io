@@ -12,8 +12,7 @@ permalink: /jsonrpc/kodi-youtube
 Play a Youtube video on Kodi, by sending a JSON-RPC request with Python.
 
 ```sh
-pip install requests
-pip install --pre jsonrpcclient
+pip install requests jsonrpcclient
 ```
 
 ```python

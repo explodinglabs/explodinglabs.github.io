@@ -66,8 +66,7 @@ $ curl -X POST http://localhost:5000 -d '{"jsonrpc": "2.0", "method": "ping", "i
 ## Send JSON-RPC request with aiohttp
 
 ```python
-$ pip install aiohttp
-$ pip install --pre jsonrpcclient
+$ pip install aiohttp jsonrpcclient
 ```
 
 Create a `client.py`:

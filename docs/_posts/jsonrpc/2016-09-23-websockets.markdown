@@ -58,8 +58,7 @@ $ python server.py
 Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
 
 ```sh
-$ pip install websockets
-$ pip install --pre jsonrpcclient
+$ pip install websockets jsonrpcclient
 ```
 
 Create a `client.py`:
