@@ -50,7 +50,7 @@ body {
     }
 
     p:first-child:before {
-        content: "⚠️ ";  // Can't see it in vim but its the warning emoji
+        content: "⚠️ ";  //Warning emoji (can't see it inthe terminal font)
     }
 }
 
