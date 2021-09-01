@@ -27,9 +27,9 @@ In a new branch:
 - Update documentation.
 
 <div class="warning" markdown="1">
-Unlike Github, PyPI will use the `README.md` included in the package, and readthedocs will use the tagged version, so make sure
-this is right before a stable release, otherwise you'll be releasing another
-version to update it.
+Once the release is uploaded, there's no way to change the `README.md` on PyPI,
+or documentation on readthedocs, without releasing another version. So take
+care with these in stable releases.
 </div>
 
 Commit, push and merge into master.
