@@ -35,10 +35,11 @@ body {
 
 .warning {
     background-color: hsl(0, 100%, 95%);
-    border-radius: 0 5px 5px 0;
     border-left: 5px solid hsl(0, 100%, 90%);
-    padding: $space/2 $space;
+    border-radius: 0 5px 5px 0;
+    font-style: italic;
     margin-bottom: $space;
+    padding: $space/2 15px;
 
     p {
         font-style: italic;
@@ -49,9 +50,7 @@ body {
     }
 
     p:first-child:before {
-        content: "⚠️";
-        position: relative;
-        padding-right: 5px;
+        content: "⚠️ ";  // Can't see it in vim but its the warning emoji
     }
 }
 

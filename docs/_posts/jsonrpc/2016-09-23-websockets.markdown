@@ -5,7 +5,7 @@ title: JSON-RPC in Python with Websockets
 permalink: /jsonrpc/websockets
 ---
 <div class="warning" markdown="1">
-    <p>This post uses Jsonrpcserver 5 which requires Python 3.8+.</p>
+This post uses Jsonrpcserver 5 which requires Python 3.8+.
 </div>
 
 <div class="wide-logos" markdown="1">
