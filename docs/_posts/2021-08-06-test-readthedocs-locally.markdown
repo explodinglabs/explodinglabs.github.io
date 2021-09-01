@@ -6,7 +6,6 @@ permalink: /build-readthedocs-locally
 Install [Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html).
 ```sh
 pip install sphinx
-pip install -r requirements-docs.txt  # theme and code highlighter
 ```
 
 Build your docs:
