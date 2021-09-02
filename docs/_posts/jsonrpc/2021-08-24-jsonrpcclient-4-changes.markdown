@@ -35,11 +35,12 @@ response, the library will help you parse it.
 
 ## Why remove the transport from the library?
 
-- Relieves the burden of supporting the various protocols and frameworks.
 - Gives the user control over how messages are sent and received.
-- Instead of doing lots of things poorly, do a couple of things well.
+- Support every protocol, not just a few. 
 - JSON-RPC is just a message format, so a JSON-RPC library should only deal with
   JSON-RPC messages, not the transport of them.
+- Relieves the burden of supporting the various protocols and frameworks.
+- Instead of doing lots of things poorly, do a couple of things well.
 
 ## Usage comparison
 
