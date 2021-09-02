@@ -17,7 +17,7 @@ Airflow. To force installing the GPL version set AIRFLOW_GPL_UNIDECODE
 ![airflow](/assets/airflow.png)
 </div>
 
-As the error message explains, **the solution is to set the environment
+As the error message explains, the solution is to **set the environment
 variable** when calling pip:
 ```
 SLUGIFY_USES_TEXT_UNIDECODE=yes pip install apache-airflow==1.10.0
