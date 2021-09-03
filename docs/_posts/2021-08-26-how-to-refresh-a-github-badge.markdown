@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to refresh a badge on Github that's not updating
+title: Refresh a badge on Github that's not updating
 permalink: /refresh-github-badge
 ---
 Grab the badge URL and purge the cache:

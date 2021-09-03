@@ -11,7 +11,7 @@ compile it with ghc:
 ghc main.hs && ./main
 ```
 
-For more complete programs I use Stack.
+For bigger programs I use Stack.
 
 Initialize Stack (creates a new directory, use `--bare` to use the current
 directory).
