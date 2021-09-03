@@ -3,9 +3,6 @@ layout: post
 title: ZeroMQ Request/Reply in C
 permalink: /c/zeromq/request-reply
 ---
-* TOC
-{:toc}
-
 ## Server
 
 The server should handle incoming JSON-RPC requests on port 5000.
