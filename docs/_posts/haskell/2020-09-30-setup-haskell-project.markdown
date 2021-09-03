@@ -13,7 +13,7 @@ ghc main.hs && ./main
 
 For bigger programs I use Stack.
 
-Initialize Stack (creates a new directory, use `--bare` to use the current
+Initialize Stack (this creates a new directory; use `--bare` to use the current
 directory).
 ```sh
 stack new myapp
