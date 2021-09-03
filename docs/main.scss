@@ -4,8 +4,8 @@
 @import "pygments";
 @charset "utf-8";
 
-$space: 30px;
-$content-width: 1000px;
+$space: 20px;
+$content-width: 800px;
 $on-laptop: 750px;
 $on-palm: 600px;
 $color: hsl(266, 100, 32); // rgb(71, 0, 163);
@@ -123,18 +123,17 @@ article {
     header {
         h1 {
             font-family: fell, Georgia, Cambria, "Times New Roman", Times, serif;
-            font-size: 48px;
+            font-size: 40px;
             font-style: normal;
             font-weight: normal;
             letter-spacing: -0.527999997138977px;
-            line-height: 60px;
+            line-height: 130%;
             margin-top: $space * 1.5;
             margin-bottom: $space / 2;
 
             @include media-query($on-palm) {
                 font-size: 32px;
                 line-height: 40px;
-                margin-top: $space;
             }
         }
 
@@ -322,8 +321,8 @@ blockquote {
     padding-right: $space * 1.5;
     padding-left: $space * 1.5;
     @include media-query($on-palm) {
-        padding-right: $space/1.5;
-        padding-left: $space/1.5;
+        padding-right: $space;
+        padding-left: $space;
     }
 }
 
