@@ -10,6 +10,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 description: >
   A programming blog.
 future: true # Include posts with a date in the future
+gems:
+    - github-pages
+    - jekyll-redirect-from
+    - jekyll-seo-tag
+    - jekyll-sitemap
 github_username: explodinglabs
 highlighter: rouge
 locale: en_AU
@@ -29,3 +34,6 @@ source: docs/
 title: Composed
 tagline: A programming blog
 url: "https://composed.blog" # the base hostname & protocol for your site
+whitelist:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
