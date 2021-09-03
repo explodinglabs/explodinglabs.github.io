@@ -11,7 +11,7 @@ permalink: /python/release-to-pypi
 These are the steps I take when releasing a version of my Python package to
 PyPI.
 
-First run your checks/cleaning. I have a post about this [here](/checks). If
+First run your checks/cleaning. I have a post about this [here](/python/checks). If
 any fail, start again.
 
 Run tests.
