@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: Group your Python imports
+title: Group Python imports
 permalink: /python/imports
 ---
 <div class="wide-logos" markdown="1">
@@ -57,7 +57,7 @@ from .stored_procedure_operator import StoredProcedureOperator
 
 Separate each group by a blank line.
 
-```
+```python
 from typing import Any
 import os
 

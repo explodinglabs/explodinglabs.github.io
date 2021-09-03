@@ -16,9 +16,10 @@ locale: en_AU
 markdown: kramdown
 # permalink: /:categories/:title
 plugins:
+    - github-pages
     - jekyll-redirect-from
-    - jekyll-sitemap
     - jekyll-seo-tag
+    - jekyll-sitemap
 repository: explodinglabs/composed.blog
 social:
   name: Exploding Labs

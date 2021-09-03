@@ -20,6 +20,7 @@ need to hit it with a barrage of checks to ensure the code at least meets some
 level of quality.
 
 The tools I use are
+
 - **Black**, to ensure code is formatted
 - **Pylint**, I use this to disallow unused imports, and
 - **Mypy** for type checking.

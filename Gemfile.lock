@@ -268,8 +268,9 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-redirect-from
   jekyll-seo-tag
   jekyll-sitemap
 
 BUNDLED WITH
-   2.2.21
+   2.2.26

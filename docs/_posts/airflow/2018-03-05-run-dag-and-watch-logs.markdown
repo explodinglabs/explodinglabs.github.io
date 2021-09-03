@@ -26,8 +26,8 @@ This makes it hard to tail-follow the logs. Thankfully, starting from Airflow
 into one file.
 
 <div class="warning" markdown="1">
-    If you make this change, you won't be able to view task logs in the web UI,
-    because the UI expects log filenames to be in the normal format.
+If you make this change, you won't be able to view task logs in the web UI,
+because the UI expects log filenames to be in the normal format.
 </div>
 
 <div class="warning" markdown="1">
