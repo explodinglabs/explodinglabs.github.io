@@ -17,7 +17,7 @@ except:
 ```
 _Followed by the same again ad infinitum._
 
-## Logging before and after every f------ thing
+## Logging before and after every thing
 
 _You don't need to log before doing everything._ "Get ready, here it comes!"
 Who cares! Just do the thing!
@@ -26,7 +26,7 @@ _You don't need to log after doing everything._ "We succeeded, yay!" Who cares?
 
 _You're only adding noise to the logs, and noise to the code._
 
-## Trying to catch every f------ exception
+## Trying to catch every exception
 
 This is the tendency of the paranoid programmer, every line of code brings
 fear. "Something could go wrong here, I'd better handle it and log a nice

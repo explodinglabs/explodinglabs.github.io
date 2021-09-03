@@ -152,14 +152,18 @@ article {
         font-size: 22px;
         font-style: normal;
         font-weight: 500;
-        height: 28px;
         letter-spacing: normal;
         line-height: 28px;
     }
 
     h3 {
         margin: $space * 1.5 0 $space 0;
-        font-size: 16px;
+        font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: normal;
+        line-height: 22px;
     }
 
     a {
@@ -187,7 +191,7 @@ article {
         }
 
         p:first-child:before {
-            content: "⚠️ ";  //Warning emoji (can't see it inthe terminal font)
+            content: "⚠️  ";  //Warning emoji (can't see it inthe terminal font)
         }
     }
 
@@ -271,7 +275,7 @@ blockquote {
     }
 
     p:first-child:before {
-        content: "\201C";
+        content: "\201C  ";
         font-size: 60px;
         position: relative;
         top: 20px;
@@ -284,6 +288,7 @@ blockquote {
         font-size: small;
         font-style: normal;
         color: #696;
+        line-height: 100%;
     }
 }
 
