@@ -5,5 +5,5 @@ found=$(ag -l "$2" "docs/_posts/$1" |head -n1)
 if [[ $found ]]; then
     vim "$found"
 else
-    vim -c ':r docs/_templates/post.markdown' "_posts/$1/$(date +%Y-%m-%d)-$(echo "${2:l}" | tr " " "-").markdown"
+    vim -c ':r docs/_templates/post.markdown' "docs/_posts/$1/$(date +%Y-%m-%d)-$(echo "${2:l}" | tr " " "-").markdown"
 fi
