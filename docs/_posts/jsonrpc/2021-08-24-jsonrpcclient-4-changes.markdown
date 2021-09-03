@@ -71,4 +71,4 @@ matching.
 frameworks.](https://github.com/explodinglabs/jsonrpcclient/tree/master/examples)
 
 [Full version 4 documentation is
-here](https://www.jsonrpcclient.com/en/latest/).
+here.](https://www.jsonrpcclient.com/en/latest/)
