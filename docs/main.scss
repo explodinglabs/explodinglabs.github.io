@@ -4,7 +4,9 @@
 @import "pygments";
 @charset "utf-8";
 
-$space: 20px;
+$space: 25px;
+$green: hsl(148, 52%, 85%);
+$yellow: hsl(53, 100%, 89%);
 $content-width: 850px;
 $on-palm: 600px;
 $color: hsl(266, 100, 32); // rgb(71, 0, 163);
@@ -140,8 +142,8 @@ article {
 
         .post-meta {
             font-size: smaller;
-            color: #666;
-            a { color: #666; text-decoration: none; }
+            color: #444;
+            a { color: #444; text-decoration: none; }
             margin-bottom: $space * 1.5;
             @include media-query($on-palm) {
                 margin-bottom: $space;
@@ -246,8 +248,8 @@ pre, code {
 
 /* Code using backticks */
 p code, li code {
-    background-color: #fff9c9;
-    border: 1px solid orange;
+    background-color: $yellow;
+    border: 1px solid desaturate(adjust-hue(darken($yellow, 30%), -15%), 10%);
     border-radius: 3px;
     padding: 3px 5px;
 }
@@ -263,10 +265,10 @@ pre {
 }
 
 blockquote {
-    background-color: #c9ffe9;
+    background-color: $green;
     border-radius: 0 5px 5px 0;
-    border-left: 5px solid #69cf99;
-    padding: 0 $space/2;
+    border-left: 5px solid darken($green, 40%);
+    padding: $space/2 $space;
     margin-bottom: $space;
 
     p {
@@ -275,6 +277,7 @@ blockquote {
     }
 
     p:last-child {
+        padding: 0;
         margin: 0;
     }
 
@@ -284,15 +287,18 @@ blockquote {
         position: relative;
         top: 20px;
         line-height: 0%;
-        color: #7a7a7a;
+        color: darken($green, 40%);
         padding-right: 5px;
     }
 
     cite {
         font-size: smaller;
         font-style: normal;
-        color: #696;
+        color: darken($green, 40%);
         line-height: 100%;
+        display: block;
+        text-align: right;
+        margin-bottom: $space/2;
     }
 }
 
@@ -323,8 +329,8 @@ blockquote {
     margin-left: auto;
     margin-right: auto;
     max-width: $content-width;
-    padding-right: $space * 2;
-    padding-left: $space * 2;
+    padding-right: $space * 1.5;
+    padding-left: $space * 1.5;
     @include media-query($on-palm) {
         padding-right: $space;
         padding-left: $space;
