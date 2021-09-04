@@ -8,9 +8,8 @@ permalink: /jsonrpc/jsonrpcserver
 ![flask](/assets/flask.png)
 </div>
 
-We'll build an HTTP server in Python, taking
-[JSON-RPC](http://www.jsonrpc.org/) requests on port 5000. It should respond to
-"ping" with "pong".
+We'll build an HTTP server in Python, taking JSON-RPC requests on port 5000. It
+should respond to "ping" with "pong".
 
 Server
 ======

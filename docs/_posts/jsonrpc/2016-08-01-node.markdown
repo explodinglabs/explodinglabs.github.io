@@ -10,7 +10,7 @@ permalink: /jsonrpc/node
 </div>
 
 We'll use [Express](https://docs.python.org/3/library/http.server.html) to take
-[JSON-RPC](http://www.jsonrpc.org/) requests.
+JSON-RPC requests.
 
 - When it receives a "speak" request on `/cats`, it should respond with "meow".
 - When it receives a "speak" request on `/dogs`, it should respond with "woof".

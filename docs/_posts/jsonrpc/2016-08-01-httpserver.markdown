@@ -13,8 +13,8 @@ This post uses Jsonrpcserver 5 which requires Python 3.8+.
 ![json](/assets/json.png)
 </div>
 
-We'll start a server to take [JSON-RPC](http://www.jsonrpc.org/) requests. It
-should respond to "ping" with "pong".
+We'll start a server to take JSON-RPC requests. It should respond to "ping"
+with "pong".
 
 We'll use Python's built-in
 [http.server](https://docs.python.org/3/library/http.server.html) module, so no

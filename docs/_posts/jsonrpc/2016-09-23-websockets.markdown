@@ -13,8 +13,8 @@ This post uses Jsonrpcserver 5 which requires Python 3.8+.
 ![json](/assets/json.png)
 </div>
 
-We'll use Websockets to take [JSON-RPC](http://www.jsonrpc.org/) requests. It
-should respond to "ping" with "pong".
+We'll use Websockets to take JSON-RPC requests. It should respond to "ping"
+with "pong".
 
 Install [websockets](http://websockets.readthedocs.io/) to take requests and
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:

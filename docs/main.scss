@@ -9,11 +9,11 @@ $content-width: 800px;
 $on-palm: 600px;
 
 // Colors
-$blockquote: hsl(148, 52%, 85%);
-$code: hsl(300, 80%, 96%);
-$inlinecode: hsl(53, 100%, 89%);
+$blockquote: hsl(148, 52, 85);
+$code: hsl(320, 8.1, 15);
+$inlinecode: hsl(53, 100, 89);
 $nav: hsl(266, 100, 32);
-$warning: hsl(0, 100%, 95%);
+$warning: hsl(0, 100, 95);
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
@@ -135,7 +135,7 @@ article {
             letter-spacing: -0.527999997138977px;
             line-height: 130%;
             margin-top: $space * 2;
-            margin-bottom: $space / 2;
+            margin-bottom: $space / 3;
 
             @include media-query($on-palm) {
                 margin-top: $space * 1.5;
@@ -258,10 +258,12 @@ p code, li code {
     padding: 3px 5px;
 }
 
+.highlight {
+    border-radius: 5px;
+}
+
 pre.highlight {
     background-color: $code;
-    // border-left: 10px solid darken($code, 5%);
-    border-radius: 0 5px 5px 0;
     line-height: 160%;
     margin-bottom: $space;
     overflow-x: auto;

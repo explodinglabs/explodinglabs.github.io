@@ -14,9 +14,8 @@ This post uses Jsonrpcserver 5 which requires Python 3.8+.
 ![json](/assets/json.png)
 </div>
 
-We'll use [Socket.IO](http://socket.io/) to take
-[JSON-RPC](http://www.jsonrpc.org/) requests. It should respond to "ping" with
-"pong".
+We'll use [Socket.IO](http://socket.io/) to take JSON-RPC requests. It should
+respond to "ping" with "pong".
 
 Install [Flask](http://flask.pocoo.org),
 [Flask-SocketIO](https://flask-socketio.readthedocs.org/) and
