@@ -7,7 +7,7 @@
 $space: 25px;
 $green: hsl(148, 52%, 85%);
 $yellow: hsl(53, 100%, 89%);
-$content-width: 850px;
+$content-width: 900px;
 $on-palm: 600px;
 $color: hsl(266, 100, 32); // rgb(71, 0, 163);
 
@@ -329,8 +329,8 @@ blockquote {
     margin-left: auto;
     margin-right: auto;
     max-width: $content-width;
-    padding-right: $space * 1.5;
-    padding-left: $space * 1.5;
+    padding-right: $space * 2;
+    padding-left: $space * 2;
     @include media-query($on-palm) {
         padding-right: $space;
         padding-left: $space;
