@@ -3,6 +3,7 @@ layout: post
 title: Write 6x less code
 permalink: /write-6x-less-code
 redirect_from: /how-to-write-6x-less-code
+sitemap: false
 ---
 I see this repeatedly in my job as a software engineer (using impure imperative
 languages):
