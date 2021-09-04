@@ -17,7 +17,7 @@ except:
 ```
 _Followed by the same again ad infinitum._
 
-## Logging before and after every thing
+## Logging before and after everything
 
 _You don't need to log before doing everything._ "Get ready, here it comes!"
 Who cares! Just do the thing!
