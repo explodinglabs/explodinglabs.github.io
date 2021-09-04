@@ -14,7 +14,7 @@ $code: hsl(320, 8.1, 15);
 $inlinecode: hsl(53, 100, 89);
 $nav: hsl(266, 100, 32);
 $warning: hsl(330, 70, 90);
-$lists: hsl(280, 90, 85);
+$lists: hsl(280, 90, 95);
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
