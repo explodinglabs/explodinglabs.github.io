@@ -28,7 +28,7 @@ In a new branch:
 
 <div class="warning" markdown="1">
 Once the release is uploaded, there's no way to change the README.md on PyPI,
-or documentation on readthedocs, without releasing another version. So take
+or documentation on Readthedocs, without releasing another version. So take
 care with these in stable releases.
 </div>
 
