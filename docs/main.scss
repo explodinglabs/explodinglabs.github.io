@@ -14,6 +14,7 @@ $code: hsl(320, 8.1, 15);
 $inlinecode: hsl(53, 100, 89);
 $nav: hsl(266, 100, 32);
 $warning: hsl(330, 70, 90);
+$lists: hsl(280, 90, 85);
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
@@ -230,8 +231,10 @@ blockquote, ul, ol, dl, figure, %vertical-rhythm {
 
 /* Lists */
 ul, ol {
-    margin-left: $space;
+    padding: $space/2 $space*2;
     margin-bottom: $space;
+    background-color: $lists;
+    border-radius: 5px;
 }
 
 /* Images */
