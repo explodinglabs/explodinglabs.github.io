@@ -15,10 +15,8 @@ social:
   name: Exploding Labs
   links:
     - https://github.com/explodinglabs
-source: docs/
 title: Composed
 tagline: A programming blog
 url: "https://composed.blog" # the base hostname & protocol for your site
 whitelist:
   - jekyll-redirect-from
-  - jekyll-seo-tag
