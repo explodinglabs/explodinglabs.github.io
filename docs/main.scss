@@ -149,7 +149,7 @@ article {
             font-size: smaller;
             color: #444;
             a { color: #444; text-decoration: none; }
-            margin-bottom: $space * 1.5;
+            margin-bottom: $space;
             @include media-query($on-palm) {
                 margin-bottom: $space;
             }
