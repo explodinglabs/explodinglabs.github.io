@@ -32,7 +32,7 @@ because the UI expects log filenames to be in the normal format.
 
 <div class="warning" markdown="1">
 Logging to a single file is useful for development (using the
-SequentialExecutor), but it's **not recommended in production** because issues
+SequentialExecutor), but it won't work in production because issues
 will arise when multiple tasks attempt to write to the same log file at once.
 </div>
 
