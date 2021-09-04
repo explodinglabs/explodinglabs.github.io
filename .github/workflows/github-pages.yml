@@ -15,3 +15,4 @@ jobs:
           jekyll_src: docs
           pre_build_commands: "gem update bundler; bundle update"
           token: ${{ secrets.GITHUB_TOKEN }}
+          jekyll_build_options: "--config ../_config.yml"
