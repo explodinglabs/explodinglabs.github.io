@@ -13,7 +13,7 @@ $blockquote: hsl(148, 52, 85);
 $code: hsl(320, 8.1, 15);
 $inlinecode: hsl(53, 100, 89);
 $nav: hsl(266, 100, 32);
-$warning: hsl(0, 100, 95);
+$warning: hsl(330, 70, 90);
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {

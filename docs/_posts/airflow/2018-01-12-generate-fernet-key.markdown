@@ -35,6 +35,8 @@ AIRFLOW__CORE__FERNET_KEY='81HqDtbqAywKSOumSha3BhWNOdQ26slT6K0YaZeZyPs='
 
 Restart Airflow's webserver.
 
-*For existing connections (the ones that you had defined before setting the
-Fernet key), you need to open each connection in the connection admin UI,
-re-type the password, and save it.*
+<div class="warning" markdown="1">
+For existing connections (the ones that were defined before setting the Fernet
+key), you need to open each connection in the web admin, re-type the password
+and save it.
+</div>
