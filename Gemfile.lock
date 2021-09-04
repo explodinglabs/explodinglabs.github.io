@@ -68,10 +68,9 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.2)
-  jekyll-redirect-from
-  jekyll-seo-tag
-  jekyll-sitemap
-  sassc (= 2.1.0)
+  jekyll-redirect-from (~> 0.16)
+  jekyll-seo-tag (~> 2.7)
+  jekyll-sitemap (~> 1.4)
 
 BUNDLED WITH
    2.2.27
