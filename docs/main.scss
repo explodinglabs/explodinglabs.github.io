@@ -12,9 +12,9 @@ $on-palm: 600px;
 $blockquote: hsl(148, 52, 85);
 $code: hsl(320, 8.1, 15);
 $inlinecode: hsl(53, 100, 89);
+$lists: hsl(190, 90, 90);
 $nav: hsl(266, 100, 32);
-$warning: hsl(330, 70, 90);
-$lists: hsl(280, 90, 95);
+$warning: hsl(280, 90, 95);
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
@@ -87,7 +87,7 @@ nav {
         list-style: none;
         text-align: center;
         > li {
-            margin-bottom: $space;
+            margin-bottom: $space * 1.5;
             a {
                 display: inline-block;
                 font-size: 1.2em;
