@@ -5,11 +5,15 @@
 @charset "utf-8";
 
 $space: 25px;
-$green: hsl(148, 52%, 85%);
-$yellow: hsl(53, 100%, 89%);
-$content-width: 900px;
+$content-width: 800px;
 $on-palm: 600px;
-$color: hsl(266, 100, 32); // rgb(71, 0, 163);
+
+// Colors
+$blockquote: hsl(148, 52%, 85%);
+$code: hsl(300, 80%, 96%);
+$inlinecode: hsl(53, 100%, 89%);
+$nav: hsl(266, 100, 32);
+$warning: hsl(0, 100%, 95%);
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
@@ -45,7 +49,7 @@ body {
 nav {
     height: 71px;
     margin-bottom: $space;
-    background-color: $color;
+    background-color: $nav;
     box-shadow: 0 5px 5px -2px gray;
     text-align: center;
     .logo {
@@ -180,9 +184,9 @@ article {
     }
 
     .warning {
-        background-color: hsl(0, 100%, 95%);
-        border-left: 5px solid hsl(0, 100%, 90%);
-        border-radius: 0 5px 5px 0;
+        background-color: $warning;
+        // border-left: 10px solid darken($warning, 5%);
+        border-radius: 5px;
         font-style: italic;
         margin-bottom: $space;
         padding: $space/2 15px;
@@ -238,8 +242,8 @@ img {
 
 /* Code formatting */
 pre, code {
-    font-family: "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
-    font-size: 15px;
+    font-family: "Source Code Pro", "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
+    font-size: 16px;
     font-stretch: normal;
     font-style: normal;
     font-variant-caps: normal;
@@ -248,26 +252,26 @@ pre, code {
 
 /* Code using backticks */
 p code, li code {
-    background-color: $yellow;
-    border: 1px solid desaturate(adjust-hue(darken($yellow, 30%), -15%), 10%);
+    background-color: $inlinecode;
+    border: 1px solid desaturate(adjust-hue(darken($inlinecode, 30%), -15%), 10%);
     border-radius: 3px;
     padding: 3px 5px;
 }
 
-pre {
+pre.highlight {
+    background-color: $code;
+    // border-left: 10px solid darken($code, 5%);
     border-radius: 0 5px 5px 0;
-    background-color: #e9e9ff;
-    border-left: 5px solid #cfcfff;
-    padding: $space/2 15px;
+    line-height: 160%;
     margin-bottom: $space;
     overflow-x: auto;
-    line-height: 25px;
+    padding: $space/2 15px;
 }
 
 blockquote {
-    background-color: $green;
-    border-radius: 0 5px 5px 0;
-    border-left: 5px solid darken($green, 40%);
+    background-color: $blockquote;
+    border-radius: 5px;
+    // border-left: 0px solid darken($blockquote, 40%);
     padding: $space/2 $space;
     margin-bottom: $space;
 
@@ -287,14 +291,14 @@ blockquote {
         position: relative;
         top: 20px;
         line-height: 0%;
-        color: darken($green, 40%);
+        color: darken($blockquote, 40%);
         padding-right: 5px;
     }
 
     cite {
         font-size: smaller;
         font-style: normal;
-        color: darken($green, 40%);
+        color: darken($blockquote, 40%);
         line-height: 100%;
         display: block;
         text-align: right;
