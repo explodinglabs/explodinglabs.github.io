@@ -82,6 +82,7 @@ nav {
 
     ul {
         margin: 0;
+        background-color: transparent;
         list-style: none;
         text-align: center;
         > li {
@@ -231,10 +232,10 @@ blockquote, ul, ol, dl, figure, %vertical-rhythm {
 
 /* Lists */
 ul, ol {
-    padding: $space/2 $space*2;
-    margin-bottom: $space;
     background-color: $lists;
     border-radius: 5px;
+    margin-bottom: $space;
+    padding: $space/2 $space*2;
 }
 
 /* Images */
