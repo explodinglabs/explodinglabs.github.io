@@ -128,10 +128,11 @@ article {
             font-weight: normal;
             letter-spacing: -0.527999997138977px;
             line-height: 130%;
-            margin-top: $space * 1.5;
+            margin-top: $space * 2;
             margin-bottom: $space / 2;
 
             @include media-query($on-palm) {
+                margin-top: $space * 1.5;
                 font-size: 32px;
                 line-height: 40px;
             }
@@ -141,7 +142,10 @@ article {
             font-size: smaller;
             color: #666;
             a { color: #666; text-decoration: none; }
-            margin-bottom: $space;
+            margin-bottom: $space * 1.5;
+            @include media-query($on-palm) {
+                margin-bottom: $space;
+            }
         }
     }
 
