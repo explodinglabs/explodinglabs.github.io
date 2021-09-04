@@ -28,15 +28,7 @@ gem install --user-install bundler jekyll
 
 ## For each site
 
-Add a `Gemfile` such as
-
-```ruby
-source 'https://rubygems.org'
-gem 'github-pages'
-gem 'jekyll-sitemap'
-gem 'jekyll-seo-tag'
-gem 'jekyll-redirect-from'
-```
+Add a `Gemfile` with dependencies (see [mine](https://github.com/explodinglabs/composed.blog/blob/master/Gemfile)).
 
 ```sh
 bundle install
