@@ -223,15 +223,6 @@ p {
     margin-bottom: $space;
 }
 
-blockquote, ul, ol, dl, figure, %vertical-rhythm {
-}
-
-@media screen and (min-width: 751px) {
-    p, #contents {
-    }
-}
-
-/* Lists */
 ul, ol {
     background-color: $lists;
     border-radius: 5px;
@@ -239,13 +230,16 @@ ul, ol {
     padding: $space/2 $space*2;
 }
 
-/* Images */
+blockquote ul, blockquote ol {
+    background-color: transparent;
+    padding: 0 0 0 $space;
+}
+
 img {
     max-width: 100%;
     vertical-align: middle;
 }
 
-/* Code formatting */
 pre, code {
     font-family: "Source Code Pro", "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
     font-size: 16px;
