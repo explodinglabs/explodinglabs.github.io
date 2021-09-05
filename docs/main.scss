@@ -228,11 +228,13 @@ ul, ol {
     border-radius: 5px;
     margin-bottom: $space;
     padding: $space/2 $space*2;
+    box-shadow: 0 5px 10px -2px gray;
 }
 
 blockquote ul, blockquote ol {
     background-color: transparent;
     padding: 0 0 0 $space;
+    box-shadow: none;
 }
 
 img {
