@@ -188,8 +188,8 @@ article {
 
     .warning {
         background-color: $warning;
-        // border-left: 10px solid darken($warning, 5%);
         border-radius: 5px;
+        box-shadow: 0 5px 10px -2px gray;
         font-style: italic;
         margin-bottom: $space;
         padding: $space/2 15px;
@@ -231,6 +231,7 @@ ul, ol {
     box-shadow: 0 5px 10px -2px gray;
 }
 
+.post-list ul,
 blockquote ul, blockquote ol {
     background-color: transparent;
     padding: 0 0 0 $space;
