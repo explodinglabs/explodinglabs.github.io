@@ -89,7 +89,6 @@ nav {
         > li {
             margin-bottom: $space;
             a {
-                display: inline-block;
                 font-size: 1.2em;
                 margin-bottom: 3px;
             }
@@ -231,10 +230,7 @@ ul, ol {
     box-shadow: 0 5px 10px -2px gray;
 }
 
-.post-list ul,
-blockquote ul, blockquote ol {
-    background-color: transparent;
-    padding: 0 $space;
+.post-list ul, blockquote ul, blockquote ol {
     box-shadow: none;
 }
 
