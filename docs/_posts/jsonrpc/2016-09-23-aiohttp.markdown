@@ -20,7 +20,7 @@ Install aiohttp to take requests and
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
-$ pip install aiohttp jsonrpcserver
+pip install aiohttp jsonrpcserver
 ```
 Create a `server.py`:
 
@@ -65,7 +65,7 @@ $ curl -X POST http://localhost:5000 -d '{"jsonrpc": "2.0", "method": "ping", "i
 ## Send JSON-RPC request with aiohttp
 
 ```python
-$ pip install aiohttp jsonrpcclient
+pip install aiohttp jsonrpcclient
 ```
 
 Create a `client.py`:

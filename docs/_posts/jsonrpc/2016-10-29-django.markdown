@@ -20,7 +20,7 @@ Install [jsonrpcserver](https://www.jsonrpcserver.com/) to process the
 JSON-RPC requests:
 
 ```sh
-$ pip install jsonrpcserver
+pip install jsonrpcserver
 ```
 
 Create a `views.py`:

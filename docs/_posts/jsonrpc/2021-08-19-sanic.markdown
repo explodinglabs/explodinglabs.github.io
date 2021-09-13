@@ -20,7 +20,7 @@ Install Sanic to take requests and
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
-$ pip install sanic jsonrpcserver
+pip install sanic jsonrpcserver
 ```
 
 Create a `server.py`:

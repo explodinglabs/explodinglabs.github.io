@@ -21,7 +21,7 @@ Install [aiozmq](https://aiozmq.readthedocs.io/) to take requests and
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
-$ pip install aiozmq jsonrpcserver
+pip install aiozmq jsonrpcserver
 ```
 Create a `server.py`:
 
@@ -61,8 +61,7 @@ $ python server.py
 Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
 
 ``` shell
-$ pip install pyzmq jsonrpcclient
-$ python
+pip install pyzmq jsonrpcclient
 ```
 ```python
 >>> from jsonrpcclient import request_json, parse_json, Ok

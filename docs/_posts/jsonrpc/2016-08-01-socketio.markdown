@@ -23,7 +23,7 @@ Install [Flask](http://flask.pocoo.org),
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
-$ pip install flask flask-socketio eventlet jsonrpcserver
+pip install flask flask-socketio eventlet jsonrpcserver
 ```
 Create a `server.py`:
 

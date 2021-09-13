@@ -20,7 +20,7 @@ $ mkvirtualenv -p $(which python2.7) esptool
 Install esptool in the virtualenv:
 
 ```sh
-$ pip install esptool
+pip install esptool
 ```
 
 Plugging in the nodemcu gives me `/dev/ttyUSB0`.

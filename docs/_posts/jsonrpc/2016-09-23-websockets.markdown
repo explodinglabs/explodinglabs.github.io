@@ -20,7 +20,7 @@ Install [websockets](http://websockets.readthedocs.io/) to take requests and
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
-$ pip install websockets jsonrpcserver
+pip install websockets jsonrpcserver
 ```
 
 Create a `server.py`:
@@ -58,7 +58,7 @@ $ python server.py
 Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
 
 ```sh
-$ pip install websockets jsonrpcclient
+pip install websockets jsonrpcclient
 ```
 
 Create a `client.py`:

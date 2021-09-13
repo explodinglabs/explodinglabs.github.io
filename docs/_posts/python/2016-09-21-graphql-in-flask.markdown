@@ -19,7 +19,7 @@ Install the dependencies — Flask to take queries,
 the route:
 
 ```sh
-$ pip install flask graphene flask-graphql
+pip install flask graphene flask-graphql
 ```
 Create a `server.py`:
 
@@ -60,7 +60,7 @@ $ curl -g 'http://localhost:5000/?query={hello}'
 ## Python Client
 
 ```sh
-$ pip install gql requests
+pip install gql requests
 ```
 ```python
 import json

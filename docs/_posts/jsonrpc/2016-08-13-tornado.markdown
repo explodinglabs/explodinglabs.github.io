@@ -20,7 +20,7 @@ Install Tornado to take requests and
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
-$ pip install tornado jsonrpcserver
+pip install tornado jsonrpcserver
 ```
 Create a `server.py`:
 

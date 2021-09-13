@@ -20,7 +20,7 @@ Install FastAPI and [Uvicorn](https://www.uvicorn.org) to take requests and
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
-$ pip install fastapi uvicorn jsonrpcserver
+pip install fastapi uvicorn jsonrpcserver
 ```
 
 Create a `server.py`:

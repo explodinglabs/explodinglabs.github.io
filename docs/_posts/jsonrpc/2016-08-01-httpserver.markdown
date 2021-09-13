@@ -23,7 +23,7 @@ web framework is required - only
 messages:
 
 ```sh
-$ pip install jsonrpcserver
+pip install jsonrpcserver
 ```
 Create a `server.py`:
 

@@ -20,7 +20,7 @@ Install Werkzeug to take requests and
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ``` shell
-$ pip install werkzeug jsonrpcserver
+pip install werkzeug jsonrpcserver
 ```
 
 Create a `server.py`:

@@ -21,7 +21,7 @@ Install [pyzmq](https://pyzmq.readthedocs.io/) to take requests and
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ``` shell
-$ pip install pyzmq jsonrpcserver
+pip install pyzmq jsonrpcserver
 ```
 Create a `server.py`:
 
@@ -55,8 +55,7 @@ $ python ./server.py
 Use [jsonrpcclient](https://www.jsonrpcclient.com/) to send requests:
 
 ```sh
-$ pip install pyzmq jsonrpcclient
-$ python
+pip install pyzmq jsonrpcclient
 ```
 
 ```python

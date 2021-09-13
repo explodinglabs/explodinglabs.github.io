@@ -16,11 +16,15 @@ options thanks to [click](https://github.com/pallets/click).
 
 To use it, install [mipy](https://github.com/bcb/mipy) with pip:
 
-    $ pip install mipy
+```sh
+pip install mipy
+```
 
 Now you can copy files to the device:
 
-    $ mipy cp main.py
+```sh
+mipy cp main.py
+```
 
 You can also set the port, baudrate and other options. See `mipy --help`.
 
