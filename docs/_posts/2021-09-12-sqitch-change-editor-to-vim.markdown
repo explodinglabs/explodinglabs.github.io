@@ -3,6 +3,12 @@ layout: post
 title: 'Sqitch: Change editor to Vim'
 permalink: /sqitch/change-editor-to-vim
 ---
+An editor is only used by sqitch for certain things such as entering a note for
+a new migration if you don't use the `--note` (or `-n`) param, otherwise it's
+not really necessary to change unless you really want to.
+
+## How to change the editor
+
 If you installed Sqitch (instead of using the docker image), the easiest way is
 to create/edit the config file (such as `~/.sqitch/sqitch.conf`):
 ```ini
