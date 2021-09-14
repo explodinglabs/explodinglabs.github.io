@@ -3,7 +3,7 @@ layout: post
 title: 'Sqitch: Change editor to Vim'
 permalink: /sqitch/change-editor-to-vim
 ---
-An editor is only used by sqitch for certain things such as entering a note for
+An editor is only used by Sqitch for certain things such as entering a note for
 a new migration, but if you use the `--note` (or `-n`) param with `sqitch add`
 it's not really necessary to change this unless you really want to.
 
