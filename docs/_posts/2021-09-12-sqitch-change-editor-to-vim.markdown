@@ -21,6 +21,6 @@ unfortunately it doesn't include vim in the container. So I had to:
 
 - Fork the [docker-sqitch repository](https://github.com/sqitchers/docker-sqitch).
 - Edit the Dockerfile to replace `nano` with `vim`. Also change SQITCH_EDITOR
-  from nano to `'vim --clean'`. (without `--clean` I got errors related to
+  from nano to `'vim --clean'`. (without `--clean` I had errors related to
   Python scripting).
 - `docker build -t sqitch/sqitch --build-arg VERSION=1.1.0 .`
