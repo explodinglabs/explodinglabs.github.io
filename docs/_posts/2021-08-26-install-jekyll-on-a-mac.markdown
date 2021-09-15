@@ -35,7 +35,7 @@ bundle install
 bundle exec jekyll serve --livereload
 ```
 
-## If you have problems with Ruby
+## If you have problems with Ruby, try:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/rbenv/rbenv-installer/main/bin/rbenv-doctor | bash
