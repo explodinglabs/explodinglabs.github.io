@@ -10,7 +10,7 @@ layout: all
             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 Beau Barker |
                 {{ created }} |
-                {% if updated != created %}
+                {% if updated and updated != created %}
                 Updated {{ updated }} |
                 {% endif %}
                 <a href="https://github.com/explodinglabs/composed.blog/edit/master/docs/{{page.path}}">
