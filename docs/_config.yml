@@ -6,6 +6,7 @@ plugins:
     - jekyll-redirect-from
     - jekyll-seo-tag
     - jekyll-sitemap
+    - jekyll-last-modified-at
 title: Composed
 tagline: A programming blog
 url: "https://composed.blog" # the base hostname & protocol for your site
