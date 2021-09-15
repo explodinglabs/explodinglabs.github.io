@@ -16,7 +16,7 @@ redirect_from:
 </div>
 
 Python's not the strictest language, so to have any confidence in your code you
-need to hit it with a barrage of checks to ensure the code at least meets some
+need to hit it with a barrage of checks to ensure it meets at least some
 level of quality.
 
 The tools I use are:
