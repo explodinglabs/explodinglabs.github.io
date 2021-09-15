@@ -28,19 +28,17 @@ In a new branch:
 
 <div class="warning" markdown="1">
 Once the release is uploaded, there's no way to change the `README.md` on PyPI,
-or documentation on Readthedocs, without releasing another version. So take
+or the documentation on Readthedocs, without releasing another version. So take
 care with these in stable releases.
 </div>
 
 Commit, push and merge into master.
-
 ```sh
 git commit -a
 git push origin head
 ```
 
 Pull master, tag the commit and push the tag.
-
 ```sh
 git checkout master
 git pull
@@ -48,8 +46,7 @@ git tag x.x.x
 git push --tags
 ```
 
-Create the sdist and upload it:
-
+Create the sdist and upload it.
 ```sh
 pip install --upgrade pip setuptools twine
 python setup.py sdist
@@ -57,7 +54,7 @@ twine check dist/my_package-x.x.x.tar.gz
 twine upload dist/my_package-x.x.x.tar.gz
 ```
 
-Update coverage badge:
+Update coverage badge.
 ```sh
 pip install --upgrade pytest-cov coveralls pyyaml
 pytest --cov-branch --cov-report term-missing --cov mypackage tests
