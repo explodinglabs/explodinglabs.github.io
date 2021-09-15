@@ -34,10 +34,23 @@ care with these in stable releases.
 
 Commit, push and merge into master.
 
+```sh
+git commit -a
+git push origin head
+```
+
 Pull master, tag the commit and push the tag.
 
-Create the sdist and upload it:
+```sh
+git checkout master
+git pull
+git tag x.x.x
+git push --tags
 ```
+
+Create the sdist and upload it:
+
+```sh
 pip install --upgrade pip setuptools twine
 python setup.py sdist
 twine check dist/my_package-x.x.x.tar.gz
@@ -46,8 +59,9 @@ twine upload dist/my_package-x.x.x.tar.gz
 
 Update coverage badge:
 ```sh
-pytest --cov-branch --cov-report term-missing --cov mypackage tests  # requires pytest-cov
-coveralls  # requires coveralls and pyyaml installed
+pip install --upgrade pytest-cov coveralls pyyaml
+pytest --cov-branch --cov-report term-missing --cov mypackage tests
+coveralls
 ```
 
 [Build readthedocs](https://composed.blog/trigger-rtd-build) if there's been
