@@ -16,8 +16,8 @@ to create/edit the config file (such as `~/.sqitch/sqitch.conf`):
     editor = vim
 ```
 
-If like me you use the docker image `sqitch/sqitch` from docker hub,
-unfortunately it doesn't include vim in the container. So I had to:
+If like me you use the docker image `sqitch/sqitch` from Docker hub,
+unfortunately it doesn't include vim in the container, so I had to:
 
 - Fork the [docker-sqitch repository](https://github.com/sqitchers/docker-sqitch).
 - Edit the Dockerfile to replace `nano` with `vim`. Also change SQITCH_EDITOR
