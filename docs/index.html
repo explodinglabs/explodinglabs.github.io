@@ -6,22 +6,12 @@ title: Composed
 {% assign posts = site.posts | where_exp:"post","post.sitemap != false" | sort: 'date' | reverse %}
 
 <div class="wrapper post-list">
-    <h1>Recent posts</h1>
-    <hr />
-
-    <ul>
-        {% for post in posts limit:5 %}
-            {% include post_link_li.html %}
+    <table>
+        {% for post in posts limit:1 %}
+            {% include post_link_td.html %}
         {% endfor %}
-    </ul>
-
-    <hr>
-    {% if posts.size > 5 %}
-        <table>
-            {% for post in posts offset:5 %}
-                {% include post_link_td.html %}
-            {% endfor %}
-        </table>
-    {% endif %}
-
+        {% for post in posts offset:1 %}
+            {% include post_link_td.html %}
+        {% endfor %}
+    </table>
 </div>
