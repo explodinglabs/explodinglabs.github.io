@@ -9,20 +9,9 @@ layout: all
     <h1 class="category-title">{{page.title}}</h1>
     <hr />
 
-    <ul>
-        {% for post in posts limit:5 %}
-            {% if post.category == page.category %}
-                {% include post_link_li.html %}
-            {% endif %}
+    <table>
+        {% for post in posts %}
+            {% include post_link_td.html %}
         {% endfor %}
-    </ul>
-
-    <hr>
-    {% if posts.size > 5 %}
-        <table>
-            {% for post in posts offset:5 %}
-                {% include post_link_td.html %}
-            {% endfor %}
-        </table>
-    {% endif %}
+    </table>
 </div>
