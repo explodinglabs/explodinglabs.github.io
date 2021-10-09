@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Sqitch: Change editor to Vim'
+title: 'Change Sqitch editor to Vim'
 permalink: /sqitch/change-editor-to-vim
 ---
 Sqitch only uses an editor for certain things such as entering a note for
