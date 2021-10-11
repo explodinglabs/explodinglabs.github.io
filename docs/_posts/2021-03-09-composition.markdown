@@ -11,7 +11,7 @@ Why do we break down problems? This is due to the limitations of the human mind
 problems, and break them down again until they're just the right sized chunks that
 we can mentally digest them.
 
-_A well decomposed problem will produce the most elegant solution._
+A well decomposed problem will produce the most elegant solution.
 
 {:refdef: style="text-align: center; margin: 20px 0;"}
 ![composition-full](/assets/composition-full.png)
