@@ -11,11 +11,13 @@ Why do we break down problems? This is due to the limitations of the human mind
 problems, and break them down again until they're just the right size chunks that
 we can mentally digest them.
 
+A well broken-down problem will produce the most elegant solution.
+
 {:refdef: style="text-align: center; margin: 20px 0;"}
 ![composition-full](/assets/composition-full.png)
 {: refdef}
 
-We solve each problem, zooming in to focus on a single arrow, ignoring
+Then we solve each problem, zooming in to focus on a single arrow, ignoring
 everything else.
 
 {:refdef: style="text-align: center; margin: 20px 0;"}
