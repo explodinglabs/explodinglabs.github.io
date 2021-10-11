@@ -3,7 +3,7 @@ layout: post
 title: Clear iMovie storage
 permalink: /clear-imovie-storage
 ---
-The "Render files: Delete" button doesn't seem to work for me, so I use:
+The "Render files: Delete" button doesn't seem to work for me, so I use this command:
 ```sh
 find ~/Movies/iMovie\ Library.imovielibrary -path "*/Render Files" -type d -exec rm -r {} +
 ```
