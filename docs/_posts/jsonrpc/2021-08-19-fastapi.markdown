@@ -17,7 +17,7 @@ We'll use [FastAPI](https://fastapi.tiangolo.com) to take JSON-RPC requests. It
 should respond to "ping" with "pong".
 
 Install FastAPI and [Uvicorn](https://www.uvicorn.org) to take requests and
-[jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
+[Jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
 pip install fastapi uvicorn jsonrpcserver
