@@ -22,8 +22,8 @@ rm -r .tox; tox  # Continue below while this is running
 
 In a new branch:
 - Update version in `setup.py`.
+- Update `CHANGELOG.md` (stable releases only).
 - Update `README.md`, if any.
-- Update `CHANGELOG.md` (stable releases only)
 - Update documentation.
 
 <div class="warning" markdown="1">
