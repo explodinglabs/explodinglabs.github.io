@@ -6,7 +6,7 @@ permalink: /trigger-rtd-build
 You can use curl to trigger a build:
 
 ```sh
-$ curl -X POST https://readthedocs.org/build/myproject/latest
+curl -X POST https://readthedocs.org/build/myproject/latest
 ```
 
-(Replace `myproject/latest` with your build info.)
+(Replace `myproject/latest` with your project name and version.)
