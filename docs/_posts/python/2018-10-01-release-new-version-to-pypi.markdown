@@ -50,8 +50,8 @@ Create the sdist and upload it.
 ```sh
 pip install --upgrade pip setuptools twine
 python setup.py sdist
-twine check dist/my_package-x.x.x.tar.gz
-twine upload dist/my_package-x.x.x.tar.gz
+twine check dist/mypackage-x.x.x.tar.gz
+twine upload dist/mypackage-x.x.x.tar.gz
 ```
 
 Update coverage badge.
