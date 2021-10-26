@@ -19,7 +19,7 @@ pip install cryptography
 
 Generate a fernet key:
 ```shell
-python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
+$ python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
 81HqDtbqAywKSOumSha3BhWNOdQ26slT6K0YaZeZyPs=
 ```
 
