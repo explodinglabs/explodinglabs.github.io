@@ -129,7 +129,3 @@ which will abort the script and should fail your build.
   "formatted" in one version may not be in another.
 - If you have an existing project with unformatted code, _format the entire
   codebase all at once_. Don't do it gradually.
-
-## See also
-
-- [Install Black in Vim 8 and format when saving](/black-vim)
