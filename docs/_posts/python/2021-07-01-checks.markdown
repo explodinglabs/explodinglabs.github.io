@@ -74,7 +74,7 @@ pre-commit install
 ## Github Actions
 
 This will run the checks when a pull request is created, allowing a
-reviewer to see any potential issues straight up before beginning their review.
+reviewer to see any potential issues right away when beginning their review.
 
 Add the following to your repository in `.github/workflows/checks.yml`.
 
