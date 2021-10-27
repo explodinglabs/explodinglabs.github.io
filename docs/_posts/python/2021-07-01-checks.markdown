@@ -26,7 +26,7 @@ The tools I use are:
 - **Mypy** for type checking
 
 A fourth is **Pytest**, but this can take some time to run so I run it
-manually, and not automated -- the exception being in deployment scripts (we
+manually, and not automated. (The exception being in deployment scripts -- we
 can't allow deployments if tests are failing).
 
 When taking on a new or existing project, _setting up these automated checks
