@@ -99,10 +99,6 @@ jobs:
         mypy --strict mypackage
 ```
 
-Even though we're running the same checks as in pre-commit, this can actually
-pick up errors that weren't found in pre-commit, e.g. if you've created a file
-but forgotten to add it to the repository.
-
 ## Deployments
 
 This will run final checks before deploying. These are the most important
