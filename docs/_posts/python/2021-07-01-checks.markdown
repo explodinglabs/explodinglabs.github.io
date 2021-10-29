@@ -22,7 +22,7 @@ level of quality.
 The tools I use are:
 
 - **Black**, to ensure code is formatted
-- **Pylint**, I use this to disallow unused imports, and
+- **Pylint**, to disallow unused imports, and
 - **Mypy** for type checking
 
 A fourth is **Pytest**, but this can take some time to run so I run it
