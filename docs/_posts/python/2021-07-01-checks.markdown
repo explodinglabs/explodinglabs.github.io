@@ -94,9 +94,9 @@ jobs:
     - run: |
         pip install --upgrade pip
         pip install black==21.6b0 pylint==v3.0.0a3 mypy==v0.902
-        black --diff --check mypackage
-        pylint --disable=all --enable=unused-import mypackage
-        mypy --strict mypackage
+    - run: black --diff --check mypackage
+    - run: pylint --disable=all --enable=unused-import mypackage
+    - run: mypy --strict mypackage
 ```
 
 Even though we're running the same checks as in pre-commit, this can actually
