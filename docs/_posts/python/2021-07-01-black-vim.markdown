@@ -20,7 +20,7 @@ mkdir -p ~/.vim/pack/start/black/plugin
 curl https://raw.githubusercontent.com/psf/black/21.6b0/plugin/black.vim -o ~/.vim/pack/start/black/plugin/black.vim
 ```
 
-Next time you open a Python file in Vim, Black will install.
+Next time you open vim, Black will install.
 
 Add the following to `~/.vimrc` to format with Black every time you save.
 ```

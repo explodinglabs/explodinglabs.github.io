@@ -16,17 +16,17 @@ redirect_from:
 </div>
 
 Python's not the strictest language, so to have any confidence in your code you
-need to hit it with a barrage of checks to ensure it at least meets some
+need to hit it with a barrage of checks to ensure it meets at least some
 level of quality.
 
 The tools I use are:
 
 - **Black**, to ensure code is formatted
-- **Pylint**, I use this to disallow unused imports, and
+- **Pylint**, to disallow unused imports, and
 - **Mypy** for type checking
 
 A fourth is **Pytest**, but this can take some time to run so I run it
-manually, and not automated -- the exception being in deployment scripts (we
+manually, not automated. (The exception being in deployment scripts -- we
 can't allow deployments if tests are failing).
 
 When taking on a new or existing project, _setting up these automated checks
@@ -74,7 +74,7 @@ pre-commit install
 ## Github Actions
 
 This will run the checks when a pull request is created, allowing a
-reviewer to see any potential issues straight up before beginning their review.
+reviewer to see any potential issues right away when beginning their review.
 
 Add the following to your repository in `.github/workflows/checks.yml`.
 
@@ -98,10 +98,6 @@ jobs:
     - run: pylint --disable=all --enable=unused-import mypackage
     - run: mypy --strict mypackage
 ```
-
-Even though we're running the same checks as in pre-commit, this can actually
-pick up errors that weren't found in pre-commit, e.g. if you've created a file
-but forgotten to add it to the repository.
 
 ## Deployments
 
@@ -129,7 +125,3 @@ which will abort the script and should fail your build.
   "formatted" in one version may not be in another.
 - If you have an existing project with unformatted code, _format the entire
   codebase all at once_. Don't do it gradually.
-
-## See also
-
-- [Install Black in Vim 8 and format when saving](/black-vim)
