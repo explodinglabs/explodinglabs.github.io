@@ -2,7 +2,7 @@
 layout: post
 category: python
 title: |
-    Automated quality control: How to run Black, Mypy, Pylint and Pytest in Pre-commit hooks,
+    Automated checks: How to run Black, Mypy, Pylint and Pytest in Pre-commit hooks,
     Github Actions and Deployments
 permalink: /python/checks
 redirect_from:
