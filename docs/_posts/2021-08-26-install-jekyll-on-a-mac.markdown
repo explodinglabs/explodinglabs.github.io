@@ -32,6 +32,10 @@ Add a `Gemfile` with dependencies (see [mine](https://github.com/explodinglabs/c
 
 ```sh
 bundle install
+```
+
+Start Jekyll. (I install Jekyll inside a `docs` subdirectory so run this from there.)
+```sh
 bundle exec jekyll serve --livereload
 ```
 
