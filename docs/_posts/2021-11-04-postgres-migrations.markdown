@@ -3,7 +3,7 @@ layout: post
 title: Postgres migrations
 permalink: /postgres-migrations
 ---
-These are the deploy, verify and revert migrations for various common changes.
+Deploy, verify and revert migrations for various common changes.
 
 ## Function
 
