@@ -2,7 +2,7 @@
 layout: post
 category: python
 title: |
-    Automated checks: How to run Black, Mypy, Pylint and Pytest in Pre-commit hooks,
+    Automated Code Quality Checks: How to run Black, Mypy, Pylint and Pytest in Pre-commit hooks,
     Github Actions and Deployments
 permalink: /python/checks
 redirect_from:
@@ -93,9 +93,9 @@ jobs:
         python-version: 3.x
     - run: pip install --upgrade pip
     - run: pip install black==21.6b0 pylint==v3.0.0a3 mypy==v0.902
-    - run: black --diff --check mypackage
-    - run: pylint --disable=all --enable=unused-import mypackage
-    - run: mypy --strict mypackage
+    - run: black --diff --check $(git ls-files '*.py')
+    - run: pylint --disable=all --enable=unused-import $(git ls-files '*.py')
+    - run: mypy --strict $(git ls-files '*.py')
 ```
 
 ## Deployments

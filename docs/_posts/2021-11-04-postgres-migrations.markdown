@@ -5,6 +5,28 @@ permalink: /postgres-migrations
 ---
 Deploy, verify and revert migrations for various common changes.
 
+## Table
+
+Deploy:
+```sql
+create table if not exists auth.user (
+    id serial primary key,
+    created_at timestamp not null default now(),
+    updated_at timestamp not null default now(),
+    ...
+);
+```
+
+Verify:
+```sql
+assert (select * from information_schema.tables where table_schema = 'auth' and table_name='user');
+```
+
+Revert:
+```sql
+drop table auth.user;
+```
+
 ## Function
 
 Deploy:
