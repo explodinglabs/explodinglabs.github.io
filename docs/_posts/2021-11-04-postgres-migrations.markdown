@@ -9,7 +9,7 @@ Deploy, verify and revert migrations for various common changes.
 
 Deploy:
 ```sql
-create table if not exists auth.user (
+create table if not exists foo.bar (
     id serial primary key,
     created_at timestamp not null default now(),
     updated_at timestamp not null default now(),
@@ -19,12 +19,12 @@ create table if not exists auth.user (
 
 Verify:
 ```sql
-assert (select * from information_schema.tables where table_schema = 'auth' and table_name='user');
+assert (select * from information_schema.tables where table_schema = 'foo' and table_name='bar');
 ```
 
 Revert:
 ```sql
-drop table auth.user;
+drop table foo.bar;
 ```
 
 ## Function
@@ -52,17 +52,17 @@ drop function api.foo;
 
 Deploy:
 ```sql
-create schema api;
+create schema foo;
 ```
 
 Verify:
 ```sql
-assert (select * from information_schema.schemata where schema_name = 'api');
+assert (select * from information_schema.schemata where schema_name = 'foo');
 ```
 
 Revert:
 ```sql
-drop schema api;
+drop schema foo;
 ```
 
 ## Trigger
