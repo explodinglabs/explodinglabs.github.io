@@ -98,6 +98,9 @@ jobs:
     - run: mypy --strict $(git ls-files '*.py')
 ```
 
+Note that while pre-commit checks only the changes being committed,
+the GitHub actions workflow checks the entire repository. 
+
 ## Deployments
 
 This will run final checks before deploying. These are the most important
