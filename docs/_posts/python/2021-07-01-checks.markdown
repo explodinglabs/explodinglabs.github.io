@@ -99,7 +99,7 @@ jobs:
 ```
 
 Note that while pre-commit checks only the changes being committed,
-the GitHub actions workflow checks the entire repository. 
+the GitHub Actions workflow checks the entire repository. 
 
 ## Deployments
 
