@@ -76,7 +76,7 @@ for each row execute procedure auth.encrypt_pass();
 
 Verify:
 ```sql
-assert (select * from information_schema.triggers where trigger_schema = 'auth' and trigger_name = 'encrypt_pass');
+assert (select * from information_schema.triggers where event_object_schema = 'auth' and event_object_table = 'user' and trigger_name = 'encrypt_pass');
 ```
 
 Revert:
