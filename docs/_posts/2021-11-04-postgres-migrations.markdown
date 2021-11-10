@@ -5,6 +5,24 @@ permalink: /postgres-migrations
 ---
 Deploy, verify and revert migrations for various common changes.
 
+## Extension
+
+Deploy:
+
+```sql
+create extension if not exists "foo";
+```
+
+Verify:
+```sql
+assert (select * from pg_extension where extname='foo');
+```
+
+Revert:
+```sql
+drop extension "foo";
+```
+
 ## Table
 
 Deploy:
@@ -19,7 +37,11 @@ create table if not exists foo.bar (
 
 Verify:
 ```sql
-assert (select * from information_schema.tables where table_schema = 'foo' and table_name='bar');
+assert (
+    select * from information_schema.tables
+    where table_schema = 'foo'
+        and table_name='bar'
+);
 ```
 
 Revert:
@@ -48,6 +70,29 @@ Revert:
 drop function api.foo;
 ```
 
+## Privileges
+
+Deploy:
+```sql
+grant usage on schema api to anon;
+```
+
+Verify:
+```sql
+assert (
+    select * from information_schema.table_privileges
+    where table_schema='api'
+        and table_name = 'users'
+        and grantee='api_views_owner'
+        and privilege_type = 'INSERT'
+);
+```
+
+Revert:
+```sql
+revoke usage on schema api from anon;
+```
+
 ## Schema
 
 Deploy:
@@ -57,7 +102,10 @@ create schema foo;
 
 Verify:
 ```sql
-assert (select * from information_schema.schemata where schema_name = 'foo');
+assert (
+    select * from information_schema.schemata
+    where schema_name = 'foo'
+);
 ```
 
 Revert:
@@ -76,7 +124,12 @@ for each row execute procedure auth.encrypt_pass();
 
 Verify:
 ```sql
-assert (select * from information_schema.triggers where event_object_schema = 'auth' and event_object_table = 'user' and trigger_name = 'encrypt_pass');
+assert (
+    select * from information_schema.triggers
+    where event_object_schema = 'auth'
+        and event_object_table = 'user'
+        and trigger_name = 'encrypt_pass'
+);
 ```
 
 Revert:
@@ -94,7 +147,11 @@ alter view api.users owner to api_views_owner;
 
 Verify:
 ```sql
-assert (select * from information_schema.views where table_schema='api' and viewname='users');
+assert (
+    select * from information_schema.views
+    where table_schema='api'
+        and viewname='users'
+);
 ```
 
 Revert:
