@@ -29,9 +29,6 @@ A fourth is **Pytest**, but this can take some time to run so I run it
 manually, not automated. (The exception being in deployment scripts -- we
 can't allow deployments if tests are failing).
 
-When taking on a new or existing project, _setting up these automated checks
-should be the first action to take_.
-
 ## Pre-commit hooks
 
 This runs the checks locally on your development machine when you try to
@@ -98,7 +95,7 @@ jobs:
     - run: mypy --strict $(git ls-files '*.py')
 ```
 
-Note that while pre-commit checks only the changes being committed,
+Note that while pre-commit only checks the changes being committed,
 the GitHub Actions workflow checks the entire repository. 
 
 ## Deployments
