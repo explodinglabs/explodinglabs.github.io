@@ -22,6 +22,27 @@ Revert:
 drop extension "foo";
 ```
 
+## Function
+
+Deploy:
+```sql
+create or replace function api.foo(x int, y text) returns json as $$
+declare
+begin
+    ...
+end;
+```
+
+Verify:
+```sql
+assert (select has_function_privilege('api.foo(int, text)', 'execute'));
+```
+
+Revert:
+```sql
+drop function api.foo;
+```
+
 ## Role
 
 Deploy:
@@ -69,32 +90,11 @@ Revert:
 drop table foo.bar;
 ```
 
-## Function
+## Table Privileges
 
 Deploy:
 ```sql
-create or replace function api.foo(x int, y text) returns json as $$
-declare
-begin
-    ...
-end;
-```
-
-Verify:
-```sql
-assert (select has_function_privilege('api.foo(int, text)', 'execute'));
-```
-
-Revert:
-```sql
-drop function api.foo;
-```
-
-## Privileges
-
-Deploy:
-```sql
-grant usage on schema api to anon;
+grant select on api.users to web_user;
 ```
 
 Verify:
@@ -102,17 +102,17 @@ Verify:
 assert (
     select exists (
         select 1 from information_schema.table_privileges
-        where table_schema='api'
+        where privilege_type = 'SELECT'
+        and table_schema='api'
         and table_name = 'users'
-        and grantee='api_views_owner'
-        and privilege_type = 'INSERT'
+        and grantee='web_user'
     )
 );
 ```
 
 Revert:
 ```sql
-revoke usage on schema api from anon;
+revoke select on api.users from web_user;
 ```
 
 ## Schema
