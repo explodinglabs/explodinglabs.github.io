@@ -35,7 +35,13 @@ end;
 
 Verify:
 ```sql
-assert (select has_function_privilege('api.foo(int, text)', 'execute'));
+assert (
+    select exists (
+        select 1 from information_schema.routines
+        where specific_schema = 'api'
+        and routine_name = 'foo'
+    )
+);
 ```
 
 Revert:
@@ -90,7 +96,7 @@ Revert:
 drop table foo.bar;
 ```
 
-## Table Privileges
+## Privileges
 
 Deploy:
 ```sql
@@ -99,6 +105,7 @@ grant select on api.users to web_user;
 
 Verify:
 ```sql
+-- For a table or view
 assert (
     select exists (
         select 1 from information_schema.table_privileges
@@ -108,6 +115,9 @@ assert (
         and grantee='web_user'
     )
 );
+
+-- For a function
+assert (select has_function_privilege('anon', 'api.login(text, text)', 'execute'));
 ```
 
 Revert:
