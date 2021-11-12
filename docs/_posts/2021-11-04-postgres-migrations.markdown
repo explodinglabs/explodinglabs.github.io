@@ -8,19 +8,37 @@ Deploy, verify and revert migrations for various common changes.
 ## Extension
 
 Deploy:
-
 ```sql
 create extension if not exists "foo";
 ```
 
 Verify:
 ```sql
-assert (select * from pg_extension where extname='foo');
+assert (select exists (select 1 from pg_extension where extname='foo'));
 ```
 
 Revert:
 ```sql
 drop extension "foo";
+```
+
+## Role
+
+Deploy:
+```sql
+create role foo nologin;
+-- or
+create role foo noinherit login password 'mysecretpassword';
+```
+
+Verify:
+```sql
+assert (select exists (select 1 from information_schema.enabled_roles where role_name = 'foo'));
+```
+
+Revert:
+```sql
+drop role foo;
 ```
 
 ## Table
@@ -38,9 +56,11 @@ create table if not exists foo.bar (
 Verify:
 ```sql
 assert (
-    select * from information_schema.tables
-    where table_schema = 'foo'
+    select exists (
+        select 1 from information_schema.tables
+        where table_schema = 'foo'
         and table_name='bar'
+    )
 );
 ```
 
@@ -80,11 +100,13 @@ grant usage on schema api to anon;
 Verify:
 ```sql
 assert (
-    select * from information_schema.table_privileges
-    where table_schema='api'
+    select exists (
+        select 1 from information_schema.table_privileges
+        where table_schema='api'
         and table_name = 'users'
         and grantee='api_views_owner'
         and privilege_type = 'INSERT'
+    )
 );
 ```
 
@@ -102,10 +124,7 @@ create schema foo;
 
 Verify:
 ```sql
-assert (
-    select * from information_schema.schemata
-    where schema_name = 'foo'
-);
+assert (select exists (select 1 from information_schema.schemata where schema_name = 'foo'));
 ```
 
 Revert:
@@ -125,10 +144,12 @@ for each row execute procedure auth.encrypt_pass();
 Verify:
 ```sql
 assert (
-    select * from information_schema.triggers
-    where event_object_schema = 'auth'
+    select exists (
+        select 1 from information_schema.triggers
+        where event_object_schema = 'auth'
         and event_object_table = 'user'
         and trigger_name = 'encrypt_pass'
+    )
 );
 ```
 
@@ -148,9 +169,11 @@ alter view api.users owner to api_views_owner;
 Verify:
 ```sql
 assert (
-    select * from information_schema.views
-    where table_schema='api'
-        and viewname='users'
+    select exists (
+        select 1 from information_schema.views
+        where table_schema='api'
+        and table_name='users'
+    )
 );
 ```
 
