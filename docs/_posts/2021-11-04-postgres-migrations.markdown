@@ -68,34 +68,6 @@ Revert:
 drop role foo;
 ```
 
-## Table
-
-Deploy:
-```sql
-create table if not exists foo.bar (
-    id serial primary key,
-    created_at timestamp not null default now(),
-    updated_at timestamp not null default now(),
-    ...
-);
-```
-
-Verify:
-```sql
-assert (
-    select exists (
-        select 1 from information_schema.tables
-        where table_schema = 'foo'
-        and table_name='bar'
-    )
-);
-```
-
-Revert:
-```sql
-drop table foo.bar;
-```
-
 ## Privileges
 
 Deploy:
@@ -140,6 +112,34 @@ assert (select exists (select 1 from information_schema.schemata where schema_na
 Revert:
 ```sql
 drop schema foo;
+```
+
+## Table
+
+Deploy:
+```sql
+create table if not exists foo.bar (
+    id serial primary key,
+    created_at timestamp not null default now(),
+    updated_at timestamp not null default now(),
+    ...
+);
+```
+
+Verify:
+```sql
+assert (
+    select exists (
+        select 1 from information_schema.tables
+        where table_schema = 'foo'
+        and table_name='bar'
+    )
+);
+```
+
+Revert:
+```sql
+drop table foo.bar;
 ```
 
 ## Trigger
