@@ -95,8 +95,8 @@ jobs:
     - run: mypy --strict $(git ls-files '*.py')
 ```
 
-Note that while pre-commit only checks the changes being committed,
-the GitHub Actions workflow checks the entire repository. 
+Note that while pre-commit only checks the files being committed,
+the GitHub Action workflow checks the entire repository. 
 
 ## Deployments
 
