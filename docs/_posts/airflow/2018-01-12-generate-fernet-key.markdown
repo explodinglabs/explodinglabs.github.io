@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generate a Fernet key for Airflow
+title: Generate a Fernet key with Python
 description:
     How to create a fernet key which is required for storing encrypted
     passwords.
@@ -23,7 +23,9 @@ $ python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key()
 81HqDtbqAywKSOumSha3BhWNOdQ26slT6K0YaZeZyPs=
 ```
 
-Paste it into your `airflow.cfg`.
+## Use a fernet key with Airflow
+
+Paste the key into your `airflow.cfg`.
 ```
 fernet_key = 81HqDtbqAywKSOumSha3BhWNOdQ26slT6K0YaZeZyPs=
 ```
