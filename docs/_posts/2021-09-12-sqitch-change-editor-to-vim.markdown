@@ -2,6 +2,7 @@
 layout: post
 title: 'Change Sqitch editor to Vim'
 permalink: /sqitch/change-editor-to-vim
+sitemap: false
 ---
 Sqitch only uses an editor for certain things such as entering a note for
 a new migration, but if you use `sqitch add --note` (or `-n`)
