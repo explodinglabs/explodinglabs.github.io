@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/main.css">
+        <link rel="alternate" type="application/rss+xml" title="Composed" href="https://composed.blog/feed.xml">
+        <link rel="author" href="https://plus.google.com/u/0/110235318020270619650?rel=author" />
+
+        <link rel="icon" type="image/png" href="/assets/favicon-16x16.png?v=2" sizes="16x16">
+        <link rel="icon" type="image/png" href="/assets/favicon-32x32.png?v=2" sizes="32x32">
+        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png?v=2" sizes="96x96">
+
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png?v=2">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png?v=2">
+        <link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png?v=2">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png?v=2">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        </style>
+        <link href="/css/molokai.css" rel="stylesheet" >
+
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QN3RXC0MWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QN3RXC0MWC');
+</script>
+
+        
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Release a version to PyPI | Composed</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Release a version to PyPI" />
+<meta name="author" content="Beau Barker" />
+<meta property="og:locale" content="en_AU" />
+<meta name="description" content="A programming blog." />
+<meta property="og:description" content="A programming blog." />
+<link rel="canonical" href="https://composed.blog/python/release-to-pypi" />
+<meta property="og:url" content="https://composed.blog/python/release-to-pypi" />
+<meta property="og:site_name" content="Composed" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-10-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Release a version to PyPI" />
+<script type="application/ld+json">
+{"datePublished":"2018-10-01T00:00:00+00:00","description":"A programming blog.","url":"https://composed.blog/python/release-to-pypi","@type":"BlogPosting","dateModified":"2021-11-17T20:56:31+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://composed.blog/python/release-to-pypi"},"author":{"@type":"Person","name":"Beau Barker"},"headline":"Release a version to PyPI","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+        <div id="socials">
+            <div class="wrapper">
+            </div>
+        </div>
+        <nav>
+            <div class="wrapper" style="height: 100%">
+                <span class="logo"></span><!-- Centers the image vertically -->
+                <a href="/"><img src="/assets/composed.png" /></a>
+            </div>
+        </nav>
+        
+
+<article class="wrapper" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1>Release a version to PyPI</h1>
+        <div class="post-meta">
+            <time datetime="2018-10-01T00:00:00+00:00" itemprop="datePublished">
+                Beau Barker |
+                Oct 1, 2018 |
+                
+                Updated Nov 17, 2021 |
+                
+                <a href="https://github.com/explodinglabs/composed.blog/edit/master/docs/_posts/python/2018-10-01-release-new-version-to-pypi.markdown">
+                    Edit
+                </a>
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        <div class="wide-logos">
+  <p><img src="/assets/python.png" alt="python" /></p>
+</div>
+
+<p>These are the steps I take when releasing a version of my Python package to
+PyPI.</p>
+
+<p>First run your checks/cleaning. I have a post about this
+<a href="/python/checks">here</a>. If any fail, start again.</p>
+
+<p>Run tests.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pytest
+<span class="nb">rm</span> <span class="nt">-r</span> .tox<span class="p">;</span> tox  <span class="c"># Continue below while this is running</span>
+</code></pre></div></div>
+
+<p>In a new branch:</p>
+<ul>
+  <li>Update version in <code class="language-plaintext highlighter-rouge">setup.py</code>.</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">CHANGELOG.md</code> (stable releases only).</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">README.md</code>, if any.</li>
+  <li>Update documentation.</li>
+</ul>
+
+<div class="warning">
+  <p>Once the release is uploaded, there’s no way to change the <code class="language-plaintext highlighter-rouge">README.md</code> on PyPI,
+or the documentation on Readthedocs, without releasing another version. So take
+care with these in stable releases.</p>
+</div>
+
+<p>Commit, push and merge into master.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-a</span>
+git push origin <span class="nb">head</span>
+</code></pre></div></div>
+
+<p>Pull master, tag the commit and push the tag.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout master
+git pull
+git tag x.x.x
+git push <span class="nt">--tags</span>
+</code></pre></div></div>
+
+<p>Create the sdist and upload it.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip setuptools twine
+python setup.py sdist
+twine check dist/mypackage-x.x.x.tar.gz
+twine upload dist/mypackage-x.x.x.tar.gz
+</code></pre></div></div>
+
+<p>Update coverage badge.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">--upgrade</span> pytest-cov coveralls pyyaml
+pytest <span class="nt">--cov-branch</span> <span class="nt">--cov-report</span> term-missing <span class="nt">--cov</span> mypackage tests
+coveralls
+</code></pre></div></div>
+
+<p><a href="https://composed.blog/trigger-rtd-build">Build readthedocs</a> if there’s been
+changes.</p>
+
+<p>Update related blog posts/stack overflow posts.</p>
+
+    </div>
+    <footer>
+        <a href="/python">
+            More Python posts
+        </a>
+    </footer>
+</article>
+
+
+
+    </body>
+</html>

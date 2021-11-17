@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/main.css">
+        <link rel="alternate" type="application/rss+xml" title="Composed" href="https://composed.blog/feed.xml">
+        <link rel="author" href="https://plus.google.com/u/0/110235318020270619650?rel=author" />
+
+        <link rel="icon" type="image/png" href="/assets/favicon-16x16.png?v=2" sizes="16x16">
+        <link rel="icon" type="image/png" href="/assets/favicon-32x32.png?v=2" sizes="32x32">
+        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png?v=2" sizes="96x96">
+
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png?v=2">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png?v=2">
+        <link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png?v=2">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png?v=2">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        </style>
+        <link href="/css/molokai.css" rel="stylesheet" >
+
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QN3RXC0MWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QN3RXC0MWC');
+</script>
+
+        
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Python 3.3 failing to install on Arch Linux | Composed</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Python 3.3 failing to install on Arch Linux" />
+<meta name="author" content="Beau Barker" />
+<meta property="og:locale" content="en_AU" />
+<meta name="description" content="A programming blog." />
+<meta property="og:description" content="A programming blog." />
+<link rel="canonical" href="https://composed.blog/python/archlinux-python33-install-fails" />
+<meta property="og:url" content="https://composed.blog/python/archlinux-python33-install-fails" />
+<meta property="og:site_name" content="Composed" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-07-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Python 3.3 failing to install on Arch Linux" />
+<script type="application/ld+json">
+{"datePublished":"2016-07-22T00:00:00+00:00","description":"A programming blog.","url":"https://composed.blog/python/archlinux-python33-install-fails","@type":"BlogPosting","dateModified":"2021-11-17T20:56:31+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://composed.blog/python/archlinux-python33-install-fails"},"author":{"@type":"Person","name":"Beau Barker"},"headline":"Python 3.3 failing to install on Arch Linux","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+        <div id="socials">
+            <div class="wrapper">
+            </div>
+        </div>
+        <nav>
+            <div class="wrapper" style="height: 100%">
+                <span class="logo"></span><!-- Centers the image vertically -->
+                <a href="/"><img src="/assets/composed.png" /></a>
+            </div>
+        </nav>
+        
+
+<article class="wrapper" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1>Python 3.3 failing to install on Arch Linux</h1>
+        <div class="post-meta">
+            <time datetime="2016-07-22T00:00:00+00:00" itemprop="datePublished">
+                Beau Barker |
+                Jul 22, 2016 |
+                
+                Updated Nov 17, 2021 |
+                
+                <a href="https://github.com/explodinglabs/composed.blog/edit/master/docs/_posts/python/2016-07-22-archlinux-python33-install-fails.markdown">
+                    Edit
+                </a>
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        <div class="wide-logos">
+  <p><img src="/assets/python.png" alt="python" /></p>
+</div>
+
+<p>Installing Python 3.3 on Arch tonight, two tests failed:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[157/372] test_import
+test test_import failed -- Traceback (most recent call last):
+  File "/tmp/packerbuild-1000/python33/python33/src/Python-3.3.6/Lib/test/test_import.py", line 307, in test_timestamp_overflow
+      os.stat(compiled)
+      FileNotFoundError: [Errno 2] No such file or directory: '__pycache__/@test_9865_tmp.cpython-33.pyc'
+</code></pre></div></div>
+
+<p>Another test:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[251/372/1] test_pyexpat
+test test_pyexpat failed -- Traceback (most recent call last):
+  File "/tmp/packerbuild-1000/python33/python33/src/Python-3.3.6/Lib/test/test_pyexpat.py", line 607, in test2
+      parser.Parse(xml, True)
+      xml.parsers.expat.ExpatError: XML declaration not well-formed: line 1, column 13
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/packerbuild-1000/python33/python33/src/Python-3.3.6/Lib/test/test_pyexpat.py", line 610, in test2
+      self.assertEqual(str(e), 'XML declaration not well-formed: line 1, column 14')
+      AssertionError: 'XML declaration not well-formed: line 1, column 13' != 'XML declaration not well-formed: line 1, column 14'
+      - XML declaration not well-formed: line 1, column 13
+      ?                                                  ^
+      + XML declaration not well-formed: line 1, column 14
+      ?
+</code></pre></div></div>
+
+<p>Test results:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>347 tests OK.
+2 tests failed: test_import test_pyexpat
+23 tests skipped:
+    test_codecmaps_cn test_codecmaps_hk test_codecmaps_jp
+    test_codecmaps_kr test_codecmaps_tw test_curses test_devpoll
+    test_gdb test_kqueue test_msilib test_ossaudiodev test_smtpnet
+    test_socketserver test_startfile test_timeout test_tk
+    test_ttk_guionly test_urllib2net test_urllibnet test_winreg
+    test_winsound test_xmlrpc_net test_zipfile64
+Those skips are all expected on linux.
+==&gt; ERROR: A failure occurred in check().
+Aborting...
+The build failed.
+</code></pre></div></div>
+
+<p>Easiest fix was to skip the tests:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># packer -S packer33
+</code></pre></div></div>
+
+<p>When packer asked to edit the PKGBUILD I said yes, and removed the <code class="language-plaintext highlighter-rouge">check()</code>
+function in which the tests were running.</p>
+
+    </div>
+    <footer>
+        <a href="/python">
+            More Python posts
+        </a>
+    </footer>
+</article>
+
+
+
+    </body>
+</html>

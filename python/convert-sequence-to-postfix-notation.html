@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/main.css">
+        <link rel="alternate" type="application/rss+xml" title="Composed" href="https://composed.blog/feed.xml">
+        <link rel="author" href="https://plus.google.com/u/0/110235318020270619650?rel=author" />
+
+        <link rel="icon" type="image/png" href="/assets/favicon-16x16.png?v=2" sizes="16x16">
+        <link rel="icon" type="image/png" href="/assets/favicon-32x32.png?v=2" sizes="32x32">
+        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png?v=2" sizes="96x96">
+
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png?v=2">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png?v=2">
+        <link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png?v=2">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png?v=2">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        </style>
+        <link href="/css/molokai.css" rel="stylesheet" >
+
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QN3RXC0MWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QN3RXC0MWC');
+</script>
+
+        
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Convert a sequence to postfix notation | Composed</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Convert a sequence to postfix notation" />
+<meta name="author" content="Beau Barker" />
+<meta property="og:locale" content="en_AU" />
+<meta name="description" content="A programming blog." />
+<meta property="og:description" content="A programming blog." />
+<link rel="canonical" href="https://composed.blog/python/convert-sequence-to-postfix-notation" />
+<meta property="og:url" content="https://composed.blog/python/convert-sequence-to-postfix-notation" />
+<meta property="og:site_name" content="Composed" />
+<meta property="og:image" content="https://composed.blog/assets/python-wide.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-05-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://composed.blog/assets/python-wide.png" />
+<meta property="twitter:title" content="Convert a sequence to postfix notation" />
+<script type="application/ld+json">
+{"datePublished":"2018-05-30T00:00:00+00:00","description":"A programming blog.","url":"https://composed.blog/python/convert-sequence-to-postfix-notation","@type":"BlogPosting","dateModified":"2021-11-17T20:56:31+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://composed.blog/python/convert-sequence-to-postfix-notation"},"image":"https://composed.blog/assets/python-wide.png","author":{"@type":"Person","name":"Beau Barker"},"headline":"Convert a sequence to postfix notation","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+        <div id="socials">
+            <div class="wrapper">
+            </div>
+        </div>
+        <nav>
+            <div class="wrapper" style="height: 100%">
+                <span class="logo"></span><!-- Centers the image vertically -->
+                <a href="/"><img src="/assets/composed.png" /></a>
+            </div>
+        </nav>
+        
+
+<article class="wrapper" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1>Convert a sequence to postfix notation</h1>
+        <div class="post-meta">
+            <time datetime="2018-05-30T00:00:00+00:00" itemprop="datePublished">
+                Beau Barker |
+                May 30, 2018 |
+                
+                Updated Nov 17, 2021 |
+                
+                <a href="https://github.com/explodinglabs/composed.blog/edit/master/docs/_posts/python/2018-05-30-convert-sequence-to-postfix-notation.markdown">
+                    Edit
+                </a>
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        <div class="wide-logos">
+  <p><img src="/assets/python.png" alt="python" /></p>
+</div>
+
+<p>We have a sequence such as a tuple or list, and want to convert it to a an
+object with named attributes in postfix notation (‘obj.name’).</p>
+
+<h2 id="convert-to-an-immutable-object">Convert to an immutable object</h2>
+
+<p>Use <code class="language-plaintext highlighter-rouge">collections.namedtuple</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'foo'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s">'Obj'</span><span class="p">,</span> <span class="p">[</span><span class="s">'id'</span><span class="p">,</span> <span class="s">'name'</span><span class="p">])(</span><span class="o">*</span><span class="n">data</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">obj</span><span class="p">.</span><span class="n">name</span>
+<span class="s">'foo'</span>
+</code></pre></div></div>
+
+<h2 id="convert-to-a-mutable-object">Convert to a mutable object</h2>
+
+<p>Use <code class="language-plaintext highlighter-rouge">types.SimpleNamespace</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">SimpleNamespace</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'foo'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span><span class="o">**</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="s">'id'</span><span class="p">,</span> <span class="s">'name'</span><span class="p">],</span> <span class="n">data</span><span class="p">)))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">obj</span><span class="p">.</span><span class="n">name</span>
+<span class="s">'foo'</span>
+</code></pre></div></div>
+
+<p>See also: <a href="/python/convert-dict-to-postfix-notation">Convert a dictionary to postfix notation</a></p>
+
+    </div>
+    <footer>
+        <a href="/python">
+            More Python posts
+        </a>
+    </footer>
+</article>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/main.css">
+        <link rel="alternate" type="application/rss+xml" title="Composed" href="https://composed.blog/feed.xml">
+        <link rel="author" href="https://plus.google.com/u/0/110235318020270619650?rel=author" />
+
+        <link rel="icon" type="image/png" href="/assets/favicon-16x16.png?v=2" sizes="16x16">
+        <link rel="icon" type="image/png" href="/assets/favicon-32x32.png?v=2" sizes="32x32">
+        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png?v=2" sizes="96x96">
+
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png?v=2">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png?v=2">
+        <link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png?v=2">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png?v=2">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        </style>
+        <link href="/css/molokai.css" rel="stylesheet" >
+
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QN3RXC0MWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QN3RXC0MWC');
+</script>
+
+        
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>ZeroMQ Request/Reply in C | Composed</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="ZeroMQ Request/Reply in C" />
+<meta name="author" content="Beau Barker" />
+<meta property="og:locale" content="en_AU" />
+<meta name="description" content="Server" />
+<meta property="og:description" content="Server" />
+<link rel="canonical" href="https://composed.blog/c/zeromq/request-reply" />
+<meta property="og:url" content="https://composed.blog/c/zeromq/request-reply" />
+<meta property="og:site_name" content="Composed" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-07-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ZeroMQ Request/Reply in C" />
+<script type="application/ld+json">
+{"datePublished":"2016-07-17T00:00:00+00:00","description":"Server","url":"https://composed.blog/c/zeromq/request-reply","@type":"BlogPosting","dateModified":"2021-11-17T20:56:31+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://composed.blog/c/zeromq/request-reply"},"author":{"@type":"Person","name":"Beau Barker"},"headline":"ZeroMQ Request/Reply in C","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+        <div id="socials">
+            <div class="wrapper">
+            </div>
+        </div>
+        <nav>
+            <div class="wrapper" style="height: 100%">
+                <span class="logo"></span><!-- Centers the image vertically -->
+                <a href="/"><img src="/assets/composed.png" /></a>
+            </div>
+        </nav>
+        
+
+<article class="wrapper" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1>ZeroMQ Request/Reply in C</h1>
+        <div class="post-meta">
+            <time datetime="2016-07-17T00:00:00+00:00" itemprop="datePublished">
+                Beau Barker |
+                Jul 17, 2016 |
+                
+                Updated Nov 17, 2021 |
+                
+                <a href="https://github.com/explodinglabs/composed.blog/edit/master/docs/_posts/2016-07-17-zeromq-request-reply-in-c.markdown">
+                    Edit
+                </a>
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        <h2 id="server">Server</h2>
+
+<p>The server should handle incoming JSON-RPC requests on port 5000.</p>
+
+<p>Install the <a href="https://github.com/zeromq/czmq">czmq</a> library.</p>
+
+<p>Write a server script, <code class="language-plaintext highlighter-rouge">server.c</code>:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;czmq.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Connect</span>
+    <span class="n">zsock_t</span> <span class="o">*</span><span class="n">responder</span> <span class="o">=</span> <span class="n">zsock_new_rep</span><span class="p">(</span><span class="s">"tcp://*:5000"</span><span class="p">);</span>
+    <span class="c1">// Recv</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">string</span> <span class="o">=</span> <span class="n">zstr_recv</span><span class="p">(</span><span class="n">responder</span><span class="p">);</span>
+    <span class="n">puts</span><span class="p">(</span><span class="n">string</span><span class="p">);</span>
+    <span class="n">zstr_free</span><span class="p">(</span><span class="o">&amp;</span><span class="n">string</span><span class="p">);</span>
+    <span class="c1">// Send</span>
+    <span class="n">zstr_send</span><span class="p">(</span><span class="n">responder</span><span class="p">,</span> <span class="s">"Pong"</span><span class="p">);</span>
+    <span class="c1">// Disconnect</span>
+    <span class="n">zsock_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">responder</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Build and start the server:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gcc <span class="nt">-lczmq</span> server.c <span class="nt">-o</span> server
+<span class="nv">$ </span>./server
+</code></pre></div></div>
+
+<h2 id="client">Client</h2>
+
+<p>Write client script:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;czmq.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Connect</span>
+    <span class="n">zsock_t</span> <span class="o">*</span><span class="n">requester</span> <span class="o">=</span> <span class="n">zsock_new_req</span><span class="p">(</span><span class="s">"tcp://127.0.0.1:5000"</span><span class="p">);</span>
+    <span class="c1">// Send</span>
+    <span class="n">zstr_send</span><span class="p">(</span><span class="n">requester</span><span class="p">,</span> <span class="s">"Ping"</span><span class="p">);</span>
+    <span class="c1">// Recv</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">string</span> <span class="o">=</span> <span class="n">zstr_recv</span><span class="p">(</span><span class="n">requester</span><span class="p">);</span>
+    <span class="n">puts</span><span class="p">(</span><span class="n">string</span><span class="p">);</span>
+    <span class="n">zstr_free</span><span class="p">(</span><span class="o">&amp;</span><span class="n">string</span><span class="p">);</span>
+    <span class="c1">// Disconnect</span>
+    <span class="n">zsock_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">requester</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Build and run:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gcc <span class="nt">-lczmq</span> client.c <span class="nt">-o</span> client
+<span class="nv">$ </span>./client
+Pong
+</code></pre></div></div>
+
+    </div>
+    <footer>
+        <a href="/">
+            More  posts
+        </a>
+    </footer>
+</article>
+
+
+
+    </body>
+</html>

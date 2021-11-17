@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/main.css">
+        <link rel="alternate" type="application/rss+xml" title="Composed" href="https://composed.blog/feed.xml">
+        <link rel="author" href="https://plus.google.com/u/0/110235318020270619650?rel=author" />
+
+        <link rel="icon" type="image/png" href="/assets/favicon-16x16.png?v=2" sizes="16x16">
+        <link rel="icon" type="image/png" href="/assets/favicon-32x32.png?v=2" sizes="32x32">
+        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png?v=2" sizes="96x96">
+
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png?v=2">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png?v=2">
+        <link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png?v=2">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png?v=2">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        </style>
+        <link href="/css/molokai.css" rel="stylesheet" >
+
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QN3RXC0MWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QN3RXC0MWC');
+</script>
+
+        
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>cx_Oracle cursor context | Composed</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="cx_Oracle cursor context" />
+<meta name="author" content="Beau Barker" />
+<meta property="og:locale" content="en_AU" />
+<meta name="description" content="A programming blog." />
+<meta property="og:description" content="A programming blog." />
+<link rel="canonical" href="https://composed.blog/python/cx-oracle-cursor-context" />
+<meta property="og:url" content="https://composed.blog/python/cx-oracle-cursor-context" />
+<meta property="og:site_name" content="Composed" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-12-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="cx_Oracle cursor context" />
+<script type="application/ld+json">
+{"datePublished":"2017-12-15T00:00:00+00:00","description":"A programming blog.","url":"https://composed.blog/python/cx-oracle-cursor-context","@type":"BlogPosting","dateModified":"2021-11-17T20:56:31+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://composed.blog/python/cx-oracle-cursor-context"},"author":{"@type":"Person","name":"Beau Barker"},"headline":"cx_Oracle cursor context","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+        <div id="socials">
+            <div class="wrapper">
+            </div>
+        </div>
+        <nav>
+            <div class="wrapper" style="height: 100%">
+                <span class="logo"></span><!-- Centers the image vertically -->
+                <a href="/"><img src="/assets/composed.png" /></a>
+            </div>
+        </nav>
+        
+
+<article class="wrapper" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1>cx_Oracle cursor context</h1>
+        <div class="post-meta">
+            <time datetime="2017-12-15T00:00:00+00:00" itemprop="datePublished">
+                Beau Barker |
+                Dec 15, 2017 |
+                
+                Updated Nov 17, 2021 |
+                
+                <a href="https://github.com/explodinglabs/composed.blog/edit/master/docs/_posts/python/2017-12-15-cx_oracle-cursor-context.markdown">
+                    Edit
+                </a>
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        <div class="wide-logos">
+  <p><img src="/assets/python.png" alt="python" /></p>
+</div>
+
+<p>Use <code class="language-plaintext highlighter-rouge">contextlib</code>’s <code class="language-plaintext highlighter-rouge">closing</code> context manager:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">closing</span>
+<span class="k">with</span> <span class="n">closing</span><span class="p">(</span><span class="n">connection</span><span class="p">.</span><span class="n">cursor</span><span class="p">())</span> <span class="k">as</span> <span class="n">cursor</span><span class="p">:</span>
+   <span class="c1"># Use cursor here. Will close when it leaves the block.
+</span></code></pre></div></div>
+
+    </div>
+    <footer>
+        <a href="/python">
+            More Python posts
+        </a>
+    </footer>
+</article>
+
+
+
+    </body>
+</html>

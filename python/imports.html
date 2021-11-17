@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/main.css">
+        <link rel="alternate" type="application/rss+xml" title="Composed" href="https://composed.blog/feed.xml">
+        <link rel="author" href="https://plus.google.com/u/0/110235318020270619650?rel=author" />
+
+        <link rel="icon" type="image/png" href="/assets/favicon-16x16.png?v=2" sizes="16x16">
+        <link rel="icon" type="image/png" href="/assets/favicon-32x32.png?v=2" sizes="32x32">
+        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png?v=2" sizes="96x96">
+
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png?v=2">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png?v=2">
+        <link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png?v=2">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png?v=2">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        </style>
+        <link href="/css/molokai.css" rel="stylesheet" >
+
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QN3RXC0MWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QN3RXC0MWC');
+</script>
+
+        
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Group Python imports | Composed</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Group Python imports" />
+<meta name="author" content="Beau Barker" />
+<meta property="og:locale" content="en_AU" />
+<meta name="description" content="A programming blog." />
+<meta property="og:description" content="A programming blog." />
+<link rel="canonical" href="https://composed.blog/python/imports" />
+<meta property="og:url" content="https://composed.blog/python/imports" />
+<meta property="og:site_name" content="Composed" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Group Python imports" />
+<script type="application/ld+json">
+{"datePublished":"2021-01-27T00:00:00+00:00","description":"A programming blog.","url":"https://composed.blog/python/imports","@type":"BlogPosting","dateModified":"2021-11-17T20:56:31+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://composed.blog/python/imports"},"author":{"@type":"Person","name":"Beau Barker"},"headline":"Group Python imports","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+        <div id="socials">
+            <div class="wrapper">
+            </div>
+        </div>
+        <nav>
+            <div class="wrapper" style="height: 100%">
+                <span class="logo"></span><!-- Centers the image vertically -->
+                <a href="/"><img src="/assets/composed.png" /></a>
+            </div>
+        </nav>
+        
+
+<article class="wrapper" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1>Group Python imports</h1>
+        <div class="post-meta">
+            <time datetime="2021-01-27T00:00:00+00:00" itemprop="datePublished">
+                Beau Barker |
+                Jan 27, 2021 |
+                
+                Updated Nov 17, 2021 |
+                
+                <a href="https://github.com/explodinglabs/composed.blog/edit/master/docs/_posts/python/2021-01-27-imports.markdown">
+                    Edit
+                </a>
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        <div class="wide-logos">
+  <p><img src="/assets/python.png" alt="python" /></p>
+</div>
+
+<p>An often ignored but important part of the <em>“Style Guide for Python Code”</em>
+(PEP-8) is the <a href="https://www.python.org/dev/peps/pep-0008/#imports">Imports
+section</a>.</p>
+
+<p>This part on <strong>grouping imports</strong> is particularly important:</p>
+
+<blockquote>
+  <p>Imports should be grouped in the following order:</p>
+
+  <ul>
+    <li>Standard library imports.</li>
+    <li>Related third party imports.</li>
+    <li>Local application/library specific imports.</li>
+  </ul>
+
+  <p>You should put a blank line between each group of imports.</p>
+
+  <p><cite>PEP-8: The Style Guide for Python Code</cite></p>
+</blockquote>
+
+<h2 id="the-first-group-standard-library-imports">The first group: “Standard library imports”</h2>
+
+<p>These are from the Python’s built-in standard library.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+<span class="kn">import</span> <span class="nn">os</span>
+</code></pre></div></div>
+
+<h2 id="the-second-group-related-third-party-imports">The second group: “Related third party imports”</h2>
+
+<p>These are imports from <em>installed packages</em>. The PEP says “third party” which
+confuses a lot of people. To me it could be a library maintained by yourself or
+the same organisation, but is kept in a separate repository and installed as a
+separate package.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">airflow.utils.decorators</span> <span class="kn">import</span> <span class="n">apply_defaults</span>
+<span class="kn">from</span> <span class="nn">cx_Oracle</span> <span class="kn">import</span> <span class="n">NUMBER</span>
+</code></pre></div></div>
+
+<h2 id="the-third-group-local-applicationlibrary-specific-imports">The third group: “Local application/library specific imports”</h2>
+
+<p>I take this to mean “imports from the same repository”.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">.stored_procedure_operator</span> <span class="kn">import</span> <span class="n">StoredProcedureOperator</span>
+</code></pre></div></div>
+
+<h2 id="putting-it-together">Putting it together</h2>
+
+<p>Separate each group by a blank line.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">airflow.utils.decorators</span> <span class="kn">import</span> <span class="n">apply_defaults</span>
+<span class="kn">from</span> <span class="nn">cx_Oracle</span> <span class="kn">import</span> <span class="n">NUMBER</span>
+
+<span class="kn">from</span> <span class="nn">.stored_procedure_operator</span> <span class="kn">import</span> <span class="n">StoredProcedureOperator</span>
+</code></pre></div></div>
+
+<p>Within each group, sort the lines alphabetically (this is just my preference,
+not part of the style guide).</p>
+
+    </div>
+    <footer>
+        <a href="/python">
+            More Python posts
+        </a>
+    </footer>
+</article>
+
+
+
+    </body>
+</html>

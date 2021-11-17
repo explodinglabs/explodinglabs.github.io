@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/main.css">
+        <link rel="alternate" type="application/rss+xml" title="Composed" href="https://composed.blog/feed.xml">
+        <link rel="author" href="https://plus.google.com/u/0/110235318020270619650?rel=author" />
+
+        <link rel="icon" type="image/png" href="/assets/favicon-16x16.png?v=2" sizes="16x16">
+        <link rel="icon" type="image/png" href="/assets/favicon-32x32.png?v=2" sizes="32x32">
+        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png?v=2" sizes="96x96">
+
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png?v=2">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png?v=2">
+        <link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png?v=2">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png?v=2">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        </style>
+        <link href="/css/molokai.css" rel="stylesheet" >
+
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QN3RXC0MWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QN3RXC0MWC');
+</script>
+
+        
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>GraphQL in Python with Flask | Composed</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="GraphQL in Python with Flask" />
+<meta name="author" content="Beau Barker" />
+<meta property="og:locale" content="en_AU" />
+<meta name="description" content="A programming blog." />
+<meta property="og:description" content="A programming blog." />
+<link rel="canonical" href="https://composed.blog/python/graphql-flask" />
+<meta property="og:url" content="https://composed.blog/python/graphql-flask" />
+<meta property="og:site_name" content="Composed" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-09-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="GraphQL in Python with Flask" />
+<script type="application/ld+json">
+{"datePublished":"2016-09-21T00:00:00+00:00","description":"A programming blog.","url":"https://composed.blog/python/graphql-flask","@type":"BlogPosting","dateModified":"2021-11-17T20:56:31+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://composed.blog/python/graphql-flask"},"author":{"@type":"Person","name":"Beau Barker"},"headline":"GraphQL in Python with Flask","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+        <div id="socials">
+            <div class="wrapper">
+            </div>
+        </div>
+        <nav>
+            <div class="wrapper" style="height: 100%">
+                <span class="logo"></span><!-- Centers the image vertically -->
+                <a href="/"><img src="/assets/composed.png" /></a>
+            </div>
+        </nav>
+        
+
+<article class="wrapper" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1>GraphQL in Python with Flask</h1>
+        <div class="post-meta">
+            <time datetime="2016-09-21T00:00:00+00:00" itemprop="datePublished">
+                Beau Barker |
+                Sep 21, 2016 |
+                
+                Updated Nov 17, 2021 |
+                
+                <a href="https://github.com/explodinglabs/composed.blog/edit/master/docs/_posts/python/2016-09-21-graphql-in-flask.markdown">
+                    Edit
+                </a>
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        <div class="wide-logos">
+  <p><img src="/assets/flask.png" alt="Flask" />
+<img src="/assets/graphql.png" alt="GraphQL" /></p>
+</div>
+
+<p>We’ll build a <a href="http://flask.pocoo.org/">Flask</a> server to take
+<a href="http://graphql.org/">GraphQL</a> queries.</p>
+
+<p>Install the dependencies — Flask to take queries,
+<a href="http://graphene-python.org/">Graphene</a> to process them and
+<a href="https://github.com/graphql-python/flask-graphql">Flask-GraphQL</a> to simplify
+the route:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>flask graphene flask-graphql
+</code></pre></div></div>
+<p>Create a <code class="language-plaintext highlighter-rouge">server.py</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">graphene</span> <span class="kn">import</span> <span class="n">ObjectType</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Schema</span>
+<span class="kn">from</span> <span class="nn">flask_graphql</span> <span class="kn">import</span> <span class="n">GraphQLView</span>
+
+<span class="k">class</span> <span class="nc">Query</span><span class="p">(</span><span class="n">ObjectType</span><span class="p">):</span>
+    <span class="n">hello</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s">"Hello"</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">resolve_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">info</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">"World"</span>
+
+<span class="n">view_func</span> <span class="o">=</span> <span class="n">GraphQLView</span><span class="p">.</span><span class="n">as_view</span><span class="p">(</span><span class="s">"graphql"</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">Schema</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">Query</span><span class="p">))</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="p">.</span><span class="n">add_url_rule</span><span class="p">(</span><span class="s">"/"</span><span class="p">,</span> <span class="n">view_func</span><span class="o">=</span><span class="n">view_func</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre></div></div>
+<p>Start the server:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python server.py
+ <span class="k">*</span> Running on http://127.0.0.1:5000/ <span class="o">(</span>Press CTRL+C to quit<span class="o">)</span>
+</code></pre></div></div>
+
+<h2 id="client">Client</h2>
+
+<p>Test with curl:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>curl <span class="nt">-g</span> <span class="s1">'http://localhost:5000/?query={hello}'</span>
+<span class="o">{</span><span class="s2">"data"</span>:<span class="o">{</span><span class="s2">"hello"</span>:<span class="s2">"World"</span><span class="o">}}</span>
+</code></pre></div></div>
+
+<h2 id="python-client">Python Client</h2>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>gql requests
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">gql</span> <span class="kn">import</span> <span class="n">gql</span><span class="p">,</span> <span class="n">Client</span>
+<span class="kn">from</span> <span class="nn">gql.transport.requests</span> <span class="kn">import</span> <span class="n">RequestsHTTPTransport</span>
+
+<span class="n">transport</span> <span class="o">=</span> <span class="n">RequestsHTTPTransport</span><span class="p">(</span><span class="s">"http://localhost:5000/"</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">transport</span><span class="o">=</span><span class="n">transport</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">gql</span><span class="p">(</span><span class="s">"{hello}"</span><span class="p">))</span>
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="p">{</span><span class="s">"hello"</span><span class="p">:</span> <span class="s">"World"</span><span class="p">}</span>
+</code></pre></div></div>
+
+    </div>
+    <footer>
+        <a href="/python">
+            More Python posts
+        </a>
+    </footer>
+</article>
+
+
+
+    </body>
+</html>

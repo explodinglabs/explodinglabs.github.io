@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/main.css">
+        <link rel="alternate" type="application/rss+xml" title="Composed" href="https://composed.blog/feed.xml">
+        <link rel="author" href="https://plus.google.com/u/0/110235318020270619650?rel=author" />
+
+        <link rel="icon" type="image/png" href="/assets/favicon-16x16.png?v=2" sizes="16x16">
+        <link rel="icon" type="image/png" href="/assets/favicon-32x32.png?v=2" sizes="32x32">
+        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png?v=2" sizes="96x96">
+
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png?v=2">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png?v=2">
+        <link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png?v=2">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png?v=2">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        </style>
+        <link href="/css/molokai.css" rel="stylesheet" >
+
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QN3RXC0MWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QN3RXC0MWC');
+</script>
+
+        
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Testing Airflow DAGs | Composed</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Testing Airflow DAGs" />
+<meta name="author" content="Beau Barker" />
+<meta property="og:locale" content="en_AU" />
+<meta name="description" content="How to test an Airflow DAG by writing unit tests for individual operators." />
+<meta property="og:description" content="How to test an Airflow DAG by writing unit tests for individual operators." />
+<link rel="canonical" href="https://composed.blog/airflow/testing-dags" />
+<meta property="og:url" content="https://composed.blog/airflow/testing-dags" />
+<meta property="og:site_name" content="Composed" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Testing Airflow DAGs" />
+<script type="application/ld+json">
+{"datePublished":"2017-10-20T00:00:00+00:00","description":"How to test an Airflow DAG by writing unit tests for individual operators.","url":"https://composed.blog/airflow/testing-dags","@type":"BlogPosting","dateModified":"2021-11-17T20:56:31+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://composed.blog/airflow/testing-dags"},"author":{"@type":"Person","name":"Beau Barker"},"headline":"Testing Airflow DAGs","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+        <div id="socials">
+            <div class="wrapper">
+            </div>
+        </div>
+        <nav>
+            <div class="wrapper" style="height: 100%">
+                <span class="logo"></span><!-- Centers the image vertically -->
+                <a href="/"><img src="/assets/composed.png" /></a>
+            </div>
+        </nav>
+        
+
+<article class="wrapper" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1>Testing Airflow DAGs</h1>
+        <div class="post-meta">
+            <time datetime="2017-10-20T00:00:00+00:00" itemprop="datePublished">
+                Beau Barker |
+                Oct 20, 2017 |
+                
+                Updated Nov 17, 2021 |
+                
+                <a href="https://github.com/explodinglabs/composed.blog/edit/master/docs/_posts/airflow/2017-10-20-testing-dags.markdown">
+                    Edit
+                </a>
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        <div class="wide-logos">
+  <p><img src="/assets/airflow.png" alt="airflow" /></p>
+</div>
+
+<p>Developing Airflow dags involves writing unit tests for the individual tasks,
+and then manually running the whole dag from start to finish.</p>
+
+<p>Here’s a simple operator for testing:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyOperator</span><span class="p">(</span><span class="n">BaseOperator</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">'foo'</span>
+</code></pre></div></div>
+
+<p>To test the operator, first instantiate three objects:</p>
+
+<ol>
+  <li>a DAG,</li>
+  <li>a task (the operator we’re testing), and</li>
+  <li>a TaskInstance.</li>
+</ol>
+
+<p>Then call the execute method.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TestMyOperator</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_execute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dag</span> <span class="o">=</span> <span class="n">DAG</span><span class="p">(</span><span class="n">dag_id</span><span class="o">=</span><span class="s">'foo'</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">())</span>
+        <span class="n">task</span> <span class="o">=</span> <span class="n">MyOperator</span><span class="p">(</span><span class="n">dag</span><span class="o">=</span><span class="n">dag</span><span class="p">,</span> <span class="n">task_id</span><span class="o">=</span><span class="s">'foo'</span><span class="p">)</span>
+        <span class="n">ti</span> <span class="o">=</span> <span class="n">TaskInstance</span><span class="p">(</span><span class="n">task</span><span class="o">=</span><span class="n">task</span><span class="p">,</span> <span class="n">execution_date</span><span class="o">=</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">())</span>
+        <span class="n">task</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">ti</span><span class="p">.</span><span class="n">get_template_context</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>Or in Pytest:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_my_operator</span><span class="p">():</span>
+    <span class="n">dag</span> <span class="o">=</span> <span class="n">DAG</span><span class="p">(</span><span class="n">dag_id</span><span class="o">=</span><span class="s">'foo'</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">())</span>
+    <span class="n">task</span> <span class="o">=</span> <span class="n">MyOperator</span><span class="p">(</span><span class="n">dag</span><span class="o">=</span><span class="n">dag</span><span class="p">,</span> <span class="n">task_id</span><span class="o">=</span><span class="s">'foo'</span><span class="p">)</span>
+    <span class="n">ti</span> <span class="o">=</span> <span class="n">TaskInstance</span><span class="p">(</span><span class="n">task</span><span class="o">=</span><span class="n">task</span><span class="p">,</span> <span class="n">execution_date</span><span class="o">=</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">())</span>
+    <span class="n">task</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">ti</span><span class="p">.</span><span class="n">get_template_context</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>Be sure to <a href="/airflow/hide-globals-in-dag-definition-file">hide the globals
+section</a> in definition files.</p>
+
+<h2 id="running-the-whole-dag">Running the whole dag</h2>
+
+<p>See how I <a href="/airflow/run-dag-and-watch-logs">run an entire dag from the
+commandline</a> and watch the logs in real-time.</p>
+
+    </div>
+    <footer>
+        <a href="/airflow">
+            More Airflow posts
+        </a>
+    </footer>
+</article>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/main.css">
+        <link rel="alternate" type="application/rss+xml" title="Composed" href="https://composed.blog/feed.xml">
+        <link rel="author" href="https://plus.google.com/u/0/110235318020270619650?rel=author" />
+
+        <link rel="icon" type="image/png" href="/assets/favicon-16x16.png?v=2" sizes="16x16">
+        <link rel="icon" type="image/png" href="/assets/favicon-32x32.png?v=2" sizes="32x32">
+        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png?v=2" sizes="96x96">
+
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png?v=2">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png?v=2">
+        <link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png?v=2">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png?v=2">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        </style>
+        <link href="/css/molokai.css" rel="stylesheet" >
+
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QN3RXC0MWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QN3RXC0MWC');
+</script>
+
+        
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Changes in Jsonrpcserver 5 | Composed</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Changes in Jsonrpcserver 5" />
+<meta name="author" content="Beau Barker" />
+<meta property="og:locale" content="en_AU" />
+<meta name="description" content="Jsonrpcserver 5 requires Python 3.8+." />
+<meta property="og:description" content="Jsonrpcserver 5 requires Python 3.8+." />
+<link rel="canonical" href="https://composed.blog/jsonrpcserver-5-changes" />
+<meta property="og:url" content="https://composed.blog/jsonrpcserver-5-changes" />
+<meta property="og:site_name" content="Composed" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-08-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Changes in Jsonrpcserver 5" />
+<script type="application/ld+json">
+{"datePublished":"2021-08-09T00:00:00+00:00","description":"Jsonrpcserver 5 requires Python 3.8+.","url":"https://composed.blog/jsonrpcserver-5-changes","@type":"BlogPosting","dateModified":"2021-11-17T20:56:31+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://composed.blog/jsonrpcserver-5-changes"},"author":{"@type":"Person","name":"Beau Barker"},"headline":"Changes in Jsonrpcserver 5","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+        <div id="socials">
+            <div class="wrapper">
+            </div>
+        </div>
+        <nav>
+            <div class="wrapper" style="height: 100%">
+                <span class="logo"></span><!-- Centers the image vertically -->
+                <a href="/"><img src="/assets/composed.png" /></a>
+            </div>
+        </nav>
+        
+
+<article class="wrapper" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1>Changes in Jsonrpcserver 5</h1>
+        <div class="post-meta">
+            <time datetime="2021-08-09T00:00:00+00:00" itemprop="datePublished">
+                Beau Barker |
+                Aug 9, 2021 |
+                
+                Updated Nov 17, 2021 |
+                
+                <a href="https://github.com/explodinglabs/composed.blog/edit/master/docs/_posts/jsonrpc/2021-08-09-jsonrpcserver-5-changes.markdown">
+                    Edit
+                </a>
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        <div class="warning">
+  <p>Jsonrpcserver 5 requires Python 3.8+.</p>
+</div>
+
+<p>Jsonrpcserver is a Python library that dispatches JSON-RPC requests to your
+Python code and gives you a JSON-RPC response.</p>
+
+<p>Version 5 is a complete rebuild. The usage remains mostly the same except for a
+few important changes. <a href="https://www.jsonrpcserver.com/en/latest/">Full version 5 documentation is
+here</a>.</p>
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/3_BMmgJaFHQ" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="methods-return-a-result">Methods return a Result</h2>
+
+<p>Writing a method is the same as before except for the return value which is now <code class="language-plaintext highlighter-rouge">Success</code> or <code class="language-plaintext highlighter-rouge">Error</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">@</span><span class="n">method</span>
+<span class="k">def</span> <span class="nf">ping</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Result</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">Success</span><span class="p">(</span><span class="s">"pong"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>These return values are the <a href="https://www.jsonrpc.org/specification#response_object">JSON-RPC responses objects</a> (minus
+the “jsonrpc” and “id” parts, the library takes care of those for you).</p>
+
+<h2 id="dispatch-returns-json">Dispatch returns JSON</h2>
+
+<p>Previously the <code class="language-plaintext highlighter-rouge">dispatch</code> function gave you an object which you had to apply
+<code class="language-plaintext highlighter-rouge">str</code> to in order to get the json response. Now you just get the json
+string.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dispatch</span><span class="p">(</span><span class="s">'{"jsonrpc": "2.0", "method": "ping", "id": 1}'</span><span class="p">)</span>
+<span class="s">'{"jsonrpc": "2.0", "result": "pong", "id": 1}'</span>
+</code></pre></div></div>
+
+<p>For notifications you get an empty string. For async protocols (sockets,
+message queues), <a href="https://www.jsonrpcserver.com/en/latest/async.html#notifications">don’t send the empty string
+back</a>.</p>
+
+<h2 id="logging-removed">Logging removed</h2>
+
+<p>The library will no longer log requests and responses. Logging can be done by the
+user, outside of the library. See <a href="https://github.com/explodinglabs/jsonrpcserver/issues/152">issue #152</a>.</p>
+
+<h2 id="configuration-file-removed">Configuration file removed</h2>
+
+<p>Version 4 allowed you to configure the library with a config file. This has
+been removed. Pass arguments to <code class="language-plaintext highlighter-rouge">dispatch</code> instead.</p>
+
+<h2 id="options-removed">Options removed</h2>
+
+<p>The “trim log values” and “convert camel case” options have been removed.</p>
+
+<h2 id="methods-collection-is-now-a-dict">Methods collection is now a dict</h2>
+
+<p>There’s an optional parameter to <code class="language-plaintext highlighter-rouge">dispatch</code> that lets you
+specify a collection of methods to dispatch to. This parameter remains, but the value
+which was previously an instance of a Methods class is now simply a <code class="language-plaintext highlighter-rouge">dict</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dispatch</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">{</span><span class="s">"ping"</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">Success</span><span class="p">(</span><span class="s">"pong"</span><span class="p">)})</span>
+</code></pre></div></div>
+
+    </div>
+    <footer>
+        <a href="/jsonrpc">
+            More Jsonrpc posts
+        </a>
+    </footer>
+</article>
+
+
+
+    </body>
+</html>

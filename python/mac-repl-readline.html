@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/main.css">
+        <link rel="alternate" type="application/rss+xml" title="Composed" href="https://composed.blog/feed.xml">
+        <link rel="author" href="https://plus.google.com/u/0/110235318020270619650?rel=author" />
+
+        <link rel="icon" type="image/png" href="/assets/favicon-16x16.png?v=2" sizes="16x16">
+        <link rel="icon" type="image/png" href="/assets/favicon-32x32.png?v=2" sizes="32x32">
+        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png?v=2" sizes="96x96">
+
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png?v=2">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png?v=2">
+        <link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png?v=2">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png?v=2">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        </style>
+        <link href="/css/molokai.css" rel="stylesheet" >
+
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QN3RXC0MWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QN3RXC0MWC');
+</script>
+
+        
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Readline in the Python REPL on MacOS | Composed</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Readline in the Python REPL on MacOS" />
+<meta name="author" content="Beau Barker" />
+<meta property="og:locale" content="en_AU" />
+<meta name="description" content="A programming blog." />
+<meta property="og:description" content="A programming blog." />
+<link rel="canonical" href="https://composed.blog/python/mac-repl-readline" />
+<meta property="og:url" content="https://composed.blog/python/mac-repl-readline" />
+<meta property="og:site_name" content="Composed" />
+<meta property="og:image" content="https://composed.blog/assets/python-wide.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-06-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://composed.blog/assets/python-wide.png" />
+<meta property="twitter:title" content="Readline in the Python REPL on MacOS" />
+<script type="application/ld+json">
+{"datePublished":"2018-06-20T00:00:00+00:00","description":"A programming blog.","url":"https://composed.blog/python/mac-repl-readline","@type":"BlogPosting","dateModified":"2021-11-17T20:56:31+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://composed.blog/python/mac-repl-readline"},"image":"https://composed.blog/assets/python-wide.png","author":{"@type":"Person","name":"Beau Barker"},"headline":"Readline in the Python REPL on MacOS","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+        <div id="socials">
+            <div class="wrapper">
+            </div>
+        </div>
+        <nav>
+            <div class="wrapper" style="height: 100%">
+                <span class="logo"></span><!-- Centers the image vertically -->
+                <a href="/"><img src="/assets/composed.png" /></a>
+            </div>
+        </nav>
+        
+
+<article class="wrapper" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1>Readline in the Python REPL on MacOS</h1>
+        <div class="post-meta">
+            <time datetime="2018-06-20T00:00:00+00:00" itemprop="datePublished">
+                Beau Barker |
+                Jun 20, 2018 |
+                
+                Updated Nov 17, 2021 |
+                
+                <a href="https://github.com/explodinglabs/composed.blog/edit/master/docs/_posts/python/2018-06-20-mac-repl-readline.markdown">
+                    Edit
+                </a>
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        <div class="wide-logos">
+  <p><img src="/assets/python.png" alt="python" /></p>
+</div>
+
+<p>How to use readline in the Python interactive interpreter on Mac.</p>
+
+<p>Install the gnureadline Python package:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>gnureadline
+</code></pre></div></div>
+
+<p>Create a <code class="language-plaintext highlighter-rouge">~/.pythonstartup.py</code> script:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">readline</span>
+    <span class="kn">import</span> <span class="nn">atexit</span>
+    <span class="kn">import</span> <span class="nn">os</span>
+    <span class="kn">import</span> <span class="nn">sys</span>
+    <span class="kn">import</span> <span class="nn">platform</span>
+    <span class="kn">import</span> <span class="nn">gnureadline</span> <span class="k">as</span> <span class="n">readline</span>
+<span class="k">except</span> <span class="nb">ImportError</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Shell Enhancement module problem: {0}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">exception</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Enable Tab Completion
+</span>    <span class="c1"># OSX's bind should only be applied with legacy readline.
+</span>    <span class="k">if</span> <span class="n">sys</span><span class="p">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s">'darwin'</span> <span class="ow">and</span> <span class="s">'libedit'</span> <span class="ow">in</span> <span class="n">readline</span><span class="p">.</span><span class="n">__doc__</span><span class="p">:</span>
+        <span class="n">readline</span><span class="p">.</span><span class="n">parse_and_bind</span><span class="p">(</span><span class="s">"bind ^I rl_complete"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">readline</span><span class="p">.</span><span class="n">parse_and_bind</span><span class="p">(</span><span class="s">"tab: complete"</span><span class="p">)</span>
+
+    <span class="c1"># Enable History File
+</span>    <span class="n">history_file</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
+        <span class="s">"PYTHON_HISTORY_FILE"</span><span class="p">,</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="s">'HOME'</span><span class="p">],</span>
+        <span class="s">'.pythonhistory'</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">history_file</span><span class="p">):</span>
+        <span class="n">readline</span><span class="p">.</span><span class="n">read_history_file</span><span class="p">(</span><span class="n">history_file</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">open</span><span class="p">(</span><span class="n">history_file</span><span class="p">,</span> <span class="s">'a'</span><span class="p">).</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="n">atexit</span><span class="p">.</span><span class="n">register</span><span class="p">(</span><span class="n">readline</span><span class="p">.</span><span class="n">write_history_file</span><span class="p">,</span> <span class="n">history_file</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Booted pythonstartup.py.'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Set the <code class="language-plaintext highlighter-rouge">PYTHONSTARTUP</code> env var:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PYTHONSTARTUP</span><span class="o">=</span><span class="nv">$HOME</span>/.pythonstartup.py
+</code></pre></div></div>
+
+<p>Start the Python REPL.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python
+Python 3.6.5 <span class="o">(</span>default, Mar 29 2018, 15:37:32<span class="o">)</span>
+<span class="o">[</span>GCC 4.2.1 Compatible Apple LLVM 9.0.0 <span class="o">(</span>clang-900.0.39.2<span class="o">)]</span> on darwin
+Type <span class="s2">"help"</span>, <span class="s2">"copyright"</span>, <span class="s2">"credits"</span> or <span class="s2">"license"</span> <span class="k">for </span>more information.
+Booted pythonstartup.py.
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div></div>
+
+    </div>
+    <footer>
+        <a href="/python">
+            More Python posts
+        </a>
+    </footer>
+</article>
+
+
+
+    </body>
+</html>

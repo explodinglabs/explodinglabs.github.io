@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/main.css">
+        <link rel="alternate" type="application/rss+xml" title="Composed" href="https://composed.blog/feed.xml">
+        <link rel="author" href="https://plus.google.com/u/0/110235318020270619650?rel=author" />
+
+        <link rel="icon" type="image/png" href="/assets/favicon-16x16.png?v=2" sizes="16x16">
+        <link rel="icon" type="image/png" href="/assets/favicon-32x32.png?v=2" sizes="32x32">
+        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png?v=2" sizes="96x96">
+
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png?v=2">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png?v=2">
+        <link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png?v=2">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png?v=2">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        </style>
+        <link href="/css/molokai.css" rel="stylesheet" >
+
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QN3RXC0MWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QN3RXC0MWC');
+</script>
+
+        
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>JSON-RPC in Node with Express | Composed</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="JSON-RPC in Node with Express" />
+<meta name="author" content="Beau Barker" />
+<meta property="og:locale" content="en_AU" />
+<meta name="description" content="A programming blog." />
+<meta property="og:description" content="A programming blog." />
+<link rel="canonical" href="https://composed.blog/jsonrpc/node" />
+<meta property="og:url" content="https://composed.blog/jsonrpc/node" />
+<meta property="og:site_name" content="Composed" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-08-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="JSON-RPC in Node with Express" />
+<script type="application/ld+json">
+{"datePublished":"2016-08-01T00:00:00+00:00","description":"A programming blog.","url":"https://composed.blog/jsonrpc/node","@type":"BlogPosting","dateModified":"2021-11-17T20:56:31+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://composed.blog/jsonrpc/node"},"author":{"@type":"Person","name":"Beau Barker"},"headline":"JSON-RPC in Node with Express","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+        <div id="socials">
+            <div class="wrapper">
+            </div>
+        </div>
+        <nav>
+            <div class="wrapper" style="height: 100%">
+                <span class="logo"></span><!-- Centers the image vertically -->
+                <a href="/"><img src="/assets/composed.png" /></a>
+            </div>
+        </nav>
+        
+
+<article class="wrapper" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1>JSON-RPC in Node with Express</h1>
+        <div class="post-meta">
+            <time datetime="2016-08-01T00:00:00+00:00" itemprop="datePublished">
+                Beau Barker |
+                Aug 1, 2016 |
+                
+                Updated Nov 17, 2021 |
+                
+                <a href="https://github.com/explodinglabs/composed.blog/edit/master/docs/_posts/jsonrpc/2016-08-01-node.markdown">
+                    Edit
+                </a>
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        <div class="wide-logos">
+  <p><img src="/assets/nodejs.png" alt="nodejs" />
+<img src="/assets/json.png" alt="json" /></p>
+</div>
+
+<p>We’ll use <a href="https://docs.python.org/3/library/http.server.html">Express</a> to take
+JSON-RPC requests.</p>
+
+<ul>
+  <li>When it receives a “speak” request on <code class="language-plaintext highlighter-rouge">/cats</code>, it should respond with “meow”.</li>
+  <li>When it receives a “speak” request on <code class="language-plaintext highlighter-rouge">/dogs</code>, it should respond with “woof”.</li>
+</ul>
+
+<p>Install Express to take requests and <a href="https://github.com/tedeh/jayson">jayson</a>
+to process them:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm <span class="nb">install </span>express body-parser jayson
+</code></pre></div></div>
+<p>Create a <code class="language-plaintext highlighter-rouge">server.js</code>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">bodyParser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">body-parser</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">jayson</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">jayson</span><span class="dl">'</span><span class="p">)</span>
+
+<span class="kd">const</span> <span class="nx">cats</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">speak</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">args</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="dl">'</span><span class="s1">meow</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">const</span> <span class="nx">dogs</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">speak</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">args</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="dl">'</span><span class="s1">woof</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">()</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">bodyParser</span><span class="p">.</span><span class="nx">urlencoded</span><span class="p">({</span><span class="na">extended</span><span class="p">:</span> <span class="kc">true</span><span class="p">}))</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">bodyParser</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">/cats</span><span class="dl">'</span><span class="p">,</span> <span class="nx">jayson</span><span class="p">.</span><span class="nx">server</span><span class="p">(</span><span class="nx">cats</span><span class="p">).</span><span class="nx">middleware</span><span class="p">())</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">/dogs</span><span class="dl">'</span><span class="p">,</span> <span class="nx">jayson</span><span class="p">.</span><span class="nx">server</span><span class="p">(</span><span class="nx">dogs</span><span class="p">).</span><span class="nx">middleware</span><span class="p">())</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Start the server:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>node server.js
+</code></pre></div></div>
+
+<h2 id="client">Client</h2>
+
+<p>Use curl to send requests:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ HDR</span><span class="o">=</span><span class="s1">'Content-type: application/json'</span>
+<span class="nv">$ MSG</span><span class="o">=</span><span class="s1">'{"jsonrpc": "2.0", "method": "speak", "id": 1}'</span>
+<span class="nv">$ </span>curl <span class="nt">-H</span> <span class="nv">$HDR</span> <span class="nt">-d</span> <span class="nv">$MSG</span> http://localhost:5000/cats
+<span class="o">{</span><span class="s2">"jsonrpc"</span>:<span class="s2">"2.0"</span>,<span class="s2">"result"</span>:<span class="s2">"meow"</span>,<span class="s2">"id"</span>:1<span class="o">}</span>
+<span class="nv">$ </span>curl <span class="nt">-H</span> <span class="nv">$HDR</span> <span class="nt">-d</span> <span class="nv">$MSG</span> http://localhost:5000/dogs
+<span class="o">{</span><span class="s2">"jsonrpc"</span>:<span class="s2">"2.0"</span>,<span class="s2">"result"</span>:<span class="s2">"woof"</span>,<span class="s2">"id"</span>:1<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Updated 11 Sep 2018 thanks to Roman Frolov.</em></p>
+
+    </div>
+    <footer>
+        <a href="/jsonrpc">
+            More Jsonrpc posts
+        </a>
+    </footer>
+</article>
+
+
+
+    </body>
+</html>
