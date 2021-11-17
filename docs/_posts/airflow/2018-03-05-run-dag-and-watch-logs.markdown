@@ -54,7 +54,7 @@ Set the `FILENAME_TEMPLATE` setting.
   Requires Airflow 1.9+
 </div>
 
-Since Airflow 1.9, logging is configured pythonically.
+Since Airflow 1.9, logging is configured Pythonically.
 
 Grab Airflow's default log config, `airflow_local_settings.py`, and copy it
 somewhere in your `PYTHONPATH`.
