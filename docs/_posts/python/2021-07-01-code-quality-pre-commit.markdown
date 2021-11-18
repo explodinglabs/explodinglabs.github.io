@@ -21,9 +21,9 @@ of quality.
 The tools I use are **Black** to ensure code is formatted,
 **Pylint** to disallow unused imports, and **Mypy** for type checking.
 
-Installing these Pre-commit hooks will run a series of checks locally on your
-development machine when you try to commit, catching problems before they even
-reach your local repository.
+Installing these Pre-commit hooks will run these checks locally on your
+development machine when you try to commit, catching problems before they
+reach your repository.
 
 ## Install the Pre-commit hooks
 
