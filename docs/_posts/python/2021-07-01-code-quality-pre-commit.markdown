@@ -16,7 +16,9 @@ redirect_from:
 
 Python's not the strictest language, so to have any confidence in your code you
 need to hit it with a barrage of checks to ensure it meets at least some level
-of quality. The tools I use are **Black** to ensure code is formatted,
+of quality.
+
+The tools I use are **Black** to ensure code is formatted,
 **Pylint** to disallow unused imports, and **Mypy** for type checking.
 
 Installing these Pre-commit hooks will run a series of checks locally on your
