@@ -10,7 +10,9 @@ permalink: /python/github-actions
 
 Python's not the strictest language, so to have any confidence in your code you
 need to hit it with a barrage of checks to ensure it meets at least some level
-of quality. The tools I use are **Black** to ensure code is formatted,
+of quality.
+
+The tools I use are **Black** to ensure code is formatted,
 **Pylint** to disallow unused imports, and **Mypy** for type checking.
 
 Adding this _Github Actions_ workflow will run a series of checks when a pull
