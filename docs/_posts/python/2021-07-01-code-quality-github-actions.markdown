@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: Black, Pylint and Mypy in Github Actions
+title:  Github Actions with Black, Pylint and Mypy
 permalink: /python/github-actions
 ---
 <div class="wide-logos" markdown="1">
