@@ -14,12 +14,12 @@ redirect_from:
 ![python](/assets/python.png)
 </div>
 
-Python's not the strictest language, so to have any confidence in your code you
+**Python's not the strictest language, so to have any confidence in your code you
 need to hit it with a barrage of checks to ensure it meets at least some level
-of quality.
+of quality.**
 
-The tools I use are **Black** to ensure code is formatted,
-**Pylint** to disallow unused imports, and **Mypy** for type checking.
+The tools I use are *Black* to ensure code is formatted,
+*Pylint* to disallow unused imports, and *Mypy* for type checking.
 
 Installing these Pre-commit hooks will run these checks locally on your
 development machine when you try to commit, catching problems before they
