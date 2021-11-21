@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: Use Black, Pylint and Mypy in Pre-commit
+title: Pre-commit with Black, Pylint and Mypy
 permalink: /python/pre-commit
 redirect_from:
     - /black
