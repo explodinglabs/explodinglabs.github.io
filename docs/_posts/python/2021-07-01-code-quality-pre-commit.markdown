@@ -25,9 +25,9 @@ Installing these Pre-commit hooks will run these checks locally on your
 development machine when you try to commit, catching problems before they
 reach your repository.
 
-## Install the Pre-commit hooks
+## How to install the Pre-commit hooks
 
-Install [pre-commit](https://pre-commit.com).
+Install [Pre-commit](https://pre-commit.com).
 
 Add the following `.pre-commit-config.yaml` file to the root of your
 repository.
