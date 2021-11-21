@@ -18,7 +18,7 @@ The tools I use are *Black* to ensure code is formatted,
 Adding this _Github Actions_ workflow will run a series of checks when a pull
 request is created, catching problems before they're merged.
 
-## Add the Github Actions workflow
+## How to add the Github Actions workflow
 
 Add the following to your repository in `.github/workflows/code-quality.yml`.
 
