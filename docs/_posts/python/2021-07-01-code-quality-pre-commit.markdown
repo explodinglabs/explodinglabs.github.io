@@ -69,4 +69,4 @@ pre-commit install
 - If you have an existing project with unformatted code, _format the entire
   codebase all at once_. Don't do it gradually.
 
-Recommended: [Add these same checks to Github Actions](/python/github-actions)
+Recommended: [Github Actions with Black, Pylint and Mypy](/python/github-actions)
