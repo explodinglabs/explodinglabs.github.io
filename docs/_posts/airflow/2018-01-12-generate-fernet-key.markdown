@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generate a Fernet key
+title: How to generate a Fernet key?
 description:
     How to create a fernet key which is required for storing encrypted
     passwords.
