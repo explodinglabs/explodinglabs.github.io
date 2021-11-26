@@ -66,7 +66,7 @@ runtime type checking on the parsed value, or in Python 3.10+, use pattern
 matching.
 
 [See examples in various
-frameworks.](https://github.com/explodinglabs/jsonrpcclient/tree/master/examples)
+frameworks.](https://github.com/explodinglabs/jsonrpcclient/tree/main/examples)
 
 [Full version 4 documentation is
 here.](https://www.jsonrpcclient.com/en/latest/)

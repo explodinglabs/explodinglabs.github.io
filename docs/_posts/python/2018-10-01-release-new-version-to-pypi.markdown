@@ -32,15 +32,15 @@ or the documentation on Readthedocs, without releasing another version. So take
 care with these in stable releases.
 </div>
 
-Commit, push and merge into master.
+Commit, push and merge into main.
 ```sh
 git commit -a
 git push origin head
 ```
 
-Pull master, tag the commit and push the tag.
+Pull main, tag the commit and push the tag.
 ```sh
-git checkout master
+git checkout main
 git pull
 git tag x.x.x
 git push --tags
