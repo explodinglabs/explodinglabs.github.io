@@ -1,7 +1,7 @@
 ---
 layout: post
 category: jsonrpc
-title: JSON-RPC in Python over ZeroMQ
+title: JSON-RPC in Python with ZeroMQ
 permalink: /jsonrpc/zeromq
 redirect_from: /jsonrpc/pyzmq
 ---
