@@ -1,7 +1,7 @@
 ---
 layout: post
 category: jsonrpc
-title: JSON-RPC in Python with Websockets
+title: How to use JSON-RPC with Websockets in Python?
 permalink: /jsonrpc/websockets
 ---
 <div class="warning" markdown="1">

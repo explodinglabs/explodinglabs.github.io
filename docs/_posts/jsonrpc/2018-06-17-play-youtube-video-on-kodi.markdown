@@ -1,7 +1,7 @@
 ---
 layout: post
 category: jsonrpc
-title: Play a Youtube video on Kodi with JSON-RPC
+title: How to use Python to play a Youtube video on Kodi?
 permalink: /jsonrpc/kodi-youtube
 ---
 <div class="wide-logos" markdown="1">

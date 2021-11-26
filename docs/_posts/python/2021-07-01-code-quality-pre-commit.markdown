@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: Black, Pylint and Mypy in Pre-commit
+title: How to use Black, Pylint and Mypy in Pre-commit?
 permalink: /python/pre-commit
 redirect_from:
     - /black
@@ -14,20 +14,20 @@ redirect_from:
 ![python](/assets/python.png)
 </div>
 
-Python's not the strictest language, so to have any confidence in your code you
+**Python's not the strictest language, so to have any confidence in your code you
 need to hit it with a barrage of checks to ensure it meets at least some level
-of quality.
+of quality.**
 
-The tools I use are **Black** to ensure code is formatted,
-**Pylint** to disallow unused imports, and **Mypy** for type checking.
+The tools I use are *Black* to ensure code is formatted,
+*Pylint* to disallow unused imports, and *Mypy* for type checking.
 
-Installing these Pre-commit hooks will run these checks locally on your
+Installing these *Pre-commit hooks* will run these checks locally on your
 development machine when you try to commit, catching problems before they
 reach your repository.
 
-## Install the Pre-commit hooks
+## How to install the Pre-commit hooks
 
-Install [pre-commit](https://pre-commit.com).
+Install [Pre-commit](https://pre-commit.com).
 
 Add the following `.pre-commit-config.yaml` file to the root of your
 repository.
@@ -69,4 +69,4 @@ pre-commit install
 - If you have an existing project with unformatted code, _format the entire
   codebase all at once_. Don't do it gradually.
 
-Recommended: [Add these same checks to Github Actions](/python/github-actions)
+Recommended: [Github Actions with Black, Pylint and Mypy](/python/github-actions)

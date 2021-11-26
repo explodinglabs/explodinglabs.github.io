@@ -1,7 +1,7 @@
 ---
 layout: post
 category: jsonrpc
-title: Changes in Jsonrpcclient 4
+title: What are the changes in Jsonrpcclient 4?
 permalink: /jsonrpcclient-4-changes
 ---
 Jsonrpcclient is a Python library that creates JSON-RPC requests for sending,

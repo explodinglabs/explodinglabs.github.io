@@ -1,7 +1,7 @@
 ---
 layout: post
 category: jsonrpc
-title: JSON-RPC in Python over ZeroMQ
+title: How to use JSON-RPC with ZeroMQ in Python?
 permalink: /jsonrpc/zeromq
 redirect_from: /jsonrpc/pyzmq
 ---
@@ -59,12 +59,16 @@ pip install pyzmq jsonrpcclient
 ```
 
 ```python
->>> from jsonrpcclient import request_json, parse_json, Ok
->>> import zmq
->>> socket = zmq.Context().socket(zmq.REQ)
->>> socket.connect("tcp://localhost:5000")
->>> socket.send_string(request_json("ping"))
->>> response = parse_json(socket.recv().decode())
+from jsonrpcclient import request_json, parse_json, Ok
+import zmq
+
+socket = zmq.Context().socket(zmq.REQ)
+socket.connect("tcp://localhost:5000")
+socket.send_string(request_json("ping"))
+response = parse_json(socket.recv().decode())
+```
+
+```python
 >>> response.result
 'pong'
 ```

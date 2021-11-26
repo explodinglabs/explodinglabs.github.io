@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Run an Airflow DAG from the command-line and watch the log output
+title: How to run an Airflow DAG from the command-line?
 description:
     Explains how to run a DAG, completely from the command-line, and watch the
     log output in real-time.
@@ -12,10 +12,12 @@ permalink: /airflow/run-dag-and-watch-logs
 ![airflow](/assets/airflow.png)
 </div>
 
-I want to run an Airflow dag and watch the logs in the terminal.
+The command to trigger an Airflow dag is simply:
+```sh
+airflow trigger_dag my-dag
+```
 
-Trouble is, each time a task is run a new directory and file is created.
-Something like:
+But I also want to watch the logs in the terminal. Trouble is, each time a task is run a new directory and file is created. Something like:
 
 ```sh
 ~/airflow/logs/my-dag/my-task/2018-03-06T09:59:10.427477/1.log
@@ -83,12 +85,12 @@ You should now get all of a dag log output in a single file.
 
 Start the scheduler and trigger a dag.
 ```sh
-$ airflow scheduler
-$ airflow trigger_dag my-dag
+airflow scheduler
+airflow trigger_dag my-dag
 ```
 
 Watch the output with `tail -f`.
 
 ```sh
-$ tail -f ~/airflow/logs/my-dag.log
+tail -f ~/airflow/logs/my-dag.log
 ```
