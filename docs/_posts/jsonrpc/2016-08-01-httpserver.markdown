@@ -1,7 +1,7 @@
 ---
 layout: post
 category: jsonrpc
-title: JSON-RPC in Python with http.server
+title: How to use JSON-RPC with Python's HTTPServer?
 permalink: /jsonrpc/httpserver
 ---
 <div class="warning" markdown="1">
