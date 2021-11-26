@@ -2,7 +2,7 @@
 layout: post
 title: What's in Airflow's context dictionary?
 description:
-    Showing the contents of the context dictionary, which is available in an
+    Showing the contents of the "context" object, which is available in an
     Operator's execute method, or a PythonOperator's function definition.
 category: airflow
 image: /assets/airflow-wide.png
