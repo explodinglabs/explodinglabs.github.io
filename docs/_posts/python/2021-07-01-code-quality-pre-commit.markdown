@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: How to add Pre-commit hooks for Black, Pylint and Mypy?
+title: "Pre-commit: How to add hooks for Black, Pylint and Mypy"
 permalink: /python/pre-commit
 redirect_from:
     - /black
