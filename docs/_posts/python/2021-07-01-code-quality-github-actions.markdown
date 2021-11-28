@@ -15,7 +15,7 @@ of quality.**
 The tools I use are *Black* to ensure code is formatted,
 *Pylint* to disallow unused imports, and *Mypy* for type checking.
 
-Adding this Github Actions workflow will run a series of checks when a pull
+Adding this Github Actions workflow will run these checks when a pull
 request is created, catching problems before they're merged.
 
 ## How to add the Github Actions workflow
