@@ -68,4 +68,4 @@ pre-commit install
 - If you have an existing project with unformatted code, _format the entire
   codebase all at once_. Don't do it gradually.
 
-Recommended: [Github Actions with Black, Pylint and Mypy](/python/github-actions)
+Recommended: [How to use Black, Pylint and Mypy with Github Actions?](/python/github-actions)
