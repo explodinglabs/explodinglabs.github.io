@@ -50,4 +50,4 @@ jobs:
 - If you have an existing project with unformatted code, _format the entire
   codebase all at once_. Don't do it gradually.
 
-See also: [Pre-commit with Black, Pylint and Mypy](/python/pre-commit)
+See also: [Black, Pylint and Mypy in Pre-commit](/python/pre-commit)
