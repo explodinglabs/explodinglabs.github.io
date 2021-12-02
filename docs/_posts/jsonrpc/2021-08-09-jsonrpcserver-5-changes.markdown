@@ -13,7 +13,7 @@ Python code and gives you a JSON-RPC response.
 
 Version 5 is a complete rebuild. The usage remains mostly the same except for a
 few important changes. [Full version 5 documentation is
-here](https://www.jsonrpcserver.com/en/latest/).
+here.](https://www.jsonrpcserver.com/en/latest/)
 
 <div class="video-container">
     <iframe src="https://www.youtube.com/embed/3_BMmgJaFHQ" frameborder="0" allowfullscreen></iframe>
