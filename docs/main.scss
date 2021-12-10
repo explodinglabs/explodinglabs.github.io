@@ -213,7 +213,7 @@ article {
 }
 
 a {
-    color: red;
+    color: $nav;
     text-decoration: none;
     &:hover { color: orange; }
 }
