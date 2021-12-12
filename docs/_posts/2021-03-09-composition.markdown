@@ -24,7 +24,7 @@ everything else.
 ![composition-full](/assets/composition-zoomed.png)
 {: refdef}
 
-In programming we solve the small problems by writing functions; these are
+In programming we solve small problems by writing functions; these are
 expressions that get you from _a_ to _b_.
 
 Finally, we zoom out again to combine the solutions.
