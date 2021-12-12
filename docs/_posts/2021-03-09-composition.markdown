@@ -6,7 +6,7 @@ permalink: /composition
 Engineers achieve big things by solving little problems. If we can solve all
 the little problems, we can combine the solutions to solve bigger problems.
 
-Why do we break down problems? This is due to the limitations of the human mind
+Why do we break down problems? This is due to the limitations of the human mind.
 We can only deal with a small number of concepts at a time. So we break down
 problems, and break them down again until they're just the right sized chunks that
 we can mentally digest.
