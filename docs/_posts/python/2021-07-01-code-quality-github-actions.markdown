@@ -15,7 +15,7 @@ of quality.**
 The tools I use are *Black* to ensure code is formatted,
 *Pylint* to disallow unused imports, and *Mypy* for type checking.
 
-Adding this _Github Actions workflow_ will run a series of checks when a pull
+Adding this Github Actions workflow will run these checks when a pull
 request is created, catching problems before they're merged.
 
 ## How to add the Github Actions workflow
@@ -50,4 +50,4 @@ jobs:
 - If you have an existing project with unformatted code, _format the entire
   codebase all at once_. Don't do it gradually.
 
-See also: [Pre-commit with Black, Pylint and Mypy](/python/pre-commit)
+See also: [How to use Black, Pylint and Mypy in Pre-commit?](/python/pre-commit)

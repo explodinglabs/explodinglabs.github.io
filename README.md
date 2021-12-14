@@ -6,7 +6,7 @@ See [Install Jekyll on a Mac](https://composed.blog/install-jekyll-on-mac).
 
 ## Usage
 
-To remove a post from the list, add to post meta:
+To remove a post, add the following to the its meta section:
 ```
 sitemap: false
 ```

@@ -17,7 +17,7 @@ We'll use [Sanic](https://sanic.readthedocs.io/) to take JSON-RPC requests. It
 should respond to "ping" with "pong".
 
 Install Sanic to take requests and
-[jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
+[Jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
 pip install sanic jsonrpcserver

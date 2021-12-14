@@ -21,8 +21,7 @@ of quality.**
 The tools I use are *Black* to ensure code is formatted,
 *Pylint* to disallow unused imports, and *Mypy* for type checking.
 
-Installing these *Pre-commit hooks* will run these checks locally on your
-development machine when you try to commit, catching problems before they
+Installing these Pre-commit hooks will run these checks locally when you try to commit, catching problems before they
 reach your repository.
 
 ## How to install the Pre-commit hooks
@@ -69,4 +68,4 @@ pre-commit install
 - If you have an existing project with unformatted code, _format the entire
   codebase all at once_. Don't do it gradually.
 
-Recommended: [Github Actions with Black, Pylint and Mypy](/python/github-actions)
+Recommended: [How to use Black, Pylint and Mypy in Github Actions?](/python/github-actions)

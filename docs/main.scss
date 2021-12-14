@@ -41,6 +41,24 @@ body {
     background-color: #fefefe;
 }
 
+a {
+    color: hsl(266, 100, 60);
+    text-decoration: none;
+    &:hover { color: orange; }
+}
+
+p {
+    margin-bottom: $space;
+}
+
+ul, ol {
+    background-color: $lists;
+    border-radius: 5px;
+    margin-bottom: $space;
+    padding: $space/2 $space*2;
+    box-shadow: 0 5px 10px -2px gray;
+}
+
 #socials {
     display: none;
     height: 35px;
@@ -48,7 +66,7 @@ body {
 }
 
 nav {
-    height: 71px;
+    height: 67px;
     margin-bottom: $space;
     background-color: $nav;
     box-shadow: 0 5px 5px -2px gray;
@@ -212,23 +230,6 @@ article {
     }
 }
 
-a {
-    color: hsl(330, 100%, 50%);
-    text-decoration: none;
-    &:hover { color: orange; }
-}
-
-p {
-    margin-bottom: $space;
-}
-
-ul, ol {
-    background-color: $lists;
-    border-radius: 5px;
-    margin-bottom: $space;
-    padding: $space/2 $space*2;
-    box-shadow: 0 5px 10px -2px gray;
-}
 
 .post-list ul, blockquote ul, blockquote ol {
     box-shadow: none;

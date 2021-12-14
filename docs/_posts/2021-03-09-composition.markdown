@@ -6,10 +6,10 @@ permalink: /composition
 Engineers achieve big things by solving little problems. If we can solve all
 the little problems, we can combine the solutions to solve bigger problems.
 
-Why do we break down problems? This is due to the limitations of the human mind
--- we can only deal with a small number of concepts at a time. So we break down
+Why do we break down problems? This is due to the limitations of the human mind.
+We can only deal with a small number of concepts at a time. So we break down
 problems, and break them down again until they're just the right sized chunks that
-we can mentally digest them.
+we can mentally digest.
 
 A well decomposed problem will produce the most elegant solution.
 
@@ -24,7 +24,7 @@ everything else.
 ![composition-full](/assets/composition-zoomed.png)
 {: refdef}
 
-In programming we solve the small problems by writing functions; these are
+In programming we solve small problems by writing functions; these are
 expressions that get you from _a_ to _b_.
 
 Finally, we zoom out again to combine the solutions.
