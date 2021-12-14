@@ -23,10 +23,12 @@ Add any dependencies to `package.yaml` under the "dependencies" section.
 
 Place source files in `app` directory and then
 ```sh
-stack build --file-watch
+stack build
 ```
+
+Use `stack build --file-watch` to rebuild as your code changes.
 
 Execute the binary with
 ```sh
-$(stack path --local-install-root)/bin/filename-exe
+stack run myapp
 ```
