@@ -1,7 +1,7 @@
 ---
 layout: post
 category: jsonrpc
-title: How to use JSON-RPC in Sanic?
+title: How to use JSON-RPC with Sanic?
 permalink: /jsonrpc/sanic
 ---
 <div class="warning" markdown="1">
