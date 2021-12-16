@@ -1,7 +1,7 @@
 ---
 layout: post
 category: jsonrpc
-title: How to use JSON-RPC in Aiohttp?
+title: How to use JSON-RPC with Aiohttp?
 permalink: /jsonrpc/aiohttp
 ---
 <div class="warning" markdown="1">
