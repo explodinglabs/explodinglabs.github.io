@@ -1,7 +1,7 @@
 ---
 layout: post
 category: jsonrpc
-title: How to use JSON-RPC in FastAPI?
+title: How to use JSON-RPC with FastAPI?
 permalink: /jsonrpc/fastapi
 ---
 <div class="warning" markdown="1">
