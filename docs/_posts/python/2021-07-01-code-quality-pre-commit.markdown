@@ -21,7 +21,7 @@ of quality.**
 I use *Black* to ensure code is formatted,
 *Pylint* to disallow unused imports, and *Mypy* for type checking.
 
-Installing these Pre-commit hooks will run these checks locally when you try to commit, catching problems before they
+Installing these Pre-commit hooks will run these checks when you try to commit, catching problems before they
 reach your repository.
 
 ## How to install the Pre-commit hooks
