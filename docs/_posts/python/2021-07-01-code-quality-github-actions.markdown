@@ -12,7 +12,7 @@ permalink: /python/github-actions
 need to hit it with a barrage of checks to ensure it meets at least some level
 of quality.**
 
-The tools I use are *Black* to ensure code is formatted,
+I use are *Black* to ensure code is formatted,
 *Pylint* to disallow unused imports, and *Mypy* for type checking.
 
 Adding this Github Actions workflow will run these checks when a pull
