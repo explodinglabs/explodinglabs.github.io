@@ -15,8 +15,8 @@ of quality.**
 I use *Black* to ensure code is formatted,
 *Pylint* to disallow unused imports, and *Mypy* for type checking.
 
-Adding this Github Actions workflow will run these checks when a pull
-request is created, catching problems before they're merged.
+This Github Actions workflow will run these checks when a Pull
+Request is created - catching problems before they're merged.
 
 ## How to add the Github Actions workflow
 
