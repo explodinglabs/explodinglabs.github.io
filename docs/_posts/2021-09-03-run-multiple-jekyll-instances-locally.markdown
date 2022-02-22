@@ -10,5 +10,5 @@ no acceptor (port is in use or requires root privileges) (RuntimeError)
 
 Set unused ports for both Jekyll and also LiveReload.
 ```sh
-$ bundle exec jekyll serve --port 4001 --livereload --livereload-port 8001
+bundle exec jekyll serve --port 4001 --livereload --livereload-port 8001
 ```
