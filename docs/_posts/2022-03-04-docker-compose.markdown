@@ -6,6 +6,9 @@ permalink: /why-i-dont-use-docker-compose
 **I don't use Docker Compose. I prefer to use `docker run` commands. Here are
 my reasons why.**
 
+Docker Compose is another layer on top of Docker, that can break or change its
+interface. Using Docker directly removes the need for it. 
+
 Using a `docker run` command with parameters is more explicit. The parameters
 are right there in front of you. Configuration in a "Compose file" is further
 away from the user.
