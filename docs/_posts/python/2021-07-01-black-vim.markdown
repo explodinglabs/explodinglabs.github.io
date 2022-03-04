@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: How to install Black in Vim 8 and format when saving?
+title: How to install or upgrade Black in Vim 8 and format when saving?
 permalink: /black-vim
 redirect_from:
     - /pylint

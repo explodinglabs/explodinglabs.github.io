@@ -21,8 +21,9 @@ subsequent commands in the documentation. Not in separate files.
 
 When an engineer is bringing up the containers for the first time, he can work
 through the issues for each container one at a time, following a set of
-instructions. He can see the `docker run` commands he's executing right there,
-with the parameters, and make any adjustments to them.
+instructions. When executing `docker-compose up` it's not clear to the user
+what's happening. With `docker run` he can see the configuration right there in
+the parameters, and make any adjustments to them.
 
 At a higher level, I just don’t want to compose services together. Why take
 down Postgres with my app? It's just a service. Once it's up, leave it up.
