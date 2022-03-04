@@ -1,10 +1,11 @@
 <img style="margin: 0 auto;" src="https://github.com/explodinglabs/composed.blog/blob/main/docs/assets/logo.png?raw=true" />
 
-## Installation
-
 See [Install Jekyll on a Mac](https://composed.blog/install-jekyll-on-mac).
 
-## Usage
+To bring up Jekyll locally:
+```sh
+(cd docs && bundle exec jekyll serve --livereload)
+```
 
 To remove a post, add the following to the its meta section:
 ```
