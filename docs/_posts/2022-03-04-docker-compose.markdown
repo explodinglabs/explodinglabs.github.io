@@ -20,7 +20,7 @@ further away.
 
 > Keep data close to where it's used.
 
-Also, the configuration (parameters) for dev and prod are together, beside each other in
+Also, the configuration (`docker run` parameters) for dev and prod are together, beside each other in
 subsequent commands in the documentation. Not in separate files.
 
 When an engineer is bringing up the containers for the first time, he can work
