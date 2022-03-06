@@ -22,8 +22,8 @@ in a file somewhere, often combining multiple repositories, further away.
 Also, the parameters for dev and prod are together, beside each other in
 subsequent commands in the documentation. Not in separate files.
 
-Having dev and prod differ by only the parameters in the command is the
-ultimate in [Dev/Prod Parity](https://12factor.net/dev-prod-parity).
+Having dev and prod differ by only parameters in the command is the ultimate in
+[Dev/Prod Parity](https://12factor.net/dev-prod-parity).
 
 When an engineer is bringing up the containers for the first time, he can work
 through the issues for each container one at a time. He follows a set of
@@ -31,4 +31,5 @@ instructions, pasting `docker run` commands from a README. Once a service is
 up, great. Move onto the next one.
 
 At a higher level, I just don’t want to compose services together. Why should
-Postgres come down with my app? It's just a service. Leave it up.
+Postgres come down with my app? It's just a service. Leave it up. Control
+containers individually.
