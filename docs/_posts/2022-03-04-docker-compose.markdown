@@ -13,9 +13,9 @@ Configuration in a `docker run` command is more explicit, the parameters are
 right there in front of you. Configuration in a "compose file" is further away
 from the user.
 
-By putting a `docker run` command in a README file, parameters are right there
-with the documentation for that service. With Docker Compose, the configuration
-is in a file somewhere, often combining multiple repositories, further away.
+By putting a `docker run` command in a README, parameters are right there with
+the documentation for that service. With Docker Compose, the configuration is
+in a file somewhere, often combining multiple repositories, further away.
 
 > Keep data close to where it's used.
 
@@ -27,5 +27,5 @@ through the issues for each container one at a time. He follows a set of
 instructions, pasting `docker run` commands from a README. Once a service is
 up, great. Move onto the next one.
 
-At a higher level, I just don’t want to compose services together. Why take
-down Postgres with my app? It's just a service. Leave it up.
+At a higher level, I just don’t want to compose services together. Why should
+Postgres come down with my app? It's just a service. Leave it up.
