@@ -22,7 +22,7 @@ Also, the parameters for dev and prod are together, beside each other in
 subsequent commands in the documentation. Not in separate files.
 
 When an engineer is bringing up the containers, he can work
-through the issues for each container one at a time. He follows a set of
+through the issues for each one, one at a time. He follows a set of
 instructions, pasting `docker run` commands from a README. Once a service is
 up, great. Move onto the next one.
 
