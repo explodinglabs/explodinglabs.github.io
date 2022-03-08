@@ -9,7 +9,7 @@ my reasons why.**
 Docker Compose is another layer on top of Docker, which can break or change its
 interface. Using `docker` directly removes the need for it.
 
-Parameters to a `docker run` command are more explicit, the parameters are
+Parameters to a `docker run` command are more explicit. They're
 right there in front of you. Configuration in a "compose file" is further away
 from the user.
 
