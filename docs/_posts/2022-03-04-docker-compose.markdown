@@ -26,8 +26,10 @@ through the issues for each one, one at a time. He follows a set of
 instructions, pasting `docker run` commands from a README. Once a service is
 up, great. Move onto the next one.
 
+## Most Importantly
+
 Having dev and prod differ by only parameters in the command is the ultimate in
-[Dev/Prod parity](https://12factor.net/dev-prod-parity).
+[Dev/Prod Parity](https://12factor.net/dev-prod-parity).
 
 At a higher level, I just don’t want to compose services together. Why should
 Postgres come down with my app? It's just a service. Leave it up.
