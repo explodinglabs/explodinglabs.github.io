@@ -27,8 +27,6 @@ through the issues for each container one at a time. He follows a set of
 instructions, pasting `docker run` commands from a README. Once a service is
 up, great. Move onto the next one.
 
-## Most Importantly
-
 Having dev and prod differ by only parameters in the command is the ultimate in
 [Dev/Prod Parity](https://12factor.net/dev-prod-parity).
 
