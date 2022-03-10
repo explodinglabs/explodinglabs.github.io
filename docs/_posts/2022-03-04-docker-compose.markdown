@@ -12,7 +12,7 @@ interface. Using `docker` directly removes the need for it.
 Parameters to a `docker run` command are right there in front of you. Configuration in a "Compose file" is further away
 from the user.
 
-By putting a `docker run` command in a README, parameters are right there with
+By putting `docker run` commands in a README, parameters are right there with
 the documentation for that service. With Docker Compose, the configuration is
 in a file somewhere, often combining multiple repositories, further away.
 
