@@ -23,7 +23,7 @@ subsequent commands in the documentation. Not in separate files.
 
 ## Most Importantly
 
-Having dev and prod differ by only parameters in the command is the ultimate in
+Having dev and prod differ by nothing more than the parameters in the commands executed is the ultimate in
 [Dev/Prod parity](https://12factor.net/dev-prod-parity).
 
 At a higher level, I just don’t want to compose services together. Why should
