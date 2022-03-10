@@ -3,7 +3,7 @@ layout: post
 title: Why I don't use Docker Compose
 permalink: /why-i-dont-use-docker-compose
 ---
-**I don't use Docker Compose. I prefer to use `docker run` commands. Here are
+**I don't use Docker Compose. I prefer to use `docker` commands. Here are
 my reasons why.**
 
 Docker Compose is another layer on top of Docker, which can break or change its
