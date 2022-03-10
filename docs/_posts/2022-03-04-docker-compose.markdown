@@ -21,9 +21,6 @@ in a file somewhere, often combining multiple repositories, further away.
 Also, the parameters for different environments are together, beside each other in
 subsequent commands in the documentation. Not in separate files.
 
-An engineer can bring up each container one at a time, following the
-instructions for each one.
-
 ## Most Importantly
 
 Having dev and prod differ by only parameters in the command is the ultimate in
