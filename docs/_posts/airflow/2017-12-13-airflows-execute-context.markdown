@@ -51,7 +51,7 @@ return {
 }
 ```
 
-An explanation of each item is found  in Airflow's documentation under
+An explanation of each item is found in the documentation under
 [Macros](https://airflow.apache.org/docs/stable/macros-ref.html).
 
 Incidentally -- you can generate the context from a TaskInstance.
