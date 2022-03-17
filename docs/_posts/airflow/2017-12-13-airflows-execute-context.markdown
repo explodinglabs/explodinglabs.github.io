@@ -57,5 +57,8 @@ An explanation of each item is found in the documentation under
 Incidentally -- you can generate the context from a TaskInstance.
 
 ```python
-context = TaskInstance(task=task, execution_date=datetime.now()).get_template_context()
+context = TaskInstance(
+    task=task,
+    execution_date=datetime.now()
+).get_template_context()
 ```
