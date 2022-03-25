@@ -16,7 +16,7 @@ Or shorthand:
 jq -C . data.json | less -R
 ```
 
-From the [jq Documentation](https://stedolan.github.io/jq/manual/#Invokingjq):
+From the [jq documentation](https://stedolan.github.io/jq/manual/#Invokingjq):
 ```
 --color-output / -C
 
