@@ -16,14 +16,15 @@ Or shorthand:
 jq -C . data.json | less -R
 ```
 
+From the [jq Documentation](https://stedolan.github.io/jq/manual/#Invokingjq):
 ```
 --color-output / -C
 
 By default, jq outputs colored JSON if writing to a terminal.
 You can force it to produce color even if writing to a pipe or a file using -C.
 ```
-[jq Documentation](https://stedolan.github.io/jq/manual/#Invokingjq)
 
+From the [less documentation](https://man7.org/linux/man-pages/man1/less.1.html):
 ```
 -R or --RAW-CONTROL-CHARS
 
@@ -33,4 +34,3 @@ the screen appearance is maintained correctly, provided
 that there are no escape sequences in the file other than
 these types of escape sequences.
 ```
-[less documentation](https://man7.org/linux/man-pages/man1/less.1.html)
