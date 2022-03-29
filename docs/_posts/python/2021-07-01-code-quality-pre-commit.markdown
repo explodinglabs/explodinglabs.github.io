@@ -58,7 +58,7 @@ Install them as git hooks:
 pre-commit install
 ```
 
-## Notes
+## Notes on Black
 
 - It's important to choose a specific Black version and be consistent with it.
   The formatting often changes between versions, so what's considered
