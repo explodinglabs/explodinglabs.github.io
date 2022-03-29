@@ -26,9 +26,7 @@ reach your repository.
 
 ## How to install the Pre-commit hooks
 
-Install [Pre-commit](https://pre-commit.com).
-
-Add the following `.pre-commit-config.yaml` file to the root of your
+Install [Pre-commit](https://pre-commit.com) and add the following `.pre-commit-config.yaml` file to the root of your
 repository.
 
 ```yaml
