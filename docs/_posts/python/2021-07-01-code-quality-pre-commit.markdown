@@ -63,7 +63,7 @@ pre-commit install
 - It's important to choose a specific Black version and be consistent with it.
   The formatting often changes between Black versions, so what's considered
   "formatted" in one version may not be in another.
-- If you have an existing project with unformatted code, _format the entire
-  codebase all at once_. Don't do it gradually.
+- If you have an existing project with unformatted code, format the entire
+  codebase all at once. _Don't do it gradually._
 
 Recommended: [How to use Black, Pylint and Mypy in Github Actions?](/python/github-actions)
