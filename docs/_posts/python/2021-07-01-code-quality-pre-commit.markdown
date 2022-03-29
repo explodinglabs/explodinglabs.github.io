@@ -61,7 +61,7 @@ pre-commit install
 ## Notes
 
 - It's important to choose a specific Black version and be consistent with it.
-  The formatting often changes between Black versions, so what's considered
+  The formatting often changes between versions, so what's considered
   "formatted" in one version may not be in another.
 - If you have an existing project with unformatted code, format the entire
   codebase all at once. _Don't do it gradually._
