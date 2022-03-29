@@ -42,7 +42,7 @@ jobs:
     - run: mypy --strict $(git ls-files '*.py')
 ```
 
-## Notes
+## Notes on Black
 
 - It's important to choose a specific Black version and be consistent with it.
   The formatting often changes between versions, so what's considered
