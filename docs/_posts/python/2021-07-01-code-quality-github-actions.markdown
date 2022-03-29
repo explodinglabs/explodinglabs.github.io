@@ -48,6 +48,6 @@ jobs:
   The formatting often changes between Black versions, so what's considered
   "formatted" in one version may not be in another.
 - If you have an existing project with unformatted code, format the entire
-  codebase all at once. _Don't do it gradually_.
+  codebase all at once. _Don't do it gradually._
 
 See also: [How to use Black, Pylint and Mypy in Pre-commit?](/python/pre-commit)
