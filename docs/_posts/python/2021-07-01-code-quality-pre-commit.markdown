@@ -34,7 +34,7 @@ fail_fast: true
 
 repos:
   - repo: https://github.com/ambv/black
-    rev: 21.6b0
+    rev: 22.3.0
     hooks:
       - id: black
         args: [--diff, --check]
