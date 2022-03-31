@@ -17,7 +17,7 @@ in a file somewhere, often combining multiple repositories, further away.
 
 > Keep data close to where it's used.
 
-Also, the parameters for different environments are together, beside each other in
+Also, the configuration for _different environments_ are together, beside each other in
 subsequent commands in the documentation. Not in separate files.
 
 ## Most Importantly
