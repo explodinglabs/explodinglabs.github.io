@@ -18,8 +18,10 @@ redirect_from:
 need to hit it with a barrage of checks to ensure it meets at least some level
 of quality.**
 
-I use *Black* to ensure code is formatted,
-*Pylint* to disallow unused imports, and *Mypy* for type checking.
+I use
+- *Black* to ensure code is formatted,
+- *Pylint* to disallow unused imports,
+- and *Mypy* for type checking.
 
 These pre-commit hooks will check your code when you try to commit, catching problems before they
 reach your repository.
