@@ -12,8 +12,10 @@ permalink: /python/github-actions
 need to hit it with a barrage of checks to ensure it meets at least some level
 of quality.**
 
-I use *Black* to ensure code is formatted,
-*Pylint* to disallow unused imports, and *Mypy* for type checking.
+I use
+- *Black* to ensure code is formatted,
+- *Pylint* to disallow unused imports, and
+- *Mypy* for type checking.
 
 This Github Actions workflow will check your code when a Pull
 Request is created, catching problems before they're merged.
@@ -44,7 +46,7 @@ jobs:
 
 ## Notes on Black
 
-- It's important to choose a specific Black version and be consistent with it.
+- Choose a specific Black version and be consistent with it.
   The formatting can change between versions, so what's considered
   "formatted" in one version may not be in another. _As of 2022 Black has a [Stability Policy](https://black.readthedocs.io/en/stable/the_black_code_style/index.html) which states the formatting won't change in a calendar year._
 - If you have an existing project with unformatted code, format the entire
