@@ -33,10 +33,10 @@ import os
 
 ## The second group, "Related third party imports"
 
-These are imports from _installed packages_. The PEP says "third party" which
+"Third party"
 confuses a lot of people. To me it could be a library maintained by yourself or
-the same organisation, but is kept in a separate repository and installed as a
-separate package.
+the same organisation, but is _inst1alled as
+separate package_.
 
 ```python
 from airflow.utils.decorators import apply_defaults
