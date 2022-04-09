@@ -20,8 +20,6 @@ This part on **grouping imports** is particularly important:
 > - Related third party imports.
 > - Local application/library specific imports.
 >
-> You should put a blank line between each group of imports.
->
 > <cite>PEP-8: The Style Guide for Python Code</cite>
 
 ## The first group: "Standard library imports"
@@ -67,5 +65,9 @@ from cx_Oracle import NUMBER
 from .stored_procedure_operator import StoredProcedureOperator
 ```
 
-Within each group, sort the lines alphabetically (this is just my preference,
-not part of the style guide).
+Be sure to separate the groups. 
+
+> You should put a blank line between each group of imports.
+
+Within each group, sort the lines alphabetically (this is
+not part of the style guide, just my recommendation).
