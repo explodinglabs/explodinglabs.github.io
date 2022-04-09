@@ -53,8 +53,6 @@ from .stored_procedure_operator import StoredProcedureOperator
 
 ## Putting it together
 
-Separate each group by a blank line.
-
 ```python
 from typing import Any
 import os
