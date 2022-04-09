@@ -22,7 +22,7 @@ This part on **grouping imports** is particularly important:
 >
 > <cite>PEP-8: The Style Guide for Python Code</cite>
 
-## The first group: "Standard library imports"
+## The first group, "Standard library imports"
 
 These are from the Python's built-in standard library.
 
@@ -31,7 +31,7 @@ from typing import Any
 import os
 ```
 
-## The second group: "Related third party imports"
+## The second group, "Related third party imports"
 
 These are imports from _installed packages_. The PEP says "third party" which
 confuses a lot of people. To me it could be a library maintained by yourself or
@@ -43,7 +43,7 @@ from airflow.utils.decorators import apply_defaults
 from cx_Oracle import NUMBER
 ```
 
-## The third group: "Local application/library specific imports"
+## The third group, "Local application/library specific imports"
 
 I take this to mean "imports from the same repository".
 
