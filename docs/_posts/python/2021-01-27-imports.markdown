@@ -24,7 +24,7 @@ This part on **grouping imports** is particularly important:
 
 ## The first group, "Standard library imports"
 
-These are from the Python's built-in standard library.
+These are from Python's built-in standard library.
 
 ```python
 from typing import Any
