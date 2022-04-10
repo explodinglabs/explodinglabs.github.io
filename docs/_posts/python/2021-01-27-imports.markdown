@@ -39,8 +39,8 @@ the same organisation, but are _installed as
 separate package_.
 
 ```python
-from airflow.utils.decorators import apply_defaults
-from cx_Oracle import NUMBER
+from airflow.utils.helpers import chain
+import requests
 ```
 
 ## The third group, "Local application/library specific imports"
@@ -48,7 +48,7 @@ from cx_Oracle import NUMBER
 I take this to mean "imports from the same repository".
 
 ```python
-from .stored_procedure_operator import StoredProcedureOperator
+from .my_package import my_function
 ```
 
 ## Putting it together
@@ -57,10 +57,10 @@ from .stored_procedure_operator import StoredProcedureOperator
 from typing import Any
 import os
 
-from airflow.utils.decorators import apply_defaults
-from cx_Oracle import NUMBER
+from airflow.utils.helpers import chain
+import requests
 
-from .stored_procedure_operator import StoredProcedureOperator
+from .my_package import my_function
 ```
 
 Be sure to separate the groups. 
