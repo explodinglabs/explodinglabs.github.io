@@ -34,8 +34,8 @@ import os
 ## The second group, "Related third party imports"
 
 "Third party"
-confuses a lot of people. These imports could be libraries maintained by yourself or
-the same organisation, but _installed as
+confuses a lot of people. These imports could be maintained by yourself or
+the same organisation, but are _installed as
 separate package_.
 
 ```python
@@ -67,5 +67,5 @@ Be sure to separate the groups.
 
 > You should put a blank line between each group of imports.
 
-Within each group, sort the lines alphabetically (this is
-not part of the style guide, just my recommendation).
+Within each group, sort the lines alphabetically. This is
+not part of the style guide, just my recommendation.
