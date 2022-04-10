@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: GraphQL in Python with Flask
+title: How to use GraphQL in Python with Flask?
 permalink: /python/graphql-flask
 redirect_from: /graphql/flask
 ---
