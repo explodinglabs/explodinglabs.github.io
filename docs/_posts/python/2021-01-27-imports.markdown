@@ -34,8 +34,8 @@ import os
 ## The second group, "Related third party imports"
 
 "Third party"
-confuses a lot of people. To me it could be a library maintained by yourself or
-the same organisation, but is _inst1alled as
+confuses a lot of people. These imports could be libraries maintained by yourself or
+the same organisation, but _installed as
 separate package_.
 
 ```python
