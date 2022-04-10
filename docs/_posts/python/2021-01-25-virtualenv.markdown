@@ -9,7 +9,7 @@ permalink: /python/virtualenv
 </div>
 
 Install
-[virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/).
+[Virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/).
 
 Here's how I install it on Mac:
 
@@ -45,7 +45,7 @@ different projects.
 The virtualenv is created and activated. Install packages into it.
 
 ```sh
-pip install ...
+pip install requests
 ```
 
 To deactivate the virtualenv:
