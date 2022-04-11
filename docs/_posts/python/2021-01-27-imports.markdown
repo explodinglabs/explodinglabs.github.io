@@ -8,7 +8,7 @@ permalink: /python/imports
 ![python](/assets/python.png)
 </div>
 
-An important part of the _PEP-8 Style Guide for Python Code_
+A key part of the _PEP-8 Style Guide for Python Code_
 is the [Imports](https://www.python.org/dev/peps/pep-0008/#imports) section.
 
 This part on **grouping imports** is particularly important:
