@@ -23,7 +23,7 @@ This part on **grouping imports** is particularly important:
 
 ## The first group, "Standard library imports"
 
-This refers to importing from Python's built-in [standard library](https://docs.python.org/3/library/index.html).
+This refers to imports from Python's built-in [standard library](https://docs.python.org/3/library/index.html).
 
 ```python
 from typing import Any
