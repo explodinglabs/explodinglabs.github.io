@@ -34,7 +34,7 @@ import os
 
 "Third party"
 confuses a lot of people. These imports could be maintained by yourself or
-the same organisation, but are _installed as
+the same organisation, but are _installed as a
 separate package_.
 
 ```python
