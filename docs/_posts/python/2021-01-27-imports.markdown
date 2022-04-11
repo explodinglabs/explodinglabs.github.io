@@ -71,4 +71,4 @@ Be sure to separate the groups with a blank line.
 > <cite>PEP-8: The Style Guide for Python Code</cite>
 
 Within each group, sort the lines alphabetically. This is
-not part of the style guide, just my recommendation.
+not part of the style guide, it's just my recommendation.
