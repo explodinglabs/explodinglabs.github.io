@@ -64,9 +64,11 @@ from . import settings
 from .my_package import my_function
 ```
 
-Be sure to separate the groups. 
+Be sure to separate the groups with a blank line. 
 
 > You should put a blank line between each group of imports.
+>
+> <cite>PEP-8: The Style Guide for Python Code</cite>
 
 Within each group, sort the lines alphabetically. This is
 not part of the style guide, just my recommendation.
