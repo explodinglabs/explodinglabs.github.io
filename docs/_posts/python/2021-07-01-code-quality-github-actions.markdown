@@ -12,7 +12,7 @@ permalink: /python/github-actions
 need to hit it with a barrage of checks to ensure it meets at least some level
 of quality.**
 
-I use
+I use the following code quality checks:
 - *Black* to ensure code is formatted,
 - *Pylint* to disallow unused imports, and
 - *Mypy* for type checking.
