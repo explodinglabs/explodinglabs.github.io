@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: Readline in the Python REPL on MacOS
+title: How to use Readline in the Python REPL on MacOS?
 image: /assets/python-wide.png
 permalink: /python/mac-repl-readline
 ---

@@ -51,11 +51,14 @@ return {
 }
 ```
 
-An explanation of each item is found  in Airflow's documentation under
+An explanation of each item is found in the documentation under
 [Macros](https://airflow.apache.org/docs/stable/macros-ref.html).
 
 Incidentally -- you can generate the context from a TaskInstance.
 
 ```python
-context = TaskInstance(task=task, execution_date=datetime.now()).get_template_context()
+context = TaskInstance(
+    task=task,
+    execution_date=datetime.now()
+).get_template_context()
 ```

@@ -3,32 +3,27 @@ layout: post
 title: Why I don't use Docker Compose
 permalink: /why-i-dont-use-docker-compose
 ---
-**I don't use Docker Compose. I prefer to use `docker run` commands. Here are
-my reasons why.**
+**I don't use Docker Compose. I prefer to use `docker` commands.**
 
 Docker Compose is another layer on top of Docker, which can break or change its
 interface. Using `docker` directly removes the need for it.
 
-Configuration in a `docker run` command is more explicit, the parameters are
-right there in front of you. Configuration in a "compose file" is further away
+Parameters to a `docker run` command are right there in front of you. Configuration in a "Compose file" is further away
 from the user.
 
-By putting a `docker run` command in a README, parameters are right there with
+By putting `docker run` commands in a README, parameters are right there with
 the documentation for that service. With Docker Compose, the configuration is
 in a file somewhere, often combining multiple repositories, further away.
 
 > Keep data close to where it's used.
 
-Also, the parameters for dev and prod are together, beside each other in
+Also, the configuration for _different environments_ are together, beside each other in
 subsequent commands in the documentation. Not in separate files.
 
-Having dev and prod differ by only parameters in the command is the ultimate in
-[Dev/Prod Parity](https://12factor.net/dev-prod-parity).
+## Most Importantly
 
-When an engineer is bringing up the containers for the first time, he can work
-through the issues for each container one at a time. He follows a set of
-instructions, pasting `docker run` commands from a README. Once a service is
-up, great. Move onto the next one.
+Having dev and prod differ by no more than command parameters is the ultimate in
+[Dev/Prod parity](https://12factor.net/dev-prod-parity).
 
 At a higher level, I just don’t want to compose services together. Why should
 Postgres come down with my app? It's just a service. Leave it up.

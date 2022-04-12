@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: Pylint - Only use one error type
+title: How to use only one error type in Pylint?
 permalink: /python/show-only-one-pylint-error
 redirect_from:
     - /pylint/show-only-one-type

@@ -11,7 +11,7 @@ We can only deal with a small number of concepts at a time. So we break down
 problems, and break them down again until they're just the right sized chunks that
 we can mentally digest.
 
-A well decomposed problem will produce the most elegant solution.
+A well-decomposed problem will produce the most elegant solution.
 
 {:refdef: style="text-align: center; margin: 20px 0;"}
 ![composition-full](/assets/composition-full.png)

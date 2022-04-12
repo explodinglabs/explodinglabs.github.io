@@ -8,9 +8,8 @@ permalink: /python/imports
 ![python](/assets/python.png)
 </div>
 
-An often ignored but important part of the PEP-8 _Style Guide for Python Code_
-is the [Imports
-section](https://www.python.org/dev/peps/pep-0008/#imports).
+A key part of the _PEP-8 Style Guide for Python Code_
+is the [Imports](https://www.python.org/dev/peps/pep-0008/#imports) section.
 
 This part on **grouping imports** is particularly important:
 
@@ -20,52 +19,56 @@ This part on **grouping imports** is particularly important:
 > - Related third party imports.
 > - Local application/library specific imports.
 >
-> You should put a blank line between each group of imports.
->
 > <cite>PEP-8: The Style Guide for Python Code</cite>
 
-## The first group: "Standard library imports"
+## The first group, "Standard library imports"
 
-These are from the Python's built-in standard library.
+This refers to imports from Python's built-in [standard library](https://docs.python.org/3/library/index.html).
 
 ```python
 from typing import Any
 import os
 ```
 
-## The second group: "Related third party imports"
+## The second group, "Related third party imports"
 
-These are imports from _installed packages_. The PEP says "third party" which
-confuses a lot of people. To me it could be a library maintained by yourself or
-the same organisation, but is kept in a separate repository and installed as a
-separate package.
+"Third party"
+confuses a lot of people. These imports could be maintained by yourself or
+the same organisation, but are _installed as a
+separate package_.
 
 ```python
-from airflow.utils.decorators import apply_defaults
-from cx_Oracle import NUMBER
+from airflow.utils.helpers import chain
+import requests
 ```
 
-## The third group: "Local application/library specific imports"
+## The third group, "Local application/library specific imports"
 
 I take this to mean "imports from the same repository".
 
 ```python
-from .stored_procedure_operator import StoredProcedureOperator
+from . import settings
+from .my_package import my_function
 ```
 
 ## Putting it together
-
-Separate each group by a blank line.
 
 ```python
 from typing import Any
 import os
 
-from airflow.utils.decorators import apply_defaults
-from cx_Oracle import NUMBER
+from airflow.utils.helpers import chain
+import requests
 
-from .stored_procedure_operator import StoredProcedureOperator
+from . import settings
+from .my_package import my_function
 ```
 
-Within each group, sort the lines alphabetically (this is just my preference,
-not part of the style guide).
+Be sure to separate the groups with a blank line. 
+
+> You should put a blank line between each group of imports.
+>
+> <cite>PEP-8: The Style Guide for Python Code</cite>
+
+Within each group, sort the lines alphabetically. This is
+not part of the style guide, it's just my recommendation.

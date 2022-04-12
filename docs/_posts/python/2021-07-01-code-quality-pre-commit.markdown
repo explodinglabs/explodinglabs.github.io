@@ -18,17 +18,18 @@ redirect_from:
 need to hit it with a barrage of checks to ensure it meets at least some level
 of quality.**
 
-I use *Black* to ensure code is formatted,
-*Pylint* to disallow unused imports, and *Mypy* for type checking.
+I use the following code quality checks:
 
-These pre-commit hooks will check your code when you _commit_ -- catching problems before they
+- *Black* to ensure code is formatted,
+- *Pylint* to disallow unused imports, and
+- *Mypy* for type checking.
+
+These pre-commit hooks will check your code when you try to commit, catching problems before they
 reach your repository.
 
 ## How to install the Pre-commit hooks
 
-Install [Pre-commit](https://pre-commit.com).
-
-Add the following `.pre-commit-config.yaml` file to the root of your
+Install [Pre-commit](https://pre-commit.com) and add the following `.pre-commit-config.yaml` file to the root of your
 repository.
 
 ```yaml
@@ -36,7 +37,7 @@ fail_fast: true
 
 repos:
   - repo: https://github.com/ambv/black
-    rev: 21.6b0
+    rev: 22.3.0
     hooks:
       - id: black
         args: [--diff, --check]
@@ -60,12 +61,12 @@ Install them as git hooks:
 pre-commit install
 ```
 
-## Notes
+## Notes on Black
 
-- It's important to choose a specific Black version and be consistent with it.
-  The formatting often changes between Black versions, so what's considered
-  "formatted" in one version may not be in another.
-- If you have an existing project with unformatted code, _format the entire
-  codebase all at once_. Don't do it gradually.
+- Choose a specific Black version and be consistent with it.
+  The formatting can change between versions, so what's considered
+  "formatted" in one version may not be in another. _As of 2022 Black has a [Stability Policy](https://black.readthedocs.io/en/stable/the_black_code_style/index.html) which states the formatting won't change in a calendar year._
+- If you have an existing project with unformatted code, format the entire
+  codebase all at once. _Don't do it gradually._
 
 Recommended: [How to use Black, Pylint and Mypy in Github Actions?](/python/github-actions)
