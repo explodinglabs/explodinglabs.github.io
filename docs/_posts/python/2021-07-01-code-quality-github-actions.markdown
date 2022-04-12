@@ -8,9 +8,11 @@ permalink: /python/github-actions
 ![python](/assets/python.png)
 </div>
 
-**Python's not the strictest language, so to have any confidence in your code you
+<div class="intro" markdown="1">
+Python's not the strictest language, so to have any confidence in your code you
 need to hit it with a barrage of checks to ensure it meets at least some level
-of quality.**
+of quality.
+</div>
 
 I use *Black* to ensure code is formatted,
 *Pylint* to disallow unused imports, and *Mypy* for type checking.

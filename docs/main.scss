@@ -26,43 +26,10 @@ $warning: hsl(280, 90, 95);
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
-    color: rgb(41, 41, 41);
-    font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
-    font-size: 21px;
-    font-stretch: normal;
-    font-style: normal;
-    font-variant-caps: normal;
-    font-weight: normal;
-    letter-spacing: -0.06300000101327896px;
-    line-height: 32px;
 }
 
 body {
     background-color: #fefefe;
-}
-
-a {
-    color: hsl(266, 100, 60);
-    text-decoration: none;
-    &:hover { color: orange; }
-}
-
-p {
-    margin-bottom: $space;
-}
-
-ul, ol {
-    background-color: $lists;
-    border-radius: 5px;
-    margin-bottom: $space;
-    padding: $space/2 $space*2;
-    box-shadow: 0 5px 10px -2px gray;
-}
-
-#socials {
-    display: none;
-    height: 35px;
-    background-color: rgb(57, 0, 130);
 }
 
 nav {
@@ -148,14 +115,14 @@ article {
 
     header {
         h1 {
-            font-family: fell, Georgia, Cambria, "Times New Roman", Times, serif;
-            font-size: 40px;
+            font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 32px;
             font-style: normal;
-            font-weight: normal;
+            font-weight: 700;
             letter-spacing: -0.527999997138977px;
             line-height: 130%;
             margin-top: $space * 2;
-            margin-bottom: $space / 3;
+            margin-bottom: $space / 1.5;
 
             @include media-query($on-palm) {
                 margin-top: $space * 1.5;
@@ -165,24 +132,58 @@ article {
         }
 
         .post-meta {
-            font-size: smaller;
+            font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+            font-size: 15px;
             color: #444;
             a { color: #444; text-decoration: none; }
-            margin-bottom: $space;
+            margin-bottom: $space * 1.5;
             @include media-query($on-palm) {
                 margin-bottom: $space;
             }
         }
     }
 
+    a {
+        color: hsl(266, 100, 60);
+        text-decoration: none;
+        &:hover { color: orange; }
+    }
+
+    p {
+        color: rgb(41, 41, 41);
+        font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+        font-size: 20px;
+        font-stretch: normal;
+        font-style: normal;
+        font-variant-caps: normal;
+        font-weight: 400;
+        letter-spacing: -0.06300000101327896px;
+        line-height: 32px;
+        margin-bottom: $space;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    ul, ol {
+        background-color: $lists;
+        border-radius: 5px;
+        margin-bottom: $space;
+        padding: $space/2 $space*2;
+        box-shadow: 0 5px 10px -2px gray;
+    }
+
+    #socials {
+        display: none;
+        height: 35px;
+        background-color: rgb(57, 0, 130);
+    }
+
     h2 {
-        margin: $space * 1.5 0 $space 0;
         font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin: $space * 1.5 0 $space  0;
         font-size: 22px;
         font-style: normal;
         font-weight: 500;
         letter-spacing: normal;
-        line-height: 28px;
     }
 
     h3 {
@@ -201,6 +202,13 @@ article {
 
     .post-content {
         margin-bottom: $space * 1.5;
+    }
+
+    .intro {
+        background-color: #cfc;
+        padding: $space $space 1px $space;
+        margin-bottom: $space;
+        border-radius: 10px;
     }
 
     .warning {
