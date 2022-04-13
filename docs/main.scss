@@ -225,12 +225,9 @@ main {
 
         .warning {
             margin-bottom: $space;
-            padding-left: $space/2;
-            background-color: hsl(0, 70, 60);
 
             p {
                 font-style: italic;
-                color: white;
             }
 
             p:last-child {
