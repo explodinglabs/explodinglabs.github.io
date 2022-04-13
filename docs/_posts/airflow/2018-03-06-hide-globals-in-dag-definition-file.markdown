@@ -26,7 +26,7 @@ Airflow then comes along and finds them.
 When importing that file however, as you do when unit testing, it's not ideal
 to have those global objects created.
 
-The solution is to protect that code by preceding it with a predicate:
+The solution is to protect that code with an `if` statement:
 
 ```python
 if __name__.startswith('unusual_prefix'):
