@@ -3,7 +3,7 @@ layout: post
 title: Why I don't use Docker Compose
 permalink: /why-i-dont-use-docker-compose
 ---
-<div class="intro" markdown="1">
+<div id="intro" markdown="1">
 I don't use Docker Compose. I prefer to use `docker` commands.
 </div>
 

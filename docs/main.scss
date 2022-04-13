@@ -60,7 +60,7 @@ nav {
     background-color: $nav;
     box-shadow: 0 5px 5px -2px #999;
     text-align: right;
-    padding: 10px;
+    padding: 10px 0 2px;
     .logo {
         @extend .wrapper;
         img {
@@ -134,7 +134,7 @@ main {
             h1 {
                 @extend .title-text;
                 margin-top: $space * 2;
-                margin-bottom: $space / 1.5;
+                margin-bottom: $space / 2;
 
                 @include media-query($on-palm) {
                     margin-top: $space * 1.5;
@@ -148,16 +148,27 @@ main {
                 font-size: 14px;
                 color: #444;
                 a { color: #444; text-decoration: none; }
-                margin-bottom: $space;
+                margin-bottom: $space * 1.5;
                 @include media-query($on-palm) {
                     margin-bottom: $space;
                 }
             }
         }
 
+        #intro {
+            @extend .bodytext;
+            margin-bottom: $space;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        #intro p {
+            margin-bottom: 0;
+        }
+
         a {
             color: hsl(266, 100, 60);
-            text-decoration: none;
+            text-decoration: underline;
             &:hover { color: orange; }
         }
 
@@ -169,7 +180,6 @@ main {
 
         ul, ol {
             @extend .bodytext;
-            border-radius: 5px;
             margin-bottom: $space;
             margin-left: $space * 1.5;
             li {
@@ -199,25 +209,9 @@ main {
             line-height: 22px;
         }
 
-        a {
-            text-decoration: underline;
-        }
-
         img {
             max-width: 100%;
             vertical-align: middle;
-        }
-
-        .intro {
-            @extend .bodytext;
-            background-color: #ecf;
-            padding: $space / 2 $space;
-            margin-bottom: $space;
-            border-radius: 2px;
-        }
-
-        .intro p {
-            margin-bottom: 0;
         }
 
         .warning {

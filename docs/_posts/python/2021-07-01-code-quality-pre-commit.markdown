@@ -14,7 +14,7 @@ redirect_from:
 ![python](/assets/python.png)
 </div>
 
-<div class="intro">
+<div id="intro">
 Python's not the strictest language, so to have any confidence in your code you
 need to hit it with a barrage of checks to ensure it meets at least some level
 of quality.
