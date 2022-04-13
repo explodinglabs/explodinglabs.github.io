@@ -12,7 +12,6 @@ $on-palm: 600px;
 $blockquote: hsl(148, 52, 85);
 $code: hsl(320, 8.1, 15);
 $inlinecode: hsl(53, 100, 89);
-$lists: hsl(190, 90, 90);
 $nav: hsl(266, 100, 32);
 $warning: hsl(280, 90, 95);
 
@@ -20,318 +19,6 @@ $warning: hsl(280, 90, 95);
     @media screen and (max-width: $device) {
         @content;
     }
-}
-
-/* Reset some basic elements */
-body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #fefefe;
-}
-
-nav {
-    height: 67px;
-    margin-bottom: $space;
-    background-color: $nav;
-    box-shadow: 0 5px 5px -2px gray;
-    text-align: center;
-    .logo {
-        white-space: nowrap;
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        img {
-            vertical-align: middle;
-            height: 40px;
-        }
-    }
-}
-
-.page-title {
-    text-align: center;
-}
-
-.post-filter {
-    font-size: smaller;
-    text-align: center;
-    margin: 0 $space $space $space;
-}
-
-.post-list {
-    h1 {
-        text-align: center;
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-        background-color: transparent;
-        list-style: none;
-        text-align: center;
-        > li {
-            margin-bottom: $space;
-            a {
-                font-size: 1.2em;
-                margin-bottom: 3px;
-            }
-            .meta {
-                font-size: smaller;
-            }
-        }
-    }
-
-    table {
-        border-collapse: collapse;
-        padding: 0;
-
-        td {
-            padding-bottom: 10px;
-            vertical-align: top;
-        }
-
-        td.date {
-            text-align: right;
-            font-size: 0.9em;
-            white-space: nowrap;
-        }
-        td span {
-            padding-right: $space / 2;
-        }
-
-        td.title {
-        }
-    }
-}
-
-hr {
-    border-top: 1px solid #eee;
-    margin: $space/2 auto $space;
-}
-
-article {
-
-    header {
-        h1 {
-            font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 700;
-            letter-spacing: -0.527999997138977px;
-            line-height: 130%;
-            margin-top: $space * 2;
-            margin-bottom: $space / 1.5;
-
-            @include media-query($on-palm) {
-                margin-top: $space * 1.5;
-                font-size: 32px;
-                line-height: 40px;
-            }
-        }
-
-        .post-meta {
-            font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
-            font-size: 15px;
-            color: #444;
-            a { color: #444; text-decoration: none; }
-            margin-bottom: $space * 1.5;
-            @include media-query($on-palm) {
-                margin-bottom: $space;
-            }
-        }
-    }
-
-    a {
-        color: hsl(266, 100, 60);
-        text-decoration: none;
-        &:hover { color: orange; }
-    }
-
-    p {
-        color: rgb(41, 41, 41);
-        font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
-        font-size: 20px;
-        font-stretch: normal;
-        font-style: normal;
-        font-variant-caps: normal;
-        font-weight: 400;
-        letter-spacing: -0.06300000101327896px;
-        line-height: 32px;
-        margin-bottom: $space;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    ul, ol {
-        background-color: $lists;
-        border-radius: 5px;
-        margin-bottom: $space;
-        padding: $space/2 $space*2;
-        box-shadow: 0 5px 10px -2px gray;
-    }
-
-    #socials {
-        display: none;
-        height: 35px;
-        background-color: rgb(57, 0, 130);
-    }
-
-    h2 {
-        font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
-        margin: $space * 1.5 0 $space  0;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 500;
-        letter-spacing: normal;
-    }
-
-    h3 {
-        margin: $space * 1.5 0 $space 0;
-        font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 19px;
-        font-style: normal;
-        font-weight: 500;
-        letter-spacing: normal;
-        line-height: 22px;
-    }
-
-    a {
-        text-decoration: underline;
-    }
-
-    .post-content {
-        margin-bottom: $space * 1.5;
-    }
-
-    .intro {
-        background-color: #cfc;
-        padding: $space $space 1px $space;
-        margin-bottom: $space;
-        border-radius: 10px;
-    }
-
-    .warning {
-        background-color: $warning;
-        border-radius: 5px;
-        box-shadow: 0 5px 10px -2px gray;
-        font-style: italic;
-        margin-bottom: $space;
-        padding: $space/2 15px;
-
-        p {
-            font-style: italic;
-        }
-
-        p:last-child {
-            margin: 0;
-        }
-
-        p:first-child:before {
-            content: "⚠️  ";  //Warning emoji (can't see it inthe terminal font)
-        }
-    }
-
-    footer {
-        font-size: smaller;
-        margin-bottom: $space * 2;
-    }
-}
-
-
-.post-list ul, blockquote ul, blockquote ol {
-    box-shadow: none;
-}
-
-img {
-    max-width: 100%;
-    vertical-align: middle;
-}
-
-pre, code {
-    font-family: "Source Code Pro", "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
-    font-size: 16px;
-    font-stretch: normal;
-    font-style: normal;
-    font-variant-caps: normal;
-    font-weight: normal;
-}
-
-/* Code using backticks */
-p code, li code {
-    background-color: $inlinecode;
-    border: 1px solid desaturate(adjust-hue(darken($inlinecode, 30%), -15%), 10%);
-    border-radius: 3px;
-    padding: 3px 5px;
-}
-
-.highlight {
-    border-radius: 5px;
-}
-
-pre.highlight {
-    background-color: $code;
-    line-height: 160%;
-    margin-bottom: $space;
-    overflow-x: auto;
-    padding: $space/2 15px;
-}
-
-blockquote {
-    background-color: $blockquote;
-    border-radius: 5px;
-    // border-left: 0px solid darken($blockquote, 40%);
-    padding: $space/2 $space;
-    margin-bottom: $space;
-
-    p {
-        font-style: italic;
-        margin-bottom: $space;
-    }
-
-    p:last-child {
-        padding: 0;
-        margin: 0;
-    }
-
-    p:first-child:before {
-        content: "\201C  ";
-        font-size: 60px;
-        position: relative;
-        top: 20px;
-        line-height: 0%;
-        color: darken($blockquote, 40%);
-        padding-right: 5px;
-    }
-
-    cite {
-        font-size: smaller;
-        font-style: normal;
-        color: darken($blockquote, 40%);
-        line-height: 100%;
-        display: block;
-        text-align: right;
-        margin-bottom: $space/2;
-    }
-}
-
-.video-container {
-    background-color: black;
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-    margin-top: $space;
-    margin-bottom: $space;
-}
-
-.video-container iframe, .video-container object, .video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
 
 /**
@@ -359,23 +46,313 @@ blockquote {
     }
 }
 
-.icon {
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-        path {
-            fill: #444;
+/* Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fefefe;
+}
+
+nav {
+    background-color: $nav;
+    box-shadow: 0 5px 5px -2px #999;
+    text-align: right;
+    padding: 10px;
+    .logo {
+        @extend .wrapper;
+        img {
+            height: 30px;
         }
     }
 }
 
-.wide-logos {
-    float: right;
-    margin-left: $space;
-    @include media-query($on-palm) {
-        /* It's not wide enough to show these */
-        display: none;
-    }
+.title-text {
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.527999997138977px;
+    line-height: 130%;
 }
+
+.bodytext {
+    color: rgb(41, 41, 41);
+    font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-weight: 400;
+    letter-spacing: -0.06300000101327896px;
+    line-height: 32px;
+}
+
+#categories {
+    padding-top: $space;
+    text-align: center;
+    margin: 0 $space $space $space;
+}
+
+main {
+
+    #post-list {
+        @extend .wrapper;
+
+        h1 {
+            @extend .title-text;
+            margin-bottom: $space / 1.5;
+            text-align: center;
+        }
+
+        table {
+            @extend .bodytext;
+            border-collapse: collapse;
+            padding: 0;
+
+            td {
+                padding-bottom: 10px;
+                vertical-align: top;
+            }
+
+            td.date {
+                text-align: right;
+                font-size: 0.9em;
+                white-space: nowrap;
+            }
+            td span {
+                padding-right: $space / 2;
+            }
+        }
+    }
+
+    article {
+
+        header {
+            h1 {
+                @extend .title-text;
+                margin-top: $space * 2;
+                margin-bottom: $space / 1.5;
+
+                @include media-query($on-palm) {
+                    margin-top: $space * 1.5;
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+            }
+
+            .post-meta {
+                font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+                font-size: 14px;
+                color: #444;
+                a { color: #444; text-decoration: none; }
+                margin-bottom: $space;
+                @include media-query($on-palm) {
+                    margin-bottom: $space;
+                }
+            }
+        }
+
+        a {
+            color: hsl(266, 100, 60);
+            text-decoration: none;
+            &:hover { color: orange; }
+        }
+
+        p {
+            @extend .bodytext;
+            margin-bottom: $space;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ul, ol {
+            @extend .bodytext;
+            border-radius: 5px;
+            margin-bottom: $space;
+            margin-left: $space * 1.5;
+            li {
+                margin-bottom: $space / 2;
+            }
+            :last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        h2 {
+            font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: $space * 1.5 0 $space  0;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: normal;
+        }
+
+        h3 {
+            margin: $space * 1.5 0 $space 0;
+            font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: normal;
+            line-height: 22px;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .intro {
+            @extend .bodytext;
+            background-color: #ecf;
+            padding: $space / 2 $space;
+            margin-bottom: $space;
+            border-radius: 2px;
+        }
+
+        .intro p {
+            margin-bottom: 0;
+        }
+
+        .warning {
+            background-color: $warning;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px -2px gray;
+            font-style: italic;
+            margin-bottom: $space;
+            padding: $space/2 15px;
+
+            p {
+                font-style: italic;
+            }
+
+            p:last-child {
+                margin: 0;
+            }
+
+            p:first-child:before {
+                content: "⚠️  ";  //Warning emoji (can't see it inthe terminal font)
+            }
+        }
+
+        pre, code {
+            font-family: "Source Code Pro", "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
+            font-size: 16px;
+            font-stretch: normal;
+            font-style: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+        }
+
+        /* Code using backticks */
+        p code, li code {
+            background-color: $inlinecode;
+            border: 1px solid desaturate(adjust-hue(darken($inlinecode, 30%), -15%), 10%);
+            border-radius: 3px;
+            padding: 3px 5px;
+        }
+
+        .highlight {
+            border-radius: 5px;
+        }
+
+        pre.highlight {
+            background-color: $code;
+            line-height: 160%;
+            margin-bottom: $space;
+            overflow-x: auto;
+            padding: $space/2 15px;
+        }
+
+        blockquote {
+            background-color: $blockquote;
+            border-radius: 5px;
+            // border-left: 0px solid darken($blockquote, 40%);
+            padding: $space/2 $space;
+            margin-bottom: $space;
+
+            p {
+                font-style: italic;
+                margin-bottom: $space;
+            }
+
+            p:last-child {
+                padding: 0;
+                margin: 0;
+            }
+
+            p:first-child:before {
+                content: "\201C  ";
+                font-size: 60px;
+                position: relative;
+                top: 20px;
+                line-height: 0%;
+                color: darken($blockquote, 40%);
+                padding-right: 5px;
+            }
+
+            cite {
+                font-size: smaller;
+                font-style: normal;
+                color: darken($blockquote, 40%);
+                line-height: 100%;
+                display: block;
+                text-align: right;
+                margin-bottom: $space/2;
+            }
+        }
+
+        .video-container {
+            background-color: black;
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+            margin-top: $space;
+            margin-bottom: $space;
+        }
+
+        .video-container iframe, .video-container object, .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .icon {
+            > svg {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                vertical-align: middle;
+                path {
+                    fill: #444;
+                }
+            }
+        }
+
+        .wide-logos {
+            float: right;
+            margin-left: $space;
+            @include media-query($on-palm) {
+                /* It's not wide enough to show these */
+                display: none;
+            }
+        }
+
+        footer {
+            font-size: smaller;
+            margin-bottom: $space * 2;
+        }
+    }
+
+}
+

@@ -5,7 +5,7 @@ title: Composed
 {% include categories.html %}
 {% assign posts = site.posts | where_exp:"post","post.sitemap != false" | sort: 'date' | reverse %}
 
-<div class="wrapper post-list">
+<main id="post-list">
     <table>
         {% for post in posts limit:1 %}
             {% include post_link_td.html %}

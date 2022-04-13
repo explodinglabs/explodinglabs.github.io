@@ -1,4 +1,4 @@
-<div class="post-filter">
+<div id="categories">
     <a href="/">All</a> ({{ site.posts | where_exp:"post","post.sitemap != false" | size }}),
     <a href="/python/">Python</a> ({{ site.categories.python | where_exp: "post","post.sitemap != false" | size }}),
     <a href="/jsonrpc/">JSON-RPC</a> ({{ site.categories.jsonrpc | where_exp: "post","post.sitemap != false" | size }}),

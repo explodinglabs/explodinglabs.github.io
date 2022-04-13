@@ -9,9 +9,9 @@ layout: all
         <div class="post-meta">
             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 Beau Barker |
-                {{ created }} |
+                <time>{{ created }}</time> |
                 {% if updated and updated != created %}
-                Updated {{ updated }} |
+                Updated <time>{{ updated }}</time> |
                 {% endif %}
                 <a href="https://github.com/explodinglabs/composed.blog/edit/main/docs/{{page.path}}">
                     Edit
@@ -19,9 +19,7 @@ layout: all
             </time>
         </div>
     </header>
-    <div class="post-content">
-        {{ content }}
-    </div>
+    {{ content }}
     <footer>
         <a href="/{{ page.category }}">
             More {{ page.category |capitalize}} posts
