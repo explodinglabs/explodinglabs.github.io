@@ -19,7 +19,7 @@ I use the following code quality checks:
 - *Pylint* to disallow unused imports, and
 - *Mypy* for type checking.
 
-This Github Actions workflow will check your code when a Pull
+The following Github Actions workflow will check your code when a Pull
 Request is created, catching problems before they're merged.
 
 ## How to add the Github Actions workflow
