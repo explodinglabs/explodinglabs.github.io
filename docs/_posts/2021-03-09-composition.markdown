@@ -17,7 +17,7 @@ A well-decomposed problem will produce the most elegant solution.
 ![composition-full](/assets/composition-full.png)
 {: refdef}
 
-Then we solve each problem, zooming in to focus on a single arrow, ignoring
+We solve each problem, zooming in to focus on a single arrow, ignoring
 everything else.
 
 {:refdef: style="text-align: center; margin: 20px 0;"}
