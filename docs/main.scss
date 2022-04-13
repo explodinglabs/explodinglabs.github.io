@@ -13,7 +13,6 @@ $blockquote: hsl(148, 52, 85);
 $code: hsl(320, 8.1, 15);
 $inlinecode: hsl(53, 100, 89);
 $nav: hsl(266, 100, 32);
-$warning: hsl(280, 90, 95);
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
@@ -90,10 +89,19 @@ nav {
     line-height: 32px;
 }
 
+.linktext {
+    color: rgb(71, 0, 163);
+    text-decoration: underline;
+    &:hover { color: orange; }
+}
+
 #categories {
     padding-top: $space;
     text-align: center;
     margin: 0 $space $space $space;
+    a {
+        color: red;
+    }
 }
 
 main {
@@ -111,10 +119,14 @@ main {
             @extend .bodytext;
             border-collapse: collapse;
             padding: 0;
+            margin-bottom: $space;
 
             td {
                 padding-bottom: 10px;
                 vertical-align: top;
+                a {
+                    @extend .linktext;
+                }
             }
 
             td.date {
@@ -122,6 +134,7 @@ main {
                 font-size: 0.9em;
                 white-space: nowrap;
             }
+
             td span {
                 padding-right: $space / 2;
             }
@@ -158,8 +171,6 @@ main {
         #intro {
             @extend .bodytext;
             margin-bottom: $space;
-            font-weight: 600;
-            font-style: italic;
         }
 
         #intro p {
@@ -167,9 +178,7 @@ main {
         }
 
         a {
-            color: hsl(266, 100, 60);
-            text-decoration: underline;
-            &:hover { color: orange; }
+            @extend .linktext;
         }
 
         p {
@@ -183,7 +192,7 @@ main {
             margin-bottom: $space;
             margin-left: $space * 1.5;
             li {
-                margin-bottom: $space / 2;
+                margin-bottom: 0;
             }
             :last-child {
                 margin-bottom: 0;
@@ -215,12 +224,10 @@ main {
         }
 
         .warning {
-            background-color: $warning;
-            border-radius: 5px;
-            box-shadow: 0 5px 10px -2px gray;
+            border-left: 5px solid hsl(348, 100%, 61%);
             font-style: italic;
             margin-bottom: $space;
-            padding: $space/2 15px;
+            padding: 0 $space;
 
             p {
                 font-style: italic;
@@ -230,9 +237,9 @@ main {
                 margin: 0;
             }
 
-            p:first-child:before {
+            /*p:first-child:before {
                 content: "⚠️  ";  //Warning emoji (can't see it inthe terminal font)
-            }
+            }*/
         }
 
         pre, code {
@@ -265,10 +272,8 @@ main {
         }
 
         blockquote {
-            background-color: $blockquote;
-            border-radius: 5px;
-            // border-left: 0px solid darken($blockquote, 40%);
-            padding: $space/2 $space;
+            border-left: 5px solid darken($blockquote, 40%);
+            padding-left: $space;
             margin-bottom: $space;
 
             p {
@@ -295,10 +300,8 @@ main {
                 font-size: smaller;
                 font-style: normal;
                 color: darken($blockquote, 40%);
-                line-height: 100%;
                 display: block;
                 text-align: right;
-                margin-bottom: $space/2;
             }
         }
 
@@ -343,7 +346,6 @@ main {
         }
 
         footer {
-            font-size: smaller;
             margin-bottom: $space * 2;
         }
     }
