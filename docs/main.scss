@@ -56,7 +56,7 @@ body {
 }
 
 nav {
-    background-color: $nav;
+    background-color: black;
     box-shadow: 0 5px 5px -2px #999;
     text-align: right;
     padding: 10px 0 2px;
@@ -224,22 +224,23 @@ main {
         }
 
         .warning {
-            border-left: 5px solid hsl(348, 100%, 61%);
-            font-style: italic;
             margin-bottom: $space;
-            padding: 0 $space;
+            padding-left: $space/2;
+            background-color: hsl(0, 70, 60);
 
             p {
                 font-style: italic;
+                color: white;
             }
 
             p:last-child {
                 margin: 0;
             }
 
-            /*p:first-child:before {
+            p:first-child:before {
                 content: "⚠️  ";  //Warning emoji (can't see it inthe terminal font)
-            }*/
+                margin-right: 5px;
+            }
         }
 
         pre, code {
