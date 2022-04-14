@@ -273,7 +273,6 @@ main {
         }
 
         blockquote {
-            padding-top: $space;
             margin-bottom: $space;
 
             p {
@@ -293,6 +292,7 @@ main {
             }
 
             cite {
+                margin-top: $space;
                 font-size: smaller;
                 font-style: normal;
                 color: #666;
