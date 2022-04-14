@@ -58,7 +58,7 @@ repos:
         args: [--strict]
 ```
 
-Install [Pre-commit](https://pre-commit.com) and install the git hooks:
+Install [Pre-commit](https://pre-commit.com) and add the git hooks:
 ```sh
 pip install precommit
 pre-commit install

@@ -12,8 +12,10 @@ redirect_from:
 ![python](/assets/python.png)
 </div>
 
+<div id="intro" markdown="1">
 We have a dictionary, and want to convert it to a an object with postfix
 notation like `obj.name`.
+</div>
 
 ## Convert to an immutable object
 

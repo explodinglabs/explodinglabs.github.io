@@ -8,8 +8,10 @@ permalink: /python/release-to-pypi
 ![python](/assets/python.png)
 </div>
 
+<div id="intro" markdown="1">
 These are the steps I take when releasing a version of my Python package to
 PyPI.
+</div>
 
 First run your checks/cleaning. I have a post about this
 [here](/python/checks). If any fail, start again.

@@ -9,7 +9,9 @@ permalink: /python/mac-repl-readline
 ![python](/assets/python.png)
 </div>
 
+<div id="intro" markdown="1">
 How to use readline in the Python interactive interpreter on Mac.
+</div>
 
 Install the gnureadline Python package:
 ```sh

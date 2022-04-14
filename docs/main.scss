@@ -59,7 +59,7 @@ nav {
     background-color: black;
     box-shadow: 0 5px 5px -2px #999;
     text-align: right;
-    padding: 10px 0 2px;
+    padding: 10px $space 2px;
     .logo {
         @extend .wrapper;
         img {

@@ -10,8 +10,10 @@ redirect_from: /convert-sequence-to-postfix-notation
 ![python](/assets/python.png)
 </div>
 
+<div id="intro" markdown="1">
 We have a sequence such as a tuple or list, and want to convert it to a an
 object with named attributes in postfix notation ('obj.name').
+</div>
 
 ## Convert to an immutable object
 
