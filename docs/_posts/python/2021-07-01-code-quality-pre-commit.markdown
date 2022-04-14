@@ -31,7 +31,7 @@ before they reach your repository.
 
 ## How to install the Pre-commit hooks
 
-Install [Pre-commit](https://pre-commit.com) and add the following `.pre-commit-config.yaml` file to the root of your
+Add the following `.pre-commit-config.yaml` file to the root of your
 repository.
 
 ```yaml
@@ -58,8 +58,9 @@ repos:
         args: [--strict]
 ```
 
-Install them as git hooks:
+Install [Pre-commit](https://pre-commit.com) and install the git hooks:
 ```sh
+pip install precommit
 pre-commit install
 ```
 
