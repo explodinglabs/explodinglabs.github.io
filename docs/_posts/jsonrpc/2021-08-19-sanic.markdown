@@ -4,17 +4,15 @@ category: jsonrpc
 title: How to use JSON-RPC with Sanic?
 permalink: /jsonrpc/sanic
 ---
-<div class="warning" markdown="1">
-This post uses Jsonrpcserver 5 which requires Python 3.8+.
-</div>
-
 <div class="wide-logos" markdown="1">
 ![sanic](/assets/sanic.png)
 ![json](/assets/json.png)
 </div>
 
+<div id="intro" markdown="1">
 We'll use [Sanic](https://sanic.readthedocs.io/) to take JSON-RPC requests. It
 should respond to "ping" with "pong".
+</div>
 
 Install Sanic to take requests and
 [Jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
