@@ -2,7 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @import "pygments";
-@import "css/friendly.css";
+@import "css/fruity.css";
 @charset "utf-8";
 
 $space: 25px;
@@ -244,8 +244,8 @@ main {
         }
 
         pre, code {
-            font-family: "Source Code Pro", "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
-            font-size: 16px;
+            font-family: "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
+            font-size: 15px;
             font-stretch: normal;
             font-style: normal;
             font-variant-caps: normal;
@@ -262,7 +262,11 @@ main {
 
         .highlight {
             border-radius: 5px;
-            background-color: hsl(320, 10, 94);
+            background-color: hsl(320, 0, 20);
+            color: #eee;
+            .bp, .vc, .vg, .vi, .na, .nb, .nc, .no, .ni, .ne, .nf, .nl, .nn, .nt, .nv {
+                color: #ff66cc;
+            }
         }
 
         pre.highlight {
