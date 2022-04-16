@@ -4,17 +4,15 @@ category: jsonrpc
 title: How to use JSON-RPC with Werkzeug?
 permalink: /jsonrpc/werkzeug
 ---
-<div class="warning" markdown="1">
-This post uses Jsonrpcserver 5 which requires Python 3.8+.
-</div>
-
 <div class="wide-logos" markdown="1">
 ![werkzeug](/assets/werkzeug.png)
 ![json](/assets/json.png)
 </div>
 
+<div id="intro" markdown="1">
 We'll use [Werkzeug](http://werkzeug.pocoo.org) to take JSON-RPC requests. It
 should respond to 'ping' with 'pong'.
+</div>
 
 Install Werkzeug to take requests and
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:

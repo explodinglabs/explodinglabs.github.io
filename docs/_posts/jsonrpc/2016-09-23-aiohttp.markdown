@@ -4,17 +4,15 @@ category: jsonrpc
 title: How to use JSON-RPC with Aiohttp?
 permalink: /jsonrpc/aiohttp
 ---
-<div class="warning" markdown="1">
-This post uses Jsonrpcserver 5 which requires Python 3.8+.
-</div>
-
 <div class="wide-logos" markdown="1">
 ![flask](/assets/aiohttp.png)
 ![json](/assets/json.png)
 </div>
 
+<div id="intro" markdown="1">
 We'll use [aiohttp](http://aiohttp.readthedocs.io/) to take JSON-RPC requests.
 It should respond to "ping" with "pong".
+</div>
 
 Install aiohttp to take requests and
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:

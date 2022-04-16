@@ -4,17 +4,15 @@ category: jsonrpc
 title: How to use JSON-RPC with Python's HTTPServer?
 permalink: /jsonrpc/httpserver
 ---
-<div class="warning" markdown="1">
-This post uses Jsonrpcserver 5 which requires Python 3.8+.
-</div>
-
 <div class="wide-logos" markdown="1">
 ![python](/assets/python.png)
 ![json](/assets/json.png)
 </div>
 
+<div id="intro" markdown="1">
 We'll start a server to take JSON-RPC requests. It should respond to "ping"
 with "pong".
+</div>
 
 We'll use Python's built-in
 [http.server](https://docs.python.org/3/library/http.server.html) module, so no

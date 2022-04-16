@@ -2,6 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @import "pygments";
+@import "css/colorful";
 @charset "utf-8";
 
 $space: 25px;
@@ -10,7 +11,6 @@ $on-palm: 600px;
 
 // Colors
 $blockquote: hsl(148, 52, 60);
-$code: hsl(320, 8.1, 15);
 $inlinecode: hsl(53, 100, 89);
 $nav: hsl(266, 100, 32);
 
@@ -262,14 +262,14 @@ main {
 
         .highlight {
             border-radius: 5px;
+            background-color: hsl(300, 0, 95);
         }
 
         pre.highlight {
-            background-color: $code;
             line-height: 160%;
             margin-bottom: $space;
             overflow-x: auto;
-            padding: $space/2 15px;
+            padding: $space/3 $space/2;
         }
 
         blockquote {

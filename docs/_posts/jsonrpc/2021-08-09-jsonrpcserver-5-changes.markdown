@@ -4,10 +4,6 @@ category: jsonrpc
 title: What are the changes in Jsonrpcserver 5?
 permalink: /jsonrpcserver-5-changes
 ---
-<div class="warning" markdown="1">
-Jsonrpcserver 5 requires Python 3.8+.
-</div>
-
 <div id="intro" markdown="1">
 Jsonrpcserver is a Python library that dispatches JSON-RPC requests to your
 code and gives you a JSON-RPC response.

@@ -4,17 +4,15 @@ category: jsonrpc
 title: How to use JSON-RPC with FastAPI?
 permalink: /jsonrpc/fastapi
 ---
-<div class="warning" markdown="1">
-This post uses Jsonrpcserver 5 which requires Python 3.8+.
-</div>
-
 <div class="wide-logos" markdown="1">
 ![fastapi](/assets/fastapi.png)
 ![json](/assets/json.png)
 </div>
 
+<div id="intro" markdown="1">
 We'll use [FastAPI](https://fastapi.tiangolo.com) to take JSON-RPC requests. It
 should respond to "ping" with "pong".
+</div>
 
 Install FastAPI and [Uvicorn](https://www.uvicorn.org) to take requests and
 [Jsonrpcserver](https://www.jsonrpcserver.com/) to process them:

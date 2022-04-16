@@ -5,17 +5,15 @@ title: How to use JSON-RPC with Socket.io in Python?
 permalink: /jsonrpc/socketio
 redirect_from: /jsonrpc/flask-socketio
 ---
-<div class="warning" markdown="1">
-This post uses Jsonrpcserver 5 which requires Python 3.8+.
-</div>
-
 <div class="wide-logos" markdown="1">
 ![socketio](/assets/socketio.png)
 ![json](/assets/json.png)
 </div>
 
+<div id="intro" markdown="1">
 We'll use [Socket.IO](http://socket.io/) to take JSON-RPC requests. It should
 respond to "ping" with "pong".
+</div>
 
 Install [Flask](http://flask.pocoo.org),
 [Flask-SocketIO](https://flask-socketio.readthedocs.org/) and
