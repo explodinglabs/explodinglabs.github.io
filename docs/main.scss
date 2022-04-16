@@ -2,7 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @import "pygments";
-@import "css/fruity.css";
+@import "css/native.css";
 @charset "utf-8";
 
 $space: 25px;
@@ -257,15 +257,16 @@ main {
             background-color: $inlinecode;
             border: 1px solid desaturate(adjust-hue(darken($inlinecode, 30%), -15%), 10%);
             border-radius: 3px;
-            padding: 3px 5px;
+            padding: 3px 3px;
         }
 
         .highlight {
             border-radius: 5px;
-            background-color: hsl(320, 0, 20);
-            color: #eee;
+            background-color: hsl(320, 0, 15);
+            color: #fefefe;
             .bp, .vc, .vg, .vi, .na, .nb, .nc, .no, .ni, .ne, .nf, .nl, .nn, .nt, .nv {
                 color: #ff66cc;
+                text-decoration: none;
             }
         }
 
@@ -273,7 +274,7 @@ main {
             line-height: 160%;
             margin-bottom: $space;
             overflow-x: auto;
-            padding: $space/2 $space/1.5;
+            padding: $space/2 $space/1.8;
         }
 
         blockquote {
