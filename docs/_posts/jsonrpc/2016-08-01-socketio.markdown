@@ -11,8 +11,8 @@ redirect_from: /jsonrpc/flask-socketio
 </div>
 
 <div id="intro" markdown="1">
-We'll use [Socket.IO](http://socket.io/) to take JSON-RPC requests. It should
-respond to "ping" with "pong".
+We'll use SocketIO to take JSON-RPC requests. It should respond to "ping" with
+"pong".
 </div>
 
 Install [Flask](http://flask.pocoo.org),

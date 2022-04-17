@@ -9,14 +9,15 @@ permalink: /jsonrpc/node
 ![json](/assets/json.png)
 </div>
 
-We'll use [Express](https://docs.python.org/3/library/http.server.html) to take
-JSON-RPC requests.
+<div id="intro" markdown="1">
+We'll use Express to take JSON-RPC requests.
+</div>
 
 - When it receives a "speak" request on `/cats`, it should respond with "meow".
 - When it receives a "speak" request on `/dogs`, it should respond with "woof".
 
-Install Express to take requests and [jayson](https://github.com/tedeh/jayson)
-to process them:
+Install [Express](https://docs.python.org/3/library/http.server.html) to take
+requests and [jayson](https://github.com/tedeh/jayson) to process them:
 
 ```sh
 $ npm install express body-parser jayson

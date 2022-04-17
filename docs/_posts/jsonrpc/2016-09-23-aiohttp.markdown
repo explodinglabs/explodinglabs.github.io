@@ -10,11 +10,11 @@ permalink: /jsonrpc/aiohttp
 </div>
 
 <div id="intro" markdown="1">
-We'll use [aiohttp](http://aiohttp.readthedocs.io/) to take JSON-RPC requests.
-It should respond to "ping" with "pong".
+We'll use AioHTTP to take JSON-RPC requests. It should respond to "ping" with
+"pong".
 </div>
 
-Install aiohttp to take requests and
+Install [AioHTTP](http://aiohttp.readthedocs.io/) to take requests and
 [jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh

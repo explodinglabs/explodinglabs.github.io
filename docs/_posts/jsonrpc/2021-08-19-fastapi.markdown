@@ -10,11 +10,12 @@ permalink: /jsonrpc/fastapi
 </div>
 
 <div id="intro" markdown="1">
-We'll use [FastAPI](https://fastapi.tiangolo.com) to take JSON-RPC requests. It
-should respond to "ping" with "pong".
+We'll use FastAPI to take JSON-RPC requests. It should respond to "ping" with
+"pong".
 </div>
 
-Install FastAPI and [Uvicorn](https://www.uvicorn.org) to take requests and
+Install [FastAPI](https://fastapi.tiangolo.com) and
+[Uvicorn](https://www.uvicorn.org) to take requests and
 [Jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh

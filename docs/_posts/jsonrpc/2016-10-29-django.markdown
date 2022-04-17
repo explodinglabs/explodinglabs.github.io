@@ -10,8 +10,8 @@ permalink: /jsonrpc/django
 </div>
 
 <div id="intro" markdown="1">
-We'll use Django to take JSON-RPC requests.
-It should respond to "ping" with "pong".
+We'll use Django to take JSON-RPC requests. It should respond to "ping" with
+"pong".
 </div>
 
 Install [Django](https://www.djangoproject.com/) and [Jsonrpcserver](https://www.jsonrpcserver.com/) to process the

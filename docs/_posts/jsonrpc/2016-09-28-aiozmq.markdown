@@ -10,9 +10,8 @@ permalink: /jsonrpc/zeromq-async
 </div>
 
 <div id="intro" markdown="1">
-We'll use [ZeroMQ](http://zeromq.org) to take JSON-RPC requests, and process
-them asynchronously. (The synchronous version is [here](./zeromq).) The server
-should respond to "ping" with "pong".
+We'll use ZeroMQ to take JSON-RPC requests, and process them asynchronously.
+The server should respond to "ping" with "pong".
 </div>
 
 Install [aiozmq](https://aiozmq.readthedocs.io/) to take requests and

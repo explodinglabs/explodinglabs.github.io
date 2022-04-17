@@ -11,8 +11,8 @@ redirect_from: /jsonrpc/pyzmq
 </div>
 
 <div id="intro" markdown="1">
-We'll use [ZeroMQ](http://zeromq.org) to take JSON-RPC requests. It should
-respond to "ping" with "pong".
+We'll use ZeroMQ to take JSON-RPC requests. It should respond to "ping" with
+"pong".
 </div>
 
 Install [pyzmq](https://pyzmq.readthedocs.io/) to take requests and

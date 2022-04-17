@@ -10,11 +10,11 @@ permalink: /jsonrpc/sanic
 </div>
 
 <div id="intro" markdown="1">
-We'll use [Sanic](https://sanic.readthedocs.io/) to take JSON-RPC requests. It
-should respond to "ping" with "pong".
+We'll use Sanic to take JSON-RPC requests. It should respond to "ping" with
+"pong".
 </div>
 
-Install Sanic to take requests and
+Install [Sanic](https://sanic.readthedocs.io/) to take requests and
 [Jsonrpcserver](https://www.jsonrpcserver.com/) to process them:
 
 ```sh
