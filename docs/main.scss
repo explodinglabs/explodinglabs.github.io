@@ -2,7 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @import "pygments";
-@import "css/native.css";
+@import "css/tango.css";
 @charset "utf-8";
 
 $space: 25px;
@@ -262,12 +262,14 @@ main {
 
         .highlight {
             border-radius: 5px;
-            background-color: hsl(320, 0, 15);
-            color: #fefefe;
+            background-color: hsl(320, 0, 93);
+            /*
+            color: #1e1e1e;
             .bp, .vc, .vg, .vi, .na, .nb, .nc, .no, .ni, .ne, .nf, .nl, .nn, .nt, .nv {
-                color: #ff66cc;
+                color: #cc2266;
                 text-decoration: none;
             }
+            */
         }
 
         pre.highlight {
