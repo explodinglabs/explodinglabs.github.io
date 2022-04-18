@@ -54,7 +54,7 @@ jobs:
   2022 Black has a
   [Stability Policy](https://black.readthedocs.io/en/stable/the_black_code_style/index.html)
   which states _the formatting won't change in a calendar year._ This is why I use "black<23"
-  above -- it means take all upgrades this year but not next.
+  above -- we take all updates from this year but not next.
 - If you have an existing project with unformatted code, format the entire
   codebase all at once. _Don't do it gradually._
 
