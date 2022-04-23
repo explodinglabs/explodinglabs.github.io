@@ -27,5 +27,5 @@ subsequent commands in the documentation. Not in separate files.
 Having dev and prod differ by no more than command parameters is the ultimate in
 [Dev/Prod parity](https://12factor.net/dev-prod-parity).
 
-Lastly, I just don’t want to compose services together. Why should
+And lastly, I just don’t want to compose services together. Why should
 Postgres come down with my app? It's just a service. Leave it up.
