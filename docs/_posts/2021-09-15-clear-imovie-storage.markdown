@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clear iMovie storage
+title: How to clear iMovie storage?
 permalink: /clear-imovie-storage
 ---
 The "Render files: Delete" button doesn't seem to work for me, so I use this command:
