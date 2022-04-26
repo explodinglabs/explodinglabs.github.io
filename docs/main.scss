@@ -87,8 +87,9 @@ nav {
 }
 
 .linktext {
-    color: rgb(71, 0, 163);
-    text-decoration: underline;
+    color: hsl(199.22, 100, 40);
+    text-decoration: none;
+    &:visited { color: purple; }
     &:hover { color: orange; }
 }
 
