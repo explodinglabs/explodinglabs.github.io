@@ -6,7 +6,7 @@
 @charset "utf-8";
 
 $space: 25px;
-$content-width: 850px;
+$content-width: 820px;
 $on-palm: 600px;
 
 // Colors
@@ -81,13 +81,13 @@ nav {
     font-stretch: normal;
     font-style: normal;
     font-variant-caps: normal;
-    font-weight: 400;
+    font-weight: normal;
     letter-spacing: -0.06300000101327896px;
     line-height: 32px;
 }
 
 .linktext {
-    color: hsl(199.22, 100, 40);
+    color: hsl(199.22, 100, 30);
     text-decoration: none;
     &:visited { color: purple; }
     &:hover { color: orange; }
