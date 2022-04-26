@@ -3,7 +3,7 @@ layout: post
 title: Calculate Australian Personal Income Tax in Apple Numbers
 permalink: /apple-numbers-tax
 ---
-Use this formula to calculate the income tax for Employee or Sole Trader
+Use this formula to calculate the income tax for an Employee or Sole Trader
 in Australia as of 2022.
 ```
 IF(A1≥180001,(A1−180000)×0.45+51667,
