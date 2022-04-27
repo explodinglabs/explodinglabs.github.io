@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Calculate Australian Personal Income Tax in Apple Numbers
+title: How to calculate Australian Personal Income Tax in Apple Numbers?
 permalink: /apple-numbers-tax
 ---
 Use this formula to calculate the income tax for an Employee or Sole Trader
