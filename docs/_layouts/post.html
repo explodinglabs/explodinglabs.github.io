@@ -20,12 +20,12 @@ layout: all
         </div>
     </header>
     {{ content }}
-    {% include adsense.html %}
     <footer>
         <a href="/{{ page.category }}">
             More {{ page.category |capitalize}} posts
         </a>
     </footer>
+    {% include adsense.html %}
 </article>
 
 {% comment %}
