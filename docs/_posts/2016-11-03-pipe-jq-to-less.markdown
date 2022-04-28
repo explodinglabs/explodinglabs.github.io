@@ -4,7 +4,7 @@ title: How to pipe jq to less, with colour?
 permalink: /pipe-jq-to-less
 ---
 Use `jq --color-output` to colorise the JSON,
-combined with `less --RAW-CONTROL-CHARS` for ANSI colours to work. 
+combined with `less --RAW-CONTROL-CHARS` for ANSI colours to work.
 
 ```sh
 jq --color-output . data.json | less --RAW-CONTROL-CHARS
