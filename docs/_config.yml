@@ -1,6 +1,8 @@
 author: Beau Barker
 description: A programming blog.
 future: true # Include posts with a date in the future
+include:
+  - ads.txt
 locale: en_AU
 plugins:
     - jekyll-redirect-from
