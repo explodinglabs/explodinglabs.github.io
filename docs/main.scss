@@ -27,7 +27,6 @@ $nav: hsl(266, 100, 32);
     @extend %clearfix;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 $space;
     max-width: $content-width;
     @include media-query($on-palm) {
     }
@@ -199,7 +198,7 @@ main {
             @extend .bodytext;
             margin: 0 $space;
             margin-bottom: $space;
-            margin-left: $space;
+            margin-left: $space * 3;
             li {
                 margin-bottom: 0;
             }
