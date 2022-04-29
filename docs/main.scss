@@ -28,8 +28,9 @@ $nav: hsl(266, 100, 32);
     margin-left: auto;
     margin-right: auto;
     max-width: $content-width;
-    @media only screen and (min-width: 750px) {
-        padding: 0 $space;
+    padding: 0 $space;
+    @include media-query($on-palm) {
+        padding: 0;
     }
 }
 
@@ -185,7 +186,7 @@ main {
             padding: 0;
             margin: 0;
             margin-bottom: 0;
-            font-weight: 600;
+            font-weight: 500;
             background: linear-gradient(104deg, rgba(130, 255, 173,0) 0.9%, rgba(130, 255, 173,1.25) 2.4%, rgba(130, 255, 173,0.5) 5.8%, rgba(130, 255, 173,0.1) 93%, rgba(130, 255, 173,0.7) 96%, rgba(130, 255, 1732,0) 98%), linear-gradient(183deg, rgba(130, 255, 173,0) 0%, rgba(130, 255, 173,0.3) 7.9%, rgba(130, 255, 173,0) 15%);
             padding: 0.6em $space;
         }
@@ -269,9 +270,9 @@ main {
             font-stretch: normal;
             font-style: normal;
             font-variant-caps: normal;
-            font-weight: normal;
-            @media only screen and (min-width: 750px) {
-                font-weight: lighter;
+            font-weight: lighter;
+            @include media-query($on-palm) {
+                font-weight: normal;
             }
         }
 
