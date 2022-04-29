@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ZeroMQ Request/Reply in C
+title: How to implement ZeroMQ Request/Reply in C?
 permalink: /c/zeromq/request-reply
 ---
 ## Server
