@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Run multiple local Jekyll instances
+title: How to run multiple local Jekyll instances?
 permalink: /run-multiple-jekyll-instances-locally
 ---
 If you're getting this error despite setting `--port` to an unused port:
