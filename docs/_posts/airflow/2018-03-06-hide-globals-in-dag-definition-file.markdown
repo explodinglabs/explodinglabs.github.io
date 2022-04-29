@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hide globals in a DAG definition file
+title: How to hide globals in an Airflow DAG definition file?
 description:
     Don't instantiate the DAG and operators when importing your DAG definition
     file.
