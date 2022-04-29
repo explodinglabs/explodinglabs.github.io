@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: Convert a sequence to postfix notation
+title: How to convert a Python sequence to postfix notation?
 image: /assets/python-wide.png
 permalink: /python/convert-sequence-to-postfix-notation
 redirect_from: /convert-sequence-to-postfix-notation
