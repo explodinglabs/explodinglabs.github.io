@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Install Jekyll on a Mac
+title: How to install Jekyll on a Mac?
 permalink: /install-jekyll-on-mac
 ---
 I like Jekyll but wish I didn't have to deal with Ruby!
