@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Macos - Uninstall Cisco Anyconnect
+title: How to uninstall Cisco Anyconnect on MacOS?
 permalink: /macos-uninstall-cisco-anyconnect
 ---
 As root, execute

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create an ECR Container Repository and push a Docker image
+title: How to create an ECR Container Repository and push a Docker image?
 permalink: /aws/ecr
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}

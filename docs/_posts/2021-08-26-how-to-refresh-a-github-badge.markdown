@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Refresh a badge on Github
+title: How to refresh a badge on Github?
 permalink: /refresh-github-badge
 ---
 Grab the badge URL and purge the cache:

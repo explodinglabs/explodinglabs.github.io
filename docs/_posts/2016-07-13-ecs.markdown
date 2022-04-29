@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Launch an ECS Container Instance and run a Container
+title: How to launch an ECS Container Instance and run a container?
 permalink: /aws/ecs
 ---
 {::options syntax_highlighter_opts="default_lang: shell" /}

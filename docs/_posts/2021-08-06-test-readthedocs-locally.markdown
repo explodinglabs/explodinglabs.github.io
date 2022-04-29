@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test Readthedocs documentation locally
+title: How to test Readthedocs documentation locally?
 permalink: /build-readthedocs-locally
 ---
 Install [Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html).

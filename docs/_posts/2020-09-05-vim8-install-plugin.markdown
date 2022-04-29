@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Vim 8: Install plugin from Github"
+title: How to install a Vim 8 plugin from Github?
 permalink: /vim8-install-plugin
 ---
 For example, to install elm-vim from github:
