@@ -67,7 +67,7 @@ nav {
     padding-right: $space;
 }
 
-.title-text {
+.titletext {
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 32px;
     font-style: normal;
@@ -104,6 +104,8 @@ nav {
 #categories {
     padding-top: $space;
     text-align: center;
+    @extend .bodytext;
+    font-size: 15px;
     margin: 0 $space $space $space;
     a {
         color: red;
@@ -116,7 +118,7 @@ main {
         @extend .wrapper;
 
         h1 {
-            @extend .title-text;
+            @extend .titletext;
             margin-bottom: $space / 1.5;
             text-align: center;
         }
@@ -126,7 +128,9 @@ main {
             border-collapse: collapse;
             padding: 0;
             margin: 0 $space;
-            margin-bottom: $space;
+            @include media-query($on-palm) {
+                margin: 0 $space/2;
+            }
 
             td {
                 padding-bottom: 10px;
@@ -152,7 +156,7 @@ main {
 
         header {
             h1 {
-                @extend .title-text;
+                @extend .titletext;
                 margin: 0 $space;
                 margin-top: $space * 2;
                 margin-bottom: $space / 2;
@@ -165,12 +169,11 @@ main {
             }
 
             .post-meta {
-                font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
-                font-size: 14px;
+                @extend .bodytext;
+                font-size: smaller;
                 color: #444;
                 a { color: #444; text-decoration: none; }
-                margin: 0 $space;
-                margin-bottom: $space * 1.5;
+                margin: 0 $space $space * 1.5 $space;
                 @include media-query($on-palm) {
                     margin-bottom: $space;
                 }
@@ -375,7 +378,9 @@ main {
         }
 
         footer {
-            margin: $space*2 $space;
+            @extend .bodytext;
+            font-size: smaller;
+            margin: $space*1.5 $space;
         }
     }
 
