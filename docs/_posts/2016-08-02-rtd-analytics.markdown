@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Google Analytics to Readthedocs
+title: How to add Google Analytics to Readthedocs?
 permalink: /rtd-analytics
 ---
 To add your GA tracking ID to readthedocs:
