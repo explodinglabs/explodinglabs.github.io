@@ -4,7 +4,7 @@ See [Install Jekyll on a Mac](https://composed.blog/install-jekyll-on-mac).
 
 To bring up Jekyll locally:
 ```sh
-(cd docs && bundle exec jekyll serve --livereload)
+(cd docs && bundle exec jekyll serve --host 0.0.0.0 --livereload)
 ```
 
 To remove a post, add the following to the its meta section:
