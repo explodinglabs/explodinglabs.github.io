@@ -8,7 +8,7 @@ To bring up Jekyll locally:
 ```
 
 To remove a post, add the following to the its meta section:
-```
+```yaml
 sitemap: false
 ```
 This removes the post from the sitemap, and also the post listing because we
