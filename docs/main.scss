@@ -267,13 +267,14 @@ main {
             font-family: "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
             font-size: 14px;
             font-weight: normal;
-            @include media-query($on-palm) {
-                font-size: 16px;
-            }
             font-stretch: normal;
             font-style: normal;
             font-variant-caps: normal;
             font-weight: normal;
+            @include media-query($on-palm) {
+                font-size: 16px;
+                letter-spacing: -0.3px;
+            }
         }
 
         /* Inline code using single backticks */
