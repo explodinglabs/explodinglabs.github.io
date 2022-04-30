@@ -273,10 +273,7 @@ main {
             font-stretch: normal;
             font-style: normal;
             font-variant-caps: normal;
-            font-weight: lighter;
-            @include media-query($on-palm) {
-                font-weight: normal;
-            }
+            font-weight: normal;
         }
 
         /* Inline code using single backticks */
