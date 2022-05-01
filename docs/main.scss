@@ -196,6 +196,7 @@ main {
 
         a {
             @extend .linktext;
+            text-decoration: underline;
         }
 
         p {
