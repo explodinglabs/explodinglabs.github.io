@@ -14,88 +14,30 @@ using the template:
 explodinglabs/elm-template
 ```
 
+For a Github Pages app, go to Settings > Pages, change Source to Branch: `main`
+and directory to `/docs`.
+
 Clone the repository:
 ```sh
-git clone ssh://git@github.com/explodinglabs/my-app
-cd my-app
+git clone ssh://git@github.com/explodinglabs/myapp
+cd myapp
 ```
 
-Now follow the instructions in the readme.
+Replace "myapp" with the name of your app, in the `README.md`.
+Commit and push that change.
 
-{% comment %}
-Install elm-live and start server.
-```sh
-npm install --save-dev elm-live
-node_modules/.bin/elm-live src/Main.elm
-```
-
-Install elm-test.
-```sh
-npm install --save-dev elm-test
-elm-test init
-```
-
-Install pre-commit hooks.
+Install npm packages.
 ```sh
 npm init
-npm install --dev
+npm install --save-dev husky lint-staged elm-format elm-review elm-test sass
+npx husky add .husky/pre-commit "npx elm-review"
+npx husky install .husky/pre-commit
 ```
 
-Then add to `elm.json`:
-```
-    "husky": {
-      "hooks": {
-        "pre-commit": "lint-staged"
-      }
-    },
-    "lint-staged": {
-      "**/*.elm": [
-        "elm-format --validate",
-        "elm-review"
-      ]
-    }
-```
+Set the title in `docs/index.html`.
+Create a favicon.
+Create an opengraph image.
 
-Elm-review & elm-review-unused.
-```sh
-npm install --save-dev elm-review
-npx elm-review init
-cd review
-elm install jfmengels/elm-review-unused
-```
+Add the new files to the repository, commit and push.
 
-Then replace `review/src/ReviewConfig.elm` with:
-```elm
-module ReviewConfig exposing (config)
-
--- import NoUnused.Dependencies
--- import NoUnused.CustomTypeConstructorArgs
-
-import NoUnused.CustomTypeConstructors
-import NoUnused.Exports
-import NoUnused.Modules
-import NoUnused.Parameters
-import NoUnused.Patterns
-import NoUnused.Variables
-import Review.Rule exposing (Rule)
-
-
-config : List Rule
-config =
-    [ NoUnused.CustomTypeConstructors.rule []
-
-    -- , NoUnused.CustomTypeConstructorArgs.rule
-    -- , NoUnused.Dependencies.rule
-    , NoUnused.Exports.rule
-    , NoUnused.Modules.rule
-    , NoUnused.Parameters.rule
-    , NoUnused.Patterns.rule
-    , NoUnused.Variables.rule
-    ]
-```
-
-To build the production `elm.js` file:
-```sh
-elm make src/Main.elm --optimize --output docs/elm.js
-```
-{% endcomment %}
+Follow the instructions in the README to bring up the container.

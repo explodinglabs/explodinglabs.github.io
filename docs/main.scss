@@ -69,7 +69,6 @@ nav {
 
 .titletext {
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 32px;
     font-style: normal;
     font-weight: 700;
     letter-spacing: -0.527999997138977px;
@@ -120,6 +119,7 @@ main {
         h1 {
             @extend .titletext;
             margin-bottom: $space / 1.5;
+            font-size: 28px;
             text-align: center;
         }
 
@@ -223,9 +223,10 @@ main {
         }
 
         h2 {
+            @extends .titletext;
             font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
             margin: $space * 1.5 $space $space $space;
-            font-size: 22px;
+            font-size: 20px;
             font-style: normal;
             font-weight: 500;
             letter-spacing: normal;
