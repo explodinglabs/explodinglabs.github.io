@@ -223,23 +223,19 @@ main {
         }
 
         h2 {
-            @extends .titletext;
-            font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            @extend .titletext;
             margin: $space * 1.5 $space $space $space;
             font-size: 20px;
-            font-style: normal;
             font-weight: 500;
-            letter-spacing: normal;
+            line-height: 100%;
         }
 
         h3 {
+            @extend .titletext;
             margin: $space * 1.5 0 $space 0;
-            font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 19px;
-            font-style: normal;
+            font-size: 18px;
             font-weight: 500;
-            letter-spacing: normal;
-            line-height: 22px;
+            line-height: 100%;
         }
 
         img {
