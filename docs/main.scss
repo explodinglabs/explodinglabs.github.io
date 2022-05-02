@@ -155,16 +155,14 @@ main {
     article {
 
         header {
+
             h1 {
                 @extend .titletext;
-                margin: 0 $space;
-                margin-top: $space * 2;
-                margin-bottom: $space / 2;
+                margin: $space * 2 $space $space / 2;
+                font-size: 25px;
 
                 @include media-query($on-palm) {
                     margin-top: $space * 1.5;
-                    font-size: 32px;
-                    line-height: 40px;
                 }
             }
 
