@@ -48,6 +48,8 @@ jobs:
     - run: mypy --strict $(git ls-files '*.py')
 ```
 
+{% include google_in_article.html %}
+
 ## Notes on Black
 
 - _Choose a specific Black version and be consistent with it._
