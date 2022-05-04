@@ -66,8 +66,6 @@ pip install precommit
 pre-commit install
 ```
 
-{% include google_in_article.html %}
-
 ## Notes on Black
 
 - _Choose a specific Black version and be consistent with it._
