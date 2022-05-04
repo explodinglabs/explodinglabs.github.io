@@ -22,6 +22,8 @@ I use the following code quality checks:
 The following Github Actions workflow will check your code when a Pull
 Request is created, catching problems before they're merged.
 
+{% include google_in_article.html %}
+
 ## How to add the Github Actions workflow
 
 Add the following to your repository in `.github/workflows/code-quality.yml`.
