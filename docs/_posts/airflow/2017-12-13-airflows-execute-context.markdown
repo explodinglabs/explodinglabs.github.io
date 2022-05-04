@@ -16,6 +16,8 @@ Airflow's context dictionary can be found in the `get_template_context` method,
 in Airflow's
 [models.py](https://github.com/databricks/incubator-airflow/blob/master/airflow/models.py).
 
+{% include google_in_article.html %}
+
 ```python
 return {
     'dag': task.dag,
@@ -50,8 +52,6 @@ return {
     }
 }
 ```
-
-{% include google_in_article.html %}
 
 An explanation of each item is found in the documentation under
 [Macros](https://airflow.apache.org/docs/stable/macros-ref.html).
