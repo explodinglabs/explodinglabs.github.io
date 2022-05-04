@@ -4,7 +4,7 @@ title: Setup an Elm project
 permalink: /elm/setup
 ---
 <div id="intro" markdown="1">
-This is how I setup a new elm project for development.
+This is how I setup a new Elm project for development.
 </div>
 
 [Create a new Github

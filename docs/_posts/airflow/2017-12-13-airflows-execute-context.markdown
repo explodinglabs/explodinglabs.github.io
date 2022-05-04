@@ -51,6 +51,8 @@ return {
 }
 ```
 
+{% include google_grid.html %}
+
 An explanation of each item is found in the documentation under
 [Macros](https://airflow.apache.org/docs/stable/macros-ref.html).
 
