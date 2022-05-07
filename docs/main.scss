@@ -159,7 +159,7 @@ main {
             h1 {
                 @extend .titletext;
                 margin: $space * 2 $space $space / 2;
-                font-size: 25px;
+                font-size: 28px;
 
                 @include media-query($on-palm) {
                     margin-top: $space * 1.5;
