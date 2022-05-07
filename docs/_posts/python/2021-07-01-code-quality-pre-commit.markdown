@@ -29,6 +29,8 @@ I use the following code quality checks:
 The following Pre-commit hooks will check your code when you try to commit, catching problems
 before they reach your repository.
 
+{% include google_in_article.html %}
+
 ## How to install the Pre-commit hooks
 
 Add the following `.pre-commit-config.yaml` file to the root of your
@@ -63,8 +65,6 @@ Install [Pre-commit](https://pre-commit.com) and add the git hooks:
 pip install precommit
 pre-commit install
 ```
-
-{% include google_in_article.html %}
 
 ## Notes on Black
 
