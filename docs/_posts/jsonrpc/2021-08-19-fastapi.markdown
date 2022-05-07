@@ -22,6 +22,8 @@ Install [FastAPI](https://fastapi.tiangolo.com) and
 pip install fastapi uvicorn jsonrpcserver
 ```
 
+{% include google_in_article.html %}
+
 Create a `server.py`:
 
 ```python
