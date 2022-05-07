@@ -31,6 +31,10 @@ To test the operator, first instantiate three objects:
 
 Then call the execute method.
 
+{% include google_in_article.html %}
+
+## The Test
+
 ```python
 class TestMyOperator(TestCase):
     def test_execute(self):
