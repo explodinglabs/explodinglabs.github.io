@@ -38,6 +38,8 @@ SequentialExecutor), but it won't work in production because issues
 will arise when multiple tasks attempt to write to the same log file at once.
 </div>
 
+{% include google_in_article.html %}
+
 ## Easy Solution
 
 <div class="warning" markdown="1">
