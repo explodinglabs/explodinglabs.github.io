@@ -21,12 +21,20 @@ stack new myapp
 
 Add any dependencies to `package.yaml` under the "dependencies" section.
 
-Place source files in `app` directory and then
+Place source files in `app` directory and then:
 ```sh
 stack build
 ```
 
-Use `stack build --file-watch` to rebuild as your code changes.
+To rebuild as your code changes:
+```sh
+stack build --file-watch
+```
+
+To rebuild and execute on changes (doesn't work for things that run forever, e.g. servers):
+```sh
+stack build --file-watch --exec $(stack path --local-install-root)/bin/myapp-exe
+```
 
 Execute the binary with
 ```sh
