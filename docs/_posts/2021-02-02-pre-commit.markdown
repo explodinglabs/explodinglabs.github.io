@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to upgrade versions in pre-commit?
+title: How to upgrade versions in Pre-commit?
 permalink: /pre-commit
 ---
 
