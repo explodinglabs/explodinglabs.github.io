@@ -33,6 +33,8 @@ source ~/.zshenv
 
 ## Usage
 
+The main two commands you need are `mkvirtualenv` and `workon`. 
+
 To create a virtualenv:
 ```sh
 mkvirtualenv -p $(which python3.6) my_virtualenv
@@ -42,23 +44,21 @@ It's important to specify the specific Python version to use for your specific
 project. Install multiple versions of Python into your system to use for
 different projects.
 
-The virtualenv is created and activated. Install packages into it.
+The virtualenv is created and activated.
+You can install packages into it with `pip install`.
 
+After creating the env, always follow with `setvirtualenvproject`, which tells the virtualenv to change into the current directory next time you work on this project.
 ```sh
-pip install requests
+setvirtualenvproject
 ```
 
-To deactivate the virtualenv:
-```
-deactivate
-```
-
-To reactivate it:
+Next time you want to work on the project:
 ```
 workon my_virtualenv
 ```
 
 To delete the virtualenv (must be inactive):
 ```
+deactivate
 rmvirtualenv my_virtualenv
 ```
