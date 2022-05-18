@@ -199,8 +199,7 @@ main {
 
         p {
             @extend .bodytext;
-            margin: 0 $space;
-            margin-bottom: $space;
+            margin: 0 $space $space $space;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -239,6 +238,13 @@ main {
         img {
             max-width: 100%;
             vertical-align: middle;
+        }
+
+        // Adsense inserts a paragraph tag
+        script + p {
+            padding: 0;
+            margin: 0 0 $space 0;
+            border: 1px solid #ccc;
         }
 
         .warning {
