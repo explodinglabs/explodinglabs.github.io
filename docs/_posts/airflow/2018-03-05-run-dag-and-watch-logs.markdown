@@ -83,6 +83,8 @@ Edit airflow_local_settings.py, changing `FILENAME_TEMPLATE` to:
 
 You should now get all of a dag log output in a single file.
 
+{% include google_in_article.html %}
+ 
 ## Tailing the logs
 
 Start the scheduler and trigger a dag.
