@@ -5,7 +5,8 @@
 @import "css/tango.css";
 @charset "utf-8";
 
-$space: 25px;
+$vspace: 25px;
+$hspace: 25px;
 $content-width: 820px;
 $on-palm: 600px;
 
@@ -28,7 +29,7 @@ $nav: hsl(266, 100, 32);
     margin-left: auto;
     margin-right: auto;
     max-width: $content-width;
-    padding: 0 $space;
+    padding: 0 $hspace;
     @include media-query($on-palm) {
         padding: 0;
     }
@@ -57,14 +58,13 @@ nav {
     background-color: black;
     box-shadow: 0 5px 5px -2px #999;
     text-align: right;
-    padding: 10px 0 2px;
+    padding: 10px 0 2px $hspace;
     .logo {
         @extend .wrapper;
         img {
             height: 30px;
         }
     }
-    padding-right: $space;
 }
 
 .titletext {
@@ -101,11 +101,11 @@ nav {
 }
 
 #categories {
-    padding-top: $space;
+    padding-top: $vspace;
     text-align: center;
     @extend .bodytext;
     font-size: 15px;
-    margin: 0 $space $space $space;
+    margin: 0 $hspace $vspace $hspace;
     a {
         color: red;
     }
@@ -118,7 +118,7 @@ main {
 
         h1 {
             @extend .titletext;
-            margin-bottom: $space / 1.5;
+            margin-bottom: $vspace / 1.5;
             font-size: 26px;
             text-align: center;
         }
@@ -127,9 +127,9 @@ main {
             @extend .bodytext;
             border-collapse: collapse;
             padding: 0;
-            margin: 0 $space;
+            margin: 0 $hspace;
             @include media-query($on-palm) {
-                margin: 0 $space/2;
+                margin: 0 $hspace/2;
             }
 
             td {
@@ -147,7 +147,7 @@ main {
             }
 
             td span {
-                padding-right: $space / 2;
+                padding-right: $hspace / 2;
             }
         }
     }
@@ -158,11 +158,11 @@ main {
 
             h1 {
                 @extend .titletext;
-                margin: $space * 2 $space $space / 2;
+                margin: $vspace * 2 $hspace $vspace / 2;
                 font-size: 26px;
 
                 @include media-query($on-palm) {
-                    margin-top: $space * 1.5;
+                    margin-top: $vspace * 1.5;
                 }
             }
 
@@ -171,16 +171,16 @@ main {
                 font-size: smaller;
                 color: #444;
                 a { color: #444; text-decoration: none; }
-                margin: 0 $space $space * 1.5 $space;
+                margin: 0 $hspace $vspace * 1.5 $hspace;
                 @include media-query($on-palm) {
-                    margin-bottom: $space;
+                    margin-bottom: $vspace;
                 }
             }
         }
 
         #intro {
             @extend .bodytext;
-            margin-bottom: $space;
+            margin-bottom: $vspace;
         }
 
         #intro p {
@@ -189,7 +189,7 @@ main {
             margin-bottom: 0;
             font-weight: 500;
             background: linear-gradient(104deg, rgba(130, 255, 173,0) 0.9%, rgba(130, 255, 173,1.25) 2.4%, rgba(130, 255, 173,0.5) 5.8%, rgba(130, 255, 173,0.1) 93%, rgba(130, 255, 173,0.7) 96%, rgba(130, 255, 1732,0) 98%), linear-gradient(183deg, rgba(130, 255, 173,0) 0%, rgba(130, 255, 173,0.3) 7.9%, rgba(130, 255, 173,0) 15%);
-            padding: 0.6em $space;
+            padding: 0.6em $hspace;
         }
 
         a {
@@ -199,17 +199,15 @@ main {
 
         p {
             @extend .bodytext;
-            margin: 0 $space $space $space;
+            margin: 0 $hspace $vspace $hspace;
             -webkit-font-smoothing: antialiased;
         }
 
         ul, ol {
             @extend .bodytext;
-            margin: 0 $space;
-            margin-bottom: $space;
-            margin-left: $space * 2.5;
+            margin: 0 $hspace $vspace $hspace * 2.5;
             @include media-query($on-palm) {
-                margin-left: $space * 2;
+                margin-left: $hspace * 2;
             }
             li {
                 margin-bottom: 0;
@@ -221,7 +219,7 @@ main {
 
         h2 {
             @extend .titletext;
-            margin: $space * 1.5 $space $space $space;
+            margin: $vspace * 1.5 $hspace $vspace $hspace;
             font-size: 20px;
             font-weight: 500;
             line-height: 100%;
@@ -229,7 +227,7 @@ main {
 
         h3 {
             @extend .titletext;
-            margin: $space * 1.5 0 $space 0;
+            margin: $vspace * 1.5 0 $vspace 0;
             font-size: 18px;
             font-weight: 500;
             line-height: 100%;
@@ -243,13 +241,12 @@ main {
         // Adsense inserts a paragraph tag
         script + p {
             padding: 0;
-            margin: 0 0 $space 0;
+            margin: 0 0 $vspace 0;
             border: 1px solid #ccc;
         }
 
         .warning {
-            margin: 0 $space;
-            margin-bottom: $space;
+            margin: 0 $hspace $vspace $hspace;
 
             p {
                 font-style: italic;
@@ -301,20 +298,20 @@ main {
 
         pre.highlight {
             line-height: 160%;
-            margin-bottom: $space;
+            margin-bottom: $vspace;
             overflow-x: auto;
-            padding: $space/2 $space;
+            padding: $vspace/2 $hspace;
         }
 
         blockquote {
             border-radius: 5px;
             background-color: #ffd;
-            padding: $space;
-            margin-bottom: $space;
+            padding: $vspace $hspace;
+            margin-bottom: $vspace;
 
             p {
                 font-style: italic;
-                margin-bottom: $space;
+                margin-bottom: $vspace;
                 margin: 0;
             }
 
@@ -328,7 +325,7 @@ main {
             }
 
             cite {
-                margin-top: $space/2;
+                margin-top: $vspace/2;
                 font-size: smaller;
                 font-style: normal;
                 color: #666;
@@ -344,8 +341,8 @@ main {
             padding-top: 30px;
             height: 0;
             overflow: hidden;
-            margin-top: $space;
-            margin-bottom: $space;
+            margin-top: $vspace;
+            margin-bottom: $vspace;
         }
 
         .video-container iframe, .video-container object, .video-container embed {
@@ -370,7 +367,7 @@ main {
 
         .wide-logos {
             float: right;
-            margin-left: $space;
+            margin-left: $hspace;
             @include media-query($on-palm) {
                 /* It's not wide enough to show these */
                 display: none;
@@ -380,8 +377,8 @@ main {
         footer {
             @extend .bodytext;
             font-size: smaller;
-            margin: $space*2 $space 0 $space;
-            padding: $space/2 0 $space 0;
+            margin: $vspace*2 $hspace 0 $hspace;
+            padding: $vspace/2 0 $vspace 0;
             border-top: 1px solid #dedede;
             text-align: right;
         }
