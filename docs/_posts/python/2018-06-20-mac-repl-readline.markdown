@@ -20,35 +20,34 @@ pip install gnureadline
 
 Create a `~/.pythonstartup.py` script:
 ```python
-try:
-    import readline
-    import atexit
-    import os
-    import sys
-    import platform
-    import gnureadline as readline
-except ImportError as exception:
-    print('Shell Enhancement module problem: {0}'.format(exception))
+import atexit
+import gnureadline as readline
+import logging
+import os
+import sys
+
+logger = logging.getLogger(__name__)
+logger.addHandler(logging.StreamHandler())
+logger.setLevel(logging.INFO)
+
+# Enable Tab Completion. OSX's bind should only be applied with legacy readline.
+readline.parse_and_bind(
+    "bind ^I rl_complete"
+    if sys.platform == "darwin" and "libedit" in readline.__doc__
+    else "tab: complete"
+)
+
+# Enable History File
+history_file = os.environ.get(
+    "PYTHON_HISTORY_FILE", os.path.join(os.environ["HOME"], ".pythonhistory")
+)
+if os.path.isfile(history_file):
+    readline.read_history_file(history_file)
 else:
-    # Enable Tab Completion
-    # OSX's bind should only be applied with legacy readline.
-    if sys.platform == 'darwin' and 'libedit' in readline.__doc__:
-        readline.parse_and_bind("bind ^I rl_complete")
-    else:
-        readline.parse_and_bind("tab: complete")
+    open(history_file, "a").close()
+atexit.register(readline.write_history_file, history_file)
 
-    # Enable History File
-    history_file = os.environ.get(
-        "PYTHON_HISTORY_FILE", os.path.join(os.environ['HOME'],
-        '.pythonhistory'))
-
-    if os.path.isfile(history_file):
-        readline.read_history_file(history_file)
-    else:
-        open(history_file, 'a').close()
-
-    atexit.register(readline.write_history_file, history_file)
-    print('Booted pythonstartup.py.')
+logger.info("Booted ~/.pythonstartup.py.")
 ```
 
 Set the `PYTHONSTARTUP` env var:
