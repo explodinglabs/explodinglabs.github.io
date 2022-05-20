@@ -5,15 +5,10 @@
 @import "css/tango.css";
 @charset "utf-8";
 
-$vspace: 25px;
-$hspace: 25px;
+$vspace: 1.4rem;
+$hspace: 1.3rem;
 $content-width: 820px;
 $on-palm: 600px;
-
-// Colors
-$blockquote: hsl(148, 52, 60);
-$inlinecode: hsl(53, 100, 89);
-$nav: hsl(266, 100, 32);
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
@@ -54,19 +49,6 @@ body {
     background-color: #fefefe;
 }
 
-nav {
-    background-color: black;
-    box-shadow: 0 5px 5px -2px #999;
-    text-align: right;
-    padding: 10px 0 2px $hspace;
-    .logo {
-        @extend .wrapper;
-        img {
-            height: 30px;
-        }
-    }
-}
-
 .titletext {
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
@@ -100,6 +82,20 @@ nav {
     &:hover { color: orange; }
 }
 
+nav {
+    background-color: black;
+    box-shadow: 0 5px 5px -2px #999;
+    text-align: right;
+    padding: 10px $hspace 2px $hspace;
+    .logo {
+        @extend .wrapper;
+        img {
+            height: 30px;
+        }
+    }
+
+}
+
 #categories {
     padding-top: $vspace;
     text-align: center;
@@ -112,6 +108,7 @@ nav {
 }
 
 main {
+    @extend .wrapper;
 
     #post-list {
         @extend .wrapper;
@@ -155,12 +152,10 @@ main {
     article {
 
         header {
-
             h1 {
                 @extend .titletext;
                 margin: $vspace * 2 $hspace $vspace / 2;
                 font-size: 26px;
-
                 @include media-query($on-palm) {
                     margin-top: $vspace * 1.5;
                 }
@@ -278,8 +273,8 @@ main {
 
         /* Inline code using single backticks */
         p code, li code {
-            background-color: $inlinecode;
-            border: 1px solid desaturate(adjust-hue(darken($inlinecode, 30%), -15%), 10%);
+            background-color: hsl(53, 100, 89);
+            border: 1px solid desaturate(adjust-hue(darken(hsl(53, 100, 89), 30%), -15%), 10%);
             border-radius: 3px;
             padding: 3px 3px;
         }
@@ -321,7 +316,7 @@ main {
                 position: relative;
                 top: 20px;
                 line-height: 0%;
-                color: darken($blockquote, 40%);
+                color: darken(hsl(148, 52, 60), 40%);
             }
 
             cite {
@@ -377,8 +372,8 @@ main {
         footer {
             @extend .bodytext;
             font-size: smaller;
-            margin: $vspace*2 $hspace 0 $hspace;
-            padding: $vspace/2 0 $vspace 0;
+            margin: $vspace*2 $hspace $vspace $hspace;
+            padding: $vspace/2 0;
             border-top: 1px solid #dedede;
             text-align: right;
         }
