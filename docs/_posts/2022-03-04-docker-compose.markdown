@@ -4,7 +4,7 @@ title: Why I don't use Docker Compose
 permalink: /why-i-dont-use-docker-compose
 ---
 <div id="intro" markdown="1">
-I don't use Docker Compose. I prefer to use docker commands.
+I don't use Docker Compose. I prefer to use plain `docker` commands.
 </div>
 
 Docker Compose is another layer on top of Docker, which can break or change its
