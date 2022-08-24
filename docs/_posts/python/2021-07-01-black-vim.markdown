@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: How to install or upgrade Black in Vim 8 and format when saving?
+title: How to install or upgrade Black in Vim 8?
 permalink: /black-vim
 redirect_from:
     - /pylint
@@ -22,7 +22,12 @@ curl https://raw.githubusercontent.com/psf/black/21.6b0/plugin/black.vim -o ~/.v
 
 Next time you open Vim, Black will install.
 
-Add the following to `~/.vimrc` to format with Black every time you save.
+To format your code in Vim:
+```
+:Black
+```
+
+To format when saving, add the following to `~/.vimrc` to format with Black every time you save.
 ```
 autocmd BufWritePre *.py execute ':Black'
 ```
