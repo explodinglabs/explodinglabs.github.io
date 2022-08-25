@@ -15,7 +15,6 @@ redirect_from:
 This method of installing Black uses the built-in plugin management in Vim 8+.
 
 ```sh
-sudo rm -rf ~/.vim/black
 mkdir -p ~/.vim/pack/plugins/start/black/plugin ~/.vim/pack/plugins/start/black/autoload
 curl https://raw.githubusercontent.com/psf/black/22.6.0/autoload/black.vim -o ~/.vim/pack/plugins/start/black/plugin/black.vim
 curl https://raw.githubusercontent.com/psf/black/22.6.0/autoload/black.vim -o ~/.vim/pack/plugins/start/black/autoload/black.vim
@@ -35,8 +34,9 @@ autocmd BufWritePre *.py execute ':Black'
 
 ## Upgrade
 
-Simply pull in the new versions:
+Simply remove Black and pull in the new versions:
 ```
+rm -r ~/.vim/black
 curl https://raw.githubusercontent.com/psf/black/22.7.0/autoload/black.vim -o ~/.vim/pack/plugins/start/black/plugin/black.vim
 curl https://raw.githubusercontent.com/psf/black/22.7.0/autoload/black.vim -o ~/.vim/pack/plugins/start/black/autoload/black.vim
 ```
