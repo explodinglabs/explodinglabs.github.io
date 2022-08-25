@@ -20,9 +20,7 @@ curl https://raw.githubusercontent.com/psf/black/22.6.0/autoload/black.vim -o ~/
 curl https://raw.githubusercontent.com/psf/black/22.6.0/autoload/black.vim -o ~/.vim/pack/plugins/start/black/autoload/black.vim
 ```
 
-Next time you open Vim, Black will install.
-
-To format your code in Vim:
+Open Vim and format your code with:
 ```
 :Black
 ```
@@ -32,7 +30,7 @@ To format when saving, add the following to `~/.vimrc` to format with Black ever
 autocmd BufWritePre *.py execute ':Black'
 ```
 
-## Upgrade
+## Upgrading
 
 Simply remove Black and pull in the new versions:
 ```
