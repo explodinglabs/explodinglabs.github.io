@@ -32,9 +32,11 @@ autocmd BufWritePre *.py execute ':Black'
 
 ## Upgrading
 
-Simply remove Black and pull in the new versions:
+Simply remove the old Black installation and pull in the new versions of the plugins:
 ```
 rm -r ~/.vim/black
 curl https://raw.githubusercontent.com/psf/black/22.7.0/autoload/black.vim -o ~/.vim/pack/plugins/start/black/plugin/black.vim
 curl https://raw.githubusercontent.com/psf/black/22.7.0/autoload/black.vim -o ~/.vim/pack/plugins/start/black/autoload/black.vim
 ```
+
+Open Vim and run `:Black` again.
