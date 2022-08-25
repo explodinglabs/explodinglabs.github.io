@@ -15,7 +15,7 @@ redirect_from:
 This method of installing Black uses the built-in plugin management in Vim 8+.
 
 ```sh
-mkdir -p ~/.vim/pack/plugins/start/black/plugin ~/.vim/pack/plugins/start/black/autoload
+mkdir -p ~/.vim/pack/plugins/start/black/{plugin,autoload}
 curl https://raw.githubusercontent.com/psf/black/22.6.0/autoload/black.vim -o ~/.vim/pack/plugins/start/black/plugin/black.vim
 curl https://raw.githubusercontent.com/psf/black/22.6.0/autoload/black.vim -o ~/.vim/pack/plugins/start/black/autoload/black.vim
 ```
