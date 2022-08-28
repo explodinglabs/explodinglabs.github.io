@@ -25,7 +25,7 @@ Open Vim and format your code with:
 :Black
 ```
 
-To format when saving, add the following to `~/.vimrc` to format with Black every time you save.
+To format when saving, add the following to `~/.vimrc`:
 ```
 autocmd BufWritePre *.py execute ':Black'
 ```
