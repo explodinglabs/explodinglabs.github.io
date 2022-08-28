@@ -35,6 +35,7 @@ autocmd BufWritePre *.py execute ':Black'
 To upgrade, remove the old Black installation:
 ```sh
 rm -r ~/.vim/black
+```
 
 Pull in the new versions of the plugins
 ```sh
