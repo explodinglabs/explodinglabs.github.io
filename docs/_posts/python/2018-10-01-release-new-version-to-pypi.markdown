@@ -22,7 +22,7 @@ pytest
 rm -r .tox; tox  # Continue below while this is running
 ```
 
-In a new branch:
+In a new branch (such as `release/x.x.x`):
 - Update version in `setup.py`.
 - Update `CHANGELOG.md` (stable releases only).
 - Update `README.md`, if any.
