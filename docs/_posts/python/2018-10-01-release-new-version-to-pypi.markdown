@@ -63,7 +63,7 @@ pytest --cov-branch --cov-report term-missing --cov mypackage tests
 coveralls
 ```
 
-[Build readthedocs](https://composed.blog/trigger-rtd-build) if there's been
-changes.
+[Build readthedocs](https://composed.blog/trigger-rtd-build) if there were any
+documentation changes.
 
-Update related blog posts/stack overflow posts.
+Update related blog posts/Stack Overflow posts.

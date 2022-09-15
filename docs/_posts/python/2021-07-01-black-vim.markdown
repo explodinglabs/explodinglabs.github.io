@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: How to install or upgrade Black in Vim 8 and format when saving?
+title: How to install or upgrade Black in Vim 8?
 permalink: /black-vim
 redirect_from:
     - /pylint
@@ -15,14 +15,32 @@ redirect_from:
 This method of installing Black uses the built-in plugin management in Vim 8+.
 
 ```sh
-sudo rm -rf ~/.vim/black
-mkdir -p ~/.vim/pack/start/black/plugin
-curl https://raw.githubusercontent.com/psf/black/21.6b0/plugin/black.vim -o ~/.vim/pack/start/black/plugin/black.vim
+mkdir -p ~/.vim/pack/plugins/start/black/{plugin,autoload}
+curl https://raw.githubusercontent.com/psf/black/22.6.0/autoload/black.vim -o ~/.vim/pack/plugins/start/black/plugin/black.vim
+curl https://raw.githubusercontent.com/psf/black/22.6.0/autoload/black.vim -o ~/.vim/pack/plugins/start/black/autoload/black.vim
 ```
 
-Next time you open Vim, Black will install.
+Open Vim and format your code with:
+```
+:Black
+```
 
-Add the following to `~/.vimrc` to format with Black every time you save.
+To format when saving, add the following to `~/.vimrc`:
 ```
 autocmd BufWritePre *.py execute ':Black'
 ```
+
+## Upgrading
+
+To upgrade, remove the old Black installation:
+```sh
+rm -r ~/.vim/black
+```
+
+Pull in the new versions of the plugins
+```sh
+curl https://raw.githubusercontent.com/psf/black/22.7.0/autoload/black.vim -o ~/.vim/pack/plugins/start/black/plugin/black.vim
+curl https://raw.githubusercontent.com/psf/black/22.7.0/autoload/black.vim -o ~/.vim/pack/plugins/start/black/autoload/black.vim
+```
+
+Open Vim and run `:Black` again.
