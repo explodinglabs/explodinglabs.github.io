@@ -26,7 +26,7 @@ I use the following code quality checks:
 - *Pylint* to disallow unused imports, and
 - *Mypy* for type checking.
 
-The following Pre-commit hooks will check your code when you try to commit, catching problems
+These Pre-commit hooks will check your code when you try to commit, catching problems
 before they reach your repository.
 
 {% include google_in_article.html %}
