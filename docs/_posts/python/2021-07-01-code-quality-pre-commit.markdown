@@ -31,7 +31,7 @@ before they reach your repository.
 
 {% include google_in_article.html %}
 
-## How to install the Pre-commit hooks
+## Install the Pre-commit hooks
 
 Add the following `.pre-commit-config.yaml` file to the root of your
 repository.
