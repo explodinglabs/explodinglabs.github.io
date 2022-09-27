@@ -26,12 +26,12 @@ I use the following code quality checks:
 - *Pylint* to disallow unused imports, and
 - *Mypy* for type checking.
 
-The following Pre-commit hooks will check your code when you try to commit, catching problems
+These Pre-commit hooks will check your code when you try to commit, catching problems
 before they reach your repository.
 
 {% include google_in_article.html %}
 
-## How to install the Pre-commit hooks
+## Install the Pre-commit hooks
 
 Add the following `.pre-commit-config.yaml` file to the root of your
 repository.
@@ -70,10 +70,10 @@ pre-commit install
 
 - _Choose a specific Black version and be consistent with it._
   The formatting can change between versions, so what's considered
-  "formatted" in one version may not be in another. Note as of
+  "formatted" in one version may not be in another. (Update: As of
   2022 Black has a
   [Stability Policy](https://black.readthedocs.io/en/stable/the_black_code_style/index.html)
-  which states the formatting won't change in a calendar year.
+  which states the formatting will not change in a calendar year.)
 - If you have an existing project with unformatted code, _format the entire
   codebase all at once_. Don't do it gradually.
 
