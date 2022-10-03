@@ -52,7 +52,7 @@ jobs:
 
 - If you have an existing project with unformatted code, _format the entire
   codebase all at once_. Don't do it gradually.
-- Choose a specific Black version and be consistent with it.
+- Be consistent with your Black version across your tooling.
   The formatting can change between versions, so what's considered
   "formatted" in one version may not be in another.
   Note as of 2022 Black has a
