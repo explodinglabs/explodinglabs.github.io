@@ -52,9 +52,9 @@ jobs:
 
 - If you have an existing project with unformatted code, _format the entire
   codebase all at once_. Don't do it gradually.
-- ~Choose a specific Black version and be consistent with it.
+- Choose a specific Black version and be consistent with it.
   The formatting can change between versions, so what's considered
-  "formatted" in one version may not be in another.~
+  "formatted" in one version may not be in another.
   Note as of 2022 Black has a
   [Stability Policy](https://black.readthedocs.io/en/stable/the_black_code_style/index.html)
   which states the formatting won't change in a calendar year. This is why I use "black<23"
