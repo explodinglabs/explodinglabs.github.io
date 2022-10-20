@@ -48,6 +48,9 @@ body {
     text-align: start;
     width: auto;
     word-break: break-word;
+    @include media-query($on-palm) {
+        font-size: 105%;
+    }
 }
 
 .linktext {
