@@ -19,7 +19,7 @@ in Airflow's
 {% include google_in_article.html %}
 
 ```python
-return {
+{
     'dag': task.dag,
     'ds': ds,
     'ds_nodash': ds_nodash,
