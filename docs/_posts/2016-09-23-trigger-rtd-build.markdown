@@ -9,4 +9,4 @@ You can use curl to trigger a build:
 curl -X POST https://readthedocs.org/build/myproject/latest
 ```
 
-(Replace `myproject/latest` with your project name and version.)
+Replace `myproject/latest` with your project name and version.
