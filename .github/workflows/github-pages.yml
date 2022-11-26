@@ -15,4 +15,3 @@ jobs:
           jekyll_src: docs
           pre_build_commands: "gem update bundler; bundle update"
           token: ${{ secrets.GITHUB_TOKEN }}
-          fetch_depth: 0
