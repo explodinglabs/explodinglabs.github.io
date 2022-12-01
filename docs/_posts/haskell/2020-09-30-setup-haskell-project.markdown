@@ -26,7 +26,7 @@ Place source files in `app` directory and then:
 stack build
 ```
 
-To rebuild as your code changes:
+To rebuild as code changes:
 ```sh
 stack build --file-watch
 ```
