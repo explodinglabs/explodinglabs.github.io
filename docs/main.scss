@@ -61,7 +61,7 @@ body {
 }
 
 nav {
-    background-color: hsl(330, 100, 50);
+    background: linear-gradient(to right, hsl(176, 96%, 50%), hsl(330, 100%, 50%));
     box-shadow: 0 5px 5px -2px #999;
     text-align: right;
     padding: 10px $hspace 2px $hspace;
