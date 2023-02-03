@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Pytest: How to xfail on a specific exception?"
+category: python
 permalink: /python/pytest-xfail-on-specific-exception
 ---
 Pytest's `xfail` decorator is useless becauses it expects the test to fail for
