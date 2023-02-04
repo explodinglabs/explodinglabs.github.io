@@ -11,6 +11,6 @@ Use `@pytest.xfail` with the `raises` param.
 from pytest import mark
 
 @mark.xfail(raises=RuntimeError)
-def test_function_call() -> None:
-    ...
+def test_func() -> None:
+    func()
 ```
