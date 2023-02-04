@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pytest: How to xfail on a specific exception?"
+title: "Pytest: How to expect failure on a specific exception?"
 category: python
 permalink: /python/pytest-xfail-on-specific-exception
 ---
