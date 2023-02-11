@@ -52,13 +52,15 @@ from . import settings
 from .my_package import my_function
 ```
 
-## Other things
+## Separate groups with a blank line
 
 Be sure to separate the groups with a blank line. 
 
 > You should put a blank line between each group of imports.
 >
 > <cite>PEP-8: The Style Guide for Python Code</cite>
+
+## Sorting imports
 
 Within each group, sort the imports alphabetically. (This is not part of the
 style guide, just my recommendation.)
