@@ -60,10 +60,10 @@ Be sure to separate the groups with a blank line.
 >
 > <cite>PEP-8: The Style Guide for Python Code</cite>
 
-Within each group, sort the imports alphabetically. This is not part of the
-style guide, just my recommendation, to make the maintainer's job easier.
+Within each group, sort the imports alphabetically. (This is not part of the
+style guide, just my recommendation.)
 
-## Putting it together
+## Putting it all together
 
 ```python
 from typing import Any
