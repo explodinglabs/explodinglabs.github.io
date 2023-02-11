@@ -60,7 +60,7 @@ Be sure to separate the groups with a blank line.
 >
 > <cite>PEP-8: The Style Guide for Python Code</cite>
 
-## Sorting imports
+## Import order
 
 Within each group, sort imports alphabetically. (This is not part of the
 style guide, just my recommendation.)
