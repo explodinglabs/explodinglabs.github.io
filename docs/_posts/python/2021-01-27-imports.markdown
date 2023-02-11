@@ -66,6 +66,7 @@ style guide, just my recommendation.)
 ## Putting it all together
 
 ```python
+"""Module-level docstring"""
 from typing import Any
 import os
 
@@ -74,4 +75,7 @@ import requests
 
 from . import settings
 from .my_package import my_function
+
+
+# Code starts here after two blank lines. 
 ```
