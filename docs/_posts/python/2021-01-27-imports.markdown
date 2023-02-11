@@ -62,8 +62,17 @@ Be sure to separate the groups with a blank line.
 
 ## Sorting imports
 
-Within each group, sort the imports alphabetically. (This is not part of the
+Within each group, sort imports alphabetically. (This is not part of the
 style guide, just my recommendation.)
+
+```python
+from z_package import (
+    a_module,
+    b_module,
+    c_module,
+)
+import a_package
+```
 
 ## Putting it all together
 
