@@ -16,12 +16,3 @@ def test_func() -> None:
 ```
 
 This lets you expect a specific exception, but it won't let you say _where_ it should happen in the test.
-
-In my opinion Pytest should provide a context manager, e.g.
-
-```python
-# DOES NOT WORK
-def test_func() -> None:
-    with xfail(raises=RuntimeError):
-        func()
-```
