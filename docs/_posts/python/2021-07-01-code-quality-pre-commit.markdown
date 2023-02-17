@@ -75,7 +75,6 @@ pre-commit install
   "formatted" in one version may not be in another.
   Note as of 2022 Black has a
   [Stability Policy](https://black.readthedocs.io/en/stable/the_black_code_style/index.html)
-  which states the formatting will not change in a calendar year. This is why I use `black<23`
-  above -- we take all updates from this year but not next.
+  which states the formatting will not change in a calendar year.
 
 See also: [How to use Black, Pylint and Mypy in Github Actions?](/python/github-actions)
