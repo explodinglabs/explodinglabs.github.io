@@ -48,10 +48,14 @@ git tag x.x.x
 git push --tags
 ```
 
-Create the sdist and upload it.
+Create the sdist and upload it (showing setuptools).
 ```sh
 pip install --upgrade pip setuptools twine
 python setup.py sdist
+```
+
+Create the package.
+```sh
 twine check dist/mypackage-x.x.x.tar.gz
 twine upload dist/mypackage-x.x.x.tar.gz
 ```
