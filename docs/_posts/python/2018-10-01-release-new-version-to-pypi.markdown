@@ -23,7 +23,7 @@ rm -r .tox; tox  # Continue below while this is running
 ```
 
 In a new branch (such as `release/x.x.x`):
-- Update version in `setup.py`.
+- Update version in `setup.py` or `pyproject.toml`.
 - Update `CHANGELOG.md` (stable releases only).
 - Update `README.md`, if any.
 - Update documentation.
