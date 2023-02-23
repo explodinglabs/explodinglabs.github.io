@@ -23,7 +23,7 @@ rm -r .tox; tox  # Continue below while this is running
 ```
 
 In a new branch (such as `release/x.x.x`):
-- Update version in `setup.py` or `pyproject.toml`.
+- Update version in `pyproject.toml` or `setup.py`:
 - Update `CHANGELOG.md` (stable releases only).
 - Update `README.md`, if any.
 - Update documentation.
@@ -48,15 +48,15 @@ git tag x.x.x
 git push --tags
 ```
 
-Create the sdist and upload it (showing setuptools).
+Create the package.
 ```sh
-pip install --upgrade pip setuptools twine
-python setup.py sdist
+pip install --upgrade pip twine build
+python -m build --wheel
 ```
 
 Upload the package.
 ```sh
-twine check dist/mypackage-x.x.x.tar.gz
+twine check dist/mypackage-x.x.x.whl
 twine upload dist/mypackage-x.x.x.tar.gz
 ```
 
