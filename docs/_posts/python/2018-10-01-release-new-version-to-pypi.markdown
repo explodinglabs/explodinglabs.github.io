@@ -54,7 +54,7 @@ pip install --upgrade pip setuptools twine
 python setup.py sdist
 ```
 
-Create the package.
+Upload the package.
 ```sh
 twine check dist/mypackage-x.x.x.tar.gz
 twine upload dist/mypackage-x.x.x.tar.gz
