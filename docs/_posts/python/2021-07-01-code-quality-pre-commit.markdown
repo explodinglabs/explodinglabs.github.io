@@ -46,11 +46,14 @@ repos:
       - id: black
         args: [--diff, --check]
 
-  - repo: https://github.com/pre-commit/mirrors-pylint
-    rev: v3.0.0a3
+  - repo: local
     hooks:
-      - id: pylint
-        args: [--disable=all, --enable=unused-import]
+    -   id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        require_serial: true
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v0.902
@@ -66,15 +69,16 @@ pip install precommit
 pre-commit install
 ```
 
-## Notes on Black
+## Notes
 
-- If you have an existing project with unformatted code, _format the entire
-  codebase all at once_. Don't do it gradually.
-- Be consistent with your Black version across your tooling.
-  The formatting can change between versions, so what's considered
-  "formatted" in one version may not be in another.
-  Note as of 2022 Black has a
+- Since Pylint needs to import modules and dependencies to work correctly, the
+  hook only works with a local installation of pylint (in your environment).
+- Be consistent with the Black version across your tooling.
+  The formatting can change between versions, so what's considered "formatted"
+  in one version may not be in another. Note as of 2022 Black has a
   [Stability Policy](https://black.readthedocs.io/en/stable/the_black_code_style/index.html)
   which states the formatting will not change in a calendar year.
+- If you have an existing project with unformatted code, _format the entire
+  codebase all at once_. Don't do it gradually.
 
 See also: [How to use Black, Pylint and Mypy in Github Actions?](/python/github-actions)

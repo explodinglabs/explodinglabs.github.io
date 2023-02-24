@@ -48,16 +48,15 @@ jobs:
     - run: mypy --strict $(git ls-files '*.py')
 ```
 
-## Notes on Black
+## Notes
 
-- If you have an existing project with unformatted code, _format the entire
-  codebase all at once_. Don't do it gradually.
-- Be consistent with your Black version across your tooling.
-  The formatting can change between versions, so what's considered
-  "formatted" in one version may not be in another.
-  Note as of 2022 Black has a
+- Be consistent with your Black version across your tooling. The formatting can
+  change between versions, so what's considered "formatted" in one version may
+  not be in another. Note as of 2022 Black has a
   [Stability Policy](https://black.readthedocs.io/en/stable/the_black_code_style/index.html)
   which states the formatting will not change in a calendar year. This is why I use `black<23`
   above -- we take all updates from this year but not next.
+- If you have an existing project with unformatted code, _format the entire
+  codebase all at once_. Don't do it gradually.
 
 See also: [How to use Black, Pylint and Mypy in Pre-commit?](/python/pre-commit)
