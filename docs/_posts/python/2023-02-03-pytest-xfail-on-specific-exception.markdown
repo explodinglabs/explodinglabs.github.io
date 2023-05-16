@@ -15,4 +15,4 @@ def test_func() -> None:
     func()
 ```
 
-While this lets you expect a specific exception, it won't let you say _where_ it should happen in the test.
+While this works, it won't let you say _where_ it should happen in the test.
