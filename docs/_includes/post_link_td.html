@@ -1,8 +1,6 @@
-<tr>
-    <td class="date">
-        <span>{{ post.date | date: "%-d %b %y" }}</span>
-    </td>
-    <td class="title">
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </td>
-</td>
+<div class="date">
+    {{ post.date | date: "%-d %b %y" }}
+</div>
+<div class="link">
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+</div>

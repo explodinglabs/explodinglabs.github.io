@@ -1,16 +1,18 @@
 ---
 layout: all
 ---
-{% include categories.html %}
+{% include nav.html %}
 {% assign posts = site.posts | where_exp:"post","post.category == page.category" | where_exp:"post","post.sitemap != false" | sort: 'date' | reverse %}
 
-<main id="post-list">
-    <img src="/assets/{{page.category}}.png" style="display: block; margin: auto" />
-    <h1 class="category-title">{{page.title}}</h1>
+<main>
+    <div id="post-list">
+        <img id="category-logo" src="/assets/{{page.category}}.png" />
+        <h1 class="category-title">{{page.title}}</h1>
 
-    <table>
-        {% for post in posts %}
-            {% include post_link_td.html %}
-        {% endfor %}
-    </table>
-</div>
+        <table>
+            {% for post in posts %}
+                {% include post_link_td.html %}
+            {% endfor %}
+        </table>
+    </div>
+</main>

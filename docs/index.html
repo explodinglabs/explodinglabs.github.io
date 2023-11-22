@@ -2,16 +2,16 @@
 layout: all
 title: Composed
 ---
-{% include categories.html %}
+{% include nav.html %}
 {% assign posts = site.posts | where_exp:"post","post.sitemap != false" | sort: 'date' | reverse %}
 
-<main id="post-list">
-    <table>
+<main>
+    <div id="post-list">
         {% for post in posts limit:1 %}
             {% include post_link_td.html %}
         {% endfor %}
         {% for post in posts offset:1 %}
             {% include post_link_td.html %}
         {% endfor %}
-    </table>
-</div>
+    </div>
+</main>

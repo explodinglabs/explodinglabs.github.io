@@ -56,84 +56,101 @@ body {
 .linktext {
     color: hsl(330, 100, 50);
     text-decoration: none;
-    &:visited { color: purple; }
+    &:visited { color: hsl(330, 50, 50); }
     &:hover { color: orange; }
 }
 
 nav {
-    background: linear-gradient(to right, hsl(176, 96%, 50%), hsl(330, 100%, 50%));
+    //background: linear-gradient(to right, hsl(176, 96%, 50%), hsl(330, 100%, 50%));
     // box-shadow: 0 5px 5px -2px #999;
-    text-align: right;
-    padding: 10px $hspace 2px $hspace;
-    .logo {
-        @extend .wrapper;
+    padding: $vspace $hspace 2px $hspace;
+    margin-bottom: $vspace*2;
+
+    #logo {
+        float: left;
+        text-align: left;
         img {
             height: 30px;
         }
     }
-}
 
-#categories {
-    padding-top: $vspace;
-    text-align: center;
-    @extend .bodytext;
-    margin: 0 $hspace $vspace $hspace;
-    a {
-        color: red;
+    #categories {
+        @extend .bodytext;
+        font-size: 90%;
+        text-align: center;
+        a {
+            color: red;
+        }
     }
+
 }
 
 main {
     @extend .wrapper;
 
     #post-list {
-        @extend .wrapper;
+        @extend .bodytext;
+        border-collapse: collapse;
+        padding: 0;
+        margin: 0 $hspace;
+        @include media-query($on-palm) {
+            margin: 0 $hspace/2;
+        }
+
+        #category-logo {
+            display: block;
+            margin: auto;
+        }
 
         h1 {
             @extend .titletext;
-            margin-bottom: $vspace / 1.5;
+            margin-bottom: $vspace*1.5;
             text-align: center;
         }
 
-        table {
-            @extend .bodytext;
-            border-collapse: collapse;
-            padding: 0;
-            margin: 0 $hspace;
-            @include media-query($on-palm) {
-                margin: 0 $hspace/2;
-            }
+        .date {
+            text-align: center;
+            font-size: smaller;
+            color: hsl(300, 0, 40);
+        }
 
-            td {
-                padding-bottom: 10px;
-                vertical-align: top;
-                a {
-                    @extend .linktext;
-                }
-            }
-
-            td.date {
-                text-align: right;
-                white-space: nowrap;
-            }
-
-            td span {
-                padding-right: $hspace / 2;
+        .link {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 2em;
+            line-height: 1.4em;
+            a {
+                @extend .linktext;
+                text-decoration: none;
             }
         }
     }
 
     article {
 
-        header {
-            h1 {
-                @extend .titletext;
-                margin: $vspace * 2 $hspace $vspace / 2;
-                @include media-query($on-palm) {
-                    margin-top: $vspace * 1.5;
-                }
+        h1 {
+            margin: $vspace * 2 $hspace $vspace / 2;
+            @include media-query($on-palm) {
+                margin-top: $vspace * 1.5;
             }
+            @extend .titletext;
+        }
 
+        h2 {
+            margin: $vspace * 1.5 $hspace $vspace $hspace;
+            @extend .titletext;
+            font-size: 120%;
+            line-height: 100%;
+        }
+
+        h3 {
+            margin: $vspace * 1.5 0 $vspace 0;
+            @extend .titletext;
+            font-size: 110%;
+            line-height: 100%;
+        }
+
+        header {
             .post-meta {
                 @extend .bodytext;
                 font-size: smaller;
@@ -183,18 +200,6 @@ main {
             :last-child {
                 margin-bottom: 0;
             }
-        }
-
-        h2 {
-            @extend .titletext;
-            margin: $vspace * 1.5 $hspace $vspace $hspace;
-            line-height: 100%;
-        }
-
-        h3 {
-            @extend .titletext;
-            margin: $vspace * 1.5 0 $vspace 0;
-            line-height: 100%;
         }
 
         img {
@@ -333,10 +338,9 @@ main {
         footer {
             @extend .bodytext;
             font-size: smaller;
-            margin: $vspace*2 $hspace $vspace $hspace;
-            padding: $vspace/2 0;
-            border-top: 1px solid #dedede;
-            text-align: right;
+            margin: $vspace*2 $hspace $vspace*3 $hspace;
+            text-align: left;
+            a { @extend .linktext; }
         }
     }
 

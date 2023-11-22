@@ -1,0 +1,13 @@
+<nav>
+    <!--div id="logo">
+        <a href="/"><img src="/assets/composed.png" /></a>
+    </div-->
+    <div id="categories">
+        <a href="/">All</a> ({{ site.posts | where_exp:"post","post.sitemap != false" | size }}),
+        <a href="/python/">Python</a> ({{ site.categories.python | where_exp: "post","post.sitemap != false" | size }}),
+        <a href="/jsonrpc/">JSON-RPC</a> ({{ site.categories.jsonrpc | where_exp: "post","post.sitemap != false" | size }}),
+        <a href="/airflow/">Airflow</a> ({{ site.categories.airflow | where_exp: "post","post.sitemap != false" | size }}),
+        <a href="/haskell/">Haskell</a> ({{ site.categories.haskell | where_exp: "post","post.sitemap != false" | size }})
+    </div>
+</nav>
+
