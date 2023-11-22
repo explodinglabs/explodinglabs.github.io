@@ -1,7 +1,7 @@
 ---
 layout: post
 category: haskell
-title: Setup a new Haskell project
+title: How to setup a new Haskell project?
 permalink: /haskell/setup
 ---
 For simple programs with no dependencies, simply create a `.hs` file and
