@@ -5,7 +5,7 @@ category: python
 permalink: /python/pytest-xfail-on-specific-exception
 ---
 
-Use `@pytest.xfail` with the `raises` param.
+Use `xfail` with the `raises` param.
 
 ```python
 from pytest import mark
@@ -15,4 +15,4 @@ def test_func() -> None:
     func()
 ```
 
-While this lets you expect a specific exception, it won't let you say _where_ it should happen in the test.
+While this works, unfortunately it won't let you say exactly _where_ it's expected to be raised in the test.
