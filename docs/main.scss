@@ -61,25 +61,37 @@ body {
 }
 
 nav {
-    //background: linear-gradient(to right, hsl(176, 96%, 50%), hsl(330, 100%, 50%));
+    // background: linear-gradient(to right, hsl(176, 96%, 50%), hsl(330, 100%, 50%));
     // box-shadow: 0 5px 5px -2px #999;
-    padding: $vspace $hspace 2px $hspace;
-    margin-bottom: $vspace*2;
+    margin: $vspace;
 
     #logo {
-        float: left;
-        text-align: left;
+        display: none;
+        @extend .bodytext;
+        text-align: center;
+        a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
         img {
             height: 30px;
         }
     }
 
     #categories {
+        display: none;
         @extend .bodytext;
-        font-size: 90%;
-        text-align: center;
+        font-size: smaller;
+        text-align: right;
+        color: black;
         a {
-            color: red;
+            color: white;
+            margin-left: 1em;
+            text-decoration: none;
+        }
+        span {
+            display: none;
         }
     }
 
@@ -116,8 +128,7 @@ main {
 
         .link {
             text-align: center;
-            font-size: 1.2em;
-            margin-bottom: 2em;
+            margin-bottom: 1.5em;
             line-height: 1.4em;
             a {
                 @extend .linktext;

@@ -4,6 +4,8 @@ layout: all
 {% assign created = page.date | date: "%b %-d, %Y" %}
 {% assign updated = page.last_modified_at | date: '%b %-d, %Y' %}
 {% assign posts = site.posts |where: "category", page.category |where_exp: "item", "item.url != page.url" |sort: "date" |reverse %}
+
+{% include nav.html %}
 <main>
 
     <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -13,7 +15,7 @@ layout: all
                 <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                     Beau Barker, <time>{{ created }}</time>.
                     {% if updated and updated != created %}
-                        Updated <time>{{ updated }}</time>
+                        Updated <time>{{ updated }}</time>.
                     {% endif %}
                     <a href="https://github.com/explodinglabs/composed.blog/edit/main/docs/{{page.path}}">
                         &#9998;

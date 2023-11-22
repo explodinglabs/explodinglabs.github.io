@@ -2,9 +2,9 @@
 layout: all
 title: Composed
 ---
-{% include nav.html %}
 {% assign posts = site.posts | where_exp:"post","post.sitemap != false" | sort: 'date' | reverse %}
 
+{% include nav.html %}
 <main>
     <div id="post-list">
         {% for post in posts limit:1 %}
