@@ -338,7 +338,7 @@ main {
         footer {
             @extend .bodytext;
             font-size: smaller;
-            margin: $vspace*2 $hspace $vspace*3 $hspace;
+            margin: $vspace*2 $hspace $vspace $hspace;
             text-align: left;
             a { @extend .linktext; }
         }
