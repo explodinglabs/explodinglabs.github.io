@@ -1,12 +1,12 @@
 <nav>
     <div id="logo">
-        <a href="/"><img src="/assets/composed.png" /></a>
+        <a href="/">Composed<!--img src="/assets/composed.png" /--></a>
     </div>
     <div id="categories">
         <!--a href="/">All</a> <span>({{ site.posts | where_exp:"post","post.sitemap != false" | size }})</span-->
         <a href="/python/">Python</a> <span>({{ site.categories.python | where_exp: "post","post.sitemap != false" | size }})</span>
         <a href="/jsonrpc/">JSON-RPC</a> <span>({{ site.categories.jsonrpc | where_exp: "post","post.sitemap != false" | size }})</span>
         <a href="/airflow/">Airflow</a> <span>({{ site.categories.airflow | where_exp: "post","post.sitemap != false" | size }})</span>
-        <a href="/haskell/">Haskell</a> <span>({{ site.categories.haskell | where_exp: "post","post.sitemap != false" | size }})<span>
+        <a href="/haskell/">Haskell</a> <span>({{ site.categories.haskell | where_exp: "post","post.sitemap != false" | size }})</span>
     </div>
 </nav>
