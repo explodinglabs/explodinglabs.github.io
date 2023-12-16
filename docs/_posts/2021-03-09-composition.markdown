@@ -31,6 +31,10 @@ expressions that get you from _a_ to _b_.
 
 Finally, we zoom out again to combine the solutions.
 
+> We should never lose sight of the purpose of programming: to decompose complex problems into a series of simpler ones. 
+>
+> <cite>Bartosz Milewski, The Dao of FP</cite>
+
 > Being able to decompose bigger problems into smaller problems, and then
 > combine the solutions, that’s essentially the description of... well, I don’t
 > know it depends on who you are, you will say that’s the description of what
@@ -41,11 +45,9 @@ Finally, we zoom out again to combine the solutions.
 >
 > <cite>Bartosz Milewski on the Corecursive podcast</cite>
 
-{% comment %}
 > The psychological profiling (of a programmer) is mostly the ability to shift
 > levels of abstraction, from low level to high level. To see something in the
 > small and to see something in the large.
 >
 > <cite>An interview with Donald Knuth. Dr. Dobb’s Journal, pages 16–22 (April
 > 1996)</cite>
-{% endcomment %}
