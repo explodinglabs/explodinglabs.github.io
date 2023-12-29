@@ -9,9 +9,8 @@ permalink: /python/github-actions
 </div>
 
 <div id="intro" markdown="1">
-Python's not the strictest language, so to have any confidence in your code you
-need to hit it with a barrage of checks to ensure it meets at least some level
-of quality.
+Python's not the strictest language, so to have any confidence in your code it needs
+to be hit with a barrage of checks to ensure it meets some level of quality.
 </div>
 
 I use the following code quality checks:
