@@ -15,7 +15,7 @@ redirect_from:
 </div>
 
 <div id="intro" markdown="1">
-    Python's not the strictest language, so to have any confidence in your code it needs
+Python's not the strictest language, so to have any confidence in your code it needs
 to be hit with a barrage of checks to ensure it meets some level of quality.
 </div>
 
