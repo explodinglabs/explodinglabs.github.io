@@ -77,9 +77,10 @@ pre-commit install
 
 ## Notes
 
-- Isort needs to know about your project's dependencies, therefore the hook
+- Isort needs to know about your project's dependencies in order to determine which groups to put your imports in. Therefore the hook
   only works with a local installation of isort, (i.e. it's installed in your
   environment).
+- To exclude certain files and directories, use the exclude option, e.g. `exclude: ^(docs/|examples/request.py)`.
 - If you have an existing project with unformatted code, _format the entire
   project all at once_, in a single dedicated PR. Don't do it gradually.
 
