@@ -9,9 +9,9 @@ the little problems, we can combine the solutions to solve bigger problems.
 </div>
 
 Why do we break down problems? This is due to the limitations of the human mind --
-we can only deal with a small number of concepts at a time. So we break down
-problems, and break them down again until they're just the right sized chunks that
-we can mentally digest.
+we can only deal with a small number of concepts at a time, so we break down
+problems, and break them down again until they're just the right size that
+we can mentally digest them.
 
 A well-decomposed problem will produce the most elegant solution.
 
@@ -31,6 +31,10 @@ expressions that get you from _a_ to _b_.
 
 Finally, we zoom out again to combine the solutions.
 
+> We should never lose sight of the purpose of programming: to decompose complex problems into a series of simpler ones. 
+>
+> <cite>Bartosz Milewski, The Dao of FP</cite>
+
 > Being able to decompose bigger problems into smaller problems, and then
 > combine the solutions, that’s essentially the description of... well, I don’t
 > know it depends on who you are, you will say that’s the description of what
@@ -41,11 +45,9 @@ Finally, we zoom out again to combine the solutions.
 >
 > <cite>Bartosz Milewski on the Corecursive podcast</cite>
 
-{% comment %}
 > The psychological profiling (of a programmer) is mostly the ability to shift
 > levels of abstraction, from low level to high level. To see something in the
 > small and to see something in the large.
 >
 > <cite>An interview with Donald Knuth. Dr. Dobb’s Journal, pages 16–22 (April
 > 1996)</cite>
-{% endcomment %}
