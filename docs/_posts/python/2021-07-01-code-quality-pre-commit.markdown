@@ -82,7 +82,6 @@ pre-commit install
   environment).
 - You may want to run tests in pre-commit as well.
 - To exclude certain files and directories, use the exclude option, e.g. `exclude: ^(docs/|examples/request.py)`.
-- If you have an existing project with unformatted code, _format the entire
-  project all at once_, in a single dedicated PR. Don't do it gradually.
+- If you have an existing project with unformatted code, _format the entire project all at once_. Don't do it gradually. I do it in a single dedicated PR, but I've seen others reformat the repository's history, to maintain git blame.
 
 See also: [How to use Ruff, Mypy, Black, Isort and Pytest in Github Actions?](/python/github-actions)
