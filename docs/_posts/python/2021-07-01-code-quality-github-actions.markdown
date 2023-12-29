@@ -50,6 +50,7 @@ jobs:
 
 ## Notes
 
+- To exclude certain files and directories, use the exclude options to each tool, (usually `--exclude`).
 - If you have an existing project with unformatted code, _format the entire
   project all at once_, in a single dedicated PR. Don't do it gradually.
 
