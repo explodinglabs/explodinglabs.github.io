@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: How to use Black, Pylint and Mypy in GitHub Actions?
+title: How to use Ruff, Mypy, Black, Isort and Pytest in GitHub Actions?
 permalink: /python/github-actions
 ---
 <div class="wide-logos" markdown="1">
@@ -15,46 +15,48 @@ of quality.
 </div>
 
 I use the following code quality checks:
-- *Black* to ensure code is formatted,
-- *Pylint* to disallow unused imports, and
-- *Mypy* for type checking.
 
-The following Github Actions workflow will check your code when a Pull
-Request is created, catching problems before they're merged.
+- *Ruff* for linting
+- *Mypy* for type checking
+- *Black* to ensure code is formatted
+- *Isort* to ensure imports are grouped and sorted
+
+The following Github Actions workflow will check your code when a pull request
+is created, catching problems before they're merged.
 
 ## How to add the Github Actions workflow
 
 Add the following to your repository in `.github/workflows/code-quality.yml`.
 
 ```sh
-name: Checks
+name: Code Quality
 on: [pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Checks
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
       with:
-        python-version: 3.x
+        python-version: "3.7"
     - run: pip install --upgrade pip
-    - run: pip install "black<23" pylint==v3.0.0a3 mypy==v0.902
-    - run: black --diff --check $(git ls-files '*.py')
-    - run: pylint --disable=all --enable=unused-import $(git ls-files '*.py')
-    - run: mypy --strict $(git ls-files '*.py')
+    - run: pip install "ruff<1" "mypy<2" "black<23" "isort<6" pytest
+    - run: ruff check .
+    - run: mypy --strict .
+    - run: black --check .
+    - run: isort --check --profile black .
+    - run: pytest .
 ```
 
 ## Notes
 
-- Be consistent with your Black version across your tooling. The formatting can
-  change between versions, so what's considered "formatted" in one version may
-  not be in another. Note as of 2022 Black has a
+- Be consistent with the Black version across your tooling.
+  The formatting can change between versions, so what's considered "formatted"
+  in one version may not be in another. Note as of 2022 Black has a
   [Stability Policy](https://black.readthedocs.io/en/stable/the_black_code_style/index.html)
-  which states the formatting will not change in a calendar year. This is why I use `black<23`
-  above -- we take all updates from this year but not next.
-- If you have an existing project with unformatted code, _format the entire
-  codebase all at once_. Don't do it gradually.
+  which states the formatting will not change in a calendar year.
+- If you have an existing project with un-blackened code, _format the entire
+  project all at once_. Don't do it gradually. Do it in a single dedicated pull request.
 
-See also: [How to use Black, Pylint and Mypy in Pre-commit?](/python/pre-commit)
+See also: [How to use Ruff, Mypy, Black and Isort in Pre-commit?](/python/pre-commit)
