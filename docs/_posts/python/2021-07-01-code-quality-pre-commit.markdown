@@ -81,12 +81,7 @@ pre-commit install
 - Isort needs to know about your project's dependencies, therefore the hook
   only works with a local installation of isort, (i.e. it's installed in your
   environment).
-- Be consistent with the Black version across your tooling.
-  The formatting can change between versions, so what's considered "formatted"
-  in one version may not be in another. Note as of 2022 Black has a
-  [Stability Policy](https://black.readthedocs.io/en/stable/the_black_code_style/index.html)
-  which states the formatting will not change in a calendar year.
-- If you have an existing project with un-blackened code, _format the entire
-  project all at once_. Don't do it gradually. Do it in a single dedicated pull request.
+- If you have an existing project with unformatted code, _format the entire
+  project all at once_, in a single dedicated PR. Don't do it gradually.
 
 See also: [How to use Ruff, Mypy, Black, Isort and Pytest in Github Actions?](/python/github-actions)
