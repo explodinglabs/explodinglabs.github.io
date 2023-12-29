@@ -38,8 +38,6 @@ SequentialExecutor), but it won't work in production because issues
 will arise when multiple tasks attempt to write to the same log file at once.
 </div>
 
-{% include google_in_article.html %}
-
 ## Easy Solution
 
 <div class="warning" markdown="1">
@@ -83,8 +81,6 @@ Edit airflow_local_settings.py, changing `FILENAME_TEMPLATE` to:
 
 You should now get all of a dag log output in a single file.
 
-{% include google_in_article.html %}
- 
 ## Tailing the logs
 
 Start the scheduler and trigger a dag.

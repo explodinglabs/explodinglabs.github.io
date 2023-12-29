@@ -29,8 +29,6 @@ I use the following code quality checks:
 These Pre-commit hooks will check your code when you try to commit, catching problems
 before they reach your repository.
 
-{% include google_in_article.html %}
-
 ## Install the Pre-commit hooks
 
 Add the following `.pre-commit-config.yaml` file to the root of your

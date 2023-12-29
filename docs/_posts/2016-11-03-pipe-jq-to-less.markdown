@@ -16,8 +16,6 @@ Or shorthand:
 jq -C . data.json | less -R
 ```
 
-{% include google_in_article.html %}
-
 From the [jq documentation](https://stedolan.github.io/jq/manual/#Invokingjq):
 ```
 --color-output / -C

@@ -16,8 +16,6 @@ Airflow's context dictionary can be found in the `get_template_context` method,
 in Airflow's
 [models.py](https://github.com/databricks/incubator-airflow/blob/master/airflow/models.py).
 
-{% include google_in_article.html %}
-
 ```python
 {
     'dag': task.dag,

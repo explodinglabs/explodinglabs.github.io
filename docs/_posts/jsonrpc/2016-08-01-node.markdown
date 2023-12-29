@@ -53,8 +53,6 @@ Start the server:
 $ node server.js
 ```
 
-{% include google_in_article.html %}
-
 ## Client
 
 Use curl to send requests:

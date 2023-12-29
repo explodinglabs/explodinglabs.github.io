@@ -23,8 +23,6 @@ $ python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key()
 81HqDtbqAywKSOumSha3BhWNOdQ26slT6K0YaZeZyPs=
 ```
 
-{% include google_in_article.html %}
-
 ## Use a fernet key with Airflow
 
 Paste the key into your `airflow.cfg`.

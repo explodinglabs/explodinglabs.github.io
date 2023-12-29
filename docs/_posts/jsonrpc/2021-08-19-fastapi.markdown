@@ -55,8 +55,6 @@ INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:5000 (Press CTRL+C to quit)
 ```
 
-{% include google_in_article.html %}
-
 ## Test it
 
 Use curl to send a request:
