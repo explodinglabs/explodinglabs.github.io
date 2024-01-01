@@ -51,6 +51,6 @@ jobs:
 ## Notes
 
 - To exclude certain files and directories, use the exclude options to each tool, (usually `--exclude`).
-- If you have an existing project with unformatted code, _format the entire project all at once_. Don't do it gradually. I do it in a single dedicated PR, but I've seen others reformat the repository's entire history, to maintain git blame.
+- If you have an existing project with unformatted code, _format the entire project all at once_. Don't do it gradually. I do it in a single dedicated PR, but I've seen others reformat the repository's entire history, to preserve git blame.
 
 See also: [How to use Ruff, Mypy, Black and Isort in Pre-commit?](/python/pre-commit)
