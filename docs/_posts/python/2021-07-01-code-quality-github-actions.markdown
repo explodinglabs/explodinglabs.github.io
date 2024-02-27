@@ -9,9 +9,8 @@ permalink: /python/github-actions
 </div>
 
 <div id="intro" markdown="1">
-Python's not the strictest language, so to have any confidence in your code you
-need to hit it with a barrage of checks to ensure it meets at least some level
-of quality.
+Python's not the strictest language, so to have any confidence in your code it needs
+to be hit with a barrage of checks to ensure it meets some level of quality.
 </div>
 
 I use the following code quality checks:
@@ -51,12 +50,7 @@ jobs:
 
 ## Notes
 
-- Be consistent with the Black version across your tooling.
-  The formatting can change between versions, so what's considered "formatted"
-  in one version may not be in another. Note as of 2022 Black has a
-  [Stability Policy](https://black.readthedocs.io/en/stable/the_black_code_style/index.html)
-  which states the formatting will not change in a calendar year.
-- If you have an existing project with un-blackened code, _format the entire
-  project all at once_. Don't do it gradually. Do it in a single dedicated pull request.
+- To exclude certain files and directories, use the exclude options to each tool, (usually `--exclude`).
+- If you have an existing project with unformatted code, _format the entire project all at once_. Don't do it gradually. I do it in a single dedicated PR, but I've seen others reformat the repository's entire history, to preserve git blame.
 
 See also: [How to use Ruff, Mypy, Black and Isort in Pre-commit?](/python/pre-commit)
