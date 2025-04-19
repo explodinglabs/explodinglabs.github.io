@@ -3,12 +3,13 @@ layout: post
 title: How to install Jekyll on a Mac?
 permalink: /install-jekyll-on-mac
 ---
+
 I like Jekyll but wish I didn't have to deal with Ruby!
 
 ## Install rbenv
 
 ```sh
-sudo port install rbenv
+sudo port install rbenv ruby-build
 ```
 
 Put at the end of a shell startup script (`~/.zshenv` doesn't work for me so I
@@ -35,6 +36,7 @@ bundle install
 ```
 
 Start Jekyll. (I install Jekyll inside a `docs` subdirectory so run this from there.)
+
 ```sh
 bundle exec jekyll serve --livereload
 ```

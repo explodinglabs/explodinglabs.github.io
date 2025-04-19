@@ -31,12 +31,25 @@ To rebuild as code changes:
 stack build --file-watch
 ```
 
-To rebuild and execute on changes (doesn't work for things that run forever, e.g. servers):
+To rebuild and execute on changes (doesn't work for things that run forever):
 ```sh
 stack build --file-watch --exec $(stack path --local-install-root)/bin/myapp-exe
 ```
 
 Execute the binary with
 ```sh
-stack run myapp
+stack run
 ```
+
+To find the binary, it's in the "bin" directory here:
+```
+stack path --local-install-root
+```
+
+To install a local module, add it to `stack.yaml` under `packages`:
+```
+packages:
+- .
+- ./haskell-mpv
+```
+And don't forget to add it to package.yaml as a dependency as well. Then build.
