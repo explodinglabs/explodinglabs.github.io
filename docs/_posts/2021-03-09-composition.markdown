@@ -13,8 +13,6 @@ we can only deal with a small number of concepts at a time, so we break down
 problems, and break them down again until they're just the right size that
 we can mentally digest them.
 
-A well-decomposed problem will produce the most elegant solution.
-
 {:refdef: style="text-align: center; margin: 20px 0;"}
 ![composition-full](/assets/composition-full.png)
 {: refdef}

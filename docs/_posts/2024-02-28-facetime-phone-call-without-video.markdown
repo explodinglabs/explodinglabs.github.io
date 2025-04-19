@@ -11,4 +11,4 @@ To make a *FacteTime phone call* without video on a Mac:
 4. Click the arrow that appears next to the phone number, and under Call using iPhone,
    click the phone number.
 
-Done! The audio settings can be set under System Settings > Sound.
+The audio settings can be set under System Settings > Sound.
