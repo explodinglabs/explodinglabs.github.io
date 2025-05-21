@@ -5,10 +5,10 @@ include:
   - ads.txt
 locale: en_AU
 plugins:
-    - jekyll-redirect-from
-    - jekyll-seo-tag
-    - jekyll-sitemap
-    - jekyll-last-modified-at
-title: Composed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-last-modified-at
+title: Exploding Labs Blog
 tagline: A programming blog
 url: "https://explodinglabs.github.io" # the base hostname & protocol for your site
