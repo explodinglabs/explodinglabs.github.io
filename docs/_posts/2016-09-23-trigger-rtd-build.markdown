@@ -3,6 +3,9 @@ layout: post
 title: How to trigger a Readthedocs build from the commandline?
 permalink: /trigger-rtd-build
 ---
+
+> ⚠ This no longer works
+
 You can use curl to trigger a build:
 
 ```sh
