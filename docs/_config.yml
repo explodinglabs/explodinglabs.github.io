@@ -11,4 +11,4 @@ plugins:
     - jekyll-last-modified-at
 title: Composed
 tagline: A programming blog
-url: "https://composed.blog" # the base hostname & protocol for your site
+url: "https://explodinglabs.github.io" # the base hostname & protocol for your site

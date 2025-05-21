@@ -67,7 +67,7 @@ pytest --cov-branch --cov-report term-missing --cov mypackage tests
 coveralls
 ```
 
-[Build readthedocs](https://composed.blog/trigger-rtd-build) if there were any
+[Build readthedocs](https://explodinglabs.github.io/trigger-rtd-build) if there were any
 documentation changes.
 
 Update related blog posts/Stack Overflow posts.

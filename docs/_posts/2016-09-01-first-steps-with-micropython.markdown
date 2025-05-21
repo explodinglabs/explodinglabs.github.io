@@ -92,4 +92,4 @@ baudrate with the `-b` option, the prompt appears (after pressing enter).
 
 ## Now see
 
-[How to copy files to a Micropython device](https://composed.blog/micropython/mipy)
+[How to copy files to a Micropython device](https://explodinglabs.github.io/micropython/mipy)

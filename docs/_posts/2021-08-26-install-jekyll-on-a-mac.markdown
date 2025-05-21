@@ -29,7 +29,7 @@ gem install --user-install bundler jekyll
 
 ## For each site
 
-Add a `Gemfile` with dependencies (see [mine](https://github.com/explodinglabs/composed.blog/blob/main/Gemfile)).
+Add a `Gemfile` with dependencies (see [mine](https://github.com/explodinglabs/explodinglabs.github.io/blob/main/Gemfile)).
 
 ```sh
 bundle install
